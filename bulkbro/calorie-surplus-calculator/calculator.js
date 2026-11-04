@@ -39,6 +39,6 @@ form?.addEventListener('submit', event => {
       <li><span>Chosen surplus</span><strong>+${surplus.toLocaleString()} kcal</strong></li>
     </ul>
     <p class="result-note">This is a formula-based starting point, not a measurement of your metabolism. Track your intake and weight response, then adjust from real results.</p>
-    <a class="button" href="https://apps.apple.com/app/id6770476671" data-app-name="BulkBro" data-link-position="calculator_result">Let BulkBro adapt it ↗</a>`;
+    <a class="button" href="https://apps.apple.com/app/apple-store/id6770476671?pt=128911414&amp;ct=kestora_bulkbro_calc_result&amp;mt=8" data-app-name="BulkBro" data-link-position="calculator_result">Let BulkBro adapt it ↗</a>`;
   result.focus();
 });
