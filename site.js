@@ -135,11 +135,11 @@ document.querySelectorAll('a[href*="apps.apple.com"]').forEach((link) => {
   link.addEventListener('click', () => {
     if (localStorage.getItem(consentKey) !== 'granted' || !analyticsLoaded) return;
     const card = link.closest('.feature-card, .app-card');
-    const appName = card?.querySelector('h3')?.textContent?.trim() || 'Unknown app';
+    const appName = link.dataset.appName || card?.querySelector('h3')?.textContent?.trim() || 'Unknown app';
     window.gtag('event', 'app_store_click', {
       app_name: appName,
       link_url: link.href,
-      link_position: card?.classList.contains('feature-card') ? 'featured' : 'app_library'
+      link_position: link.dataset.linkPosition || (card?.classList.contains('feature-card') ? 'featured' : 'app_library')
     });
   });
 });
