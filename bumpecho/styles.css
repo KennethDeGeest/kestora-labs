@@ -33,6 +33,7 @@ button { font: inherit; }
 .brand img { width: 42px; height: 42px; object-fit: cover; border-radius: 13px; box-shadow: 0 7px 20px rgba(92, 60, 25, .14); }
 .site-header nav { display: flex; align-items: center; gap: clamp(18px, 2.4vw, 36px); font-size: .78rem; font-weight: 700; }
 .site-header nav a { text-decoration: none; }
+.portfolio-return { padding-left: clamp(10px, 1.4vw, 20px); border-left: 1px solid var(--line); color: var(--terracotta); }
 .nav-cta { padding: 12px 18px; border: 1px solid var(--cocoa); border-radius: 999px; transition: background .2s, color .2s; }
 .nav-cta:hover { background: var(--cocoa); color: var(--cream); }
 
@@ -211,7 +212,8 @@ footer > p { grid-column: 1 / -1; margin: 5px 0 0; padding-top: 26px; border-top
 .js .reveal.visible { opacity: 1; transform: none; }
 
 @media (max-width: 1040px) {
-  .site-header nav > a:not(.nav-cta) { display: none; }
+  .site-header nav > a:not(.nav-cta):not(.portfolio-return) { display: none; }
+  .site-header nav > a.portfolio-return { display: inline-flex; padding-left: 0; border-left: 0; font-size: .68rem; }
   .hero { min-height: auto; grid-template-columns: 1fr 420px; gap: 20px; }
   .hero-visual { min-height: 600px; }
   .date-card { right: -2%; }
