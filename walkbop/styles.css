@@ -33,6 +33,7 @@ footer{background:var(--ink);color:#fff;border-top:1px solid #36302e;padding:46p
 .inventory-line{display:grid;grid-template-columns:repeat(8,1fr);gap:0;margin-top:70px}
 .inventory-line span{display:flex;min-width:0;flex-direction:column;align-items:center;gap:8px;padding:16px 7px 13px;border-left:1px solid rgba(23,19,19,.35);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
 .inventory-line span:first-child{border-left:0}.inventory-line img{width:min(88px,100%);aspect-ratio:1;object-fit:contain}
+.inventory-line b{font-size:10px;line-height:1}.inventory-line small{min-height:2.5em;font-size:9px;line-height:1.3;text-align:center;text-transform:none;letter-spacing:0;color:rgba(23,19,19,.68)}
 .item-story figure,.character-collage figure{border:0;border-radius:0;box-shadow:none}
 .item-story figure{clip-path:polygon(4% 0,100% 2%,96% 100%,0 98%)}
 .crate-rule{justify-content:flex-start;align-items:center;gap:18px}.crate-rule>img{width:72px;height:72px;object-fit:contain}.crate-rule>span{display:grid;gap:4px}.crate-rule small{font-size:12px}
@@ -40,5 +41,6 @@ footer{background:var(--ink);color:#fff;border-top:1px solid #36302e;padding:46p
 .friend-points span{padding:17px 2px;border:0;border-bottom:2px solid var(--ink);border-radius:0;background:transparent;box-shadow:none}
 .coming-soon>img{width:124px;height:124px;min-height:124px;aspect-ratio:1;object-fit:cover;border-radius:28px;flex:0 0 124px}
 .footer-brand img{width:44px;height:44px;min-width:44px;aspect-ratio:1;object-fit:cover;border-radius:12px}
+#race,#items,#character,#coming-soon{scroll-margin-top:96px}
 
 @media(max-width:760px){.race-board{background:var(--yellow)}.story-card{border-left:0;border-top:3px solid var(--ink)}.items-grid{grid-template-columns:1fr;margin-left:var(--pad);margin-right:var(--pad)}.item-move{min-height:440px;border-left:0;border-top:2px solid var(--ink);padding:30px 22px}.item-move:first-child{border-top:0}.item-move .item-art{height:190px}.item-move .item-art:before{width:150px;height:150px}.item-move .item-art img{width:180px}.inventory-line{grid-template-columns:repeat(4,1fr);margin-top:48px}.inventory-line span:nth-child(5){border-left:0}.inventory-line img{width:70px}.item-story figure{clip-path:none}.coming-soon>img{width:106px;height:106px;min-height:106px;flex-basis:106px}}
