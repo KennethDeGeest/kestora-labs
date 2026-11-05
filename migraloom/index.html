@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MigraLoom — Private Migraine Diary & Headache Tracker</title>
   <meta name="description" content="Log migraine and headache episodes, understand patterns in your recorded history, and prepare clearer visit reports with MigraLoom for iPhone.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="theme-color" content="#111216">
   <meta name="apple-itunes-app" content="app-id=6811065580, affiliate-data=pt=128911414&amp;ct=kestora_migraloom_landing">
   <link rel="canonical" href="https://kestoralabs.com/migraloom/">
@@ -16,7 +17,11 @@
   <meta name="twitter:card" content="summary">
   <link rel="icon" href="../assets/migraloom.png">
   <link rel="apple-touch-icon" href="../assets/migraloom.png">
-  <link rel="stylesheet" href="styles.css?v=20261105-1">
+  <link rel="preload" href="fonts/instrument-serif-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="../assets/screens/migraloom-home.png" as="image">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <link rel="stylesheet" href="styles.css?v=20261105-2">
   <script src="../site.js?v=20261104-analytics" defer></script>
   <script type="application/ld+json">
   {
@@ -32,6 +37,19 @@
     "author": {"@type": "Organization", "name": "Kestora Labs", "url": "https://kestoralabs.com/"}
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Is MigraLoom a medical device or diagnostic tool?","acceptedAnswer":{"@type":"Answer","text":"No. MigraLoom is a personal journal and appointment-preparation tool. It does not provide medical advice, diagnosis, treatment or emergency care."}},
+      {"@type":"Question","name":"Can I use MigraLoom without creating an account?","acceptedAnswer":{"@type":"Answer","text":"Yes. No MigraLoom account is required to use the journal."}},
+      {"@type":"Question","name":"What happens after five recorded episodes?","acceptedAnswer":{"@type":"Answer","text":"A one-time in-app purchase unlocks continued episode recording. Saved history, Patterns, Reports and basic export remain available without a purchase."}},
+      {"@type":"Question","name":"Does MigraLoom determine migraine triggers?","acceptedAnswer":{"@type":"Answer","text":"No. MigraLoom helps users review recurring details in their recorded history, but it does not infer causes or make medical conclusions."}},
+      {"@type":"Question","name":"Can I share my migraine history with a healthcare professional?","acceptedAnswer":{"@type":"Answer","text":"Users can prepare a structured visit summary and export a PDF when they decide to share it."}}
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -39,7 +57,7 @@
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="MigraLoom home">
-      <img src="../assets/migraloom.png" alt="">
+      <img src="../assets/migraloom.png" width="320" height="320" alt="">
       <span>MigraLoom</span>
     </a>
     <nav aria-label="Primary navigation">
@@ -70,10 +88,10 @@
       <div class="hero-visual" aria-label="MigraLoom app screens">
         <div class="loom-rings" aria-hidden="true"></div>
         <div class="phone phone-back phone-patterns">
-          <img src="../assets/screens/migraloom-patterns.png" alt="MigraLoom Patterns screen showing sample recorded history">
+          <img src="../assets/screens/migraloom-patterns.png" width="414" height="900" decoding="async" alt="MigraLoom Patterns screen showing sample recorded history">
         </div>
         <div class="phone phone-front">
-          <img src="../assets/screens/migraloom-home.png" alt="MigraLoom home screen with a start migraine button and sample journal">
+          <img src="../assets/screens/migraloom-home.png" width="414" height="900" fetchpriority="high" alt="MigraLoom home screen with a start migraine button and sample journal">
         </div>
         <div class="floating-note note-one"><b>LOG NOW</b><span>Add detail when you feel ready.</span></div>
         <div class="floating-note note-two"><b>YOUR RECORD</b><span>No guesses presented as conclusions.</span></div>
@@ -112,7 +130,7 @@
           <div class="feature-detail"><span>Optional daily check-ins</span><span>Past-episode logging</span></div>
         </div>
         <div class="feature-screen coral-panel">
-          <div class="phone feature-phone"><img loading="lazy" src="../assets/screens/migraloom-home.png" alt="MigraLoom episode logging home screen with sample data"></div>
+          <div class="phone feature-phone"><img loading="lazy" decoding="async" width="414" height="900" src="../assets/screens/migraloom-home.png" alt="MigraLoom episode logging home screen with sample data"></div>
           <p class="screen-caption">Sample journal data shown</p>
         </div>
       </article>
@@ -126,7 +144,7 @@
           <div class="feature-detail"><span>Recorded days stay distinct</span><span>Unknown stays unknown</span></div>
         </div>
         <div class="feature-screen violet-panel">
-          <div class="phone feature-phone"><img loading="lazy" src="../assets/screens/migraloom-patterns.png" alt="MigraLoom Patterns screen with sample episode counts"></div>
+          <div class="phone feature-phone"><img loading="lazy" decoding="async" width="414" height="900" src="../assets/screens/migraloom-patterns.png" alt="MigraLoom Patterns screen with sample episode counts"></div>
           <div class="pattern-card"><b>5</b><span>recorded<br>episode days</span></div>
         </div>
       </article>
@@ -140,7 +158,7 @@
           <div class="feature-detail"><span>You control the period</span><span>You choose what to share</span></div>
         </div>
         <div class="feature-screen mint-panel">
-          <div class="phone feature-phone"><img loading="lazy" src="../assets/screens/migraloom-visit.png" alt="MigraLoom visit report preparation screen with sample data"></div>
+          <div class="phone feature-phone"><img loading="lazy" decoding="async" width="414" height="900" src="../assets/screens/migraloom-visit.png" alt="MigraLoom visit report preparation screen with sample data"></div>
           <div class="report-slip"><span>VISIT REPORT</span><b>A clearer history for the next conversation.</b><i aria-hidden="true">→</i></div>
         </div>
       </article>
@@ -160,7 +178,7 @@
 
     <section class="privacy-section" id="privacy">
       <div class="privacy-visual reveal">
-        <img src="../assets/migraloom.png" alt="MigraLoom app icon">
+        <img loading="lazy" decoding="async" src="../assets/migraloom.png" width="320" height="320" alt="MigraLoom app icon">
         <div class="privacy-orbit orbit-one"></div>
         <div class="privacy-orbit orbit-two"></div>
         <span class="privacy-label label-local">ON YOUR IPHONE</span>
@@ -215,7 +233,7 @@
   </main>
 
   <footer>
-    <div class="footer-brand"><img src="../assets/migraloom.png" alt=""><strong>MigraLoom</strong><span>by Kestora Labs</span></div>
+    <div class="footer-brand"><img loading="lazy" src="../assets/migraloom.png" width="320" height="320" alt=""><strong>MigraLoom</strong><span>by Kestora Labs</span></div>
     <nav aria-label="Footer navigation">
       <a href="https://kennethdegeest.github.io/app-portfolio-website/apps/migraloom/privacy.html">Privacy</a>
       <a href="https://kennethdegeest.github.io/app-portfolio-website/apps/migraloom/terms.html">Terms</a>
