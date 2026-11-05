@@ -12,3 +12,33 @@ footer{background:var(--ink);color:#fff;border-top:1px solid #36302e;padding:46p
 @media(max-width:1050px){.site-header nav>a:not(.portfolio-return):not(.nav-cta){display:none}.hero{grid-template-columns:1fr;min-height:auto}.hero-scene{min-height:650px}.hero-copy{padding-top:50px}.section-heading{grid-template-columns:1fr}.section-heading>p:last-child{max-width:680px}.items-title{grid-template-columns:1fr}.character-section{grid-template-columns:1fr}.character-collage{min-height:700px}.friends-section{grid-template-columns:.8fr 1fr}.health-section>div:first-child{grid-template-columns:1fr}}
 @media(max-width:760px){:root{--pad:18px}.site-header{left:10px;right:10px;top:9px}.site-header .portfolio-return{font-size:0}.site-header .portfolio-return:after{content:"← Studio";font-size:10px}.nav-cta{padding:10px 13px}.hero{padding-top:125px;gap:10px}.hero h1{font-size:clamp(58px,18vw,90px)}.hero-actions{align-items:flex-start;flex-direction:column}.hero-scene{min-height:520px}.hero-phone{width:58%}.score-card{padding:11px}.score-card strong{font-size:25px}.score-a{left:0}.score-b{right:0}.burst-a{width:70px;height:70px}.burst-b{width:54px;height:54px}.section-heading>*{min-width:0}.section-heading h2{overflow-wrap:anywhere}.section-heading h2,.items-title h2,.character-copy h2,.friends-copy h2,.health-section h2{font-size:clamp(45px,14vw,72px)}.race-board{grid-template-columns:1fr;min-height:0}.race-copy{padding:32px 22px}.story-card{height:650px}.items-grid{grid-template-columns:1fr}.item-card{min-height:400px}.item-art{font-size:110px}.item-story{grid-template-columns:1fr;margin-top:80px}.item-story figure{height:680px}.item-story h3{font-size:62px}.character-collage{min-height:540px}.sticker{width:115px;height:115px;font-size:18px}.friends-section{grid-template-columns:1fr}.friends-visual{height:680px;border-right:0;border-bottom:3px solid var(--ink)}.friends-copy{padding:70px 24px}.health-grid{grid-template-columns:1fr}.health-grid article{min-height:0}.coming-soon{min-height:75svh}.coming-soon h2{font-size:clamp(56px,17vw,90px)}footer{grid-template-columns:1fr}.footer-brand+nav{justify-content:flex-start;display:grid;grid-template-columns:1fr 1fr;gap:18px}.consent-banner{align-items:flex-start;flex-direction:column}.consent-actions{width:100%}.consent-actions button{flex:1}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.availability i{animation:none}.reveal{opacity:1;transform:none;transition:none}}
+
+/* WalkBop brand-alignment pass: use the app's real assets and cleaner race UI. */
+.race-board{border:0;border-block:3px solid var(--ink);border-radius:0;box-shadow:none;background:linear-gradient(90deg,var(--yellow) 0 56%,#ff735f 56%)}
+.story-card{border-left:3px solid var(--ink)}
+.items-section{background:var(--coral);position:relative;overflow:hidden}
+.items-section:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(23,19,19,.16) 1.5px,transparent 1.5px);background-size:22px 22px;opacity:.25;pointer-events:none}
+.items-section>*{position:relative}
+.items-grid{gap:0;margin-top:80px;border-block:3px solid var(--ink);padding-left:0;padding-right:0;margin-left:var(--pad);margin-right:var(--pad)}
+.item-move{min-width:0;padding:34px clamp(22px,3vw,46px) 42px;display:grid;grid-template-rows:auto 1fr auto auto;min-height:560px;border-left:2px solid var(--ink)}
+.item-move:first-child{border-left:0}
+.item-move>span{font-size:10px;font-weight:800;letter-spacing:.16em}
+.item-move .item-art{position:relative;height:250px;margin:8px 0 0;display:grid;place-items:center;filter:none;transform:none;font-size:0}
+.item-move .item-art:before{content:"";position:absolute;width:190px;height:190px;border:3px solid var(--ink);border-radius:50%;background:var(--paper)}
+.item-move .item-art img{position:relative;width:min(230px,85%);height:auto;aspect-ratio:1;object-fit:contain;filter:drop-shadow(0 12px 0 rgba(23,19,19,.12));transition:transform .25s}
+.item-move:hover .item-art img{transform:translateY(-8px) rotate(-4deg)}
+.item-move h3{font-family:"Archivo Black",sans-serif;font-size:clamp(29px,3vw,48px);line-height:.95;text-transform:uppercase;letter-spacing:-.05em;margin:18px 0 12px}
+.item-move p{font-size:15px;line-height:1.55;margin:0;max-width:390px}
+.item-move.banana{background:var(--yellow)}.item-move.shield{background:var(--blue)}.item-move.rocket{background:var(--paper)}
+.inventory-line{display:grid;grid-template-columns:repeat(8,1fr);gap:0;margin-top:70px}
+.inventory-line span{display:flex;min-width:0;flex-direction:column;align-items:center;gap:8px;padding:16px 7px 13px;border-left:1px solid rgba(23,19,19,.35);font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.07em}
+.inventory-line span:first-child{border-left:0}.inventory-line img{width:min(88px,100%);aspect-ratio:1;object-fit:contain}
+.item-story figure,.character-collage figure{border:0;border-radius:0;box-shadow:none}
+.item-story figure{clip-path:polygon(4% 0,100% 2%,96% 100%,0 98%)}
+.crate-rule{justify-content:flex-start;align-items:center;gap:18px}.crate-rule>img{width:72px;height:72px;object-fit:contain}.crate-rule>span{display:grid;gap:4px}.crate-rule small{font-size:12px}
+.character-shot,.mood-shot{border-radius:0}.character-shot{clip-path:polygon(6% 0,100% 3%,94% 100%,0 97%)}.mood-shot{clip-path:polygon(0 3%,94% 0,100% 97%,6% 100%)}
+.friend-points span{padding:17px 2px;border:0;border-bottom:2px solid var(--ink);border-radius:0;background:transparent;box-shadow:none}
+.coming-soon>img{width:124px;height:124px;min-height:124px;aspect-ratio:1;object-fit:cover;border-radius:28px;flex:0 0 124px}
+.footer-brand img{width:44px;height:44px;min-width:44px;aspect-ratio:1;object-fit:cover;border-radius:12px}
+
+@media(max-width:760px){.race-board{background:var(--yellow)}.story-card{border-left:0;border-top:3px solid var(--ink)}.items-grid{grid-template-columns:1fr;margin-left:var(--pad);margin-right:var(--pad)}.item-move{min-height:440px;border-left:0;border-top:2px solid var(--ink);padding:30px 22px}.item-move:first-child{border-top:0}.item-move .item-art{height:190px}.item-move .item-art:before{width:150px;height:150px}.item-move .item-art img{width:180px}.inventory-line{grid-template-columns:repeat(4,1fr);margin-top:48px}.inventory-line span:nth-child(5){border-left:0}.inventory-line img{width:70px}.item-story figure{clip-path:none}.coming-soon>img{width:106px;height:106px;min-height:106px;flex-basis:106px}}
