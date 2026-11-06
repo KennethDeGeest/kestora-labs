@@ -48,3 +48,5 @@
 /* A simple vertical footer menu stays clear at every width. */
 .site-footer nav{width:max-content;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-start;gap:.75rem}
 .site-footer nav a,.site-footer .footer-link{width:auto;flex:none;text-align:left;line-height:1.4}
+.language-switch{font-weight:820!important}
+@media(max-width:980px){.site-header nav .language-switch{display:inline-flex!important}}

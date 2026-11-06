@@ -71,7 +71,12 @@ document.querySelectorAll('.filter-button').forEach((button) => {
     });
     const visible = document.querySelectorAll('.app-card:not([hidden])').length;
     const status = document.querySelector('#filter-status');
-    if (status) status.textContent = `Showing ${visible} ${filter === 'all' ? '' : button.textContent.replace(/\d+/g, '').trim().toLowerCase() + ' '}apps.`;
+    if (status) {
+      const category = filter === 'all' ? '' : button.textContent.replace(/\d+/g, '').trim().toLowerCase() + ' ';
+      status.textContent = document.documentElement.lang === 'es'
+        ? `Mostrando ${visible} ${category}apps.`
+        : `Showing ${visible} ${category}apps.`;
+    }
   });
 });
 
