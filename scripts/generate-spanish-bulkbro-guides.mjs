@@ -78,12 +78,12 @@ const guides = [
   },
   {
     en: 'best-foods-for-healthy-weight-gain', es: 'mejores-alimentos-para-ganar-peso',
-    title: 'Mejores alimentos para ganar peso de forma saludable', short: 'Opciones densas en energía y nutrientes que caben en comidas reales.', description: 'Encuentra alimentos para ganar peso de forma saludable, ideas densas en energía y maneras prácticas de aumentar calorías sin platos enormes.', keyword: 'Alimentos y apetito', campaign: 'alimentos',
+    title: 'Alimentos para engordar y ganar peso de forma saludable', short: 'Opciones densas en energía y nutrientes que caben en comidas reales.', description: 'Descubre alimentos para engordar y ganar peso de forma saludable, con ideas densas en energía para aumentar calorías sin platos enormes.', keyword: 'Alimentos para engordar', campaign: 'alimentos',
     answer: 'Prioriza alimentos que aporten energía y nutrientes en una porción manejable: frutos secos, lácteos o alternativas, aceite de oliva, aguacate, cereales, legumbres, huevos, pescado y carnes según tus preferencias.',
     sections: [
       ['Aumenta la densidad, no solo el tamaño', '<p>Si el apetito es limitado, platos mucho más grandes pueden resultar difíciles. Añade aceite de oliva, frutos secos, crema de frutos secos, queso, aguacate o leche a comidas que ya toleras.</p>'],
       ['Construye cada comida', '<p>Combina una fuente de proteína, una base de carbohidrato, una grasa y algo de fruta o verdura. No existe un alimento obligatorio; el patrón debe adaptarse a alergias, cultura, presupuesto y digestión.</p>'],
-      ['Ideas sencillas', '<ul><li>Avena con leche, yogur, fruta y crema de cacahuete.</li><li>Arroz o pasta con legumbres, carne, pescado o tofu y aceite de oliva.</li><li>Bocadillo con huevo, queso, hummus o atún.</li><li>Batido casero con leche o alternativa, yogur, plátano y avena.</li></ul>'],
+      ['Comidas y alimentos para engordar de forma saludable', '<p>Quien busca alimentos para engordar normalmente necesita opciones que aporten más energía sin obligarle a comer un volumen enorme. Estas combinaciones pueden servir como punto de partida:</p><ul><li>Avena con leche, yogur, fruta y crema de cacahuete.</li><li>Arroz o pasta con legumbres, carne, pescado o tofu y aceite de oliva.</li><li>Bocadillo con huevo, queso, hummus o atún.</li><li>Batido casero con leche o alternativa, yogur, plátano y avena.</li></ul>'],
       ['Bebidas y horarios', '<p>Las bebidas con energía pueden ayudar entre comidas, pero no deberían desplazar siempre alimentos variados. Repartir la ingesta en tres comidas y varios tentempiés puede ser más llevadero que concentrarla al final del día.</p>']
     ], sources: [['NHS: formas saludables de ganar peso','https://www.nhs.uk/live-well/healthy-weight/managing-your-weight/healthy-ways-to-gain-weight/'],['Guy’s and St Thomas’: aumentar calorías','https://www.guysandstthomas.nhs.uk/health-information/increasing-calories-your-diet'],['North Tees NHS: ganar peso de forma saludable','https://www.nth.nhs.uk/resources/dietary-advice-about-gaining-weight-in-a-healthy-way/']]
   },
@@ -100,11 +100,11 @@ const guides = [
   },
   {
     en: 'how-to-build-a-weight-gain-meal-plan', es: 'plan-de-comidas-para-ganar-peso',
-    title: 'Cómo crear un plan de comidas para ganar peso', short: 'Una estructura repetible para comer suficiente sin improvisar cada día.', description: 'Crea un plan de comidas para ganar peso con calorías suficientes, proteína, tentempiés y una estructura flexible que puedas mantener.', keyword: 'Plan de comidas', campaign: 'plan_comidas',
+    title: 'Dieta para engordar: crea un plan de comidas para ganar peso', short: 'Una estructura repetible para comer suficiente sin improvisar cada día.', description: 'Crea una dieta para engordar con comidas para ganar peso, calorías suficientes, proteína, tentempiés y una estructura flexible y sostenible.', keyword: 'Dieta para engordar', campaign: 'plan_comidas',
     answer: 'Empieza por el objetivo diario, reparte la energía entre comidas que ya te gustan, añade tentempiés y prepara alternativas para los días con menos tiempo o apetito.',
     sections: [
       ['1. Define el objetivo y la estructura', '<p>Decide cuántas comidas y tentempiés encajan en tu horario. Repartir la energía suele ser más cómodo que intentar completar una diferencia grande por la noche.</p>'],
-      ['2. Elige bloques repetibles', '<p>Ten dos o tres desayunos, comidas y cenas base. Cambia acompañamientos y sabores sin reconstruir todo el cálculo. La repetición controlada reduce esfuerzo y mejora la consistencia.</p>'],
+      ['2. Elige comidas para engordar que puedas repetir', '<p>Ten dos o tres desayunos, comidas y cenas base que faciliten alcanzar tu objetivo. Cambia acompañamientos y sabores sin reconstruir todo el cálculo. La repetición controlada reduce esfuerzo y mejora la consistencia.</p>'],
       ['3. Añade energía donde sea fácil', '<p>Aceite, frutos secos, queso, aguacate, leche, panes y salsas pueden elevar el total sin duplicar el volumen. Ajusta según tolerancia, alergias y preferencias.</p>'],
       ['4. Prepara un plan de respaldo', '<p>Guarda opciones rápidas para trabajo, viajes o días de poco apetito: bocadillos, yogur, fruta, frutos secos, comidas congeladas o ingredientes para un batido. Un plan real incluye los días imperfectos.</p>'],
       ['5. Revisa y adapta', '<p>Después de varias semanas, compara el promedio de ingesta y peso. Conserva lo que funciona y cambia una sola parte cada vez. El mejor plan no es el más creativo, sino el que puedes repetir.</p>']
@@ -178,13 +178,17 @@ for (const [englishFile, spanishFile, spanishUrl, englishUrl] of legalPairs) {
   const enTarget = path.join(root, englishFile);
   let english = fs.readFileSync(enTarget, 'utf8');
   if (!english.includes('/locale.js')) english = english.replace('</head>', '  <script src="/locale.js?v=20261106-1"></script>\n</head>');
-  english = english.replace(`href="${spanishUrl}" lang="es" hreflang="es"`, `href="${spanishUrl}" lang="es" hreflang="es" data-locale="es"`);
+  if (!english.includes(`href="${spanishUrl}" lang="es" hreflang="es" data-locale="es"`)) {
+    english = english.replace(`href="${spanishUrl}" lang="es" hreflang="es"`, `href="${spanishUrl}" lang="es" hreflang="es" data-locale="es"`);
+  }
   fs.writeFileSync(enTarget, english);
 
   const esTarget = path.join(root, spanishFile);
   let spanish = fs.readFileSync(esTarget, 'utf8');
   if (!spanish.includes('/locale.js')) spanish = spanish.replace('</head>', '  <script src="/locale.js?v=20261106-1"></script>\n</head>');
-  spanish = spanish.replace(`href="${englishUrl}" lang="en" hreflang="en"`, `href="${englishUrl}" lang="en" hreflang="en" data-locale="en"`);
+  if (!spanish.includes(`href="${englishUrl}" lang="en" hreflang="en" data-locale="en"`)) {
+    spanish = spanish.replace(`href="${englishUrl}" lang="en" hreflang="en"`, `href="${englishUrl}" lang="en" hreflang="en" data-locale="en"`);
+  }
   fs.writeFileSync(esTarget, spanish);
 }
 
