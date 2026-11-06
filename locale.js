@@ -9,7 +9,7 @@
     '/bulkbro/terms.html': '/es/bulkbro/terminos/',
     '/bulkbro/health.html': '/es/bulkbro/salud/',
     '/bulkbro/support.html': '/es/bulkbro/soporte/',
-    '/bulkbro/calorie-surplus-calculator/': '/es/bulkbro/calculadora-superavit-calorico/',
+    '/bulkbro/calorie-surplus-calculator/': '/es/bulkbro/calculadora-de-calorias/',
     '/bulkbro/guides/': '/es/bulkbro/guias/',
     '/bulkbro/guides/editorial-policy/': '/es/bulkbro/guias/politica-editorial/',
     '/bulkbro/guides/how-many-calories-to-gain-weight/': '/es/bulkbro/guias/cuantas-calorias-para-ganar-peso/',
@@ -18,9 +18,9 @@
     '/bulkbro/guides/calorie-surplus-for-muscle-gain/': '/es/bulkbro/guias/superavit-calorico-para-ganar-masa-muscular/',
     '/bulkbro/guides/how-to-track-calories-for-weight-gain/': '/es/bulkbro/guias/como-contar-calorias-para-ganar-peso/',
     '/bulkbro/guides/how-often-should-you-weigh-yourself/': '/es/bulkbro/guias/cada-cuanto-pesarse/',
-    '/bulkbro/guides/best-foods-for-healthy-weight-gain/': '/es/bulkbro/guias/mejores-alimentos-para-ganar-peso/',
+    '/bulkbro/guides/best-foods-for-healthy-weight-gain/': '/es/bulkbro/guias/alimentos-para-engordar/',
     '/bulkbro/guides/clean-bulk-vs-dirty-bulk/': '/es/bulkbro/guias/volumen-limpio-vs-sucio/',
-    '/bulkbro/guides/how-to-build-a-weight-gain-meal-plan/': '/es/bulkbro/guias/plan-de-comidas-para-ganar-peso/'
+    '/bulkbro/guides/how-to-build-a-weight-gain-meal-plan/': '/es/bulkbro/guias/dieta-para-engordar/'
   };
 
   const reversePairs = Object.fromEntries(Object.entries(pairs).map(([english, spanish]) => [spanish, english]));
