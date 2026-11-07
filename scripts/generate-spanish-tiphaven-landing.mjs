@@ -194,9 +194,23 @@ html = html
   .replaceAll('href="terms.html"', 'href="/tiphaven/terms.html"')
   .replaceAll('href="../privacy.html"', 'href="/es/privacidad/"');
 
-for (const slug of ['tip-out-calculator','tip-pool-calculator','tip-split-calculator','paycheck-calculator-with-tips','how-much-do-servers-make-in-tips','server-tips-and-taxes','average-bartender-salary-with-tips','server-tip-out-percentage','splitting-tips-by-hours-worked','best-tip-tracking-apps-for-servers']) {
-  html = html.replaceAll(`href="${slug}/"`, `href="/tiphaven/${slug}/"`);
-}
+const localizedPages = {
+  'tip-out-calculator': 'calculadora-reparto-propinas',
+  'tip-pool-calculator': 'calculadora-bote-propinas',
+  'tip-split-calculator': 'calculadora-dividir-propinas',
+  'paycheck-calculator-with-tips': 'calculadora-nomina-con-propinas',
+  'how-much-do-servers-make-in-tips': 'cuanto-gana-camarero-propinas',
+  'server-tips-and-taxes': 'propinas-impuestos-camareros',
+  'average-bartender-salary-with-tips': 'sueldo-bartender-con-propinas',
+  'server-tip-out-percentage': 'porcentaje-reparto-propinas-camareros',
+  'splitting-tips-by-hours-worked': 'repartir-propinas-horas-trabajadas',
+  'best-tip-tracking-apps-for-servers': 'mejores-apps-registrar-propinas'
+};
+for (const [english, spanish] of Object.entries(localizedPages)) html = html.replaceAll(`href="${english}/"`, `href="/es/tiphaven/${spanish}/"`);
+html = html
+  .replaceAll('href="/tiphaven/support.html"', 'href="/es/tiphaven/soporte/"')
+  .replaceAll('href="/tiphaven/privacy.html"', 'href="/es/tiphaven/privacidad/"')
+  .replaceAll('href="/tiphaven/terms.html"', 'href="/es/tiphaven/terminos/"');
 
 const target = path.join(root, 'es/tiphaven/index.html');
 fs.mkdirSync(path.dirname(target), { recursive: true });
