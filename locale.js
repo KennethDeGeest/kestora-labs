@@ -45,7 +45,22 @@
     '/migraloom/guides/headache-calendar-app/': '/es/migraloom/calendario-de-cefaleas/',
     '/migraloom/guides/how-to-keep-a-headache-diary/': '/es/migraloom/diario-de-cefaleas/',
     '/migraloom/guides/headache-diary-template/': '/es/migraloom/diario-de-dolor-de-cabeza/',
-    '/migraloom/guides/best-migraine-tracker-apps/': '/es/migraloom/app-para-migranas/'
+    '/migraloom/guides/best-migraine-tracker-apps/': '/es/migraloom/app-para-migranas/',
+    '/bumpecho/': '/es/bumpecho/',
+    '/bumpecho/privacy.html': '/es/bumpecho/privacidad/',
+    '/bumpecho/terms.html': '/es/bumpecho/terminos/',
+    '/bumpecho/support.html': '/es/bumpecho/soporte/',
+    '/bumpecho/guides/': '/es/bumpecho/guias/',
+    '/bumpecho/guides/pregnancy-journal/': '/es/bumpecho/diario-de-embarazo/',
+    '/bumpecho/guides/best-pregnancy-journal-apps/': '/es/bumpecho/app-embarazo/',
+    '/bumpecho/guides/pregnancy-memory-book/': '/es/bumpecho/album-embarazo/',
+    '/bumpecho/guides/pregnancy-diary/': '/es/bumpecho/diario-embarazo-semana-a-semana/',
+    '/bumpecho/guides/pregnancy-audio-journal/': '/es/bumpecho/frases-embarazo/',
+    '/bumpecho/guides/pregnancy-scrapbook-ideas/': '/es/bumpecho/ideas-fotos-embarazo/',
+    '/bumpecho/guides/letters-to-unborn-baby/': '/es/bumpecho/carta-a-mi-bebe/',
+    '/bumpecho/guides/voice-messages-for-baby/': '/es/bumpecho/mensajes-para-bebe-en-el-embarazo/',
+    '/bumpecho/guides/how-to-record-pregnancy-memories/': '/es/bumpecho/recuerdos-del-embarazo/',
+    '/bumpecho/guides/baby-heartbeat-apps-explained/': '/es/bumpecho/grabar-latido-bebe/'
   };
 
   const reversePairs = Object.fromEntries(Object.entries(pairs).map(([english, spanish]) => [spanish, english]));
