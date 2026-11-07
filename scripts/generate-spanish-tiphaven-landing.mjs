@@ -178,9 +178,9 @@ const cleanup = [
 for (const [from, to] of cleanup) html = html.replaceAll(from, to);
 
 html = html
-  .replaceAll('/assets/screens/tiphaven-today.png', '/assets/screens/tiphaven-es-today.png')
-  .replaceAll('/assets/screens/tiphaven-shift.png', '/assets/screens/tiphaven-es-shift.png')
-  .replaceAll('/assets/screens/tiphaven-insights.png', '/assets/screens/tiphaven-es-insights.png')
+  .replaceAll('/assets/screens/tiphaven-today.png', '/assets/screens/tiphaven-es-today.png?v=20261107-2')
+  .replaceAll('/assets/screens/tiphaven-shift.png', '/assets/screens/tiphaven-es-shift.png?v=20261107-2')
+  .replaceAll('/assets/screens/tiphaven-insights.png', '/assets/screens/tiphaven-es-insights.png?v=20261107-2')
   .replaceAll('width="1206" height="2622"', 'width="414" height="900"')
   .replaceAll('<strong>$300</strong>', '<strong>300 €</strong>')
   .replaceAll('<strong>$50</strong>', '<strong>50 €</strong>')
