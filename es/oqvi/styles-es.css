@@ -1,0 +1,13 @@
+@import url("../../oqvi/styles.css?v=20261105-4");
+
+.spanish-screens{background:#e2eadf;padding:clamp(64px,8vw,128px) clamp(20px,5vw,80px)}
+.spanish-screens .screen-heading{max-width:760px;margin:0 auto 48px;text-align:center}
+.spanish-screens h2{font-size:clamp(42px,6vw,86px);line-height:.92;margin:12px 0 20px}
+.spanish-screens h2 em{font-family:Georgia,serif;font-weight:400;color:#226257}
+.store-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,28px);max-width:1360px;margin:auto}
+.store-gallery img{display:block;width:100%;height:auto;border-radius:clamp(16px,2vw,28px);box-shadow:0 20px 55px rgba(16,61,54,.14)}
+.language-switch{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:16px}
+.language-switch a{color:inherit;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:900px){.store-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.store-gallery{grid-template-columns:1fr 1fr;gap:8px}.spanish-screens{padding-inline:12px}}
+

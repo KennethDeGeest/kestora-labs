@@ -60,7 +60,22 @@
     '/bumpecho/guides/letters-to-unborn-baby/': '/es/bumpecho/carta-a-mi-bebe/',
     '/bumpecho/guides/voice-messages-for-baby/': '/es/bumpecho/mensajes-para-bebe-en-el-embarazo/',
     '/bumpecho/guides/how-to-record-pregnancy-memories/': '/es/bumpecho/recuerdos-del-embarazo/',
-    '/bumpecho/guides/baby-heartbeat-apps-explained/': '/es/bumpecho/grabar-latido-bebe/'
+    '/bumpecho/guides/baby-heartbeat-apps-explained/': '/es/bumpecho/grabar-latido-bebe/',
+    '/oqvi/': '/es/oqvi/',
+    '/oqvi/privacy.html': '/es/oqvi/privacidad/',
+    '/oqvi/terms.html': '/es/oqvi/terminos/',
+    '/oqvi/support.html': '/es/oqvi/soporte/',
+    '/oqvi/guides/': '/es/oqvi/guias/',
+    '/oqvi/guides/best-plant-identification-apps/': '/es/oqvi/identificador-de-plantas/',
+    '/oqvi/guides/free-plant-identification-app/': '/es/oqvi/aplicacion-identificar-plantas/',
+    '/oqvi/guides/plant-identifier-app-for-iphone/': '/es/oqvi/app-identificar-plantas/',
+    '/oqvi/guides/tree-identification-app/': '/es/oqvi/identificador-de-arboles/',
+    '/oqvi/guides/tree-bark-identifier/': '/es/oqvi/identificar-corteza-de-arbol/',
+    '/oqvi/guides/identify-tree-by-leaf/': '/es/oqvi/identificar-arbol-por-hoja/',
+    '/oqvi/guides/identify-flower-by-photo/': '/es/oqvi/identificar-flor-por-foto/',
+    '/oqvi/guides/wood-species-identifier/': '/es/oqvi/identificar-madera/',
+    '/oqvi/guides/how-to-identify-a-tree/': '/es/oqvi/identificador-de-arboles/',
+    '/oqvi/guides/how-to-identify-plants/': '/es/oqvi/identificar-plantas/'
   };
 
   const reversePairs = Object.fromEntries(Object.entries(pairs).map(([english, spanish]) => [spanish, english]));
