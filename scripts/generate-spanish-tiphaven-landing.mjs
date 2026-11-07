@@ -170,13 +170,23 @@ const cleanup = [
   ['cash + card − tip-out + wages = ingresos totales', 'efectivo + tarjeta − reparto + salario = ingresos totales'],
   ['Visit <a href="/tiphaven/support.html">TipHaven Soporte</a> or email <a href="mailto:degeestkenneth@gmail.com?subject=TipHaven%20Soporte">degeestkenneth@gmail.com</a>. Please do not include earnings, workplace details or backup files in a support message.', 'Visita el <a href="/tiphaven/support.html">soporte de TipHaven</a> o escribe a <a href="mailto:degeestkenneth@gmail.com?subject=Soporte%20TipHaven">degeestkenneth@gmail.com</a>. No incluyas ingresos, datos del lugar de trabajo ni copias de seguridad en el mensaje.'],
   ['TipHaven app icon', 'Icono de TipHaven'],
-  ['TipHaven shift entry showing cash tips, card tips, tip-out, hourly wage and shift time', 'Registro de turno de TipHaven con propinas en efectivo y tarjeta, reparto, salario por hora y horario'],
+  ['TipHaven Today screen showing weekly tips, hourly earnings and hours worked', 'Panel semanal de TipHaven con propinas, ingresos por hora y horas trabajadas'],
+  ['TipHaven shift entry showing cash tips, card tips, tip-out, hourly wage and shift time', 'Detalle de un turno de TipHaven con propinas en efectivo y tarjeta, reparto, salario e ingresos totales'],
   ['TipHaven Estadísticas comparing earnings por hora across jobs and days', 'Estadísticas de TipHaven comparando ingresos por hora entre trabajos y días'],
   ['TipHaven dashboard with weekly earnings and monthly goal progress', 'Panel de TipHaven con ingresos semanales y progreso del objetivo mensual']
 ];
 for (const [from, to] of cleanup) html = html.replaceAll(from, to);
 
 html = html
+  .replaceAll('/assets/screens/tiphaven-today.png', '/assets/screens/tiphaven-es-today.png')
+  .replaceAll('/assets/screens/tiphaven-shift.png', '/assets/screens/tiphaven-es-shift.png')
+  .replaceAll('/assets/screens/tiphaven-insights.png', '/assets/screens/tiphaven-es-insights.png')
+  .replaceAll('width="1206" height="2622"', 'width="414" height="900"')
+  .replaceAll('<strong>$300</strong>', '<strong>300 €</strong>')
+  .replaceAll('<strong>$50</strong>', '<strong>50 €</strong>')
+  .replaceAll('<b>$</b>', '<b>€</b>')
+  .replaceAll('<strong>$300.00</strong>', '<strong>300,00 €</strong>')
+  .replaceAll('<small>$50.00 por hora</small>', '<small>50,00 € por hora</small>')
   .replaceAll('ct=kestora_tiphaven_home_header&amp;mt=8', 'ct=kestora_tiphaven_es_home_header&amp;mt=8')
   .replaceAll('ct=kestora_tiphaven_home_hero&amp;mt=8', 'ct=kestora_tiphaven_es_home_hero&amp;mt=8')
   .replaceAll('ct=kestora_tiphaven_home_pricing&amp;mt=8', 'ct=kestora_tiphaven_es_home_pricing&amp;mt=8')
