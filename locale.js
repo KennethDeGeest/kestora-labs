@@ -90,7 +90,8 @@
     '/fovri/guides/recipe-app-for-iphone/': '/es/fovri/app-recetario/',
     '/fovri/guides/meal-planning-app-with-grocery-list/': '/es/fovri/menu-semanal/',
     '/fovri/guides/save-recipes-from-tiktok/': '/es/fovri/recetas-tiktok/',
-    '/fovri/guides/save-recipes-from-instagram/': '/es/fovri/recetas-instagram/'
+    '/fovri/guides/save-recipes-from-instagram/': '/es/fovri/recetas-instagram/',
+    '/walkbop/': '/es/walkbop/'
   };
 
   const reversePairs = Object.fromEntries(Object.entries(pairs).map(([english, spanish]) => [spanish, english]));
