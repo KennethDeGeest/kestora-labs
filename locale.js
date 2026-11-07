@@ -75,7 +75,22 @@
     '/oqvi/guides/identify-flower-by-photo/': '/es/oqvi/identificar-flor-por-foto/',
     '/oqvi/guides/wood-species-identifier/': '/es/oqvi/identificar-madera/',
     '/oqvi/guides/how-to-identify-a-tree/': '/es/oqvi/identificador-de-arboles/',
-    '/oqvi/guides/how-to-identify-plants/': '/es/oqvi/identificar-plantas/'
+    '/oqvi/guides/how-to-identify-plants/': '/es/oqvi/identificar-plantas/',
+    '/fovri/': '/es/fovri/',
+    '/fovri/privacy.html': '/es/fovri/privacidad/',
+    '/fovri/terms.html': '/es/fovri/terminos/',
+    '/fovri/support.html': '/es/fovri/soporte/',
+    '/fovri/guides/': '/es/fovri/guias/',
+    '/fovri/guides/best-recipe-organizer-app/': '/es/fovri/organizador-de-recetas/',
+    '/fovri/guides/best-recipe-keeper-app/': '/es/fovri/app-para-guardar-recetas/',
+    '/fovri/guides/recipe-manager-app/': '/es/fovri/guardar-recetas/',
+    '/fovri/guides/cookbook-app/': '/es/fovri/libro-de-recetas-digital/',
+    '/fovri/guides/digital-recipe-book/': '/es/fovri/recetario-digital/',
+    '/fovri/guides/best-recipe-app/': '/es/fovri/app-recetario/',
+    '/fovri/guides/recipe-app-for-iphone/': '/es/fovri/app-recetario/',
+    '/fovri/guides/meal-planning-app-with-grocery-list/': '/es/fovri/menu-semanal/',
+    '/fovri/guides/save-recipes-from-tiktok/': '/es/fovri/recetas-tiktok/',
+    '/fovri/guides/save-recipes-from-instagram/': '/es/fovri/recetas-instagram/'
   };
 
   const reversePairs = Object.fromEntries(Object.entries(pairs).map(([english, spanish]) => [spanish, english]));
