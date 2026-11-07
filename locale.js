@@ -34,7 +34,18 @@
     '/tiphaven/best-tip-tracking-apps-for-servers/': '/es/tiphaven/mejores-apps-registrar-propinas/',
     '/tiphaven/privacy.html': '/es/tiphaven/privacidad/',
     '/tiphaven/terms.html': '/es/tiphaven/terminos/',
-    '/tiphaven/support.html': '/es/tiphaven/soporte/'
+    '/tiphaven/support.html': '/es/tiphaven/soporte/',
+    '/migraloom/': '/es/migraloom/',
+    '/migraloom/privacy.html': '/es/migraloom/privacidad/',
+    '/migraloom/terms.html': '/es/migraloom/terminos/',
+    '/migraloom/support.html': '/es/migraloom/soporte/',
+    '/migraloom/guides/': '/es/migraloom/guias/',
+    '/migraloom/guides/migraine-symptom-tracker/': '/es/migraloom/sintomas-de-migrana/',
+    '/migraloom/guides/migraine-diary-template/': '/es/migraloom/diario-de-migrana/',
+    '/migraloom/guides/headache-calendar-app/': '/es/migraloom/calendario-de-cefaleas/',
+    '/migraloom/guides/how-to-keep-a-headache-diary/': '/es/migraloom/diario-de-cefaleas/',
+    '/migraloom/guides/headache-diary-template/': '/es/migraloom/diario-de-dolor-de-cabeza/',
+    '/migraloom/guides/best-migraine-tracker-apps/': '/es/migraloom/app-para-migranas/'
   };
 
   const reversePairs = Object.fromEntries(Object.entries(pairs).map(([english, spanish]) => [spanish, english]));
