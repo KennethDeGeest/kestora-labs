@@ -20,7 +20,8 @@
     '/bulkbro/guides/how-often-should-you-weigh-yourself/': '/es/bulkbro/guias/cada-cuanto-pesarse/',
     '/bulkbro/guides/best-foods-for-healthy-weight-gain/': '/es/bulkbro/guias/alimentos-para-engordar/',
     '/bulkbro/guides/clean-bulk-vs-dirty-bulk/': '/es/bulkbro/guias/volumen-limpio-vs-sucio/',
-    '/bulkbro/guides/how-to-build-a-weight-gain-meal-plan/': '/es/bulkbro/guias/dieta-para-engordar/'
+    '/bulkbro/guides/how-to-build-a-weight-gain-meal-plan/': '/es/bulkbro/guias/dieta-para-engordar/',
+    '/tiphaven/': '/es/tiphaven/'
   };
 
   const reversePairs = Object.fromEntries(Object.entries(pairs).map(([english, spanish]) => [spanish, english]));
