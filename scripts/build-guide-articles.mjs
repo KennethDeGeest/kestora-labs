@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import migraLoomGuides from './migraloom-guide-data.mjs';
+import oqviGuides from './oqvi-guide-data.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -41,6 +42,22 @@ function migraLoomArticle(config) {
     appCallout: { kicker: 'A calm, private migraine diary', title: 'Record now. Add detail when you can.', text: 'MigraLoom keeps your migraine history on your iPhone, requires no account and creates a structured report from what you recorded.', url: `https://apps.apple.com/app/apple-store/id6811065580?pt=128911414&mt=8&ct=migraloom_${config.slug.replaceAll('-', '_')}_inline` },
     footerNote: 'MigraLoom is a personal migraine diary. It does not diagnose, treat or provide medical advice. Seek qualified medical care for health concerns.',
     sourceNote: 'This guide is general information, not medical advice. It was reviewed against the sources below. A diary can support a healthcare conversation; it cannot determine a diagnosis or treatment.',
+    ...config
+  };
+}
+
+function oqviArticle(config) {
+  return {
+    app: 'Oqvi', appSlug: 'oqvi', appIcon: '/assets/treeidentifier.png',
+    kicker: config.kicker || 'Oqvi field guide', published: '2026-11-05', modified: '2026-11-11',
+    author: 'Kestora Labs, the maker of Oqvi', appStoreId: '6815273355',
+    smartBannerCampaign: `oqvi_${config.slug.replaceAll('-', '_')}`,
+    socialImage: `/assets/guides/oqvi-${config.slug}.png`,
+    about: ['plant identification', 'tree identification', 'field observation'],
+    languages: [{ code: 'en', label: 'English', short: 'EN', url: `/oqvi/guides/${config.slug}/` }, ...(config.french ? [{ code: 'fr', label: 'Français', short: 'FR', url: config.french }] : [])],
+    appCallout: { kicker: 'A private botanical field collection', title: 'Keep the evidence with the discovery.', text: 'Oqvi identifies plants, trees, leaves, flowers, bark and wood, then keeps photos, notes, favorites and optional places together on your iPhone.', url: `https://apps.apple.com/app/apple-store/id6815273355?pt=128911414&mt=8&ct=oqvi_${config.slug.replaceAll('-', '_')}_inline` },
+    footerNote: 'Oqvi provides identification suggestions for education and record-keeping. It cannot certify identity, edibility, toxicity, treatment, structural suitability or safety.',
+    sourceNote: 'This field guide is educational information. Photo identification produces candidates, not certainty. The article was reviewed against the sources below; use an appropriate regional reference or qualified expert when the answer matters.',
     ...config
   };
 }
@@ -270,7 +287,7 @@ const articles = [{
     { id: 'permission', toc: 'Ask permission', title: 'Ask before keeping and sharing', paragraphs: ['Tell each person what the recording is for and who may hear it. A family keepsake is still someone else’s voice. Do not publish or broadly share it without clear permission.'] }
   ],
   related: [{ title: 'How to record pregnancy memories', url: '../how-to-record-pregnancy-memories/' }, { title: 'Pregnancy journal ideas', url: '../pregnancy-journal/' }]
-}), ...migraLoomGuides.map(migraLoomArticle)];
+}), ...migraLoomGuides.map(migraLoomArticle), ...oqviGuides.map(oqviArticle)];
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const prettyDate = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`));
