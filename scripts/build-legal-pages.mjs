@@ -10,7 +10,8 @@ const apps = {
   tiphaven: 'TipHaven',
   oqvi: 'Oqvi',
   migraloom: 'MigraLoom',
-  bumpecho: 'Bump Echo'
+  bumpecho: 'Bump Echo',
+  calmber: 'Calmber'
 };
 const pageFiles = ['privacy.html', 'terms.html', 'support.html', 'health.html'];
 const overrides = {
