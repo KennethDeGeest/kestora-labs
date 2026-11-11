@@ -4,6 +4,30 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
+function bumpEchoArticle(config) {
+  return {
+    app: 'Bump Echo',
+    appSlug: 'bumpecho',
+    appIcon: '/assets/bumpecho.png',
+    kicker: config.kicker || 'Bump Echo guide',
+    published: '2026-11-05',
+    modified: '2026-11-11',
+    author: 'Kestora Labs, the maker of Bump Echo',
+    socialImage: `/assets/guides/bumpecho-${config.slug}.png`,
+    languages: [
+      { code: 'en', label: 'English', short: 'EN', url: `/bumpecho/guides/${config.slug}/` },
+      { code: 'fr', label: 'Français', short: 'FR', url: config.french }
+    ],
+    appCallout: {
+      kicker: 'A private pregnancy Soundbook',
+      title: 'Keep the voices, not just the timeline.',
+      text: 'Bump Echo keeps messages, songs and meaningful everyday sounds together on your iPhone. It is a keepsake app—not a medical device or health-monitoring tool.',
+      url: `https://apps.apple.com/app/apple-store/id6812684414?pt=128911414&mt=8&ct=bumpecho_${config.slug.replaceAll('-', '_')}_inline`
+    },
+    ...config
+  };
+}
+
 const articles = [{
   app: 'Bump Echo',
   appSlug: 'bumpecho',
@@ -18,9 +42,9 @@ const articles = [{
   modified: '2026-11-11',
   author: 'Kestora Labs, the maker of Bump Echo',
   socialImage: '/assets/guides/bumpecho-heartbeat-apps.png',
+  about: ['pregnancy keepsakes', 'fetal heartbeat apps', 'phone audio recording'],
   languages: [
     { code: 'en', label: 'English', short: 'EN', url: '/bumpecho/guides/baby-heartbeat-apps-explained/' },
-    { code: 'es', label: 'Español', short: 'ES', url: '/es/bumpecho/grabar-latido-bebe/' },
     { code: 'fr', label: 'Français', short: 'FR', url: '/fr/bumpecho/enregistrer-battement-bebe-telephone/' }
   ],
   quickAnswer: {
@@ -79,15 +103,165 @@ const articles = [{
     { title: 'Pregnancy journal ideas for every trimester', url: '../pregnancy-journal/' },
     { title: 'Pregnancy memory book ideas beyond photos', url: '../pregnancy-memory-book/' }
   ]
-}];
+}, bumpEchoArticle({
+  slug: 'best-pregnancy-journal-apps',
+  title: 'Best Pregnancy Journal Apps for iPhone',
+  h1: 'The best pregnancy journal app is the one you will keep using',
+  description: 'Compare pregnancy journal apps by format, privacy, effort and payment model. See when a private audio journal like Bump Echo is the better fit.',
+  lead: 'Choose the format around the memory you want to preserve—not the longest feature list. Here is a transparent way to compare pregnancy journal apps.',
+  spanish: '/es/bumpecho/app-embarazo/',
+  french: '/fr/bumpecho/application-journal-grossesse/',
+  quickAnswer: {
+    question: 'Which pregnancy journal app is best?',
+    answer: 'The best choice is the format you can use consistently. Choose Bump Echo when voices and meaningful sounds matter most; choose another format when text, medical tracking or printed books are the priority.'
+  },
+  sections: [
+    {
+      id: 'formats', toc: 'Journal formats', title: 'Four journal formats worth comparing', paragraphs: ['No single format is best for every kind of memory. Compare what each tool preserves well and what it leaves out.'],
+      table: { headers: ['Format', 'Best for', 'Tradeoff'], rows: [
+        ['Bump Echo', 'Private voice notes, songs, family messages and a focused audio keepsake', 'Not a medical tracker, calendar or photo-book service'],
+        ['Writing-first journal app', 'Long reflections, prompts and searchable text', 'May not preserve the sound of a voice'],
+        ['Pregnancy tracker with journal', 'Weekly development content plus notes in one place', 'Journaling may be secondary; account and data models vary'],
+        ['Printed memory book', 'A tactile finished object with photos and handwriting', 'Harder to capture audio and edit over time']
+      ] }
+    },
+    {
+      id: 'questions', toc: 'Questions to ask', title: 'Five questions before you commit', paragraphs: ['A feature list is less useful than understanding how the journal fits your real routine, privacy expectations and preferred memory format.'],
+      list: ['Which memory format matters? Text, photos, audio and timelines serve different purposes.', 'Can you use it on a tired day? Test the shortest possible entry flow.', 'Where does personal data live? Read the current privacy policy and account requirements.', 'What is the payment model? Confirm whether continued use requires a subscription or one-time purchase.', 'Can you keep or share individual memories? Understand export and backup behavior before building a long history.']
+    },
+    {
+      id: 'fit', toc: 'When Bump Echo fits', title: 'When Bump Echo is—and is not—the fit',
+      paragraphs: ['Bump Echo is the strongest fit when you want to preserve voices without building a public feed or another account. It records ordinary microphone audio, adds titles and notes, and lets you share an individual memory only when you choose.', 'Choose another tool if your priority is medical information, fetal monitoring, weekly development estimates, symptom tracking, photo-book printing or Android support. Bump Echo is a keepsake, not a health tool.'],
+      note: 'Disclosure: Kestora Labs makes Bump Echo. This guide explains the criteria that favor it and the situations where another format is the better choice.'
+    }
+  ],
+  related: [{ title: 'Pregnancy memory book ideas beyond photos', url: '../pregnancy-memory-book/' }, { title: 'How to start a pregnancy audio journal', url: '../pregnancy-audio-journal/' }]
+}), bumpEchoArticle({
+  slug: 'how-to-record-pregnancy-memories',
+  title: 'How to Record Pregnancy Memories on iPhone',
+  h1: 'Record pregnancy memories before they become hard to name',
+  description: 'Record meaningful pregnancy memories on your iPhone with a simple audio workflow for clean sound, useful titles, private storage and intentional sharing.',
+  lead: 'You do not need professional equipment. A quiet-enough room, one clear idea and a useful title are enough to turn a short iPhone recording into a lasting keepsake.',
+  spanish: '/es/bumpecho/recuerdos-del-embarazo/', french: '/fr/bumpecho/souvenirs-grossesse/',
+  quickAnswer: { question: 'How do you record pregnancy memories on an iPhone?', answer: 'Choose a quiet-enough space, make a short test and record one idea at a time. Save it with a descriptive title, date and one line of context.' },
+  sections: [
+    { id: 'routine', toc: 'Five-step routine', title: 'A reliable five-step recording routine', list: ['Pick one moment: a message, song, story or room sound—not “the entire trimester.”', 'Reduce obvious noise: pause the television, move away from fans and close the door if practical.', 'Make a ten-second test and listen for volume, fabric rubbing and distance.', 'Record naturally. Speak toward the phone without holding it directly against clothing.', 'Name it immediately. Include the person or moment plus a useful note.'] },
+    { id: 'sound', toc: 'Clear-enough sound', title: 'Good sound is clear enough, not perfect', paragraphs: ['A keepsake should sound like life. Removing every room sound can erase context; leaving a roaring fan can hide the voice. Aim for intelligibility. If the message can be understood comfortably at normal volume, the recording has done its job.'] },
+    { id: 'privacy', toc: 'Private storage', title: 'Store and share with intention', paragraphs: ['Understand where the app stores recordings, whether a device backup may include them and how export works. Share one selected memory rather than an entire private library. If another person appears in a recording, ask before publishing it.'] },
+    { id: 'next', toc: 'What to record next', title: 'What to record next', paragraphs: ['Try a letter read aloud, a family voice message or one small weekly ritual. The most useful prompt is usually specific enough to begin and open enough to sound like you.'] }
+  ],
+  related: [{ title: 'Baby heartbeat apps explained', url: '../baby-heartbeat-apps-explained/' }, { title: 'Best pregnancy journal apps', url: '../best-pregnancy-journal-apps/' }]
+}), bumpEchoArticle({
+  slug: 'letters-to-unborn-baby',
+  title: 'Letters to Your Unborn Baby: Prompts & Examples',
+  h1: 'Write the letter only you can write',
+  description: 'Write a meaningful letter to your unborn baby with gentle prompts, a simple structure and ideas for recording the letter in your own voice.',
+  lead: 'A letter to your unborn baby does not need to predict the future. It can simply hold who you are today, what this season feels like and the welcome you want to offer.',
+  spanish: '/es/bumpecho/carta-a-mi-bebe/', french: '/fr/bumpecho/lettre-a-mon-bebe/',
+  quickAnswer: { question: 'How do you start a letter to an unborn baby?', answer: 'Begin with a concrete present-tense detail: where you are, how far along the pregnancy is or what happened today. Specific details remove the pressure to sound profound.' },
+  sections: [
+    { id: 'structure', toc: 'A simple structure', title: 'A gentle three-part structure', list: ['Here is where we are. Describe today in a few honest details.', 'Here is what I hope. Share a value, feeling or wish without deciding who the child must become.', 'Here is your welcome. End with the words you want them to hear from you.'] },
+    { id: 'prompts', toc: 'Writing prompts', title: 'Prompts that leave room for your story', prompts: [
+      ['Today', 'The weather is… The room sounds like… The person beside me just said…'], ['This season', 'I keep thinking about… I did not expect… One small thing that changed me is…'], ['Our people', 'Someone waiting to meet you is… A story from our family I want you to know is…'], ['For later', 'If you ever hear this when… I hope you remember… You never have to be…']
+    ] },
+    { id: 'aloud', toc: 'Read it aloud', title: 'Read the letter aloud', paragraphs: ['The written letter keeps the exact words. A recording keeps how you said them. Read naturally, include the stumbled sentence and do not chase a studio-quality result. The recognizable voice is the keepsake.'] }
+  ],
+  related: [{ title: 'Voice messages for your future baby', url: '../voice-messages-for-baby/' }, { title: 'How to start a pregnancy audio journal', url: '../pregnancy-audio-journal/' }]
+}), bumpEchoArticle({
+  slug: 'pregnancy-audio-journal',
+  title: 'How to Start a Pregnancy Audio Journal',
+  h1: 'A pregnancy journal in the voices that lived it',
+  description: 'Start a private pregnancy audio journal with simple prompts for messages, songs and family voices. Learn what to record and how to keep it organized.',
+  lead: 'An audio journal turns tiny recordings into a story you can replay. It works especially well for moments where the sound—not just the fact—is what you want to keep.',
+  spanish: '/es/bumpecho/frases-embarazo/', french: '/fr/bumpecho/journal-audio-grossesse/',
+  quickAnswer: { question: 'What is a pregnancy audio journal?', answer: 'It is a dated collection of spoken memories and meaningful sounds from pregnancy: reflections, partner messages, family greetings, songs, stories and ordinary moments.' },
+  safety: 'A pregnancy audio journal captures ordinary microphone audio. It does not detect a fetal heartbeat, assess fetal wellbeing or replace any part of prenatal care.',
+  sections: [
+    { id: 'begin', toc: 'Seven recordings', title: 'Seven recordings to begin with', list: ['The story of the day you found out.', 'A short introduction from each parent or caregiver.', 'A grandparent or loved one saying hello.', 'A favorite song sung imperfectly and honestly.', 'The sounds of a room you are preparing.', 'A message from a day that felt difficult or important.', 'A final note during the weeks of waiting.'] },
+    { id: 'names', toc: 'Name recordings', title: 'Name recordings for the memory, not the file', paragraphs: ['“Voice memo 17” tells you nothing later. Use a human title such as “Dad’s story after dinner,” then add a sentence of context. Dates help build the timeline; titles help you recognize the moment.'] },
+    { id: 'audience', toc: 'Choose the audience', title: 'Decide who the journal is for', paragraphs: ['A private journal allows a different kind of honesty from content prepared for social media. Choose whether each recording is for you, your partner, your future child or a wider family circle. Share only the individual moments that belong outside the private collection.'] }
+  ],
+  related: [{ title: 'Pregnancy scrapbook ideas', url: '../pregnancy-scrapbook-ideas/' }, { title: 'Voice messages for your future baby', url: '../voice-messages-for-baby/' }]
+}), bumpEchoArticle({
+  slug: 'pregnancy-diary',
+  title: 'How to Keep a Pregnancy Diary Without Pressure',
+  h1: 'Your pregnancy diary does not need a perfect streak',
+  description: 'Keep a pregnancy diary without daily pressure. Use a flexible weekly method, honest prompts and audio notes for the moments words do not quite hold.',
+  lead: 'A diary works when it lowers the effort of remembering. Build a gentle habit that welcomes short entries, missed weeks and the full range of how pregnancy actually feels.',
+  spanish: '/es/bumpecho/diario-embarazo-semana-a-semana/', french: '/fr/bumpecho/journal-grossesse-semaine-par-semaine/',
+  quickAnswer: { question: 'How often should you write in a pregnancy diary?', answer: 'There is no required schedule. Weekly works well for many people because it captures change without creating daily pressure. Let quiet weeks remain quiet.' },
+  sections: [
+    { id: 'routine', toc: 'Three-minute routine', title: 'A three-minute weekly diary routine', list: ['Date the entry and note the pregnancy week if you know it.', 'Finish three lines: “Today felt…”, “I noticed…” and “I want to remember…”', 'Add one photo, voice note or physical detail only if it adds meaning.', 'Stop. Consistency grows when each entry has a clear finish.'] },
+    { id: 'honest', toc: 'Write honestly', title: 'Make room for the honest version', paragraphs: ['A pregnancy diary is not promotional copy. Excitement, uncertainty, boredom, discomfort and gratitude can exist on the same page. If an entry is private, write what you actually want to remember—not what you think a pregnancy journal should sound like.'] },
+    { id: 'prompts', toc: 'Gentle prompts', title: 'Prompts for the days when nothing feels important', prompts: [['The room', 'Where are you sitting, and what can you hear right now?'], ['The change', 'What became easier, harder or simply different this week?'], ['The person', 'Who showed up for you, and what did they say?'], ['The future', 'What small scene are you imagining about life after birth?']] },
+    { id: 'speaking', toc: 'Try speaking', title: 'When speaking is easier than writing', paragraphs: ['Some entries arrive more naturally as speech. Record the thought as it is, then add a short title so you can find it later. The pauses and tone that feel ordinary today may be the part you value most in a few years.'] }
+  ],
+  related: [{ title: 'How to start a pregnancy audio journal', url: '../pregnancy-audio-journal/' }, { title: 'Letters to your unborn baby', url: '../letters-to-unborn-baby/' }]
+}), bumpEchoArticle({
+  slug: 'pregnancy-journal',
+  title: 'Pregnancy Journal Ideas for Every Trimester',
+  h1: 'A pregnancy journal made of real moments',
+  description: 'Start a pregnancy journal you will actually keep with trimester prompts, audio ideas and a simple routine for preserving the moments that matter.',
+  lead: 'A useful pregnancy journal does not need a perfect daily entry. It needs small, honest pieces of the story—written, photographed or heard in the voices you love.',
+  spanish: '/es/bumpecho/diario-de-embarazo/', french: '/fr/bumpecho/journal-grossesse/',
+  quickAnswer: { question: 'What should you put in a pregnancy journal?', answer: 'Record the things your future self may want back: ordinary routines, questions, changing hopes, family reactions and the voices around you. A short weekly entry is often enough.' },
+  sections: [
+    { id: 'rhythm', toc: 'A sustainable rhythm', title: 'Start with a rhythm you can keep', paragraphs: ['A blank book can make every entry feel important. That pressure is usually the enemy. Pick one small ritual—Sunday evening, after an appointment or whenever a new week begins—and capture one thing that changed, one thing you noticed and one thing you want to remember.'], list: ['Keep entries small. A sentence, photo caption or 20-second voice note counts.', 'Date the moment. Context becomes surprisingly valuable later.', 'Write what is true today. You do not need to make every entry cheerful or polished.', 'Mix formats. Text remembers facts; audio remembers pace, laughter and tone.'] },
+    { id: 'trimester-prompts', toc: 'Trimester prompts', title: 'Pregnancy journal prompts by trimester', prompts: [['First trimester', 'How did you find out? Who knew first? What are you quietly hoping for?'], ['Second trimester', 'What changes feel real now? Which name, song or family story keeps returning?'], ['Third trimester', 'What are you preparing? What do you want to remember about waiting?'], ['After birth', 'What surprised you? Which pregnancy details already feel far away?']] },
+    { id: 'audio', toc: 'Why add audio', title: 'Why add audio to a pregnancy journal?', paragraphs: ['Written entries preserve meaning. Audio preserves presence. A grandparent’s greeting, a partner reading a story or your own unedited thoughts can carry details that a transcript cannot. The goal is not a performance; it is a recognizable piece of a real day.'] }
+  ],
+  related: [{ title: 'Best pregnancy journal apps', url: '../best-pregnancy-journal-apps/' }, { title: 'How to keep a pregnancy diary', url: '../pregnancy-diary/' }]
+}), bumpEchoArticle({
+  slug: 'pregnancy-memory-book',
+  title: 'Pregnancy Memory Book Ideas Beyond Photos',
+  h1: 'A pregnancy memory book you can hear',
+  description: 'Create a pregnancy memory book with photos, small notes, timelines and voice recordings. Use these simple sections and prompts to make it personal.',
+  lead: 'The strongest memory books do more than document milestones. They preserve the atmosphere around them: the voice, the story and the ordinary details that made the season yours.',
+  spanish: '/es/bumpecho/album-embarazo/', french: '/fr/bumpecho/album-grossesse/',
+  quickAnswer: { question: 'What belongs in a pregnancy memory book?', answer: 'Start with a timeline, then add family reactions, appointment-day thoughts, name ideas, photos of ordinary life, letters and voice recordings. Meaning matters more than completeness.' },
+  sections: [
+    { id: 'sections', toc: 'Six useful sections', title: 'Six sections that create a real story', prompts: [['The beginning', 'How you found out, where you were and what the next hour felt like.'], ['The people', 'Reactions, family stories, messages and the names of people waiting with you.'], ['The everyday', 'Meals, songs, walks, rooms and routines that defined this season.'], ['The changes', 'What shifted in your body, plans, relationship or view of the future.'], ['The preparation', 'Lists, little purchases, the nursery or the bag by the door.'], ['The voices', 'A first hello, a story, a song or a message meant to be replayed later.']] },
+    { id: 'medium', toc: 'Choose the medium', title: 'Use each medium for what it remembers best', paragraphs: ['A photo captures appearance. A caption supplies context. A longer entry records thought. Audio keeps timing, accent, hesitation and laughter. A physical object adds touch. You do not need every format for every milestone—choose the one that carries the most meaning.'] },
+    { id: 'finish', toc: 'Keep it manageable', title: 'How to avoid an unfinished memory book', list: ['Create the sections first and fill them out of order.', 'Let blank spaces remain blank instead of inventing a perfect narrative.', 'Keep a small “inbox” of photos, notes and recordings to organize later.', 'Choose one monthly moment to curate, not an entire month to reconstruct.'] }
+  ],
+  related: [{ title: 'How to keep a pregnancy diary', url: '../pregnancy-diary/' }, { title: 'Pregnancy scrapbook ideas', url: '../pregnancy-scrapbook-ideas/' }]
+}), bumpEchoArticle({
+  slug: 'pregnancy-scrapbook-ideas',
+  title: 'Pregnancy Scrapbook Ideas That Feel Personal',
+  h1: 'Pregnancy scrapbook ideas beyond the usual milestones',
+  description: 'Use these pregnancy scrapbook ideas to combine photos, notes, tactile keepsakes and QR-linked audio memories in a story that feels genuinely yours.',
+  lead: 'A scrapbook becomes personal when it includes the unremarkable details: the receipt, the playlist, the sentence someone said and the room as it sounded that afternoon.',
+  spanish: '/es/bumpecho/ideas-fotos-embarazo/', french: '/fr/bumpecho/idees-photos-grossesse/',
+  quickAnswer: { question: 'What can you put in a pregnancy scrapbook?', answer: 'Mix milestone photos with handwritten notes, name lists, small receipts, fabric, playlists, letters and links to private audio recordings. Choose meaningful context over clutter.' },
+  sections: [
+    { id: 'pages', toc: 'Ten page ideas', title: 'Ten pages that tell more than a timeline', prompts: [['The day before we knew', 'A snapshot of ordinary life just before the story changed.'], ['The first reactions', 'A line from each person who heard the news.'], ['What was playing', 'Songs, podcasts or stories that filled the background.'], ['Our neighborhood', 'The walk, café or view that belonged to this season.'], ['Names we almost chose', 'The serious, sentimental and wonderfully unlikely options.'], ['Voices waiting for you', 'A private family recording and a note explaining why it matters.']] },
+    { id: 'sound', toc: 'Add sound safely', title: 'Add sound without turning the book into technology', paragraphs: ['Keep the physical page simple: title the audio memory, write why it matters and add a private QR code or short retrieval note only if your storage method supports it safely. Test any link periodically; printed links can outlive the service behind them.'] },
+    { id: 'recipe', toc: 'A repeatable recipe', title: 'A repeatable page recipe', list: ['Choose one object or photo.', 'Add the date or pregnancy stage.', 'Write two sentences of context.', 'Add one optional “listen” element.', 'Leave open space—the page does not need to prove how much happened.'] }
+  ],
+  related: [{ title: 'Letters to your unborn baby', url: '../letters-to-unborn-baby/' }, { title: 'How to record pregnancy memories', url: '../how-to-record-pregnancy-memories/' }]
+}), bumpEchoArticle({
+  slug: 'voice-messages-for-baby',
+  title: 'Voice Messages for Your Future Baby',
+  h1: 'A voice message can carry a whole family',
+  description: 'Record voice messages for your future baby with prompts for parents, grandparents, siblings and friends. Make each message personal and easy to keep.',
+  lead: 'Invite the people you love to record one small, specific welcome. Their natural voices are the point—no script, microphone or polished performance required.',
+  spanish: '/es/bumpecho/mensajes-para-bebe-en-el-embarazo/', french: '/fr/bumpecho/messages-pour-bebe-grossesse/',
+  quickAnswer: { question: 'What should you say in a voice message to a future baby?', answer: 'Introduce yourself, explain how you are connected to the family, share one short story and end with a simple welcome. Thirty to ninety seconds is plenty.' },
+  sections: [
+    { id: 'prompts', toc: 'Prompts for everyone', title: 'Prompts for the people waiting', prompts: [['Parent or caregiver', 'What changed when you learned about the pregnancy? What ordinary day do you want to remember?'], ['Grandparent', 'Which family story or tradition would you like to pass forward?'], ['Sibling', 'What are you excited to show, teach or do together?'], ['Friend', 'What do you hope this child eventually understands about their family?']] },
+    { id: 'natural', toc: 'Keep it natural', title: 'How to keep the message natural', list: ['Record somewhere quiet enough to hear, but not so formal that everyone freezes.', 'Give the person one prompt instead of a full script.', 'Keep the laughter, pause or second attempt if it feels like them.', 'Add their name, relationship and the date in the title or note.'] },
+    { id: 'permission', toc: 'Ask permission', title: 'Ask before keeping and sharing', paragraphs: ['Tell each person what the recording is for and who may hear it. A family keepsake is still someone else’s voice. Do not publish or broadly share it without clear permission.'] }
+  ],
+  related: [{ title: 'How to record pregnancy memories', url: '../how-to-record-pregnancy-memories/' }, { title: 'Pregnancy journal ideas', url: '../pregnancy-journal/' }]
+})];
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const prettyDate = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`));
 const absolute = value => value.startsWith('http') ? value : `https://kestoralabs.com${value}`;
 
 function plainText(article) {
-  return [article.h1, article.lead, article.quickAnswer.question, article.quickAnswer.answer, article.safety,
-    ...article.sections.flatMap(section => [section.title, ...section.paragraphs, ...(section.comparison ? [...section.comparison.can, ...section.comparison.cannot] : [])])
+  return [article.h1, article.lead, article.quickAnswer.question, article.quickAnswer.answer, article.safety || '',
+    ...article.sections.flatMap(section => [section.title, ...(section.paragraphs || []), ...(section.list || []), ...(section.prompts || []).flat(), ...(section.table?.rows || []).flat(), ...(section.comparison ? [...section.comparison.can, ...section.comparison.cannot] : [])])
   ].join(' ');
 }
 
@@ -102,6 +276,14 @@ function renderComparison(comparison) {
   return `<div class="capability-grid" aria-label="What a phone recording can and cannot do">${card('A phone can', comparison.can)}${card('A phone cannot', comparison.cannot, 'cannot')}</div>`;
 }
 
+function renderSectionExtras(section) {
+  const list = section.list ? `<ul class="paper-list">${section.list.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>` : '';
+  const prompts = section.prompts ? `<div class="prompt-grid">${section.prompts.map(([title, text]) => `<div class="prompt-card"><strong>${escapeHtml(title)}</strong><p>${escapeHtml(text)}</p></div>`).join('')}</div>` : '';
+  const table = section.table ? `<div class="comparison-scroll"><table class="comparison"><thead><tr>${section.table.headers.map(header => `<th>${escapeHtml(header)}</th>`).join('')}</tr></thead><tbody>${section.table.rows.map(row => `<tr>${row.map(cell => `<td>${escapeHtml(cell)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : '';
+  const note = section.note ? `<aside class="section-note"><p>${escapeHtml(section.note)}</p></aside>` : '';
+  return `${list}${prompts}${table}${note}`;
+}
+
 function renderArticle(article) {
   const canonicalPath = `/${article.appSlug}/guides/${article.slug}/`;
   const canonical = absolute(canonicalPath);
@@ -110,13 +292,16 @@ function renderArticle(article) {
   const alternates = article.languages.map(language => `  <link rel="alternate" hreflang="${escapeHtml(language.code)}" href="${escapeHtml(absolute(language.url))}">`).join('\n');
   const languageLinks = article.languages.filter(language => language.code !== 'en').map(language => `<a href="${escapeHtml(language.url)}" lang="${escapeHtml(language.code)}" hreflang="${escapeHtml(language.code)}" aria-label="Read in ${escapeHtml(language.label)}">${escapeHtml(language.short)}</a>`).join('');
   const toc = article.sections.map(section => `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.toc)}</a>`).join('');
-  const sections = article.sections.map(section => `<h2 id="${escapeHtml(section.id)}">${escapeHtml(section.title)}</h2>${section.paragraphs.map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}${renderCitations(section.citations)}${renderComparison(section.comparison)}`).join('');
+  const sourceToc = article.sources?.length ? '<a href="#sources">Sources</a>' : '';
+  const sections = article.sections.map(section => `<h2 id="${escapeHtml(section.id)}">${escapeHtml(section.title)}</h2>${(section.paragraphs || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}${renderCitations(section.citations)}${renderComparison(section.comparison)}${renderSectionExtras(section)}`).join('');
+  const safety = article.safety ? `<aside class="safety-note"><p><strong>Important:</strong> ${escapeHtml(article.safety)}${article.sources?.length ? ' <a class="inline-source" href="https://www.nhs.uk/pregnancy/keeping-well/your-babys-movements/" rel="noopener">NHS guidance ↗</a>' : ''}</p></aside>` : '';
+  const sources = article.sources?.length ? `<div class="review-note"><p><strong>Editorial note:</strong> This guide is general information, not medical advice. It was reviewed against the official sources below on ${prettyDate(article.modified)}. Always follow advice from your own qualified maternity care team.</p></div><h2 id="sources">Official sources</h2><ul class="source-list">${article.sources.map(source => `<li><a href="${escapeHtml(source.url)}" rel="noopener">${escapeHtml(source.label)} ↗</a></li>`).join('')}</ul>` : '';
   const schema = {
     '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
     image: absolute(article.socialImage), datePublished: article.published, dateModified: article.modified,
     author: { '@type': 'Organization', name: 'Kestora Labs' }, publisher: { '@type': 'Organization', name: 'Kestora Labs', url: 'https://kestoralabs.com/' },
-    mainEntityOfPage: canonical, articleSection: `${article.app} guides`, about: ['pregnancy keepsakes', 'fetal heartbeat apps', 'phone audio recording'],
-    citation: article.sources.map(source => source.url), isPartOf: { '@type': 'WebSite', name: 'Kestora Labs', url: 'https://kestoralabs.com/' }
+    mainEntityOfPage: canonical, articleSection: `${article.app} guides`, about: article.about || ['pregnancy memories', 'pregnancy journaling', 'audio keepsakes'],
+    citation: (article.sources || []).map(source => source.url), isPartOf: { '@type': 'WebSite', name: 'Kestora Labs', url: 'https://kestoralabs.com/' }
   };
   const breadcrumbSchema = { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Kestora Labs', item: 'https://kestoralabs.com/' },
@@ -147,7 +332,7 @@ ${alternates}
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="${escapeHtml(article.appIcon)}">
-  <link rel="stylesheet" href="/guide-article.css?v=20261111-2">
+  <link rel="stylesheet" href="/guide-article.css?v=20261111-3">
   <script type="application/ld+json">${JSON.stringify(schema)}</script>
   <script type="application/ld+json">${JSON.stringify(breadcrumbSchema)}</script>
 </head>
@@ -165,12 +350,11 @@ ${alternates}
         <aside class="article-summary" aria-label="Quick answer"><span>Quick answer</span><strong>${escapeHtml(article.quickAnswer.question)}</strong><p>${escapeHtml(article.quickAnswer.answer)}</p></aside>
       </header>
       <div class="article-layout">
-        <details class="article-toc" open><summary>On this page</summary><div>${toc}<a href="#sources">Sources</a></div></details>
+        <details class="article-toc" open><summary>On this page</summary><div>${toc}${sourceToc}</div></details>
         <div class="article-content">
-          <aside class="safety-note"><p><strong>${escapeHtml(article.safety.split(' Do not')[0])}</strong> Do not${escapeHtml(article.safety.split(' Do not')[1] || '')} <a class="inline-source" href="https://www.nhs.uk/pregnancy/keeping-well/your-babys-movements/" rel="noopener">NHS guidance ↗</a></p></aside>
+          ${safety}
           ${sections}
-          <div class="review-note"><p><strong>Editorial note:</strong> This guide is general information, not medical advice. It was reviewed against the official sources below on ${prettyDate(article.modified)}. Always follow advice from your own qualified maternity care team.</p></div>
-          <h2 id="sources">Official sources</h2><ul class="source-list">${article.sources.map(source => `<li><a href="${escapeHtml(source.url)}" rel="noopener">${escapeHtml(source.label)} ↗</a></li>`).join('')}</ul>
+          ${sources}
           <section class="app-callout" aria-labelledby="app-callout-title"><img src="${escapeHtml(article.appIcon)}" width="320" height="320" alt="${escapeHtml(article.app)} app icon"><div><p class="article-kicker">${escapeHtml(article.appCallout.kicker)}</p><h2 id="app-callout-title">${escapeHtml(article.appCallout.title)}</h2><p>${escapeHtml(article.appCallout.text)}</p><a class="button" href="${escapeHtml(article.appCallout.url)}">View ${escapeHtml(article.app)} on the App Store ↗</a></div></section>
           <h2>Continue reading</h2><div class="related-grid">${article.related.map(item => `<a class="related-card" href="${escapeHtml(item.url)}"><span>Related guide</span><strong>${escapeHtml(item.title)}</strong></a>`).join('')}</div>
         </div>
@@ -187,6 +371,6 @@ ${alternates}
 for (const article of articles) {
   const output = path.join(root, article.appSlug, 'guides', article.slug, 'index.html');
   fs.mkdirSync(path.dirname(output), { recursive: true });
-  fs.writeFileSync(output, `${renderArticle(article)}\n`);
+  fs.writeFileSync(output, `${renderArticle(article).replace(/[ \t]+$/gm, '')}\n`);
   console.log(`${article.appSlug}/${article.slug}: generated`);
 }
