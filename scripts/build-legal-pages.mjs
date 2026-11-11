@@ -14,6 +14,16 @@ const apps = {
 };
 const pageFiles = ['privacy.html', 'terms.html', 'support.html', 'health.html'];
 const overrides = {
+  'bulkbro/support.html': {
+    intro: 'Help with BulkBro, purchases, feedback and deleting your app data.',
+    updated: '',
+    sections: [
+      `<h2>Contact support</h2><p>For questions, bug reports, purchase issues or privacy requests, email <a href="mailto:degeestkenneth@gmail.com?subject=BulkBro%20Support">degeestkenneth@gmail.com</a>. Include your iPhone model, iOS version, BulkBro version and a short description of what happened.</p><a class="email-button" href="mailto:degeestkenneth@gmail.com?subject=BulkBro%20Support">Email support</a>`,
+      `<h2>App feedback</h2><p>BulkBro is built around feedback from people trying to gain weight. If something is unclear, broken or missing, email <a href="mailto:degeestkenneth@gmail.com?subject=BulkBro%20Feedback">degeestkenneth@gmail.com</a> and tell us what would make the app more useful.</p>`,
+      `<h2>Delete your app data</h2><p>You can permanently delete your BulkBro data inside the app. Open <strong>BulkBro → Settings → Delete data</strong> and follow the confirmation steps.</p><p>If you no longer have access to the app, email <a href="mailto:degeestkenneth@gmail.com?subject=BulkBro%20Data%20Deletion%20Request">degeestkenneth@gmail.com</a> and we’ll help with your deletion request.</p>`,
+      `<h2>Privacy and terms</h2><p>Read the current <a href="privacy.html">Privacy Policy</a>, <a href="terms.html">Terms of Use</a> and <a href="health.html">Health Disclaimer</a>.</p>`
+    ]
+  },
   'fovri/privacy.html': {
     intro: 'How Fovri handles your cookbook, recipe imports, optional AI assistance, purchases, analytics and support requests.',
     updated: 'Last updated 11 November 2026',
