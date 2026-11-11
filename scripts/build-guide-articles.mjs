@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import migraLoomGuides from './migraloom-guide-data.mjs';
 import oqviGuides from './oqvi-guide-data.mjs';
+import tipHavenGuides from './tiphaven-guide-data.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -58,6 +59,22 @@ function oqviArticle(config) {
     appCallout: { kicker: 'A private botanical field collection', title: 'Keep the evidence with the discovery.', text: 'Oqvi identifies plants, trees, leaves, flowers, bark and wood, then keeps photos, notes, favorites and optional places together on your iPhone.', url: `https://apps.apple.com/app/apple-store/id6815273355?pt=128911414&mt=8&ct=oqvi_${config.slug.replaceAll('-', '_')}_inline` },
     footerNote: 'Oqvi provides identification suggestions for education and record-keeping. It cannot certify identity, edibility, toxicity, treatment, structural suitability or safety.',
     sourceNote: 'This field guide is educational information. Photo identification produces candidates, not certainty. The article was reviewed against the sources below; use an appropriate regional reference or qualified expert when the answer matters.',
+    ...config
+  };
+}
+
+function tipHavenArticle(config) {
+  return {
+    app: 'TipHaven', appSlug: 'tiphaven', appIcon: '/assets/tiphaven.png', articleBasePath: '/tiphaven/', outputBasePath: 'tiphaven',
+    kicker: config.kicker || 'TipHaven earnings guide', published: '2026-11-05', modified: '2026-11-11',
+    author: 'Kestora Labs, the maker of TipHaven', appStoreId: '6805177188',
+    smartBannerCampaign: `tiphaven_${config.slug.replaceAll('-', '_')}`,
+    socialImage: `/assets/guides/tiphaven-${config.slug}.png`,
+    about: ['tip tracking', 'hospitality earnings', 'tipped employees'],
+    languages: [{ code: 'en', label: 'English', short: 'EN', url: `/tiphaven/${config.slug}/` }, { code: 'es', label: 'Español', short: 'ES', url: config.spanish }, { code: 'fr', label: 'Français', short: 'FR', url: config.french }].filter(language => language.url),
+    appCallout: { kicker: 'A private tip and shift tracker', title: 'Keep the result, not the mental math.', text: 'TipHaven records tips, tip-out, wages and hours privately on your iPhone, then shows net tips, total earnings and true hourly earnings.', url: `https://apps.apple.com/app/apple-store/id6805177188?pt=128911414&mt=8&ct=tiphaven_${config.slug.replaceAll('-', '_')}_inline` },
+    footerNote: 'TipHaven is a personal recordkeeping tool. It is not payroll, tax, accounting, legal or financial advice.',
+    sourceNote: 'This guide provides general educational information, not payroll, tax, accounting, legal or financial advice. Figures and rules can change; verify current official guidance for your location and circumstances.',
     ...config
   };
 }
@@ -287,7 +304,7 @@ const articles = [{
     { id: 'permission', toc: 'Ask permission', title: 'Ask before keeping and sharing', paragraphs: ['Tell each person what the recording is for and who may hear it. A family keepsake is still someone else’s voice. Do not publish or broadly share it without clear permission.'] }
   ],
   related: [{ title: 'How to record pregnancy memories', url: '../how-to-record-pregnancy-memories/' }, { title: 'Pregnancy journal ideas', url: '../pregnancy-journal/' }]
-}), ...migraLoomGuides.map(migraLoomArticle), ...oqviGuides.map(oqviArticle)];
+}), ...migraLoomGuides.map(migraLoomArticle), ...oqviGuides.map(oqviArticle), ...tipHavenGuides.map(tipHavenArticle)];
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const prettyDate = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`));
@@ -319,7 +336,7 @@ function renderSectionExtras(section) {
 }
 
 function renderArticle(article) {
-  const canonicalPath = `/${article.appSlug}/guides/${article.slug}/`;
+  const canonicalPath = `${article.articleBasePath || `/${article.appSlug}/guides/`}${article.slug}/`;
   const canonical = absolute(canonicalPath);
   const words = plainText(article).trim().split(/\s+/).length;
   const readingMinutes = Math.max(1, Math.ceil(words / 200));
@@ -404,7 +421,7 @@ ${alternates}
 }
 
 for (const article of articles) {
-  const output = path.join(root, article.appSlug, 'guides', article.slug, 'index.html');
+  const output = path.join(root, article.outputBasePath || path.join(article.appSlug, 'guides'), article.slug, 'index.html');
   fs.mkdirSync(path.dirname(output), { recursive: true });
   fs.writeFileSync(output, `${renderArticle(article).replace(/[ \t]+$/gm, '')}\n`);
   console.log(`${article.appSlug}/${article.slug}: generated`);
