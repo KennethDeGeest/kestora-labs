@@ -13,6 +13,61 @@ const apps = {
   bumpecho: 'Bump Echo'
 };
 const pageFiles = ['privacy.html', 'terms.html', 'support.html', 'health.html'];
+const overrides = {
+  'fovri/privacy.html': {
+    intro: 'How Fovri handles your cookbook, recipe imports, optional AI assistance, purchases, analytics and support requests.',
+    updated: 'Last updated 11 November 2026',
+    sections: [
+      `<h2>Who is responsible</h2><p>Fovri is provided by Kenneth Marcel S De Geest, a self-employed developer based in Spain. For privacy questions or requests, email <a href="mailto:degeestkenneth@gmail.com?subject=Fovri%20Privacy">degeestkenneth@gmail.com</a>.</p>`,
+      `<h2>Your cookbook</h2><p>No personal Fovri account is required. Recipes, folders, favourites, meal plans, grocery information, notes and saved photos are stored on your iPhone. Fovri does not operate a cloud cookbook-sync service. Apple device backups may include app data according to your iPhone and iCloud settings.</p><p>You control exported cookbook files and any recipes or photos you choose to share.</p>`,
+      `<h2>Recipe imports and optional AI help</h2><p>When you import a public recipe or cooking-video link, Fovri contacts the source and may process the available page text, captions, images or selected video information needed to create the recipe. Source websites receive ordinary connection information under their own privacy policies.</p><p>If optional AI import help is enabled and a normal import needs assistance, the relevant source material is sent securely to service providers that process it for Fovri. Your unrelated cookbook entries, personal notes and photos are not sent for this purpose. Do not import private or sensitive material unless you are comfortable with this processing.</p>`,
+      `<h2>Purchases and subscriptions</h2><p>Apple processes App Store payments. RevenueCat helps Fovri display offers, confirm subscription access and restore purchases. These services may process purchase, product, entitlement, app and device information. Fovri does not receive your full payment-card details.</p>`,
+      `<h2>Analytics and diagnostics</h2><p>Fovri uses privacy-conscious analytics and crash diagnostics to understand feature use and reliability. This may include app interactions, app version, device and operating-system information, approximate region and crash details. Analytics does not include recipe names, ingredients, grocery text, notes, photos or imported recipe content.</p><p>Fovri does not sell personal information, show third-party advertising or use your cookbook to track you across other companies’ apps and websites.</p>`,
+      `<h2>Permissions and notifications</h2><p>Notifications are optional and may be used for import completion, grocery reminders and cooking timers. Photos or files you select are used only for the action you request. You can manage permissions in Fovri and iPhone Settings.</p>`,
+      `<h2>Retention and deletion</h2><p>Local cookbook information remains until you delete it or remove the app. Exported files and device backups must be managed where they are stored. Service providers retain limited purchase, analytics, security and diagnostic information according to their settings, contracts and legal obligations. Support correspondence is retained as reasonably needed to answer the request and meet legal obligations.</p>`,
+      `<h2>Your choices and rights</h2><p>Depending on where you live, you may request access, correction, deletion, portability or restriction of personal information under the developer’s control, object to certain processing or withdraw consent. Contact the email above. You may also complain to the Spanish Data Protection Agency or your local supervisory authority.</p>`,
+      `<h2>Children, security and changes</h2><p>Fovri is not directed to children under 13. Reasonable technical and organisational safeguards are used, but no system can guarantee absolute security. This policy may be updated when Fovri’s features, providers or legal requirements change.</p>`
+    ]
+  },
+  'fovri/terms.html': {
+    intro: 'The rules for using Fovri, recipe imports, optional AI assistance and Fovri Pro.',
+    updated: 'Last updated 11 November 2026',
+    sections: [
+      `<h2>The app and provider</h2><p>Fovri is provided by Kenneth Marcel S De Geest, a self-employed developer based in Spain. Fovri helps you collect and edit recipes, plan meals, prepare grocery lists and follow cooking steps. Apple’s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Standard End User License Agreement</a> also applies.</p>`,
+      `<h2>Subscriptions and access</h2><p>Fovri Pro is offered through auto-renewing monthly and yearly subscriptions at the price shown before purchase. Any trial or introductory offer is shown in Apple’s confirmation sheet and is subject to Apple’s eligibility rules. Subscriptions renew unless cancelled through your Apple Account before the current period ends. Deleting Fovri does not cancel a subscription.</p><p>Restore Purchases can restore eligible access bought with the same Apple Account. Apple handles billing and refund requests. Mandatory consumer rights continue to apply.</p>`,
+      `<h2>Your recipes and imported content</h2><p>You retain ownership of recipes, notes and photos you create. You are responsible for having permission to import, save, edit, export or share third-party material. Source content remains subject to its owner’s rights and terms.</p>`,
+      `<h2>AI-assisted results and cooking information</h2><p>Imports and optional AI-assisted suggestions can be incomplete or inaccurate. Review ingredients, quantities, allergens, food-safety information and cooking instructions before relying on them. Fovri is a planning tool, not professional medical, dietary or food-safety advice.</p>`,
+      `<h2>Acceptable use and availability</h2><p>Use Fovri lawfully and do not misuse, disrupt, reverse engineer or attempt unauthorised access to the app or its services except where applicable law permits it. Features may change, and uninterrupted or error-free availability is not guaranteed.</p>`,
+      `<h2>Privacy, liability and changes</h2><p>The <a href="privacy.html">Privacy Policy</a> explains how information is handled. To the fullest extent permitted by law, Fovri is provided “as is” and the provider is not responsible for indirect or consequential loss. Nothing in these terms excludes liability or consumer rights that cannot legally be limited.</p><p>These terms may be updated when the app, purchases or legal requirements change. Questions may be sent to <a href="mailto:degeestkenneth@gmail.com?subject=Fovri%20Terms">degeestkenneth@gmail.com</a>.</p>`
+    ]
+  },
+  'oqvi/privacy.html': {
+    intro: 'How Oqvi handles photos used for identification, your private collection, purchases, diagnostics and support requests.',
+    updated: 'Last updated 11 November 2026',
+    sections: [
+      `<h2>Who is responsible</h2><p>Oqvi is provided by Kenneth Marcel S De Geest, a self-employed developer based in Spain. Contact <a href="mailto:degeestkenneth@gmail.com?subject=Oqvi%20Privacy">degeestkenneth@gmail.com</a> with privacy questions or requests.</p>`,
+      `<h2>Your private collection</h2><p>Saved discoveries, notes, favourites and precise map pins are stored on your iPhone. Oqvi does not operate an account-based cloud collection. Apple device backups may include app data according to your settings.</p>`,
+      `<h2>Plant-identification requests</h2><p>When you request an identification, the selected photo and limited context needed for the request are sent securely to service providers that process the identification for Oqvi. Results are suggestions and may be inaccurate. Do not submit private or sensitive images.</p>`,
+      `<h2>Location, photos and permissions</h2><p>Camera, photo-library and location permissions are requested only for features you choose. Precise saved map pins remain in your local collection. You can review or revoke permissions in iPhone Settings.</p>`,
+      `<h2>Purchases, analytics and diagnostics</h2><p>Apple processes App Store payments, and purchase services help verify access and restore purchases. Oqvi may use limited analytics and crash diagnostics to understand reliability and general feature use. This information does not include your private collection, notes or precise saved locations.</p>`,
+      `<h2>Retention and deletion</h2><p>Local collection data remains until you delete it or remove the app. Device backups and exported copies must be managed separately. Providers retain limited purchase, security, analytics and diagnostic information under their own retention rules and legal obligations.</p>`,
+      `<h2>Your rights, security and changes</h2><p>Depending on your location, you may have rights to access, correct, delete, restrict or object to processing of personal information under the developer’s control. Contact the email above. Reasonable safeguards are used, but no system is completely secure. This policy may change when Oqvi’s features, providers or legal requirements change.</p>`
+    ]
+  },
+  'migraloom/privacy.html': {
+    intro: 'How MigraLoom handles your local headache journal, exports, purchases, optional diagnostics and support requests.',
+    updated: 'Last updated 11 November 2026',
+    sections: [
+      `<h2>Who is responsible</h2><p>MigraLoom is provided by Kenneth Marcel S De Geest, a self-employed developer based in Spain. For privacy questions or requests, email <a href="mailto:degeestkenneth@gmail.com?subject=MigraLoom%20Privacy">degeestkenneth@gmail.com</a>.</p>`,
+      `<h2>Your headache journal</h2><p>No personal account is required. Episodes, symptoms, triggers, medication notes and related journal information are stored on your iPhone. MigraLoom does not operate a cloud journal. Apple device backups may include app data according to your settings.</p>`,
+      `<h2>Exports and sharing</h2><p>You choose whether to create or share an export. Exported files can contain sensitive health information. Store and share them carefully. Copies already sent to another person or service are governed by that destination.</p>`,
+      `<h2>Purchases and optional diagnostics</h2><p>Apple processes App Store payments and purchase services help verify or restore access. If you enable optional diagnostics, limited app, device, performance and crash information may be processed to improve reliability. Journal entries, symptom notes and medication details are not intentionally included in diagnostics.</p>`,
+      `<h2>Retention and deletion</h2><p>Journal information remains on your device until you delete it or remove the app. Device backups and exported files must be managed separately. Providers retain limited purchase and diagnostic information under their own retention rules and legal obligations.</p>`,
+      `<h2>Your choices and rights</h2><p>You can keep diagnostics disabled, edit or delete journal entries, remove the app and control exports. Depending on where you live, you may also request access, correction, deletion, restriction or objection for personal information under the developer’s control. Contact the email above.</p>`,
+      `<h2>Health notice, security and changes</h2><p>MigraLoom is a personal journal, not a medical device, diagnosis or substitute for professional care. Reasonable safeguards are used, but no system can guarantee absolute security. This policy may be updated when features, providers or legal requirements change.</p>`
+    ]
+  }
+};
 const files = [path.join(dist, 'privacy.html')];
 for (const slug of Object.keys(apps)) for (const page of pageFiles) {
   const file = path.join(dist, slug, page);
@@ -39,17 +94,18 @@ for (const file of files) {
   const slug = parts.length === 2 ? parts[0] : null;
   const appName = slug ? apps[slug] : 'Kestora Labs';
   const page = path.basename(file, '.html');
+  const override = overrides[relative];
   const main = match(original, /<main\b[^>]*>([\s\S]*?)<\/main>/i);
   const title = match(original, /<title>([\s\S]*?)<\/title>/i) || `${appName} — Kestora Labs`;
   const description = match(original, /<meta\s+name="description"\s+content="([^"]*)"/i);
   const canonical = match(original, /<link\s+rel="canonical"\s+href="([^"]*)"/i) || `https://kestoralabs.com/${relative}`;
   const kickerRaw = match(main, /class="(?:[^"]*\s)?(?:legal-kicker|kicker|privacy-eyebrow)(?:\s[^"]*)?"[^>]*>([\s\S]*?)<\//i);
   const h1Raw = match(main, /<h1[^>]*>([\s\S]*?)<\/h1>/i);
-  const introRaw = match(main, /class="(?:[^"]*\s)?(?:legal-intro|intro|lead|lede|privacy-lead)(?:\s[^"]*)?"[^>]*>([\s\S]*?)<\//i);
-  const updatedRaw = match(main, /class="(?:[^"]*\s)?(?:legal-updated|updated|privacy-meta)(?:\s[^"]*)?"[^>]*>([\s\S]*?)<\//i);
+  const introRaw = override?.intro || match(main, /class="(?:[^"]*\s)?(?:legal-intro|intro|lead|lede|privacy-lead)(?:\s[^"]*)?"[^>]*>([\s\S]*?)<\//i);
+  const updatedRaw = override?.updated || match(main, /class="(?:[^"]*\s)?(?:legal-updated|updated|privacy-meta)(?:\s[^"]*)?"[^>]*>([\s\S]*?)<\//i);
   const noteRaw = original.includes('class="legal-shell"') ? '' : match(main, /<div\s+class="legal-note"[^>]*>([\s\S]*?)<\/div>/i);
-  const sections = [];
-  for (const found of main.matchAll(/<section\b([^>]*)>([\s\S]*?)<\/section>/gi)) {
+  const sections = override ? override.sections.map(content => `<section class="legal-section">${content}</section>`) : [];
+  for (const found of override ? [] : main.matchAll(/<section\b([^>]*)>([\s\S]*?)<\/section>/gi)) {
     const attrs = found[1];
     const content = found[2].trim();
     if (/class="[^"]*legal-hero/.test(attrs)) continue;
