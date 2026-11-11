@@ -220,7 +220,7 @@ document.querySelectorAll('a[href*="apps.apple.com"]').forEach((link) => {
   if (!document.querySelector('#kestora-language-switch-style')) {
     const style = document.createElement('style');
     style.id = 'kestora-language-switch-style';
-    style.textContent = '.kestora-language-switch{display:inline-flex!important;align-items:center;justify-content:center;gap:.35rem;min-width:2.8rem;padding:.58rem .72rem!important;border:1px solid currentColor!important;border-radius:999px!important;font:800 .68rem/1 system-ui,sans-serif!important;letter-spacing:.08em!important;text-decoration:none!important;text-transform:uppercase!important;white-space:nowrap}.kestora-language-switch:before{content:"🌐";font-size:.75rem}.kestora-language-footer{display:inline-flex!important;align-items:center;gap:.4rem;text-decoration:underline!important;text-underline-offset:.2rem}@media(max-width:760px){.kestora-language-switch{padding:.52rem .62rem!important;min-width:auto}.kestora-language-switch:before{display:none}}';
+    style.textContent = '.kestora-language-switch{display:inline-flex!important;align-items:center;justify-content:center;gap:.35rem;min-width:2.8rem;padding:.58rem .72rem!important;border:1px solid currentColor!important;border-radius:999px!important;font:800 .68rem/1 system-ui,sans-serif!important;letter-spacing:.08em!important;text-decoration:none!important;text-transform:uppercase!important;white-space:nowrap}.kestora-language-switch:before{content:"🌐";font-size:.75rem}.kestora-language-footer{display:inline-flex!important;align-items:center;gap:.4rem;text-decoration:underline!important;text-underline-offset:.2rem}.kestora-language-fallback-footer{display:flex;justify-content:center;padding:1.5rem;background:#111827;color:#fff;font:500 .9rem/1.4 system-ui,sans-serif}@media(max-width:760px){.kestora-language-switch{padding:.52rem .62rem!important;min-width:auto}.kestora-language-switch:before{display:none}}';
     document.head.append(style);
   }
 
@@ -237,8 +237,14 @@ document.querySelectorAll('a[href*="apps.apple.com"]').forEach((link) => {
     headerNav.append(link);
   }
 
-  const footerNav = document.querySelector('.site-footer nav, .legal-footer nav, footer nav');
-  if (footerNav && !footerNav.querySelector('[data-language-switch]')) {
+  let footerNav = document.querySelector('.site-footer nav, .legal-footer nav, footer nav');
+  if (!footerNav) footerNav = document.querySelector('footer');
+  if (!footerNav) {
+    footerNav = document.createElement('footer');
+    footerNav.className = 'kestora-language-fallback-footer';
+    document.body.appendChild(footerNav);
+  }
+  if ( !footerNav.querySelector('[data-language-switch]')) {
     const link = document.createElement('a');
     link.href = target;
     link.className = 'kestora-language-footer';
