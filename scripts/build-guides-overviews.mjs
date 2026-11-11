@@ -104,7 +104,7 @@ for (const [slug, config] of Object.entries(apps)) {
   <link rel="canonical" href="https://kestoralabs.com/${slug}/guides/">
   <link rel="icon" type="image/svg+xml" href="${favicon}">
   <title>${config.name} Guides — Kestora Labs</title>
-  <link rel="stylesheet" href="/guides-page.css?v=20261111-1">
+  <link rel="stylesheet" href="/guides-page.css?v=20261111-2">
 </head>
 <body>
   <a class="skip-link" href="#guides">Skip to guides</a>
