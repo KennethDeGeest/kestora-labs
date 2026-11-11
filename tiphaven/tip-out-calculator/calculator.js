@@ -9,7 +9,6 @@
   const result = document.querySelector('[data-result]');
   const error = form.querySelector('[data-error]');
 
-  const money = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' });
   const value = (name) => Number.parseFloat(form.elements[name].value) || 0;
 
   const syncFields = () => {
@@ -21,6 +20,7 @@
 
   const calculate = (event) => {
     if (event) event.preventDefault();
+    const money = window.TipHavenCurrency.formatter();
     error.textContent = '';
     const tips = value('tips');
     const rate = value('rate');

@@ -17,6 +17,11 @@ for (const { slug, brokenLocale } of tools) {
   let html = fs.readFileSync(file, 'utf8');
   if (!html.includes(oldLink)) throw new Error(`Missing mobile stylesheet marker in ${slug}`);
   if (!html.includes('/guide-tool.css')) html = html.replace(oldLink, newLink);
+  if (!html.includes('../calculator-currency.js')) {
+    html = html.replace(/(<script src="calculator\.js[^>]*><\/script>)/, '<script src="../calculator-currency.js?v=20261111-1" defer></script>$1');
+  }
+  html = html.replace('/calculator-currency.js?v=20261111-1', '/calculator-currency.js?v=20261111-2');
+  html = html.replace(/calculator\.js\?v=[^"]+/, 'calculator.js?v=20261111-currency');
   if (brokenLocale) {
     const localeLink = new RegExp(`<a href="${brokenLocale}" lang="es" hreflang="es" data-locale="es">Español<\\/a>`, 'g');
     html = html.replace(localeLink, '');
