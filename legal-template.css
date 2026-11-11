@@ -208,10 +208,20 @@ body.unified-legal-page {
 .legal-document-shell article > section,
 .legal-document-shell .legal-copy > section,
 .legal-document-shell .legal-content > section,
-.legal-document-shell > section:not(.legal-hero),
 .legal-document-shell > .privacy-shell > section {
   width: 100% !important;
   margin: 0 !important;
+  padding: 1.55rem 0 !important;
+  border: 0 !important;
+  border-top: 1px solid var(--legal-line) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.legal-document-shell > section:not(.legal-hero) {
+  width: auto !important;
+  margin: 0 3.5rem !important;
   padding: 1.55rem 0 !important;
   border: 0 !important;
   border-top: 1px solid var(--legal-line) !important;
