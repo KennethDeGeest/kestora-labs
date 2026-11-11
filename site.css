@@ -101,14 +101,17 @@ footer p { margin: 0; }
 .contact-dialog-content h2 { margin: 0; font-size: clamp(1.65rem, 5vw, 2.15rem); letter-spacing: -.045em; }
 .contact-dialog-intro { margin: .8rem 0 1.8rem; color: var(--muted); line-height: 1.55; }
 .contact-options { display: grid; gap: .65rem; }
-.contact-options a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid var(--line); border-radius: .9rem; padding: 1rem 1.1rem; text-decoration: none; transition: border-color .18s, transform .18s, box-shadow .18s; }
-.contact-options a:hover { border-color: #bbbcc0; transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.05); }
+.contact-options a, .contact-option { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid var(--line); border-radius: .9rem; padding: 1rem 1.1rem; text-align: left; text-decoration: none; background: var(--white); color: inherit; font: inherit; cursor: pointer; transition: border-color .18s, transform .18s, box-shadow .18s; }
+.contact-options a:hover, .contact-option:hover { border-color: #bbbcc0; transform: translateY(-1px); box-shadow: 0 8px 18px rgba(0,0,0,.05); }
 .contact-options span { display: grid; gap: .2rem; }
 .contact-options strong { font-size: .98rem; }
 .contact-options small { color: var(--muted); font-size: .8rem; line-height: 1.35; }
 .contact-options b { color: #8a8c91; font-weight: 500; }
-.contact-options .hire-option { background: var(--ink); border-color: var(--ink); color: white; }
-.contact-options .hire-option small, .contact-options .hire-option b { color: #bfc0c3; }
+.support-back { margin: 0 0 1.5rem; padding: 0; border: 0; background: transparent; color: var(--muted); font: inherit; font-size: .9rem; cursor: pointer; }
+.support-label { display: block; margin-bottom: .5rem; font-size: .82rem; font-weight: 700; }
+.support-select { width: 100%; min-height: 3.25rem; border: 1px solid #d5d6d8; border-radius: .75rem; padding: 0 .9rem; background: var(--white); color: var(--ink); font: inherit; font-size: 1rem; }
+.support-submit { width: 100%; margin-top: .85rem; min-height: 3.25rem; border: 0; border-radius: .75rem; background: var(--ink); color: white; font: inherit; cursor: pointer; }
+.support-submit:disabled { background: #dedfe1; color: #8b8d91; cursor: not-allowed; }
 .dialog-content { padding: 3.5rem; }
 .dialog-close { position: sticky; float: right; right: .9rem; top: .9rem; z-index: 5; width: 2.25rem; height: 2.25rem; margin-bottom: -2.25rem; border: 0; border-radius: 50%; background: rgba(240,240,241,.94); font-size: 1.55rem; line-height: 1; cursor: pointer; color: #4f5155; backdrop-filter: blur(8px); }
 .app-case-header { display: grid; grid-template-columns: 7rem minmax(0, 1fr); align-items: start; gap: 1.8rem; max-width: 49rem; }
