@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tip-Out Calculator for Servers — Free & Instant | TipHaven</title>
+  <meta name="description" content="Calculate your tip-out, net tips and true hourly earnings. Free tip-out calculator for servers, bartenders and tipped hospitality workers.">
+  <meta name="theme-color" content="#f4f1ea">
+  <meta name="apple-itunes-app" content="app-id=6805177188, affiliate-data=pt=128911414&amp;ct=kestora_tiphaven_tipout_calc">
+  <link rel="canonical" href="https://kestoralabs.com/tiphaven/tip-out-calculator/">
+  <meta property="og:title" content="Free Tip-Out Calculator for Servers">
+  <meta property="og:description" content="See your tip-out, net tips and real hourly earnings before you leave the shift behind.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kestoralabs.com/tiphaven/tip-out-calculator/">
+  <meta property="og:image" content="https://kestoralabs.com/assets/social/tiphaven-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="TipHaven tip and shift tracker">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="../../assets/tiphaven.png">
+  <link rel="apple-touch-icon" href="../../assets/tiphaven.png">
+  <link rel="stylesheet" href="../seo.css?v=20261104-1">
+  <script src="../../site.js?v=20261104-analytics" defer></script>
+  <script src="calculator.js?v=20261104-1" defer></script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"TipHaven Tip-Out Calculator","url":"https://kestoralabs.com/tiphaven/tip-out-calculator/","image":"https://kestoralabs.com/assets/social/tiphaven-preview.png","applicationCategory":"FinanceApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"A free calculator for estimating tip-out, net tips and hourly earnings after a shift."}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do you calculate tip-out?","acceptedAnswer":{"@type":"Answer","text":"Multiply the amount your workplace uses as the tip-out base—usually tips or sales—by the tip-out percentage. Subtract that result from gross tips to find net tips."}},{"@type":"Question","name":"Is tip-out calculated from tips or sales?","acceptedAnswer":{"@type":"Answer","text":"Both methods are used. Your workplace policy determines whether the percentage is applied to gross tips, total sales, food sales or another base."}},{"@type":"Question","name":"Does this calculator save my earnings?","acceptedAnswer":{"@type":"Answer","text":"No. The calculation runs in your browser and the numbers are not saved or sent to Kestora Labs."}}]}</script>
+  <link rel="stylesheet" href="/mobile-audit.css?v=20261110k">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="shell"><a class="brand" href="../"><img src="../../assets/tiphaven.png" width="320" height="320" alt=""><span>TipHaven</span></a><nav aria-label="Primary navigation"><a href="#how">How it works</a><a href="#faq">FAQ</a><a href="../">The app</a><a class="nav-cta" href="https://apps.apple.com/app/apple-store/id6805177188?pt=128911414&amp;ct=kestora_tiphaven_tipout_header&amp;mt=8" data-app-name="TipHaven" data-link-position="tipout_header">Get TipHaven</a></nav></div></header>
+
+  <main id="main">
+    <nav class="breadcrumb shell" aria-label="Breadcrumb"><ol><li><a href="../../">Kestora Labs</a></li><li>›</li><li><a href="../">TipHaven</a></li><li>›</li><li aria-current="page">Tip-out calculator</li></ol></nav>
+
+    <section class="seo-hero"><div class="shell"><p class="eyebrow">Free tip-out calculator</p><h1>Leave the shift knowing what you actually made.</h1><p class="seo-lead">Calculate your tip-out, net tips and true hourly earnings in seconds—whether your workplace bases tip-out on tips or sales.</p><p class="byline">Runs locally in your browser · No account · No calculator data is saved or sent</p></div></section>
+
+    <section class="calculator-section" aria-labelledby="calculator-title"><div class="shell calculator-grid">
+      <form class="calculator-card" data-calculator novalidate>
+        <p class="eyebrow">Your shift</p><h2 id="calculator-title">Tip-out calculator</h2>
+        <div class="form-grid">
+          <div class="field"><label for="tips">Gross tips</label><div class="money-input"><span>$</span><input id="tips" name="tips" type="number" min="0" step="0.01" inputmode="decimal" value="240" required></div><p class="field-help">Cash and card tips before tip-out.</p></div>
+          <div class="field"><label for="basis">Tip-out is based on</label><select id="basis" name="basis"><option value="tips">Gross tips</option><option value="sales">Sales</option><option value="fixed">A fixed amount</option></select></div>
+          <div class="field" data-sales-field hidden><label for="sales">Sales used for tip-out</label><div class="money-input"><span>$</span><input id="sales" name="sales" type="number" min="0" step="0.01" inputmode="decimal" value="1800"></div><p class="field-help">Use the sales figure specified by your workplace.</p></div>
+          <div class="field" data-rate-field><label for="rate">Tip-out percentage</label><div class="money-input suffix"><input id="rate" name="rate" type="number" min="0" max="100" step="0.1" inputmode="decimal" value="15" required><span>%</span></div></div>
+          <div class="field" data-fixed-field hidden><label for="fixed">Fixed tip-out</label><div class="money-input"><span>$</span><input id="fixed" name="fixed" type="number" min="0" step="0.01" inputmode="decimal" value="30"></div></div>
+          <div class="field"><label for="hours">Hours worked <small>optional</small></label><div class="money-input suffix"><input id="hours" name="hours" type="number" min="0.25" max="24" step="0.25" inputmode="decimal" value="6"><span>h</span></div></div>
+          <div class="field"><label for="wage">Hourly wage <small>optional</small></label><div class="money-input"><span>$</span><input id="wage" name="wage" type="number" min="0" step="0.01" inputmode="decimal" value="15"></div></div>
+        </div>
+        <button class="button" type="submit">Calculate my shift</button><p class="form-error" data-error aria-live="polite"></p>
+      </form>
+
+      <aside class="result-card" data-result tabindex="-1" aria-live="polite"><p class="eyebrow">Your result</p><h2>$36.00 tip-out</h2><div class="result-number">$204.00 <span>net tips</span></div><ul class="result-breakdown"><li><span>Gross tips</span><strong>$240.00</strong></li><li><span>Tip-out</span><strong>− $36.00</strong></li><li><span>Wages</span><strong>+ $90.00</strong></li><li><span>Total earnings</span><strong>$294.00</strong></li><li><span>True hourly earnings</span><strong>$49.00/hr</strong></li></ul><p class="result-note">Before taxes. Use your workplace policy to choose the correct tip-out base and rate.</p></aside>
+    </div></section>
+
+    <section class="content-section" id="how"><div class="shell content-layout"><aside class="toc"><p>On this page</p><a href="#formula">The formula</a><a href="#examples">Examples</a><a href="#percentage">Typical percentages</a><a href="#records">Keeping records</a><a href="#faq">FAQ</a></aside><article class="article">
+      <h2 id="formula">How to calculate tip-out</h2><div class="quick-answer"><strong>Tip-out = tip-out base × percentage</strong><p>Then subtract the tip-out from your gross tips. If you add wages, you can also see total earnings and what the shift paid per hour.</p></div><p>The important part is choosing the same base your workplace uses. Some restaurants calculate tip-out as a percentage of gross tips. Others use total sales, food sales or another sales category. A fixed dollar amount is also possible.</p>
+      <h2 id="examples">Tip-out examples</h2><div class="example-grid"><div><span>Based on tips</span><strong>$240 × 15% = $36</strong><p>You keep $204 in net tips.</p></div><div><span>Based on sales</span><strong>$1,800 × 3% = $54</strong><p>From $240 gross tips, you keep $186.</p></div></div><p>These examples show why “15% tip-out” and “3% tip-out” cannot be compared without knowing what the percentage is applied to.</p>
+      <h2 id="percentage">What is a normal server tip-out percentage?</h2><p>There is no single percentage that applies everywhere. Tip-out can depend on the restaurant, role, shift, sales mix and local law. Ask which employees participate, which sales or tips form the calculation base, and whether managers or supervisors are excluded where required.</p><p>In the United States, federal rules distinguish between traditional tip pools and nontraditional tip pools. State and local rules can be more protective. The calculator performs arithmetic only; it cannot determine whether a workplace policy is lawful.</p>
+      <h2 id="records">Why track tip-out after every shift?</h2><p>One shift tells you what you took home. A consistent record shows whether a job, role or weekday actually pays your time well. Record gross tips, tip-out, hours and wages together so that changes in the workplace or schedule remain visible.</p><p>TipHaven keeps those numbers together on your iPhone and calculates net tips, total earnings and true hourly earnings for every shift.</p><div class="app-callout"><img width="320" height="320" src="../../assets/tiphaven.png" alt="TipHaven app icon"><div><p class="eyebrow">From one calculation to a useful history</p><h3>Keep the result, not the mental math.</h3><p>Track every shift, compare jobs and days, and see where your time pays best.</p><a class="button" href="https://apps.apple.com/app/apple-store/id6805177188?pt=128911414&amp;ct=kestora_tiphaven_tipout_inline&amp;mt=8" data-app-name="TipHaven" data-link-position="tipout_inline">Get TipHaven on iPhone ↗︎</a></div></div>
+      <h2 id="faq">Frequently asked questions</h2><div class="faq-list"><details><summary>Is tip-out calculated before or after taxes?<span>+</span></summary><p>Tip-out is part of the shift earnings calculation, while taxes are handled separately through payroll and tax reporting. This calculator shows amounts before taxes.</p></details><details><summary>Should I enter cash and card tips together?<span>+</span></summary><p>Yes. Enter total gross tips before tip-out. If your workplace applies different rules to cash and card tips, calculate each portion separately.</p></details><details><summary>What if I tip out different roles at different rates?<span>+</span></summary><p>Calculate each tip-out separately and add them together, or enter the total as a fixed amount for the final net-tip calculation.</p></details><details><summary>Does this calculator save my earnings?<span>+</span></summary><p>No. It runs in your browser and does not save or send the values you enter.</p></details></div>
+      <h2 id="sources">Source and important note</h2><ol class="source-list"><li><a href="https://www.dol.gov/agencies/whd/fact-sheets/15-tipped-employees-flsa">U.S. Department of Labor: Fact Sheet #15 — Tipped Employees Under the FLSA</a></li></ol><div class="legal-note">This page provides a general calculation and educational information, not payroll, tax, accounting, legal or financial advice. Workplace policies and applicable laws vary. For a question about your rights or reporting obligations, consult the appropriate government agency or a qualified professional.</div>
+    </article></div></section>
+
+    <section class="seo-cta"><div class="shell"><div><p class="eyebrow">Every shift tells you something</p><h2>Turn tonight’s numbers into a clearer work history.</h2><p>TipHaven tracks tips, wages, hours and tip-outs privately on your iPhone.</p></div><a class="button" href="https://apps.apple.com/app/apple-store/id6805177188?pt=128911414&amp;ct=kestora_tiphaven_tipout_footer_cta&amp;mt=8" data-app-name="TipHaven" data-link-position="tipout_footer_cta">Get TipHaven ↗︎</a></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell"><div><strong>TipHaven by Kestora Labs</strong><p>A private tip and shift tracker for hospitality workers.</p></div><nav aria-label="Footer navigation"><a href="../">TipHaven</a><a href="../privacy.html">App privacy</a><a href="../terms.html">Terms</a><a href="../support.html">Support</a><a href="../../privacy.html">Website privacy</a><button type="button" data-cookie-settings>Cookie settings</button></nav><p class="copyright">© 2026 Kestora Labs. TipHaven is not payroll, tax, accounting, legal or financial advice.</p></div></footer>
+  <section class="consent-banner" data-consent-banner aria-labelledby="consent-title" aria-describedby="consent-copy" hidden><div><p class="consent-label">Your privacy, your choice</p><h2 id="consent-title">Help us improve this calculator?</h2><p id="consent-copy">With your permission, Kestora Labs uses Google Analytics to understand which pages and App Store links are useful. Analytics stays off unless you accept. <a href="../../privacy.html">Read our website privacy policy.</a></p></div><div class="consent-actions"><button class="consent-secondary" type="button" data-consent-reject>Essential only</button><button class="consent-primary" type="button" data-consent-accept>Accept analytics</button></div></section>
+</body>
+</html>

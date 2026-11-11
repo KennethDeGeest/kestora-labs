@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#F4F3EF"/>
+  <circle cx="980" cy="600" r="210" fill="none" stroke="#9AA8D4" stroke-width="2" opacity=".6"/>
+  <circle cx="980" cy="600" r="145" fill="none" stroke="#9AA8D4" stroke-width="2" opacity=".35"/>
+  <g transform="rotate(-5 980 600)">
+    <rect x="845" y="465" width="270" height="270" rx="58" fill="#121724"/>
+    <path d="M895 590v-45q0-18 18-18h45" fill="none" stroke="#F4F3EF" stroke-width="24" stroke-linecap="round"/>
+    <path d="M1002 527h45q18 0 18 18v45" fill="none" stroke="#7692EE" stroke-width="24" stroke-linecap="round"/>
+    <path d="M1065 633v22q0 18-18 18h-45" fill="none" stroke="#F4F3EF" stroke-width="24" stroke-linecap="round"/>
+    <path d="M958 673h-45q-18 0-18-18v-22" fill="none" stroke="#7692EE" stroke-width="24" stroke-linecap="round"/>
+  </g>
+  <text x="70" y="380" fill="#3356D7" font-family="Helvetica Neue,Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="3">KESTORA LABS</text>
+  <text x="70" y="555" fill="#121724" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="800" letter-spacing="-4">APPS PEQUEÑAS.</text>
+  <text x="70" y="665" fill="#121724" font-family="Helvetica Neue,Arial,sans-serif" font-size="84" font-weight="800" letter-spacing="-4">PROPÓSITO REAL.</text>
+  <text x="75" y="785" fill="#566078" font-family="Helvetica Neue,Arial,sans-serif" font-size="25">Apps para iPhone pensadas para el día a día.</text>
+</svg>

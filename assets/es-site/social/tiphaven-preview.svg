@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#f4f1ea"/>
+  <circle cx="990" cy="605" r="250" fill="#55c9bf" stroke="#171614" stroke-width="4"/>
+  <rect x="850" y="465" width="280" height="280" rx="62" fill="#ffe361" stroke="#171614" stroke-width="7"/>
+  <rect x="865" y="480" width="280" height="280" rx="62" fill="none" stroke="#171614" stroke-width="7"/>
+  <text x="990" y="659" font-family="Arial, Helvetica, sans-serif" font-size="190" font-weight="800" text-anchor="middle" fill="#171614">t+</text>
+  <text x="72" y="383" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="5" fill="#171614">TIPHAVEN · KESTORA LABS</text>
+  <text x="72" y="530" font-family="Arial, Helvetica, sans-serif" font-size="75" font-weight="800" letter-spacing="-5" fill="#171614">Tus propinas.</text>
+  <text x="72" y="615" font-family="Arial, Helvetica, sans-serif" font-size="75" font-weight="800" letter-spacing="-5" fill="#171614">Por fin, claras.</text>
+  <rect x="72" y="674" width="550" height="76" rx="18" fill="#a984df" stroke="#171614" stroke-width="4"/>
+  <rect x="80" y="682" width="550" height="76" rx="18" fill="none" stroke="#171614" stroke-width="4"/>
+  <text x="347" y="723" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="800" text-anchor="middle" fill="#171614">CONOCE EL VALOR DE CADA TURNO</text>
+  <text x="72" y="833" font-family="Arial, Helvetica, sans-serif" font-size="27" fill="#5d5852">Seguimiento privado de propinas y turnos para iPhone.</text>
+</svg>

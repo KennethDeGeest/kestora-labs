@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <rect width="1200" height="1200" fill="#faf8f4"/>
+  <circle cx="980" cy="600" r="245" fill="#dbe5f1"/>
+  <circle cx="980" cy="600" r="174" fill="none" stroke="#8fa8c7" stroke-width="2"/>
+  <rect x="896" y="516" width="168" height="168" rx="44" fill="#1d1a18"/>
+  <text x="980" y="625" text-anchor="middle" fill="#faf8f4" font-family="Helvetica Neue,Arial,sans-serif" font-size="78" font-weight="800">B↑</text>
+  <text x="72" y="385" fill="#3e608b" font-family="Helvetica Neue,Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="4">BULKBRO · KESTORA LABS</text>
+  <text x="72" y="535" fill="#1d1a18" font-family="Helvetica Neue,Arial,sans-serif" font-size="62" font-weight="800" letter-spacing="-2">Guías prácticas para</text>
+  <text x="72" y="610" fill="#1d1a18" font-family="Helvetica Neue,Arial,sans-serif" font-size="62" font-weight="800" letter-spacing="-2">ganar peso, con un</text>
+  <text x="72" y="690" fill="#253b59" font-family="Georgia,serif" font-size="72" font-style="italic">progreso real.</text>
+  <text x="72" y="825" fill="#6c655f" font-family="Helvetica Neue,Arial,sans-serif" font-size="24">Formación rigurosa para ganar peso de forma consciente.</text>
+</svg>
