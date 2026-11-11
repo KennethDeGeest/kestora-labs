@@ -52,9 +52,11 @@ a { color: inherit; }
 
 @media (max-width: 700px) {
   .site-header { padding: 1.25rem; }
-  .wordmark { align-items: flex-start; flex-direction: column; gap: .2rem; }
+  .wordmark { align-items: center; flex-direction: row; gap: .65rem; }
   .wordmark-name { font-size: .82rem; }
-  .wordmark-label { padding-left: 0; border-left: 0; font-size: .58rem; }
+  .wordmark-label { padding-left: .65rem; font-size: .58rem; }
+  /* The overview already has one explicit back-to-app link. */
+  .site-header nav { display: none; }
   .guides-main { padding: 0 .5rem 2rem; }
   .guides-back { margin: 1.25rem .75rem 1rem; }
   .guides-shell { border-radius: 1.15rem; }

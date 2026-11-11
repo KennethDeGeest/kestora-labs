@@ -276,6 +276,8 @@ body.unified-legal-page {
 .unified-legal-page .legal-footer nav button { color: #595b60 !important; font: inherit !important; font-size: .85rem !important; }
 
 @media (max-width: 700px) {
+  /* Legal pages use the back link and tab row below; do not repeat “All apps” here. */
+  .legal-site-header nav { display: none !important; }
   .unified-legal-main { padding: 0 .5rem !important; margin-bottom: 2rem !important; }
   .legal-page-tools { align-items: flex-start; flex-direction: column; margin: 1.25rem .75rem 1rem; gap: .8rem; }
   .legal-document-shell { border-radius: 1.15rem; }
@@ -298,7 +300,7 @@ body.unified-legal-page {
   .legal-page-tools { margin-left: .5rem; margin-right: .5rem; }
   .legal-tabs { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .legal-tabs:has(a[href="health.html"]) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .legal-tabs a { text-align: center; }
+  .legal-tabs a { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; text-align: center; }
   .legal-document-shell .legal-hero h1,
   .legal-document-shell > .legal-header h1,
   .legal-document-shell .privacy-shell > h1 { font-size: clamp(2rem, 13vw, 3rem) !important; }

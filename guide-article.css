@@ -120,10 +120,11 @@ img { display: block; max-width: 100%; }
 
 @media (max-width: 700px) {
   .site-header { padding: 1.25rem; }
-  .wordmark { align-items: flex-start; flex-direction: column; gap: .2rem; }
+  .wordmark { align-items: center; flex-direction: row; gap: .65rem; }
   .wordmark-name { font-size: .82rem; }
-  .wordmark-label { padding-left: 0; border-left: 0; font-size: .58rem; }
-  .site-header nav a:first-child { display: none; }
+  .wordmark-label { padding-left: .65rem; font-size: .58rem; }
+  /* The contextual back link below the header is clearer than duplicate app/guide links. */
+  .site-header nav { display: none; }
   .article-main { padding: 0 .5rem 2rem; }
   .article-back { margin: 1.25rem .75rem 1rem; }
   .article-shell { border-radius: 1.15rem; }
@@ -135,6 +136,7 @@ img { display: block; max-width: 100%; }
   .article-layout { padding: 2rem 1.25rem; }
   .article-content h2 { margin-top: 3rem; }
   .app-callout { grid-template-columns: 1fr; }
+  .app-callout .button { width: 100%; text-align: center; }
   .related-grid { grid-template-columns: 1fr; }
   .capability-grid { grid-template-columns: 1fr; }
   .prompt-grid { grid-template-columns: 1fr; }

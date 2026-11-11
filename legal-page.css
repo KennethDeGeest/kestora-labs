@@ -105,9 +105,11 @@ button { font: inherit; }
 
 @media (max-width: 700px) {
   .site-header { padding: 1.25rem; }
-  .wordmark { align-items: flex-start; flex-direction: column; gap: .2rem; }
+  .wordmark { align-items: center; flex-direction: row; gap: .65rem; }
   .wordmark-name { font-size: .82rem; }
-  .wordmark-label { padding-left: 0; border-left: 0; font-size: .58rem; }
+  .wordmark-label { padding-left: .65rem; font-size: .58rem; }
+  /* Back-to-app plus the legal tabs already provide the useful phone navigation. */
+  .site-header nav { display: none; }
   .legal-main { padding: 0 .5rem 2rem; }
   .legal-tools { align-items: flex-start; flex-direction: column; gap: .8rem; margin: 1.25rem .75rem 1rem; }
   .legal-shell { border-radius: 1.15rem; }
@@ -123,7 +125,7 @@ button { font: inherit; }
   .wordmark-label { display: none; }
   .legal-tabs { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .legal-tabs.has-health { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .legal-tabs a { text-align: center; }
+  .legal-tabs a { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; text-align: center; }
   .legal-hero h1 { font-size: clamp(2.15rem, 13vw, 3rem); }
 }
 
