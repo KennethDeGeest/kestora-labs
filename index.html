@@ -72,36 +72,34 @@
     <button class="dialog-close" type="button" aria-label="Close contact options">×</button>
     <div class="contact-dialog-content">
       <p class="dialog-kicker">Get in touch</p>
-      <h2 id="contact-dialog-title">What would you like to discuss?</h2>
-      <p class="contact-dialog-intro">Choose a topic so your message reaches me with the right context.</p>
-      <div class="contact-options">
-        <a data-contact-app="walkbop" href="mailto:degeestkenneth@gmail.com?subject=WalkBop%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20WalkBop.%0A%0A">
-          <span><strong>WalkBop</strong><small>Weekly Step Races With Friends</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a data-contact-app="fovri" href="mailto:degeestkenneth@gmail.com?subject=Recipe%20Keeper%20%26%20Planner%3A%20Fovri%20Support">
-          <span><strong>Recipe Keeper &amp; Planner: Fovri</strong><small>Social Import &amp; Cookbook</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a data-contact-app="treeidentifier" href="mailto:degeestkenneth@gmail.com?subject=AI%20Plant%20Identifier%3A%20Oqvi%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20AI%20Plant%20Identifier%3A%20Oqvi.%0A%0A">
-          <span><strong>AI Plant Identifier: Oqvi</strong><small>Tree, Leaf, Wood &amp; Flower ID</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a data-contact-app="tiphaven" href="mailto:degeestkenneth@gmail.com?subject=Server%20Tip%20Tracker%3A%20TipHaven%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Server%20Tip%20Tracker%3A%20TipHaven.%0A%0A">
-          <span><strong>Server Tip Tracker: TipHaven</strong><small>Waitress Bartender Income Log</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a data-contact-app="bulkbro" href="mailto:degeestkenneth@gmail.com?subject=Bulk%20Tracker%3A%20Gain%20Weight%20Plan%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Bulk%20Tracker%3A%20Gain%20Weight%20Plan.%0A%0A">
-          <span><strong>Bulk Tracker: Gain Weight Plan</strong><small>Adaptive Calorie &amp; Macro Goals</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a data-contact-app="migraloom" href="mailto:degeestkenneth@gmail.com?subject=Headache%20Tracker%3A%20MigraLoom%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Headache%20Tracker%3A%20MigraLoom.%0A%0A">
-          <span><strong>Headache Tracker: MigraLoom</strong><small>Migraine Diary &amp; Symptom Log</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a data-contact-app="bumpecho" href="mailto:degeestkenneth@gmail.com?subject=Baby%20Heartbeat%20-%20Bump%20Echo%20Support&amp;body=Hi%20Kenneth%2C%0A%0AI%27m%20contacting%20you%20about%20Baby%20Heartbeat%20-%20Bump%20Echo.%0A%0A">
-          <span><strong>Baby Heartbeat - Bump Echo</strong><small>Pregnancy Sound Recorder</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a class="hire-option" href="mailto:degeestkenneth@gmail.com?subject=App%20Project%20Enquiry&amp;body=Hi%20Kenneth%2C%0A%0AI%27d%20like%20to%20discuss%20an%20app%20project.%0A%0AProject%20idea%3A%0ATimeline%3A%0ABudget%20range%3A%0A">
-          <span><strong>Hire me for an app project</strong><small>Building, improving, or launching an app</small></span><b aria-hidden="true">↗</b>
-        </a>
-        <a href="mailto:degeestkenneth@gmail.com?subject=General%20Enquiry&amp;body=Hi%20Kenneth%2C%0A%0A">
-          <span><strong>Something else</strong><small>General enquiries and introductions</small></span><b aria-hidden="true">↗</b>
-        </a>
+      <div id="contact-start">
+        <h2 id="contact-dialog-title">How can I help?</h2>
+        <p class="contact-dialog-intro">Choose the type of message you would like to send.</p>
+        <div class="contact-options">
+          <button class="contact-option" id="support-choice" type="button">
+            <span><strong>App support</strong><small>Get help with one of the apps</small></span><b aria-hidden="true">→</b>
+          </button>
+          <a href="mailto:degeestkenneth@gmail.com?subject=General%20Enquiry&amp;body=Hi%20Kenneth%2C%0A%0A">
+            <span><strong>General enquiry</strong><small>Questions, introductions, or working together</small></span><b aria-hidden="true">↗</b>
+          </a>
+        </div>
+      </div>
+      <div id="support-step" hidden>
+        <button class="support-back" id="support-back" type="button">← Back</button>
+        <h2>Which app do you need help with?</h2>
+        <p class="contact-dialog-intro">Select an app and I’ll prepare the support email.</p>
+        <label class="support-label" for="support-app">App</label>
+        <select class="support-select" id="support-app">
+          <option value="" selected disabled>Choose an app</option>
+          <option>WalkBop</option>
+          <option>Fovri</option>
+          <option>BulkBro</option>
+          <option>TipHaven</option>
+          <option>Oqvi</option>
+          <option>MigraLoom</option>
+          <option>Bump Echo</option>
+        </select>
+        <button class="support-submit" id="support-submit" type="button" disabled>Continue to email ↗</button>
       </div>
     </div>
   </dialog>
