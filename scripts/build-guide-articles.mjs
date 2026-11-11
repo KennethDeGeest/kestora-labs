@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import migraLoomGuides from './migraloom-guide-data.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -24,6 +25,22 @@ function bumpEchoArticle(config) {
       text: 'Bump Echo keeps messages, songs and meaningful everyday sounds together on your iPhone. It is a keepsake app—not a medical device or health-monitoring tool.',
       url: `https://apps.apple.com/app/apple-store/id6812684414?pt=128911414&mt=8&ct=bumpecho_${config.slug.replaceAll('-', '_')}_inline`
     },
+    ...config
+  };
+}
+
+function migraLoomArticle(config) {
+  return {
+    app: 'MigraLoom', appSlug: 'migraloom', appIcon: '/assets/migraloom.png',
+    kicker: config.kicker || 'MigraLoom guide', published: '2026-11-05', modified: '2026-11-11',
+    author: 'Kestora Labs, the maker of MigraLoom', appStoreId: '6811065580',
+    smartBannerCampaign: `migraloom_${config.slug.replaceAll('-', '_')}`,
+    socialImage: `/assets/guides/migraloom-${config.slug}.png`,
+    about: ['migraine diary', 'headache tracking', 'appointment preparation'],
+    languages: [{ code: 'en', label: 'English', short: 'EN', url: `/migraloom/guides/${config.slug}/` }, ...(config.french ? [{ code: 'fr', label: 'Français', short: 'FR', url: config.french }] : [])],
+    appCallout: { kicker: 'A calm, private migraine diary', title: 'Record now. Add detail when you can.', text: 'MigraLoom keeps your migraine history on your iPhone, requires no account and creates a structured report from what you recorded.', url: `https://apps.apple.com/app/apple-store/id6811065580?pt=128911414&mt=8&ct=migraloom_${config.slug.replaceAll('-', '_')}_inline` },
+    footerNote: 'MigraLoom is a personal migraine diary. It does not diagnose, treat or provide medical advice. Seek qualified medical care for health concerns.',
+    sourceNote: 'This guide is general information, not medical advice. It was reviewed against the sources below. A diary can support a healthcare conversation; it cannot determine a diagnosis or treatment.',
     ...config
   };
 }
@@ -253,7 +270,7 @@ const articles = [{
     { id: 'permission', toc: 'Ask permission', title: 'Ask before keeping and sharing', paragraphs: ['Tell each person what the recording is for and who may hear it. A family keepsake is still someone else’s voice. Do not publish or broadly share it without clear permission.'] }
   ],
   related: [{ title: 'How to record pregnancy memories', url: '../how-to-record-pregnancy-memories/' }, { title: 'Pregnancy journal ideas', url: '../pregnancy-journal/' }]
-})];
+}), ...migraLoomGuides.map(migraLoomArticle)];
 
 const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character]);
 const prettyDate = value => new Intl.DateTimeFormat('en', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(new Date(`${value}T00:00:00Z`));
@@ -294,8 +311,9 @@ function renderArticle(article) {
   const toc = article.sections.map(section => `<a href="#${escapeHtml(section.id)}">${escapeHtml(section.toc)}</a>`).join('');
   const sourceToc = article.sources?.length ? '<a href="#sources">Sources</a>' : '';
   const sections = article.sections.map(section => `<h2 id="${escapeHtml(section.id)}">${escapeHtml(section.title)}</h2>${(section.paragraphs || []).map(paragraph => `<p>${escapeHtml(paragraph)}</p>`).join('')}${renderCitations(section.citations)}${renderComparison(section.comparison)}${renderSectionExtras(section)}`).join('');
-  const safety = article.safety ? `<aside class="safety-note"><p><strong>Important:</strong> ${escapeHtml(article.safety)}${article.sources?.length ? ' <a class="inline-source" href="https://www.nhs.uk/pregnancy/keeping-well/your-babys-movements/" rel="noopener">NHS guidance ↗</a>' : ''}</p></aside>` : '';
-  const sources = article.sources?.length ? `<div class="review-note"><p><strong>Editorial note:</strong> This guide is general information, not medical advice. It was reviewed against the official sources below on ${prettyDate(article.modified)}. Always follow advice from your own qualified maternity care team.</p></div><h2 id="sources">Official sources</h2><ul class="source-list">${article.sources.map(source => `<li><a href="${escapeHtml(source.url)}" rel="noopener">${escapeHtml(source.label)} ↗</a></li>`).join('')}</ul>` : '';
+  const safetyLink = article.appSlug === 'bumpecho' && article.sources?.length ? ' <a class="inline-source" href="https://www.nhs.uk/pregnancy/keeping-well/your-babys-movements/" rel="noopener">NHS guidance ↗</a>' : '';
+  const safety = article.safety ? `<aside class="safety-note"><p><strong>Important:</strong> ${escapeHtml(article.safety)}${safetyLink}</p></aside>` : '';
+  const sources = article.sources?.length ? `<div class="review-note"><p><strong>Editorial note:</strong> ${escapeHtml(article.sourceNote || `This guide is general information, not medical advice. It was reviewed against the official sources below on ${prettyDate(article.modified)}. Always follow advice from your own qualified maternity care team.`)}</p></div><h2 id="sources">Official sources</h2><ul class="source-list">${article.sources.map(source => `<li><a href="${escapeHtml(source.url)}" rel="noopener">${escapeHtml(source.label)} ↗</a></li>`).join('')}</ul>` : '';
   const schema = {
     '@context': 'https://schema.org', '@type': 'Article', headline: article.title, description: article.description,
     image: absolute(article.socialImage), datePublished: article.published, dateModified: article.modified,
@@ -319,7 +337,7 @@ function renderArticle(article) {
   <meta name="description" content="${escapeHtml(article.description)}">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="theme-color" content="#fafafa">
-  <meta name="apple-itunes-app" content="app-id=6812684414, affiliate-data=pt=128911414&amp;ct=bumpecho_heartbeat_apps">
+  <meta name="apple-itunes-app" content="app-id=${escapeHtml(article.appStoreId || '6812684414')}, affiliate-data=pt=128911414&amp;ct=${escapeHtml(article.smartBannerCampaign || 'bumpecho_heartbeat_apps')}">
   <link rel="canonical" href="${canonical}">
 ${alternates}
   <link rel="alternate" hreflang="x-default" href="${canonical}">
@@ -359,7 +377,7 @@ ${alternates}
           <h2>Continue reading</h2><div class="related-grid">${article.related.map(item => `<a class="related-card" href="${escapeHtml(item.url)}"><span>Related guide</span><strong>${escapeHtml(item.title)}</strong></a>`).join('')}</div>
         </div>
       </div>
-      <div class="article-note"><p>${escapeHtml(article.app)} is an audio keepsake app. It is not a medical device and does not monitor, identify or assess fetal heartbeat, movement, pregnancy or wellbeing.</p></div>
+      <div class="article-note"><p>${escapeHtml(article.footerNote || `${article.app} is an audio keepsake app. It is not a medical device and does not monitor, identify or assess fetal heartbeat, movement, pregnancy or wellbeing.`)}</p></div>
     </article>
   </main>
   <footer class="article-footer"><p>© <span id="year"></span> Kestora Labs</p><nav aria-label="Footer navigation"><a href="/${article.appSlug}/">${escapeHtml(article.app)}</a><a href="/${article.appSlug}/guides/">Guides</a><a href="/${article.appSlug}/privacy.html">Privacy</a><a href="/${article.appSlug}/terms.html">Terms</a><a href="/${article.appSlug}/support.html">Support</a><a href="/privacy.html">Website privacy</a>${article.languages.filter(language => language.code !== 'en').map(language => `<a href="${escapeHtml(language.url)}" lang="${escapeHtml(language.code)}" hreflang="${escapeHtml(language.code)}">${escapeHtml(language.label)}</a>`).join('')}</nav></footer>
