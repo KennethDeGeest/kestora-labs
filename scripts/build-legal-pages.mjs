@@ -145,7 +145,7 @@ for (const file of files) {
   <link rel="icon" type="image/svg+xml" href="${favicon}">
   <title>${title}</title>
   <link rel="stylesheet" href="/legal-page.css?v=20261111-1">
-  <script src="/site.js?v=20261111-language-switch-v2" defer></script>
+  <script src="/site.js?v=20261111-contact" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>

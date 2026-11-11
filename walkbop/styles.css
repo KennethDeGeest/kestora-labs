@@ -14,7 +14,7 @@ footer{background:var(--ink);color:#fff;border-top:1px solid #36302e;padding:46p
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.availability i{animation:none}.reveal{opacity:1;transform:none;transition:none}}
 
 /* WalkBop brand-alignment pass: use the app's real assets and cleaner race UI. */
-.race-board{border:0;border-block:3px solid var(--ink);border-radius:0;box-shadow:none;background:var(--yellow)}
+.race-board{border:0;border-block:3px solid var(--ink);border-radius:0;box-shadow:none;background:linear-gradient(90deg,var(--yellow) 0 56%,#ff735f 56%)}
 .story-card{border-left:3px solid var(--ink)}
 .items-section{background:var(--coral);position:relative;overflow:hidden}
 .items-section:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(23,19,19,.16) 1.5px,transparent 1.5px);background-size:22px 22px;opacity:.25;pointer-events:none}
@@ -44,19 +44,3 @@ footer{background:var(--ink);color:#fff;border-top:1px solid #36302e;padding:46p
 #race,#items,#character,#friends,#coming-soon{scroll-margin-top:96px}
 
 @media(max-width:760px){.race-board{background:var(--yellow)}.story-card{border-left:0;border-top:3px solid var(--ink)}.items-grid{grid-template-columns:1fr;margin-left:var(--pad);margin-right:var(--pad)}.item-move{min-height:440px;border-left:0;border-top:2px solid var(--ink);padding:30px 22px}.item-move:first-child{border-top:0}.item-move .item-art{height:190px}.item-move .item-art:before{width:150px;height:150px}.item-move .item-art img{width:180px}.inventory-line{grid-template-columns:repeat(4,1fr);margin-top:48px}.inventory-line span:nth-child(5){border-left:0}.inventory-line img{width:70px}.item-story figure{clip-path:none}.coming-soon>img{width:106px;height:106px;min-height:106px;flex-basis:106px}}
-
-
-/* Present the real app UI in consistent iPhone-style hardware frames. */
-.phone-mockup{position:relative;overflow:hidden;background:#0e0d0d;border:9px solid #0e0d0d;border-radius:48px;box-shadow:0 28px 58px rgba(23,19,19,.28);aspect-ratio:414/900}
-.phone-mockup:before{content:"";position:absolute;z-index:2;left:50%;top:10px;width:88px;height:24px;transform:translateX(-50%);border-radius:999px;background:#0e0d0d}
-.phone-mockup img{width:100%;height:100%;object-fit:cover;object-position:top}
-.story-card{display:grid;place-items:center;padding:clamp(28px,4vw,64px)}
-.story-card>.phone-mockup{width:min(355px,88%)}
-.story-card>img{display:none}
-.phone-stage{display:grid;place-items:center;min-height:820px;overflow:visible!important;border:0!important;border-radius:0!important;box-shadow:none!important;clip-path:none!important}
-.phone-stage>.phone-mockup{width:min(380px,100%)}
-.character-collage figure.phone-mockup{border:9px solid #0e0d0d;border-radius:48px;box-shadow:0 28px 58px rgba(23,19,19,.28);background:#0e0d0d}
-.character-shot{width:48%;height:auto;left:3%;top:2%;clip-path:none}
-.mood-shot{width:48%;height:auto;right:2%;bottom:2%;clip-path:none}
-
-@media(max-width:760px){.story-card{height:auto;min-height:720px;padding:28px 18px}.story-card>.phone-mockup{width:min(320px,92%)}.phone-stage{height:auto!important;min-height:680px}.phone-stage>.phone-mockup{width:min(315px,88%)}.character-collage{min-height:680px}.character-collage figure.phone-mockup{border-width:7px;border-radius:38px}.character-shot,.mood-shot{width:54%}}

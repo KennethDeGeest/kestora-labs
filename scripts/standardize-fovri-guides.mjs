@@ -30,10 +30,6 @@ for (const slug of slugs) {
   const socialDescription = pick(old, /<meta property="og:description" content="([^"]+)"/i, description);
   const socialImage = pick(old, /<meta property="og:image" content="([^"]+)"/i, 'https://kestoralabs.com/assets/fovri/social-to-recipe.png');
   const jsonLd = [...old.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)].map((match) => `  <script type="application/ld+json">${match[1].replace('"dateModified":"2026-11-05"', '"dateModified":"2026-11-11"')}</script>`).join('\n');
-  const alternates = [...old.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)"/gi)].map((match) => ({ code: match[1], url: match[2] }));
-  const alternateTags = alternates.map(({ code, url }) => `  <link rel="alternate" hreflang="${code}" href="${url}">`).join('\n');
-  const languageLinks = alternates.filter(({ code }) => !['en', 'x-default'].includes(code)).map(({ code, url }) => `<a href="${url}" lang="${code}" hreflang="${code}" aria-label="Read in ${code.toUpperCase()}">${code.toUpperCase()}</a>`).join('');
-  const footerLanguages = alternates.filter(({ code }) => !['en', 'x-default'].includes(code)).map(({ code, url }) => `<a href="${url}" lang="${code}" hreflang="${code}">${code === 'es' ? 'Español' : code === 'fr' ? 'Français' : code.toUpperCase()}</a>`).join('');
 
   let toc = pick(old, /<aside class="toc">[\s\S]*?<p>[^<]*<\/p>([\s\S]*?)<\/aside>/i);
   toc = toc.replace(/>\s*0\d\s+/g, '>');
@@ -65,7 +61,6 @@ for (const slug of slugs) {
   <meta name="theme-color" content="#fafafa">
   <meta name="apple-itunes-app" content="${smartBanner}">
   <link rel="canonical" href="${canonical}">
-${alternateTags}
   <meta property="og:type" content="article">
   <meta property="og:title" content="${socialTitle}">
   <meta property="og:description" content="${socialDescription}">
@@ -80,7 +75,7 @@ ${jsonLd}
 </head>
 <body>
   <a class="skip-link" href="#article">Skip to article</a>
-  <header class="site-header"><a class="wordmark" href="/" aria-label="Kestora Labs app portfolio home"><span class="wordmark-name">Kestora Labs</span><span class="wordmark-label">Independent Apps</span></a><nav aria-label="Main navigation"><a href="/fovri/">Fovri</a><a href="/fovri/guides/">All guides</a>${languageLinks}</nav></header>
+  <header class="site-header"><a class="wordmark" href="/" aria-label="Kestora Labs app portfolio home"><span class="wordmark-name">Kestora Labs</span><span class="wordmark-label">Independent Apps</span></a><nav aria-label="Main navigation"><a href="/fovri/">Fovri</a><a href="/fovri/guides/">All guides</a></nav></header>
   <main class="article-main">
     <a class="article-back" href="/fovri/guides/">← Back to Fovri guides</a>
     <article class="article-shell" id="article">
@@ -89,7 +84,7 @@ ${jsonLd}
       <div class="article-note"><p>Imported and AI-assisted recipes are editable drafts. Review ingredients, quantities, allergens, handling and safe cooking temperatures before cooking.</p></div>
     </article>
   </main>
-  <footer class="article-footer"><p>© <span id="year"></span> Kestora Labs</p><nav aria-label="Footer navigation"><a href="/fovri/">Fovri</a><a href="/fovri/guides/">Guides</a><a href="/fovri/privacy.html">Privacy</a><a href="/fovri/terms.html">Terms</a><a href="/fovri/support.html">Support</a><a href="/privacy.html">Website privacy</a>${footerLanguages}</nav></footer>
+  <footer class="article-footer"><p>© <span id="year"></span> Kestora Labs</p><nav aria-label="Footer navigation"><a href="/fovri/">Fovri</a><a href="/fovri/guides/">Guides</a><a href="/fovri/privacy.html">Privacy</a><a href="/fovri/terms.html">Terms</a><a href="/fovri/support.html">Support</a><a href="/privacy.html">Website privacy</a></nav></footer>
   <script>document.querySelector('#year').textContent = new Date().getFullYear();const toc=document.querySelector('.article-toc');const tocBreakpoint=matchMedia('(max-width: 860px)');const syncToc=()=>{if(tocBreakpoint.matches)toc.removeAttribute('open');else toc.setAttribute('open','');};syncToc();tocBreakpoint.addEventListener('change',syncToc);</script>
 </body>
 </html>`;
