@@ -45,7 +45,9 @@ img { display: block; max-width: 100%; }
 
 .article-layout { display: grid; grid-template-columns: 13rem minmax(0, 46rem); gap: clamp(2.5rem, 7vw, 6rem); justify-content: space-between; padding: clamp(2rem, 5vw, 4rem); }
 .article-toc { position: sticky; top: 2rem; align-self: start; }
-.article-toc p { margin: 0 0 .9rem; color: #77797e; font-size: .68rem; font-weight: 750; letter-spacing: .13em; text-transform: uppercase; }
+.article-toc summary { margin: 0 0 .9rem; color: #77797e; font-size: .68rem; font-weight: 750; letter-spacing: .13em; list-style: none; text-transform: uppercase; }
+.article-toc summary::-webkit-details-marker { display: none; }
+.article-toc > div { display: block; }
 .article-toc a { display: block; padding: .55rem 0; color: var(--muted); font-size: .86rem; line-height: 1.35; text-decoration: none; }
 .article-toc a:hover { color: var(--ink); }
 .article-content { min-width: 0; }
@@ -59,6 +61,15 @@ img { display: block; max-width: 100%; }
 .quick-answer p { margin: .7rem 0 0; color: #d4d5d7; }
 .safety-note { margin: 1rem 0 0; padding: 1.4rem 1.5rem; border: 1px solid var(--warning-line); border-radius: 1rem; background: var(--warning); }
 .safety-note p { margin: 0; color: #5d4a31; }
+.inline-source { color: inherit; font-weight: 650; text-underline-offset: .18em; }
+.capability-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; margin: 1.5rem 0 0; }
+.capability-card { padding: 1.4rem; border: 1px solid var(--line); border-radius: 1rem; background: var(--paper); }
+.capability-card.cannot { background: #f3f3f4; }
+.capability-card span { display: block; margin-bottom: .8rem; color: #77797e; font-size: .68rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.capability-card ul { margin: 0; }
+.capability-card li { margin: .45rem 0; font-size: .92rem; line-height: 1.55; }
+.review-note { margin: 3rem 0 0; padding: 1.1rem 1.2rem; border-left: 3px solid #c7c8cc; background: var(--paper); }
+.review-note p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.65; }
 .source-list { display: grid; gap: .75rem; padding: 0; list-style: none; }
 .source-list li { margin: 0; }
 .source-list a { display: block; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--paper); color: var(--ink); text-decoration: none; }
@@ -82,8 +93,13 @@ img { display: block; max-width: 100%; }
   .article-hero { grid-template-columns: 1fr; gap: 2rem; }
   .article-summary { max-width: 34rem; }
   .article-layout { grid-template-columns: 1fr; gap: 2rem; }
-  .article-toc { position: static; padding-bottom: 1.4rem; border-bottom: 1px solid var(--line); }
-  .article-toc a { display: inline-block; margin-right: 1rem; }
+  .article-toc { position: static; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: .8rem; background: var(--paper); }
+  .article-toc summary { margin: 0; cursor: pointer; }
+  .article-toc summary::after { content: "+"; float: right; color: var(--ink); font-size: 1rem; line-height: .7; }
+  .article-toc[open] summary { margin-bottom: .7rem; }
+  .article-toc[open] summary::after { content: "−"; }
+  .article-toc:not([open]) > div { display: none; }
+  .article-toc a { padding: .45rem 0; }
 }
 
 @media (max-width: 700px) {
@@ -95,12 +111,16 @@ img { display: block; max-width: 100%; }
   .article-main { padding: 0 .5rem 2rem; }
   .article-back { margin: 1.25rem .75rem 1rem; }
   .article-shell { border-radius: 1.15rem; }
-  .article-hero { padding: 2.5rem 1.25rem; }
-  .article-hero h1 { font-size: clamp(2.5rem, 12vw, 3.7rem); }
+  .article-hero { gap: 1.4rem; padding: 1.9rem 1.25rem 2.1rem; }
+  .article-hero h1 { font-size: clamp(2.3rem, 11vw, 3.25rem); line-height: 1; }
+  .article-lead { margin-top: 1rem; font-size: .98rem; line-height: 1.6; }
+  .article-byline { margin-top: 1rem; }
+  .article-summary { padding: 1.25rem; }
   .article-layout { padding: 2rem 1.25rem; }
   .article-content h2 { margin-top: 3rem; }
   .app-callout { grid-template-columns: 1fr; }
   .related-grid { grid-template-columns: 1fr; }
+  .capability-grid { grid-template-columns: 1fr; }
   .article-note { padding: 1.25rem; }
   .article-footer { align-items: flex-start; flex-direction: column; padding: 2rem 1.25rem; }
 }
