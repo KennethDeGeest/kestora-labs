@@ -15,6 +15,12 @@
   document.body.classList.add('unified-legal-page');
   main.classList.add('unified-legal-main');
 
+  document.querySelectorAll('footer p').forEach(paragraph => {
+    paragraph.innerHTML = paragraph.innerHTML
+      .replace('Kenneth M. S. De Geest', 'Kestora Labs')
+      .replace('Kenneth Marcel S De Geest', 'Kestora Labs');
+  });
+
   const header = document.createElement('header');
   header.className = 'site-header legal-site-header';
   header.innerHTML = `
