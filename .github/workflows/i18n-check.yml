@@ -1,0 +1,32 @@
+name: Localization safety checks
+
+on:
+  pull_request:
+    paths:
+      - 'i18n/**'
+      - 'scripts/i18n-*.mjs'
+      - 'tests/i18n.test.mjs'
+      - 'sitemap.xml'
+      - 'package.json'
+  push:
+    branches: [main]
+    paths:
+      - 'i18n/**'
+      - 'scripts/i18n-*.mjs'
+      - 'tests/i18n.test.mjs'
+      - 'sitemap.xml'
+      - 'package.json'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm run i18n:verify

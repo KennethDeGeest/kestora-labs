@@ -1,0 +1,55 @@
+{
+  "fovri.app": {
+    "meta": {
+      "title": "Recipe Keeper & Planner: Fovri — Kestora Labs",
+      "description": "Turn recipe links and cooking videos into a personal cookbook, then plan what to cook and what to buy."
+    },
+    "brand": {
+      "studio": "Kestora Labs",
+      "label": "Independent Apps",
+      "homeLabel": "Kestora Labs app portfolio home"
+    },
+    "hero": {
+      "name": "Recipe Keeper & Planner: Fovri",
+      "subtitle": "Social Import & Cookbook",
+      "description": "Turn recipe links and cooking videos into a personal cookbook, then plan what to cook and what to buy.",
+      "iconAlt": "Recipe Keeper & Planner: Fovri app icon"
+    },
+    "screenshots": [
+      { "alt": "Fovri Cook next screen with a sample pasta meal" },
+      { "alt": "An editable sample recipe in Fovri" },
+      { "alt": "Fovri grocery checklist with sample ingredients" }
+    ],
+    "summary": {
+      "label": "The idea",
+      "title": "From saved inspiration to your next good meal.",
+      "body": "A recipe should be easy to find when you are ready to cook. Fovri brings shared links, editable recipes, meal plans and groceries together in one calm place."
+    },
+    "features": [
+      { "title": "Bring recipes into your cookbook", "body": "Share a recipe link to Fovri or paste it in the app. Review and edit the ingredients and steps; optional AI help can recover missing details or create a labelled suggestion from a video." },
+      { "title": "Plan meals and groceries", "body": "Choose what to cook next and bring the ingredients into a grocery list you can check off as you shop." },
+      { "title": "Cook at your own pace", "body": "Adjust servings, follow the steps and use cooking timers while keeping the original source within reach." }
+    ],
+    "cta": {
+      "title": "Try Fovri for yourself.",
+      "body": "Take a closer look on the App Store."
+    },
+    "footer": {
+      "note": "Available on the App Store. Five successful recipe imports are free; Fovri Pro offers monthly and yearly subscriptions for further imports. Saved recipes remain available without a subscription. Screenshots show sample content.",
+      "copyright": "Kestora Labs"
+    },
+    "ui": {
+      "allApps": "All apps",
+      "viewAppStore": "View on the App Store",
+      "browseGuides": "Browse guides",
+      "whatItDoes": "What it does",
+      "screenshots": "App screenshots",
+      "mainNavigation": "Main navigation",
+      "appInformation": "App information",
+      "footerNavigation": "Footer navigation",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "support": "Support"
+    }
+  }
+}
