@@ -15,7 +15,7 @@ for (const [locale, localeContent] of Object.entries(contentByLocale)) {
   for (const page of pages) {
     const destination = join(outputRoot, outputPath(locale, page.route));
     await mkdir(dirname(destination), { recursive: true });
-    const html = renderAppPage({ locale: locales[locale].htmlLang, page, content: localeContent[page.id], contentByLocale });
+    const html = renderAppPage({ locale: locales[locale].htmlLang, page, content: localeContent.pages[page.id], common: localeContent.common, contentByLocale });
     await writeFile(destination, html, 'utf8');
   }
 }

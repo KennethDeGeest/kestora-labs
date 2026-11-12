@@ -1,0 +1,20 @@
+{
+  "brand": {
+    "studio": "Kestora Labs",
+    "label": "Independent Apps",
+    "homeLabel": "Kestora Labs app portfolio home"
+  },
+  "ui": {
+    "allApps": "All apps",
+    "viewAppStore": "View on the App Store",
+    "browseGuides": "Browse guides",
+    "whatItDoes": "What it does",
+    "screenshots": "App screenshots",
+    "mainNavigation": "Main navigation",
+    "appInformation": "App information",
+    "footerNavigation": "Footer navigation",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "support": "Support"
+  }
+}

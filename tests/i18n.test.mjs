@@ -12,6 +12,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 test('registry and enabled locale content validate', async () => {
   const content = await loadContent(root);
   assert.deepEqual(Object.keys(content), ['en']);
+  assert.equal(Object.keys(content.en.pages).length, 8);
 });
 
 test('locale paths are deterministic', () => {
@@ -38,7 +39,7 @@ test('an enabled locale cannot ship with missing content', async () => {
   const content = await loadContent(root);
   locales.es.enabled = true;
   try {
-    assert.throws(() => validateRegistry(content), /Missing es content/);
+    assert.throws(() => validateRegistry(content), /Missing es (common )?content/);
   } finally {
     locales.es.enabled = false;
   }

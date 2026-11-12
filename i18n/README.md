@@ -27,11 +27,11 @@ npm run i18n:parity
 
 The GitHub workflow `Localization safety checks` runs this verification automatically whenever localization infrastructure, content or the sitemap changes.
 
-The first pilot is the Fovri app page. It proves that the current shared portfolio template can be rendered entirely from content data while retaining the existing CSS and page structure.
+All eight app landing pages now use the shared app-page definition. Their generated English previews match the existing pages while shared interface labels live in `content/en/common.json` and app-specific copy lives in `content/en/pages.json`.
 
 ## Adding a language
 
-1. Copy `content/en/pages.json` to `content/<locale>/pages.json`.
+1. Copy both `content/en/common.json` and `content/en/pages.json` to `content/<locale>/`.
 2. Translate values only. Do not add HTML.
 3. Keep URLs root-relative unless the localized route map changes them.
 4. Run all four commands above.
@@ -41,8 +41,8 @@ The first pilot is the Fovri app page. It proves that the current shared portfol
 
 ## Migration order
 
-1. App pages
-2. Guide overview pages
+1. App pages — complete
+2. Guide overview pages — next
 3. Guide article pages
 4. Privacy, terms and support pages
 5. Calculators and other interactive tools
