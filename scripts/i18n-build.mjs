@@ -6,6 +6,7 @@ import { outputPath } from '../i18n/lib/core.mjs';
 import { renderAppPage } from '../i18n/templates/app-page.mjs';
 import { renderGuideOverview } from '../i18n/templates/guide-overview.mjs';
 import { renderGuideArticle } from '../i18n/templates/guide-article.mjs';
+import { renderInteractiveTool } from '../i18n/templates/interactive-tool.mjs';
 import { loadContent, migrationSummary } from './i18n-shared.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -29,11 +30,13 @@ for (const [locale, localeContent] of Object.entries(contentByLocale)) {
         .concat(content.extraCards)
         .sort((left, right) => left.order - right.order);
       html = renderGuideOverview({ locale, page, content, guideUi: localeContent.guideOverviews.ui, common: localeContent.common, cards, contentByLocale });
-    } else {
+    } else if (page.type === 'guide-article') {
       const content = localeContent.guideArticles.pages[page.id];
       const appId = `${page.id.split('.')[0]}.guides`;
       const appName = localeContent.guideOverviews.pages[appId].name;
       html = renderGuideArticle({ locale, page, content, articleUi: localeContent.guideArticles.ui, common: localeContent.common, appName, contentByLocale });
+    } else {
+      html = renderInteractiveTool({ locale, page, content: localeContent.tools.pages[page.id], contentByLocale });
     }
     await writeFile(destination, html, 'utf8');
   }

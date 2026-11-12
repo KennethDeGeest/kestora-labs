@@ -58,6 +58,16 @@ function seoFacts(html) {
   return { title, meta, canonical, jsonLd };
 }
 
+function runtimeFacts(html, base) {
+  const stylesheets = [...html.matchAll(/<link\s+[^>]*rel="stylesheet"[^>]*href="([^"]+)"[^>]*>/gi)]
+    .map(match => new URL(match[1], base).href).sort();
+  const externalScripts = [...html.matchAll(/<script\s+[^>]*src="([^"]+)"[^>]*><\/script>/gi)]
+    .map(match => new URL(match[1], base).href).sort();
+  const inlineScripts = [...html.matchAll(/<script(?![^>]*type="application\/ld\+json")[^>]*>([\s\S]*?)<\/script>/gi)]
+    .map(match => match[1].replace(/\s+/g, ' ').trim()).filter(Boolean).sort();
+  return { stylesheets, externalScripts, inlineScripts };
+}
+
 for (const page of pages) {
   const source = await readFile(join(root, page.source), 'utf8');
   const generated = await readFile(join(root, site.previewDirectory, outputPath('en', page.route)), 'utf8');
@@ -69,6 +79,7 @@ for (const page of pages) {
     images: [urls(source, 'src', base), urls(generated, 'src', base)],
     seo: [seoFacts(source), seoFacts(generated)]
   };
+  if (page.type === 'interactive-tool') checks.runtime = [runtimeFacts(source, base), runtimeFacts(generated, base)];
   for (const [name, [expected, actual]] of Object.entries(checks)) {
     if (JSON.stringify(expected) !== JSON.stringify(actual)) {
       console.error(`Parity failure for ${page.id}: ${name}`);

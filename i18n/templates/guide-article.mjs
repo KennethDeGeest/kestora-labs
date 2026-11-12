@@ -11,7 +11,7 @@ function renderNode(node, locale) {
   if (typeof node === 'string') return e(node);
   const attrs = Object.entries(node.attrs).map(([name, raw]) => {
     if (raw === null) return ` ${name}`;
-    const value = ['href', 'src'].includes(name) ? localizeUrl(locale, raw) : raw;
+    const value = name === 'href' ? localizeUrl(locale, raw) : raw;
     return ` ${name}="${e(value)}"`;
   }).join('');
   if (voidTags.has(node.tag)) return `<${node.tag}${attrs}>`;

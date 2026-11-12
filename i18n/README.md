@@ -27,9 +27,11 @@ npm run i18n:parity
 
 The GitHub workflow `Localization safety checks` runs this verification automatically whenever localization infrastructure, content or the sitemap changes.
 
-All eight app landing pages, all seven guide overview pages and all 55 editorial guide articles now use shared definitions. Their generated English previews match the existing pages while shared interface labels and page-specific copy remain separate from the templates.
+All eight app landing pages, all seven guide overview pages, all 55 editorial guide articles and all five interactive tools now use shared definitions. Their generated English previews match the existing pages while shared interface labels and page-specific copy remain separate from the templates.
 
 Guide cards, article metadata, structured data and article content are stored as validated locale content. Article markup is represented as a restricted element tree: translators can change text without introducing scripts, new HTML structures or unsafe URLs.
+
+Interactive tools use a separate restricted tree. Their calculator scripts, stylesheets, form structure and protected attributes must remain identical to English, while visible text and accessible labels can be translated.
 
 ## Adding a language
 
@@ -48,7 +50,7 @@ The repository currently contains English only. When a new language is chosen:
 1. App pages — complete
 2. Guide overview pages — complete
 3. Guide article pages — complete
-4. Privacy, terms and support pages
-5. Calculators and other interactive tools — next
+4. Calculators and other interactive tools — complete
+5. Privacy, terms and support pages — next
 
 English remains the visual reference throughout migration. A page is not considered migrated until its generated English version matches the existing live page.

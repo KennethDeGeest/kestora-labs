@@ -64,6 +64,14 @@ const guideArticleGroups = {
   tiphaven: ['average-bartender-salary-with-tips', 'best-tip-tracking-apps-for-servers', 'how-much-do-servers-make-in-tips', 'server-tip-out-percentage', 'server-tips-and-taxes', 'splitting-tips-by-hours-worked']
 };
 
+const interactiveTool = ({ id, route, source }) => ({
+  id,
+  type: 'interactive-tool',
+  route,
+  source,
+  routes: {}
+});
+
 // App pages are fully registered. Generated output remains preview-only until
 // every other page type has been migrated and explicitly promoted.
 export const pages = [
@@ -127,5 +135,10 @@ export const pages = [
   guideOverview({ slug: 'bumpecho' }),
   ...Object.entries(guideArticleGroups).flatMap(([app, slugs]) =>
     slugs.map(slug => guideArticle({ app, slug, root: app === 'tiphaven' }))
-  )
+  ),
+  interactiveTool({ id: 'bulkbro.tool.gain-rate', route: '/bulkbro/guides/how-fast-should-you-gain-weight/', source: 'bulkbro/guides/how-fast-should-you-gain-weight/index.html' }),
+  interactiveTool({ id: 'tiphaven.tool.paycheck', route: '/tiphaven/paycheck-calculator-with-tips/', source: 'tiphaven/paycheck-calculator-with-tips/index.html' }),
+  interactiveTool({ id: 'tiphaven.tool.tip-out', route: '/tiphaven/tip-out-calculator/', source: 'tiphaven/tip-out-calculator/index.html' }),
+  interactiveTool({ id: 'tiphaven.tool.tip-pool', route: '/tiphaven/tip-pool-calculator/', source: 'tiphaven/tip-pool-calculator/index.html' }),
+  interactiveTool({ id: 'tiphaven.tool.tip-split', route: '/tiphaven/tip-split-calculator/', source: 'tiphaven/tip-split-calculator/index.html' })
 ];

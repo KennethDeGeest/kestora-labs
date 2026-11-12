@@ -34,7 +34,8 @@ export function hreflangLinks(pageId, contentByLocale) {
     .filter(locale => locales[locale]?.enabled && (
       contentByLocale[locale]?.pages?.[pageId] ||
       contentByLocale[locale]?.guideOverviews?.pages?.[pageId] ||
-      contentByLocale[locale]?.guideArticles?.pages?.[pageId]
+      contentByLocale[locale]?.guideArticles?.pages?.[pageId] ||
+      contentByLocale[locale]?.tools?.pages?.[pageId]
     ))
     .sort();
   const links = available.map(locale =>
@@ -141,10 +142,14 @@ function validateArticleNode(node, path) {
   node.children.forEach((child, index) => validateArticleNode(child, `${path}.children[${index}]`));
 }
 
-function articleSkeleton(nodes) {
+function contentSkeleton(nodes, translatableAttrs = new Set()) {
   return nodes.map(node => typeof node === 'string'
     ? null
-    : { tag: node.tag, attrs: node.attrs, children: articleSkeleton(node.children) });
+    : {
+        tag: node.tag,
+        attrs: Object.fromEntries(Object.entries(node.attrs).map(([name, value]) => [name, translatableAttrs.has(name) ? null : value])),
+        children: contentSkeleton(node.children, translatableAttrs)
+      });
 }
 
 export function validateGuideArticles(content, path) {
@@ -170,6 +175,46 @@ export function validateGuideArticles(content, path) {
   }
 }
 
+const toolTags = new Set(['a', 'article', 'aside', 'button', 'code', 'details', 'div', 'footer', 'form', 'h1', 'h2', 'h3', 'header', 'img', 'input', 'label', 'li', 'main', 'nav', 'ol', 'option', 'p', 'section', 'select', 'small', 'span', 'strong', 'summary', 'table', 'tbody', 'td', 'th', 'thead', 'time', 'tr', 'ul']);
+const toolAttrs = new Set(['alt', 'aria-current', 'aria-describedby', 'aria-label', 'aria-labelledby', 'aria-live', 'class', 'data-add', 'data-app-name', 'data-calculator', 'data-consent-accept', 'data-consent-banner', 'data-consent-reject', 'data-cookie-settings', 'data-error', 'data-fixed-field', 'data-link-position', 'data-participants', 'data-rate-calculator', 'data-rate-field', 'data-rate-result', 'data-remove', 'data-result', 'data-sales-field', 'datetime', 'for', 'height', 'hidden', 'href', 'id', 'inputmode', 'max', 'min', 'name', 'novalidate', 'open', 'required', 'src', 'step', 'style', 'tabindex', 'type', 'value', 'width']);
+
+function validateToolNode(node, path) {
+  if (typeof node === 'string') return;
+  validateKeys(node, ['tag', 'attrs', 'children'], path);
+  invariant(toolTags.has(node.tag), `${path}.tag is not allowed: ${node.tag}`);
+  for (const [name, value] of Object.entries(node.attrs)) {
+    invariant(toolAttrs.has(name), `${path}.attrs.${name} is not allowed`);
+    invariant(value === null || typeof value === 'string', `${path}.attrs.${name} must be text or null`);
+    if (['href', 'src'].includes(name) && value !== null) invariant(!/^javascript:/i.test(value) && !/["'<>\s]/.test(value), `${path}.attrs.${name} is unsafe`);
+  }
+  invariant(Array.isArray(node.children), `${path}.children must be an array`);
+  node.children.forEach((child, index) => validateToolNode(child, `${path}.children[${index}]`));
+}
+
+export function validateTools(content, path) {
+  validateKeys(content, ['pages'], path);
+  for (const [pageId, page] of Object.entries(content.pages)) {
+    validateKeys(page, ['meta', 'stylesheets', 'externalScripts', 'inlineScripts', 'body'], `${path}.pages.${pageId}`);
+    validateKeys(page.meta, ['title', 'tags', 'icons', 'jsonLd'], `${path}.pages.${pageId}.meta`);
+    validatePlainText(page.meta.title, `${path}.pages.${pageId}.meta.title`);
+    invariant(Array.isArray(page.meta.tags), `${path}.pages.${pageId}.meta.tags must be an array`);
+    page.meta.tags.forEach((tag, index) => {
+      invariant(tag && typeof tag === 'object' && typeof tag.content === 'string', `${path}.pages.${pageId}.meta.tags[${index}] is invalid`);
+      invariant((tag.name && !tag.property) || (tag.property && !tag.name), `${path}.pages.${pageId}.meta.tags[${index}] needs name or property`);
+    });
+    invariant(Array.isArray(page.meta.icons), `${path}.pages.${pageId}.meta.icons must be an array`);
+    invariant(Array.isArray(page.meta.jsonLd) && page.meta.jsonLd.length, `${path}.pages.${pageId}.meta.jsonLd must not be empty`);
+    for (const [field, urls] of [['stylesheets', page.stylesheets], ['externalScripts', page.externalScripts]]) {
+      invariant(Array.isArray(urls), `${path}.pages.${pageId}.${field} must be an array`);
+      urls.forEach((url, index) => validateUrl(url, `${path}.pages.${pageId}.${field}[${index}]`, { internal: true }));
+    }
+    invariant(Array.isArray(page.inlineScripts), `${path}.pages.${pageId}.inlineScripts must be an array`);
+    page.inlineScripts.forEach((script, index) => invariant(typeof script === 'string' && script && !/<\/script/i.test(script), `${path}.pages.${pageId}.inlineScripts[${index}] is unsafe`));
+    invariant(Array.isArray(page.body) && page.body.length, `${path}.pages.${pageId}.body must not be empty`);
+    page.body.forEach((node, index) => validateToolNode(node, `${path}.pages.${pageId}.body[${index}]`));
+  }
+}
+
 export function validateRegistry(contentByLocale) {
   const enabled = Object.entries(locales).filter(([, config]) => config.enabled).map(([locale]) => locale);
   invariant(enabled.includes(site.sourceLocale), 'The source locale must remain enabled');
@@ -182,13 +227,15 @@ export function validateRegistry(contentByLocale) {
     validateGuideOverviews(contentByLocale[locale].guideOverviews, `${locale}.guideOverviews`);
     invariant(contentByLocale[locale]?.guideArticles, `Missing ${locale} guide article content`);
     validateGuideArticles(contentByLocale[locale].guideArticles, `${locale}.guideArticles`);
+    invariant(contentByLocale[locale]?.tools, `Missing ${locale} tool content`);
+    validateTools(contentByLocale[locale].tools, `${locale}.tools`);
   }
   for (const page of pages) {
     invariant(!pageIds.has(page.id), `Duplicate page id: ${page.id}`);
     invariant(!routes.has(page.route), `Duplicate route: ${page.route}`);
     pageIds.add(page.id);
     routes.add(page.route);
-    invariant(['app-page', 'guide-overview', 'guide-article'].includes(page.type), `Unsupported page type: ${page.type}`);
+    invariant(['app-page', 'guide-overview', 'guide-article', 'interactive-tool'].includes(page.type), `Unsupported page type: ${page.type}`);
     if (page.type === 'app-page') {
       validateUrl(page.appStore, `${page.id}.appStore`);
       validateUrl(page.assets.icon, `${page.id}.assets.icon`, { internal: true });
@@ -205,14 +252,28 @@ export function validateRegistry(contentByLocale) {
       for (const locale of enabled) {
         invariant(contentByLocale[locale]?.guideOverviews?.pages?.[page.id], `Missing ${locale} guide overview content for ${page.id}`);
       }
-    } else {
+    } else if (page.type === 'guide-article') {
       const sourceArticle = contentByLocale[site.sourceLocale]?.guideArticles?.pages?.[page.id];
       for (const locale of enabled) {
         const localized = contentByLocale[locale]?.guideArticles?.pages?.[page.id];
         invariant(localized, `Missing ${locale} guide article content for ${page.id}`);
         if (locale !== site.sourceLocale) {
-          invariant(JSON.stringify(articleSkeleton(localized.article)) === JSON.stringify(articleSkeleton(sourceArticle.article)), `${locale}.${page.id} article structure must match English`);
+          const translatableAttrs = new Set(['alt', 'aria-label']);
+          invariant(JSON.stringify(contentSkeleton(localized.article, translatableAttrs)) === JSON.stringify(contentSkeleton(sourceArticle.article, translatableAttrs)), `${locale}.${page.id} article structure must match English`);
           invariant(localized.card?.href === sourceArticle.card?.href && localized.card?.order === sourceArticle.card?.order, `${locale}.${page.id} card route and order must match English`);
+        }
+      }
+    } else {
+      const sourceTool = contentByLocale[site.sourceLocale]?.tools?.pages?.[page.id];
+      for (const locale of enabled) {
+        const localized = contentByLocale[locale]?.tools?.pages?.[page.id];
+        invariant(localized, `Missing ${locale} tool content for ${page.id}`);
+        if (locale !== site.sourceLocale) {
+          const translatableAttrs = new Set(['alt', 'aria-label']);
+          invariant(JSON.stringify(contentSkeleton(localized.body, translatableAttrs)) === JSON.stringify(contentSkeleton(sourceTool.body, translatableAttrs)), `${locale}.${page.id} tool structure must match English`);
+          invariant(JSON.stringify(localized.stylesheets) === JSON.stringify(sourceTool.stylesheets), `${locale}.${page.id} stylesheets must match English`);
+          invariant(JSON.stringify(localized.externalScripts) === JSON.stringify(sourceTool.externalScripts), `${locale}.${page.id} scripts must match English`);
+          invariant(JSON.stringify(localized.inlineScripts) === JSON.stringify(sourceTool.inlineScripts), `${locale}.${page.id} inline scripts must match English`);
         }
       }
     }

@@ -3,6 +3,7 @@ import re
 from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urljoin, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 GUIDE_APPS = ['bulkbro', 'bumpecho', 'fovri', 'migraloom', 'oqvi']
@@ -17,8 +18,9 @@ TIPHAVEN_ARTICLES = [
 ]
 
 class ArticleParser(HTMLParser):
-    def __init__(self):
+    def __init__(self, route):
         super().__init__(convert_charrefs=True)
+        self.route = route
         self.active = False
         self.root = []
         self.stack = [self.root]
@@ -30,6 +32,9 @@ class ArticleParser(HTMLParser):
             return
         if not self.active:
             return
+        for name in ('href', 'src'):
+            if name in attrs and attrs[name] and not attrs[name].startswith(('#', 'data:', 'mailto:', 'tel:')) and not urlparse(attrs[name]).scheme:
+                attrs[name] = urljoin(self.route, attrs[name])
         node = {'tag': tag, 'attrs': attrs, 'children': []}
         self.stack[-1].append(node)
         if tag not in {'area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr'}:
@@ -66,9 +71,10 @@ files.extend(('tiphaven', ROOT / 'tiphaven' / slug / 'index.html') for slug in T
 pages = {}
 for app, file in files:
     html = file.read_text()
-    parser = ArticleParser()
-    parser.feed(html)
     slug = file.parent.name
+    route = f'/{app}/{slug}/' if app == 'tiphaven' else f'/{app}/guides/{slug}/'
+    parser = ArticleParser(route)
+    parser.feed(html)
     json_ld = []
     for raw in re.findall(r'<script type="application/ld\+json">([\s\S]*?)</script>', html, re.I):
         json_ld.append(json.loads(raw))
