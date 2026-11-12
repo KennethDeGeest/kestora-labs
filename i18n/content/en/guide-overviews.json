@@ -1,0 +1,21 @@
+{
+  "ui": {
+    "skipToGuides": "Skip to guides",
+    "heroTitle": "Learn at your own pace.",
+    "readGuide": "Read guide →",
+    "guidesAvailable": "guides available",
+    "guideAvailable": "guide available",
+    "newGuides": "New guides will appear here",
+    "editorialPolicy": "Editorial policy",
+    "websitePrivacy": "Website privacy"
+  },
+  "pages": {
+    "walkbop.guides": {"name":"WalkBop","intro":"Practical ideas for walking more, staying motivated and making step challenges fun with friends.","emptyTitle":"Guides are coming soon.","emptyBody":"We are preparing practical WalkBop guides. The overview is ready now, so new articles can be added without changing the app page again."},
+    "fovri.guides": {"name":"Fovri","intro":"Practical guides for saving recipes, building a personal cookbook, planning meals and cooking with less friction.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here."},
+    "bulkbro.guides": {"name":"BulkBro","intro":"Straightforward guides for healthy weight gain, calorie tracking, meal planning and understanding your progress.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here."},
+    "tiphaven.guides": {"name":"TipHaven","intro":"Guides and calculators for tracking tips, understanding earnings, splitting tip pools and planning your take-home pay.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here."},
+    "oqvi.guides": {"name":"Oqvi","intro":"Field-friendly guides for identifying plants, flowers, trees, bark and wood with better photos and better clues.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here."},
+    "migraloom.guides": {"name":"MigraLoom","intro":"Simple guides and templates for keeping a useful headache or migraine journal without making it a burden.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here."},
+    "bumpecho.guides": {"name":"Bump Echo","intro":"Gentle ideas for recording pregnancy memories, keeping a journal and creating messages for your future baby.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here."}
+  }
+}

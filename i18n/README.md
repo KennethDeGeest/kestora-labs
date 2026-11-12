@@ -27,7 +27,9 @@ npm run i18n:parity
 
 The GitHub workflow `Localization safety checks` runs this verification automatically whenever localization infrastructure, content or the sitemap changes.
 
-All eight app landing pages now use the shared app-page definition. Their generated English previews match the existing pages while shared interface labels live in `content/en/common.json` and app-specific copy lives in `content/en/pages.json`.
+All eight app landing pages and all seven guide overview pages now use shared definitions. Their generated English previews match the existing pages while shared interface labels and page-specific copy remain separate from the templates.
+
+Guide card copy is temporarily snapshotted from the current English overview pages. This prevents stale overview summaries from changing silently. The cards become structured locale content when the linked guide articles are migrated in the next stage; until then, the build deliberately blocks non-English guide overviews.
 
 ## Adding a language
 
@@ -44,8 +46,8 @@ The repository currently contains English only. When a new language is chosen:
 ## Migration order
 
 1. App pages — complete
-2. Guide overview pages — next
-3. Guide article pages
+2. Guide overview pages — complete
+3. Guide article pages — next
 4. Privacy, terms and support pages
 5. Calculators and other interactive tools
 

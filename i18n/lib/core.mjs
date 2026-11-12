@@ -31,7 +31,9 @@ export function hreflangLinks(pageId, contentByLocale) {
   const page = pages.find(item => item.id === pageId);
   invariant(page, `Unknown page: ${pageId}`);
   const available = Object.keys(contentByLocale)
-    .filter(locale => locales[locale]?.enabled && contentByLocale[locale]?.pages?.[pageId])
+    .filter(locale => locales[locale]?.enabled && (
+      contentByLocale[locale]?.pages?.[pageId] || contentByLocale[locale]?.guideOverviews?.pages?.[pageId]
+    ))
     .sort();
   const links = available.map(locale =>
     `<link rel="alternate" hreflang="${escapeHtml(locales[locale].htmlLang)}" href="${escapeHtml(absoluteUrl(locale, page.route))}">`
@@ -101,29 +103,52 @@ export function validateAppPage(content, path) {
   });
 }
 
+export function validateGuideOverviews(content, path) {
+  validateKeys(content, ['ui', 'pages'], path);
+  validateKeys(content.ui, ['skipToGuides', 'heroTitle', 'readGuide', 'guidesAvailable', 'guideAvailable', 'newGuides', 'editorialPolicy', 'websitePrivacy'], `${path}.ui`);
+  for (const [key, value] of Object.entries(content.ui)) validatePlainText(value, `${path}.ui.${key}`);
+  for (const [pageId, page] of Object.entries(content.pages)) {
+    validateKeys(page, ['name', 'intro', 'emptyTitle', 'emptyBody'], `${path}.pages.${pageId}`);
+    for (const [key, value] of Object.entries(page)) validatePlainText(value, `${path}.pages.${pageId}.${key}`);
+  }
+}
+
 export function validateRegistry(contentByLocale) {
   const enabled = Object.entries(locales).filter(([, config]) => config.enabled).map(([locale]) => locale);
   invariant(enabled.includes(site.sourceLocale), 'The source locale must remain enabled');
   const pageIds = new Set();
   const routes = new Set();
+  for (const locale of enabled) {
+    invariant(contentByLocale[locale]?.common, `Missing ${locale} common content`);
+    validateCommon(contentByLocale[locale].common, `${locale}.common`);
+    invariant(contentByLocale[locale]?.guideOverviews, `Missing ${locale} guide overview content`);
+    validateGuideOverviews(contentByLocale[locale].guideOverviews, `${locale}.guideOverviews`);
+  }
   for (const page of pages) {
     invariant(!pageIds.has(page.id), `Duplicate page id: ${page.id}`);
     invariant(!routes.has(page.route), `Duplicate route: ${page.route}`);
     pageIds.add(page.id);
     routes.add(page.route);
-    invariant(page.type === 'app-page', `Unsupported page type: ${page.type}`);
-    validateUrl(page.appStore, `${page.id}.appStore`);
-    validateUrl(page.assets.icon, `${page.id}.assets.icon`, { internal: true });
-    invariant(page.assets.screenshots.length === 3, `${page.id}.assets.screenshots must contain exactly 3 items`);
-    page.assets.screenshots.forEach((url, index) => validateUrl(url, `${page.id}.assets.screenshots[${index}]`, { internal: true }));
+    invariant(['app-page', 'guide-overview'].includes(page.type), `Unsupported page type: ${page.type}`);
+    if (page.type === 'app-page') {
+      validateUrl(page.appStore, `${page.id}.appStore`);
+      validateUrl(page.assets.icon, `${page.id}.assets.icon`, { internal: true });
+      invariant(page.assets.screenshots.length === 3, `${page.id}.assets.screenshots must contain exactly 3 items`);
+      page.assets.screenshots.forEach((url, index) => validateUrl(url, `${page.id}.assets.screenshots[${index}]`, { internal: true }));
+      for (const locale of enabled) {
+        invariant(contentByLocale[locale]?.pages?.[page.id], `Missing ${locale} content for ${page.id}`);
+        validateAppPage(contentByLocale[locale].pages[page.id], `${locale}.${page.id}`);
+      }
+    } else {
+      invariant(['guides', 'root'].includes(page.articles.source), `${page.id}.articles.source is invalid`);
+      invariant(Array.isArray(page.articles.skip), `${page.id}.articles.skip must be an array`);
+      if (page.articles.source === 'root') invariant(Array.isArray(page.articles.include) && page.articles.include.length, `${page.id}.articles.include must not be empty`);
+      for (const locale of enabled) {
+        invariant(contentByLocale[locale]?.guideOverviews?.pages?.[page.id], `Missing ${locale} guide overview content for ${page.id}`);
+      }
+    }
     for (const [name, route] of Object.entries(page.routes)) {
       if (route !== null) validateUrl(route, `${page.id}.routes.${name}`, { internal: true });
-    }
-    for (const locale of enabled) {
-      invariant(contentByLocale[locale]?.common, `Missing ${locale} common content`);
-      validateCommon(contentByLocale[locale].common, `${locale}.common`);
-      invariant(contentByLocale[locale]?.pages?.[page.id], `Missing ${locale} content for ${page.id}`);
-      validateAppPage(contentByLocale[locale].pages[page.id], `${locale}.${page.id}`);
     }
   }
 }

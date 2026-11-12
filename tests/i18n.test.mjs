@@ -4,7 +4,7 @@ import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { escapeHtml, localeRoute, outputPath, validateAppPage, validateRegistry } from '../i18n/lib/core.mjs';
-import { locales } from '../i18n/config.mjs';
+import { locales, pages } from '../i18n/config.mjs';
 import { loadContent } from '../scripts/i18n-shared.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -13,6 +13,8 @@ test('registry and enabled locale content validate', async () => {
   const content = await loadContent(root);
   assert.deepEqual(Object.keys(content), ['en']);
   assert.equal(Object.keys(content.en.pages).length, 8);
+  assert.equal(Object.keys(content.en.guideOverviews.pages).length, 7);
+  assert.equal(pages.length, 15);
 });
 
 test('locale paths are deterministic', () => {

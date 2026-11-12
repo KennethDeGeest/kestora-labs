@@ -10,7 +10,8 @@ export async function loadContent(root) {
     const directory = join(root, 'i18n', 'content', locale);
     contentByLocale[locale] = {
       common: JSON.parse(await readFile(join(directory, 'common.json'), 'utf8')),
-      pages: JSON.parse(await readFile(join(directory, 'pages.json'), 'utf8'))
+      pages: JSON.parse(await readFile(join(directory, 'pages.json'), 'utf8')),
+      guideOverviews: JSON.parse(await readFile(join(directory, 'guide-overviews.json'), 'utf8'))
     };
   }
   validateRegistry(contentByLocale);

@@ -25,6 +25,20 @@ const appPage = ({ slug, appStore, icon, screenshots, guides = true }) => ({
     assets: { icon, screenshots }
 });
 
+const guideOverview = ({ slug, articleSource = 'guides', include, skip, editorial = false }) => ({
+  id: `${slug}.guides`,
+  type: 'guide-overview',
+  route: `/${slug}/guides/`,
+  source: `${slug}/guides/index.html`,
+  routes: {
+    app: `/${slug}/`,
+    privacy: `/${slug}/privacy.html`,
+    support: `/${slug}/support.html`,
+    editorial: editorial ? `/${slug}/guides/editorial-policy/` : null
+  },
+  articles: { source: articleSource, include, skip: skip ?? [] }
+});
+
 // App pages are fully registered. Generated output remains preview-only until
 // every other page type has been migrated and explicitly promoted.
 export const pages = [
@@ -67,5 +81,23 @@ export const pages = [
         '/assets/screens/fovri-cook-next.png',
         '/assets/screens/fovri-recipe.png',
         '/assets/screens/fovri-groceries.png'
-  ] })
+  ] }),
+  guideOverview({ slug: 'walkbop' }),
+  guideOverview({ slug: 'fovri' }),
+  guideOverview({ slug: 'bulkbro', skip: ['editorial-policy'], editorial: true }),
+  guideOverview({ slug: 'tiphaven', articleSource: 'root', include: [
+    'average-bartender-salary-with-tips',
+    'best-tip-tracking-apps-for-servers',
+    'how-much-do-servers-make-in-tips',
+    'paycheck-calculator-with-tips',
+    'server-tip-out-percentage',
+    'server-tips-and-taxes',
+    'splitting-tips-by-hours-worked',
+    'tip-out-calculator',
+    'tip-pool-calculator',
+    'tip-split-calculator'
+  ] }),
+  guideOverview({ slug: 'oqvi' }),
+  guideOverview({ slug: 'migraloom' }),
+  guideOverview({ slug: 'bumpecho' })
 ];
