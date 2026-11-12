@@ -44,6 +44,20 @@ function urls(html, attribute, base) {
     .sort();
 }
 
+function seoFacts(html) {
+  const title = decode(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() ?? '');
+  const meta = [...html.matchAll(/<meta\s+([^>]+)>/gi)].map(match => {
+    const attrs = Object.fromEntries([...match[1].matchAll(/([\w:-]+)="([^"]*)"/g)].map(item => [item[1], decode(item[2])]));
+    const key = attrs.name || attrs.property;
+    if (!key || attrs.content === undefined) return null;
+    return [key, key === 'viewport' ? attrs.content.replaceAll(' ', '') : attrs.content];
+  }).filter(Boolean).sort(([a], [b]) => a.localeCompare(b));
+  const canonical = html.match(/<link\s+rel="canonical"\s+href="([^"]+)"/i)?.[1] ?? '';
+  const jsonLd = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)]
+    .map(match => JSON.parse(match[1]));
+  return { title, meta, canonical, jsonLd };
+}
+
 for (const page of pages) {
   const source = await readFile(join(root, page.source), 'utf8');
   const generated = await readFile(join(root, site.previewDirectory, outputPath('en', page.route)), 'utf8');
@@ -52,7 +66,8 @@ for (const page of pages) {
     visibleText: [bodyText(source), bodyText(generated)],
     classes: [classSet(source), classSet(generated)],
     links: [urls(source, 'href', base).filter(url => !url.includes('/site.css')), urls(generated, 'href', base).filter(url => !url.includes('/site.css'))],
-    images: [urls(source, 'src', base), urls(generated, 'src', base)]
+    images: [urls(source, 'src', base), urls(generated, 'src', base)],
+    seo: [seoFacts(source), seoFacts(generated)]
   };
   for (const [name, [expected, actual]] of Object.entries(checks)) {
     if (JSON.stringify(expected) !== JSON.stringify(actual)) {

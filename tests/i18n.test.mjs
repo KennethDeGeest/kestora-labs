@@ -14,7 +14,8 @@ test('registry and enabled locale content validate', async () => {
   assert.deepEqual(Object.keys(content), ['en']);
   assert.equal(Object.keys(content.en.pages).length, 8);
   assert.equal(Object.keys(content.en.guideOverviews.pages).length, 7);
-  assert.equal(pages.length, 15);
+  assert.equal(Object.keys(content.en.guideArticles.pages).length, 55);
+  assert.equal(pages.length, 70);
 });
 
 test('locale paths are deterministic', () => {

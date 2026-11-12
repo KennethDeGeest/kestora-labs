@@ -39,6 +39,31 @@ const guideOverview = ({ slug, articleSource = 'guides', include, skip, editoria
   articles: { source: articleSource, include, skip: skip ?? [] }
 });
 
+const guideArticle = ({ app, slug, root = false }) => ({
+  id: `${app}.guide.${slug}`,
+  type: 'guide-article',
+  route: root ? `/${app}/${slug}/` : `/${app}/guides/${slug}/`,
+  source: root ? `${app}/${slug}/index.html` : `${app}/guides/${slug}/index.html`,
+  routes: {
+    app: `/${app}/`,
+    guides: `/${app}/guides/`,
+    privacy: `/${app}/privacy.html`,
+    terms: app === 'bulkbro' ? null : `/${app}/terms.html`,
+    support: `/${app}/support.html`,
+    calculator: app === 'bulkbro' ? '/bulkbro/calorie-surplus-calculator/' : null,
+    health: app === 'bulkbro' ? '/bulkbro/health.html' : null
+  }
+});
+
+const guideArticleGroups = {
+  bulkbro: ['best-foods-for-healthy-weight-gain', 'calorie-surplus-for-muscle-gain', 'clean-bulk-vs-dirty-bulk', 'editorial-policy', 'how-many-calories-to-gain-weight', 'how-often-should-you-weigh-yourself', 'how-to-build-a-weight-gain-meal-plan', 'how-to-track-calories-for-weight-gain', 'why-am-i-not-gaining-weight'],
+  bumpecho: ['baby-heartbeat-apps-explained', 'best-pregnancy-journal-apps', 'how-to-record-pregnancy-memories', 'letters-to-unborn-baby', 'pregnancy-audio-journal', 'pregnancy-diary', 'pregnancy-journal', 'pregnancy-memory-book', 'pregnancy-scrapbook-ideas', 'voice-messages-for-baby'],
+  fovri: ['best-recipe-app', 'best-recipe-keeper-app', 'best-recipe-organizer-app', 'cookbook-app', 'digital-recipe-book', 'meal-planning-app-with-grocery-list', 'recipe-app-for-iphone', 'recipe-manager-app', 'save-recipes-from-instagram', 'save-recipes-from-tiktok'],
+  migraloom: ['best-migraine-tracker-apps', 'free-migraine-tracking-app', 'headache-calendar-app', 'headache-diary-template', 'headache-log-template', 'how-to-keep-a-headache-diary', 'migraine-diary-template', 'migraine-symptom-tracker', 'printable-diary-vs-migraine-tracker-app', 'printable-migraine-tracker'],
+  oqvi: ['best-plant-identification-apps', 'free-plant-identification-app', 'how-to-identify-a-tree', 'how-to-identify-plants', 'identify-flower-by-photo', 'identify-tree-by-leaf', 'plant-identifier-app-for-iphone', 'tree-bark-identifier', 'tree-identification-app', 'wood-species-identifier'],
+  tiphaven: ['average-bartender-salary-with-tips', 'best-tip-tracking-apps-for-servers', 'how-much-do-servers-make-in-tips', 'server-tip-out-percentage', 'server-tips-and-taxes', 'splitting-tips-by-hours-worked']
+};
+
 // App pages are fully registered. Generated output remains preview-only until
 // every other page type has been migrated and explicitly promoted.
 export const pages = [
@@ -99,5 +124,8 @@ export const pages = [
   ] }),
   guideOverview({ slug: 'oqvi' }),
   guideOverview({ slug: 'migraloom' }),
-  guideOverview({ slug: 'bumpecho' })
+  guideOverview({ slug: 'bumpecho' }),
+  ...Object.entries(guideArticleGroups).flatMap(([app, slugs]) =>
+    slugs.map(slug => guideArticle({ app, slug, root: app === 'tiphaven' }))
+  )
 ];

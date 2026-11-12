@@ -27,15 +27,15 @@ npm run i18n:parity
 
 The GitHub workflow `Localization safety checks` runs this verification automatically whenever localization infrastructure, content or the sitemap changes.
 
-All eight app landing pages and all seven guide overview pages now use shared definitions. Their generated English previews match the existing pages while shared interface labels and page-specific copy remain separate from the templates.
+All eight app landing pages, all seven guide overview pages and all 55 editorial guide articles now use shared definitions. Their generated English previews match the existing pages while shared interface labels and page-specific copy remain separate from the templates.
 
-Guide card copy is temporarily snapshotted from the current English overview pages. This prevents stale overview summaries from changing silently. The cards become structured locale content when the linked guide articles are migrated in the next stage; until then, the build deliberately blocks non-English guide overviews.
+Guide cards, article metadata, structured data and article content are stored as validated locale content. Article markup is represented as a restricted element tree: translators can change text without introducing scripts, new HTML structures or unsafe URLs.
 
 ## Adding a language
 
 The repository currently contains English only. When a new language is chosen:
 
-1. Copy both `content/en/common.json` and `content/en/pages.json` to `content/<locale>/`.
+1. Copy the JSON files in `content/en/` to `content/<locale>/`.
 2. Translate values only. Do not add HTML.
 3. Keep URLs root-relative unless the localized route map changes them.
 4. Register the locale in `config.mjs` only after its complete content set exists.
@@ -47,8 +47,8 @@ The repository currently contains English only. When a new language is chosen:
 
 1. App pages — complete
 2. Guide overview pages — complete
-3. Guide article pages — next
+3. Guide article pages — complete
 4. Privacy, terms and support pages
-5. Calculators and other interactive tools
+5. Calculators and other interactive tools — next
 
 English remains the visual reference throughout migration. A page is not considered migrated until its generated English version matches the existing live page.
