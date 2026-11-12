@@ -7,9 +7,7 @@ export const site = {
 // A locale cannot be built or published merely by adding a folder. It must be
 // explicitly enabled after its complete content set passes validation.
 export const locales = {
-  en: { label: 'English', htmlLang: 'en', prefix: '', enabled: true },
-  es: { label: 'Español', htmlLang: 'es', prefix: '/es', enabled: false },
-  fr: { label: 'Français', htmlLang: 'fr', prefix: '/fr', enabled: false }
+  en: { label: 'English', htmlLang: 'en', prefix: '', enabled: true }
 };
 
 const appPage = ({ slug, appStore, icon, screenshots, guides = true }) => ({

@@ -17,8 +17,7 @@ test('registry and enabled locale content validate', async () => {
 
 test('locale paths are deterministic', () => {
   assert.equal(localeRoute('en', '/fovri/'), '/fovri/');
-  assert.equal(localeRoute('es', '/fovri/'), '/es/fovri/');
-  assert.equal(outputPath('fr', '/fovri/'), 'fr/fovri/index.html');
+  assert.equal(outputPath('en', '/fovri/'), 'fovri/index.html');
 });
 
 test('plain text is escaped and markup cannot enter content fields', async () => {
@@ -37,10 +36,10 @@ test('preview build cannot target the live site root', async () => {
 
 test('an enabled locale cannot ship with missing content', async () => {
   const content = await loadContent(root);
-  locales.es.enabled = true;
+  locales.test = { label: 'Test', htmlLang: 'test', prefix: '/test', enabled: true };
   try {
-    assert.throws(() => validateRegistry(content), /Missing es (common )?content/);
+    assert.throws(() => validateRegistry(content), /Missing test (common )?content/);
   } finally {
-    locales.es.enabled = false;
+    delete locales.test;
   }
 });

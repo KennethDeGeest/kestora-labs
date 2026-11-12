@@ -31,12 +31,14 @@ All eight app landing pages now use the shared app-page definition. Their genera
 
 ## Adding a language
 
+The repository currently contains English only. When a new language is chosen:
+
 1. Copy both `content/en/common.json` and `content/en/pages.json` to `content/<locale>/`.
 2. Translate values only. Do not add HTML.
 3. Keep URLs root-relative unless the localized route map changes them.
-4. Run all four commands above.
-5. Compare the generated pages at phone and desktop widths.
-6. Enable the locale only after all registered pages are complete.
+4. Register the locale in `config.mjs` only after its complete content set exists.
+5. Run all verification commands above.
+6. Compare the generated pages at phone and desktop widths.
 7. Add the localized output to the live sitemap only during the explicit promotion step.
 
 ## Migration order

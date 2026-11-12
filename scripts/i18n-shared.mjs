@@ -19,8 +19,7 @@ export async function loadContent(root) {
 
 export function migrationSummary(contentByLocale) {
   return {
-    enabledLocales: Object.keys(contentByLocale),
-    disabledLocales: Object.entries(locales).filter(([, config]) => !config.enabled).map(([locale]) => locale),
+    configuredLocales: Object.keys(locales),
     registeredPages: pages.length,
     pageTypes: [...new Set(pages.map(page => page.type))]
   };
