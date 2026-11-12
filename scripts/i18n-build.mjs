@@ -7,6 +7,7 @@ import { renderAppPage } from '../i18n/templates/app-page.mjs';
 import { renderGuideOverview } from '../i18n/templates/guide-overview.mjs';
 import { renderGuideArticle } from '../i18n/templates/guide-article.mjs';
 import { renderInteractiveTool } from '../i18n/templates/interactive-tool.mjs';
+import { renderLegalPage } from '../i18n/templates/legal-page.mjs';
 import { loadContent, migrationSummary } from './i18n-shared.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -35,8 +36,10 @@ for (const [locale, localeContent] of Object.entries(contentByLocale)) {
       const appId = `${page.id.split('.')[0]}.guides`;
       const appName = localeContent.guideOverviews.pages[appId].name;
       html = renderGuideArticle({ locale, page, content, articleUi: localeContent.guideArticles.ui, common: localeContent.common, appName, contentByLocale });
-    } else {
+    } else if (page.type === 'interactive-tool') {
       html = renderInteractiveTool({ locale, page, content: localeContent.tools.pages[page.id], contentByLocale });
+    } else {
+      html = renderLegalPage({ locale, page, content: localeContent.legalPages.pages[page.id], contentByLocale });
     }
     await writeFile(destination, html, 'utf8');
   }

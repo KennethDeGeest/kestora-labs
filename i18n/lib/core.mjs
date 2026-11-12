@@ -35,7 +35,8 @@ export function hreflangLinks(pageId, contentByLocale) {
       contentByLocale[locale]?.pages?.[pageId] ||
       contentByLocale[locale]?.guideOverviews?.pages?.[pageId] ||
       contentByLocale[locale]?.guideArticles?.pages?.[pageId] ||
-      contentByLocale[locale]?.tools?.pages?.[pageId]
+      contentByLocale[locale]?.tools?.pages?.[pageId] ||
+      contentByLocale[locale]?.legalPages?.pages?.[pageId]
     ))
     .sort();
   const links = available.map(locale =>
@@ -215,6 +216,46 @@ export function validateTools(content, path) {
   }
 }
 
+const legalTags = new Set(['a', 'article', 'button', 'div', 'em', 'footer', 'h1', 'h2', 'header', 'li', 'main', 'nav', 'p', 'section', 'span', 'strong', 'ul']);
+const legalAttrs = new Set(['aria-current', 'aria-label', 'class', 'data-consent-accept', 'data-consent-banner', 'data-consent-reject', 'data-cookie-settings', 'hidden', 'href', 'id', 'type']);
+
+function validateLegalNode(node, path) {
+  if (typeof node === 'string') return;
+  validateKeys(node, ['tag', 'attrs', 'children'], path);
+  invariant(legalTags.has(node.tag), `${path}.tag is not allowed: ${node.tag}`);
+  for (const [name, value] of Object.entries(node.attrs)) {
+    invariant(legalAttrs.has(name), `${path}.attrs.${name} is not allowed`);
+    invariant(value === null || typeof value === 'string', `${path}.attrs.${name} must be text or null`);
+    if (name === 'href' && value !== null) invariant(!/^javascript:/i.test(value) && !/["'<>\s]/.test(value), `${path}.attrs.${name} is unsafe`);
+  }
+  invariant(Array.isArray(node.children), `${path}.children must be an array`);
+  node.children.forEach((child, index) => validateLegalNode(child, `${path}.children[${index}]`));
+}
+
+export function validateLegalPages(content, path) {
+  validateKeys(content, ['pages'], path);
+  for (const [pageId, page] of Object.entries(content.pages)) {
+    validateKeys(page, ['meta', 'stylesheets', 'externalScripts', 'inlineScripts', 'body'], `${path}.pages.${pageId}`);
+    validateKeys(page.meta, ['title', 'tags', 'icons', 'jsonLd'], `${path}.pages.${pageId}.meta`);
+    validatePlainText(page.meta.title, `${path}.pages.${pageId}.meta.title`);
+    invariant(Array.isArray(page.meta.tags), `${path}.pages.${pageId}.meta.tags must be an array`);
+    page.meta.tags.forEach((tag, index) => {
+      invariant(tag && typeof tag === 'object' && typeof tag.content === 'string', `${path}.pages.${pageId}.meta.tags[${index}] is invalid`);
+      invariant((tag.name && !tag.property) || (tag.property && !tag.name), `${path}.pages.${pageId}.meta.tags[${index}] needs name or property`);
+    });
+    invariant(Array.isArray(page.meta.icons), `${path}.pages.${pageId}.meta.icons must be an array`);
+    invariant(Array.isArray(page.meta.jsonLd), `${path}.pages.${pageId}.meta.jsonLd must be an array`);
+    for (const [field, urls] of [['stylesheets', page.stylesheets], ['externalScripts', page.externalScripts]]) {
+      invariant(Array.isArray(urls), `${path}.pages.${pageId}.${field} must be an array`);
+      urls.forEach((url, index) => validateUrl(url, `${path}.pages.${pageId}.${field}[${index}]`, { internal: true }));
+    }
+    invariant(Array.isArray(page.inlineScripts), `${path}.pages.${pageId}.inlineScripts must be an array`);
+    page.inlineScripts.forEach((script, index) => invariant(typeof script === 'string' && script && !/<\/script/i.test(script), `${path}.pages.${pageId}.inlineScripts[${index}] is unsafe`));
+    invariant(Array.isArray(page.body) && page.body.length, `${path}.pages.${pageId}.body must not be empty`);
+    page.body.forEach((node, index) => validateLegalNode(node, `${path}.pages.${pageId}.body[${index}]`));
+  }
+}
+
 export function validateRegistry(contentByLocale) {
   const enabled = Object.entries(locales).filter(([, config]) => config.enabled).map(([locale]) => locale);
   invariant(enabled.includes(site.sourceLocale), 'The source locale must remain enabled');
@@ -229,13 +270,15 @@ export function validateRegistry(contentByLocale) {
     validateGuideArticles(contentByLocale[locale].guideArticles, `${locale}.guideArticles`);
     invariant(contentByLocale[locale]?.tools, `Missing ${locale} tool content`);
     validateTools(contentByLocale[locale].tools, `${locale}.tools`);
+    invariant(contentByLocale[locale]?.legalPages, `Missing ${locale} legal page content`);
+    validateLegalPages(contentByLocale[locale].legalPages, `${locale}.legalPages`);
   }
   for (const page of pages) {
     invariant(!pageIds.has(page.id), `Duplicate page id: ${page.id}`);
     invariant(!routes.has(page.route), `Duplicate route: ${page.route}`);
     pageIds.add(page.id);
     routes.add(page.route);
-    invariant(['app-page', 'guide-overview', 'guide-article', 'interactive-tool'].includes(page.type), `Unsupported page type: ${page.type}`);
+    invariant(['app-page', 'guide-overview', 'guide-article', 'interactive-tool', 'legal-page'].includes(page.type), `Unsupported page type: ${page.type}`);
     if (page.type === 'app-page') {
       validateUrl(page.appStore, `${page.id}.appStore`);
       validateUrl(page.assets.icon, `${page.id}.assets.icon`, { internal: true });
@@ -263,7 +306,7 @@ export function validateRegistry(contentByLocale) {
           invariant(localized.card?.href === sourceArticle.card?.href && localized.card?.order === sourceArticle.card?.order, `${locale}.${page.id} card route and order must match English`);
         }
       }
-    } else {
+    } else if (page.type === 'interactive-tool') {
       const sourceTool = contentByLocale[site.sourceLocale]?.tools?.pages?.[page.id];
       for (const locale of enabled) {
         const localized = contentByLocale[locale]?.tools?.pages?.[page.id];
@@ -274,6 +317,19 @@ export function validateRegistry(contentByLocale) {
           invariant(JSON.stringify(localized.stylesheets) === JSON.stringify(sourceTool.stylesheets), `${locale}.${page.id} stylesheets must match English`);
           invariant(JSON.stringify(localized.externalScripts) === JSON.stringify(sourceTool.externalScripts), `${locale}.${page.id} scripts must match English`);
           invariant(JSON.stringify(localized.inlineScripts) === JSON.stringify(sourceTool.inlineScripts), `${locale}.${page.id} inline scripts must match English`);
+        }
+      }
+    } else {
+      const sourceLegal = contentByLocale[site.sourceLocale]?.legalPages?.pages?.[page.id];
+      for (const locale of enabled) {
+        const localized = contentByLocale[locale]?.legalPages?.pages?.[page.id];
+        invariant(localized, `Missing ${locale} legal page content for ${page.id}`);
+        if (locale !== site.sourceLocale) {
+          const translatableAttrs = new Set(['aria-label']);
+          invariant(JSON.stringify(contentSkeleton(localized.body, translatableAttrs)) === JSON.stringify(contentSkeleton(sourceLegal.body, translatableAttrs)), `${locale}.${page.id} legal page structure must match English`);
+          invariant(JSON.stringify(localized.stylesheets) === JSON.stringify(sourceLegal.stylesheets), `${locale}.${page.id} stylesheets must match English`);
+          invariant(JSON.stringify(localized.externalScripts) === JSON.stringify(sourceLegal.externalScripts), `${locale}.${page.id} scripts must match English`);
+          invariant(JSON.stringify(localized.inlineScripts) === JSON.stringify(sourceLegal.inlineScripts), `${locale}.${page.id} inline scripts must match English`);
         }
       }
     }

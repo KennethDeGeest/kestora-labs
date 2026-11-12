@@ -28,7 +28,7 @@ function renderAttrs(attrs) {
   return Object.entries(attrs).map(([name, value]) => ` ${name}="${e(value)}"`).join('');
 }
 
-export function renderInteractiveTool({ locale, page, content, contentByLocale }) {
+export function renderStructuredDocument({ locale, page, content, contentByLocale }) {
   const canonical = absoluteUrl(locale, page.route);
   const metaTags = content.meta.tags.map(tag => `<meta${renderAttrs(tag)}>`).join('\n  ');
   const icons = content.meta.icons.map(icon => `<link${renderAttrs(icon)}>`).join('\n  ');
@@ -53,3 +53,5 @@ export function renderInteractiveTool({ locale, page, content, contentByLocale }
 <body>${content.body.map(node => renderNode(node, locale)).join('')}${inline}</body>
 </html>`;
 }
+
+export const renderInteractiveTool = renderStructuredDocument;

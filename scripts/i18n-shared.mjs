@@ -13,7 +13,8 @@ export async function loadContent(root) {
       pages: JSON.parse(await readFile(join(directory, 'pages.json'), 'utf8')),
       guideOverviews: JSON.parse(await readFile(join(directory, 'guide-overviews.json'), 'utf8')),
       guideArticles: JSON.parse(await readFile(join(directory, 'guide-articles.json'), 'utf8')),
-      tools: JSON.parse(await readFile(join(directory, 'tools.json'), 'utf8'))
+      tools: JSON.parse(await readFile(join(directory, 'tools.json'), 'utf8')),
+      legalPages: JSON.parse(await readFile(join(directory, 'legal-pages.json'), 'utf8'))
     };
   }
   validateRegistry(contentByLocale);

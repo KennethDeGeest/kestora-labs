@@ -79,7 +79,7 @@ for (const page of pages) {
     images: [urls(source, 'src', base), urls(generated, 'src', base)],
     seo: [seoFacts(source), seoFacts(generated)]
   };
-  if (page.type === 'interactive-tool') checks.runtime = [runtimeFacts(source, base), runtimeFacts(generated, base)];
+  if (['interactive-tool', 'legal-page'].includes(page.type)) checks.runtime = [runtimeFacts(source, base), runtimeFacts(generated, base)];
   for (const [name, [expected, actual]] of Object.entries(checks)) {
     if (JSON.stringify(expected) !== JSON.stringify(actual)) {
       console.error(`Parity failure for ${page.id}: ${name}`);

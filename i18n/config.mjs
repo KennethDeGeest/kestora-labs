@@ -72,6 +72,9 @@ const interactiveTool = ({ id, route, source }) => ({
   routes: {}
 });
 
+const legalPage = ({ id, route, source }) => ({ id, type: 'legal-page', route, source, routes: {} });
+const legalApps = ['bulkbro', 'bumpecho', 'calmber', 'fovri', 'migraloom', 'oqvi', 'tiphaven', 'walkbop'];
+
 // App pages are fully registered. Generated output remains preview-only until
 // every other page type has been migrated and explicitly promoted.
 export const pages = [
@@ -140,5 +143,10 @@ export const pages = [
   interactiveTool({ id: 'tiphaven.tool.paycheck', route: '/tiphaven/paycheck-calculator-with-tips/', source: 'tiphaven/paycheck-calculator-with-tips/index.html' }),
   interactiveTool({ id: 'tiphaven.tool.tip-out', route: '/tiphaven/tip-out-calculator/', source: 'tiphaven/tip-out-calculator/index.html' }),
   interactiveTool({ id: 'tiphaven.tool.tip-pool', route: '/tiphaven/tip-pool-calculator/', source: 'tiphaven/tip-pool-calculator/index.html' }),
-  interactiveTool({ id: 'tiphaven.tool.tip-split', route: '/tiphaven/tip-split-calculator/', source: 'tiphaven/tip-split-calculator/index.html' })
+  interactiveTool({ id: 'tiphaven.tool.tip-split', route: '/tiphaven/tip-split-calculator/', source: 'tiphaven/tip-split-calculator/index.html' }),
+  ...legalApps.flatMap(app => ['privacy', 'terms', 'support'].map(kind =>
+    legalPage({ id: `${app}.legal.${kind}`, route: `/${app}/${kind}.html`, source: `${app}/${kind}.html` })
+  )),
+  legalPage({ id: 'bulkbro.legal.health', route: '/bulkbro/health.html', source: 'bulkbro/health.html' }),
+  legalPage({ id: 'site.legal.privacy', route: '/privacy.html', source: 'privacy.html' })
 ];
