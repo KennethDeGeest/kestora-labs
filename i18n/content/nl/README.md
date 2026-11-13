@@ -8,11 +8,12 @@ Completed draft content:
 - all app landing pages
 - all guide overview pages, initially with empty Dutch SEO inventories
 - all eight app support pages
+- privacy pages for Calmber, Fovri, MigraLoom and Oqvi
 
 Required before activation:
 
 - final language-selector review at phone and desktop widths
-- website and app privacy pages
+- the remaining app privacy pages and website privacy page
 - app terms pages
 - app privacy and terms pages
 
