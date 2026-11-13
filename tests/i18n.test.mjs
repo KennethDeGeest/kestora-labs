@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { escapeHtml, localeRoute, outputPath, pageEnabledForLocale, validateAppPage, validateRegistry } from '../i18n/lib/core.mjs';
+import { escapeHtml, localeRoute, outputPath, pageEnabledForLocale, validateAppPage, validateLegalPages, validateRegistry } from '../i18n/lib/core.mjs';
 import { locales, pages } from '../i18n/config.mjs';
 import { loadContent } from '../scripts/i18n-shared.mjs';
+import { localizeLegalPages } from '../scripts/legal-localization.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -35,6 +36,15 @@ test('core pages are shared while SEO inventories are locale-specific', () => {
   assert.equal(pageEnabledForLocale(appPage, 'nl'), true);
   assert.equal(pageEnabledForLocale(englishGuide, 'en'), true);
   assert.equal(pageEnabledForLocale(englishGuide, 'nl'), false);
+});
+
+test('completed Dutch legal-page batches preserve the protected English structure', async () => {
+  const source = JSON.parse(await readFile(resolve(root, 'i18n/content/en/legal-pages.json'), 'utf8'));
+  const overlay = JSON.parse(await readFile(resolve(root, 'i18n/content/nl/legal-translations.json'), 'utf8'));
+  const localized = localizeLegalPages(source, overlay, 'nl');
+  assert.equal(Object.keys(localized.pages).length, 8);
+  assert.ok(Object.keys(localized.pages).every(id => id.endsWith('.support')));
+  validateLegalPages(localized, 'nl.legalPagesDraft');
 });
 
 test('plain text is escaped and markup cannot enter content fields', async () => {
