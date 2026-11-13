@@ -2,7 +2,7 @@ import { mkdir, rm, writeFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { locales, pages, site } from '../i18n/config.mjs';
-import { outputPath } from '../i18n/lib/core.mjs';
+import { outputPath, pageEnabledForLocale } from '../i18n/lib/core.mjs';
 import { renderAppPage } from '../i18n/templates/app-page.mjs';
 import { renderGuideOverview } from '../i18n/templates/guide-overview.mjs';
 import { renderGuideArticle } from '../i18n/templates/guide-article.mjs';
@@ -17,6 +17,7 @@ const contentByLocale = await loadContent(root);
 await rm(outputRoot, { recursive: true, force: true });
 for (const [locale, localeContent] of Object.entries(contentByLocale)) {
   for (const page of pages) {
+    if (!pageEnabledForLocale(page, locale)) continue;
     const destination = join(outputRoot, outputPath(locale, page.route));
     await mkdir(dirname(destination), { recursive: true });
     let html;

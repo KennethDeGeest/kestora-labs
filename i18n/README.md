@@ -9,6 +9,7 @@ This directory is the guarded source for future translations. It does **not** pu
 - HTML and template tokens are rejected inside translation strings.
 - A locale must be explicitly enabled in `config.mjs`.
 - Every enabled locale must contain every registered page and field.
+- Core pages are mandatory in every enabled locale; SEO pages declare exactly which locales they belong to.
 - Canonical URLs and `hreflang` links are generated, never translated manually.
 - Output always goes to `.i18n-preview/`, which is ignored by Git.
 - The live sitemap is unchanged until a locale is complete and deliberately promoted.
@@ -46,6 +47,15 @@ The repository currently contains English only. When a new language is chosen:
 5. Run all verification commands above.
 6. Compare the generated pages at phone and desktop widths.
 7. Add the localized output to the live sitemap only during the explicit promotion step.
+
+## Core pages and language-specific SEO
+
+Every registered page has a `scope`:
+
+- `core` pages belong to every enabled language. This includes app landing pages, guide overview pages, privacy pages, terms pages and support pages.
+- `seo` pages list their supported locales explicitly. English guides and calculators are currently English-only. A Dutch SEO page will be registered for `nl` only after Dutch keyword research determines its subject, native-language URL and content.
+
+The Dutch locale is registered at `/nl/` but remains disabled until all mandatory Dutch core content has been translated, reviewed and verified. Enabling Dutch therefore cannot accidentally publish English SEO articles beneath Dutch URLs.
 
 ## Migration order
 

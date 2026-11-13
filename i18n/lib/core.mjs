@@ -1,5 +1,10 @@
 import { locales, pages, site } from '../config.mjs';
 
+export function pageEnabledForLocale(page, locale) {
+  invariant(locales[locale], `Unknown locale: ${locale}`);
+  return page.scope === 'core' || page.locales?.includes(locale) === true;
+}
+
 export const escapeHtml = value => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
@@ -31,7 +36,7 @@ export function hreflangLinks(pageId, contentByLocale) {
   const page = pages.find(item => item.id === pageId);
   invariant(page, `Unknown page: ${pageId}`);
   const available = Object.keys(contentByLocale)
-    .filter(locale => locales[locale]?.enabled && (
+    .filter(locale => locales[locale]?.enabled && pageEnabledForLocale(page, locale) && (
       contentByLocale[locale]?.pages?.[pageId] ||
       contentByLocale[locale]?.guideOverviews?.pages?.[pageId] ||
       contentByLocale[locale]?.guideArticles?.pages?.[pageId] ||
@@ -278,6 +283,13 @@ export function validateRegistry(contentByLocale) {
     invariant(!routes.has(page.route), `Duplicate route: ${page.route}`);
     pageIds.add(page.id);
     routes.add(page.route);
+    invariant(['core', 'seo'].includes(page.scope), `${page.id}.scope must be core or seo`);
+    if (page.scope === 'seo') {
+      invariant(Array.isArray(page.locales) && page.locales.length, `${page.id}.locales must list at least one locale`);
+      page.locales.forEach(locale => invariant(locales[locale], `${page.id}.locales contains unknown locale: ${locale}`));
+    } else {
+      invariant(page.locales === undefined, `${page.id}.locales is only valid for SEO pages`);
+    }
     invariant(['app-page', 'guide-overview', 'guide-article', 'interactive-tool', 'legal-page'].includes(page.type), `Unsupported page type: ${page.type}`);
     if (page.type === 'app-page') {
       validateUrl(page.appStore, `${page.id}.appStore`);
@@ -285,6 +297,7 @@ export function validateRegistry(contentByLocale) {
       invariant(page.assets.screenshots.length === 3, `${page.id}.assets.screenshots must contain exactly 3 items`);
       page.assets.screenshots.forEach((url, index) => validateUrl(url, `${page.id}.assets.screenshots[${index}]`, { internal: true }));
       for (const locale of enabled) {
+        if (!pageEnabledForLocale(page, locale)) continue;
         invariant(contentByLocale[locale]?.pages?.[page.id], `Missing ${locale} content for ${page.id}`);
         validateAppPage(contentByLocale[locale].pages[page.id], `${locale}.${page.id}`);
       }
@@ -293,11 +306,13 @@ export function validateRegistry(contentByLocale) {
       invariant(Array.isArray(page.articles.skip), `${page.id}.articles.skip must be an array`);
       if (page.articles.source === 'root') invariant(Array.isArray(page.articles.include) && page.articles.include.length, `${page.id}.articles.include must not be empty`);
       for (const locale of enabled) {
+        if (!pageEnabledForLocale(page, locale)) continue;
         invariant(contentByLocale[locale]?.guideOverviews?.pages?.[page.id], `Missing ${locale} guide overview content for ${page.id}`);
       }
     } else if (page.type === 'guide-article') {
       const sourceArticle = contentByLocale[site.sourceLocale]?.guideArticles?.pages?.[page.id];
       for (const locale of enabled) {
+        if (!pageEnabledForLocale(page, locale)) continue;
         const localized = contentByLocale[locale]?.guideArticles?.pages?.[page.id];
         invariant(localized, `Missing ${locale} guide article content for ${page.id}`);
         if (locale !== site.sourceLocale) {
@@ -309,6 +324,7 @@ export function validateRegistry(contentByLocale) {
     } else if (page.type === 'interactive-tool') {
       const sourceTool = contentByLocale[site.sourceLocale]?.tools?.pages?.[page.id];
       for (const locale of enabled) {
+        if (!pageEnabledForLocale(page, locale)) continue;
         const localized = contentByLocale[locale]?.tools?.pages?.[page.id];
         invariant(localized, `Missing ${locale} tool content for ${page.id}`);
         if (locale !== site.sourceLocale) {
@@ -322,6 +338,7 @@ export function validateRegistry(contentByLocale) {
     } else {
       const sourceLegal = contentByLocale[site.sourceLocale]?.legalPages?.pages?.[page.id];
       for (const locale of enabled) {
+        if (!pageEnabledForLocale(page, locale)) continue;
         const localized = contentByLocale[locale]?.legalPages?.pages?.[page.id];
         invariant(localized, `Missing ${locale} legal page content for ${page.id}`);
         if (locale !== site.sourceLocale) {

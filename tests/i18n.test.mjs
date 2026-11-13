@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { escapeHtml, localeRoute, outputPath, validateAppPage, validateRegistry } from '../i18n/lib/core.mjs';
+import { escapeHtml, localeRoute, outputPath, pageEnabledForLocale, validateAppPage, validateRegistry } from '../i18n/lib/core.mjs';
 import { locales, pages } from '../i18n/config.mjs';
 import { loadContent } from '../scripts/i18n-shared.mjs';
 
@@ -22,7 +22,16 @@ test('registry and enabled locale content validate', async () => {
 
 test('locale paths are deterministic', () => {
   assert.equal(localeRoute('en', '/fovri/'), '/fovri/');
+  assert.equal(localeRoute('nl', '/fovri/'), '/nl/fovri/');
   assert.equal(outputPath('en', '/fovri/'), 'fovri/index.html');
+});
+
+test('core pages are shared while SEO inventories are locale-specific', () => {
+  const appPage = pages.find(page => page.id === 'fovri.app');
+  const englishGuide = pages.find(page => page.id === 'fovri.guide.best-recipe-app');
+  assert.equal(pageEnabledForLocale(appPage, 'nl'), true);
+  assert.equal(pageEnabledForLocale(englishGuide, 'en'), true);
+  assert.equal(pageEnabledForLocale(englishGuide, 'nl'), false);
 });
 
 test('plain text is escaped and markup cannot enter content fields', async () => {

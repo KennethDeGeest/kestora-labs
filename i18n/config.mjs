@@ -7,12 +7,14 @@ export const site = {
 // A locale cannot be built or published merely by adding a folder. It must be
 // explicitly enabled after its complete content set passes validation.
 export const locales = {
-  en: { label: 'English', htmlLang: 'en', prefix: '', enabled: true }
+  en: { label: 'English', htmlLang: 'en', prefix: '', enabled: true },
+  nl: { label: 'Nederlands', htmlLang: 'nl', prefix: '/nl', enabled: false }
 };
 
 const appPage = ({ slug, appStore, icon, screenshots, guides = true }) => ({
     id: `${slug}.app`,
     type: 'app-page',
+    scope: 'core',
     route: `/${slug}/`,
     source: `${slug}/index.html`,
     appStore,
@@ -28,6 +30,7 @@ const appPage = ({ slug, appStore, icon, screenshots, guides = true }) => ({
 const guideOverview = ({ slug, articleSource = 'guides', include, skip, editorial = false }) => ({
   id: `${slug}.guides`,
   type: 'guide-overview',
+  scope: 'core',
   route: `/${slug}/guides/`,
   source: `${slug}/guides/index.html`,
   routes: {
@@ -42,6 +45,8 @@ const guideOverview = ({ slug, articleSource = 'guides', include, skip, editoria
 const guideArticle = ({ app, slug, root = false }) => ({
   id: `${app}.guide.${slug}`,
   type: 'guide-article',
+  scope: 'seo',
+  locales: ['en'],
   route: root ? `/${app}/${slug}/` : `/${app}/guides/${slug}/`,
   source: root ? `${app}/${slug}/index.html` : `${app}/guides/${slug}/index.html`,
   routes: {
@@ -67,12 +72,14 @@ const guideArticleGroups = {
 const interactiveTool = ({ id, route, source }) => ({
   id,
   type: 'interactive-tool',
+  scope: 'seo',
+  locales: ['en'],
   route,
   source,
   routes: {}
 });
 
-const legalPage = ({ id, route, source }) => ({ id, type: 'legal-page', route, source, routes: {} });
+const legalPage = ({ id, route, source }) => ({ id, type: 'legal-page', scope: 'core', route, source, routes: {} });
 const legalApps = ['bulkbro', 'bumpecho', 'calmber', 'fovri', 'migraloom', 'oqvi', 'tiphaven', 'walkbop'];
 
 // App pages are fully registered. Generated output remains preview-only until
