@@ -29,7 +29,7 @@ npm run i18n:promote
 
 The GitHub workflow `Localization safety checks` runs this verification automatically whenever localization infrastructure, content or the sitemap changes.
 
-All eight app landing pages, all seven guide overview pages, all 55 editorial guide articles, all five interactive tools and all 26 legal/support pages now use shared definitions. Their generated English previews match the existing pages while shared interface labels and page-specific copy remain separate from the templates.
+All eight app landing pages, all eight guide overview pages, all 55 editorial guide articles, all five interactive tools and all 26 legal/support pages now use shared definitions. Their generated English previews match the existing pages while shared interface labels and page-specific copy remain separate from the templates.
 
 Guide cards, article metadata, structured data and article content are stored as validated locale content. Article markup is represented as a restricted element tree: translators can change text without introducing scripts, new HTML structures or unsafe URLs.
 

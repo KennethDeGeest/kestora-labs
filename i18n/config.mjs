@@ -87,7 +87,7 @@ const homePage = { id: 'site.home', type: 'home-page', scope: 'core', route: '/'
 // every other page type has been migrated and explicitly promoted.
 export const pages = [
   homePage,
-  appPage({ slug: 'calmber', appStore: 'https://apps.apple.com/app/id6833412600', icon: '/assets/calmber.png', guides: false, screenshots: [
+  appPage({ slug: 'calmber', appStore: 'https://apps.apple.com/app/id6833412600', icon: '/assets/calmber.png', screenshots: [
     '/assets/screens/calmber-home.png',
     '/assets/screens/calmber-plan.png',
     '/assets/screens/calmber-insights.png'
@@ -127,6 +127,7 @@ export const pages = [
         '/assets/screens/fovri-recipe.png',
         '/assets/screens/fovri-groceries.png'
   ] }),
+  guideOverview({ slug: 'calmber' }),
   guideOverview({ slug: 'walkbop' }),
   guideOverview({ slug: 'fovri' }),
   guideOverview({ slug: 'bulkbro', skip: ['editorial-policy'], editorial: true }),

@@ -12,6 +12,13 @@
     "guides": "gidsen"
   },
   "pages": {
+    "calmber.guides": {
+      "name": "Calmber",
+      "intro": "Praktische gidsen over minder roken, stoppen met roken, omgaan met trek en in je eigen tempo een rustig afbouwplan opbouwen.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    },
     "walkbop.guides": {
       "name": "WalkBop",
       "intro": "Praktische ideeën om meer te wandelen, gemotiveerd te blijven en samen met vrienden plezier te maken van stappenuitdagingen.",

@@ -12,6 +12,7 @@
     "guides": "guides"
   },
   "pages": {
+    "calmber.guides": {"name":"Calmber","intro":"Practical guides for reducing or quitting smoking, understanding cravings and building a calmer plan at your own pace.","emptyTitle":"Guides are coming soon.","emptyBody":"We are preparing practical Calmber guides. New articles can now be added without changing the app page again.","extraCards":[]},
     "walkbop.guides": {"name":"WalkBop","intro":"Practical ideas for walking more, staying motivated and making step challenges fun with friends.","emptyTitle":"Guides are coming soon.","emptyBody":"We are preparing practical WalkBop guides. The overview is ready now, so new articles can be added without changing the app page again.","extraCards":[]},
     "fovri.guides": {"name":"Fovri","intro":"Practical guides for saving recipes, building a personal cookbook, planning meals and cooking with less friction.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here.","extraCards":[]},
     "bulkbro.guides": {"name":"BulkBro","intro":"Straightforward guides for healthy weight gain, calorie tracking, meal planning and understanding your progress.","emptyTitle":"Guides are coming soon.","emptyBody":"New guides will appear here.","extraCards":[{"title":"How Fast Should You Gain Weight? A Practical Rate","description":"Learn how quickly to gain weight, why faster is not always better, and how to adjust your calorie target using a consistent weekly trend.","href":"how-fast-should-you-gain-weight/","order":3}]},

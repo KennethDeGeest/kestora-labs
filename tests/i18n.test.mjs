@@ -15,17 +15,17 @@ test('registry and enabled locale content validate', async () => {
   assert.deepEqual(Object.keys(content), ['en', 'nl']);
   assert.equal(content.en.home.meta.title, 'Kestora Labs — Independent iPhone Apps');
   assert.equal(Object.keys(content.en.pages).length, 8);
-  assert.equal(Object.keys(content.en.guideOverviews.pages).length, 7);
+  assert.equal(Object.keys(content.en.guideOverviews.pages).length, 8);
   assert.equal(Object.keys(content.en.guideArticles.pages).length, 55);
   assert.equal(Object.keys(content.en.tools.pages).length, 5);
   assert.equal(Object.keys(content.en.legalPages.pages).length, 26);
   assert.equal(content.nl.home.meta.title, 'Kestora Labs — Onafhankelijke iPhone-apps');
   assert.equal(Object.keys(content.nl.pages).length, 8);
-  assert.equal(Object.keys(content.nl.guideOverviews.pages).length, 7);
+  assert.equal(Object.keys(content.nl.guideOverviews.pages).length, 8);
   assert.equal(Object.keys(content.nl.guideArticles.pages).length, 0);
   assert.equal(Object.keys(content.nl.tools.pages).length, 0);
   assert.equal(Object.keys(content.nl.legalPages.pages).length, 26);
-  assert.equal(pages.length, 102);
+  assert.equal(pages.length, 103);
 });
 
 test('locale paths are deterministic', () => {
