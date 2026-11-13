@@ -43,8 +43,11 @@ button { font: inherit; }
 .site-header a:hover,
 .legal-site-footer a:hover,
 .legal-site-footer button:hover { color: var(--ink); }
-.language-switcher { display: inline-flex; align-items: center; gap: .45rem; color: #66686d; font-size: .78rem; }
-.language-switcher select { min-height: 2.25rem; padding: 0 1.8rem 0 .65rem; border: 1px solid #d9dade; border-radius: .55rem; color: var(--ink); background: var(--white); font: inherit; font-size: .85rem; }
+.language-switcher { display: inline-flex; align-items: center; gap: .15rem; padding: .18rem; border: 1px solid #dedfe2; border-radius: .65rem; background: #f1f1f2; }
+.site-header .language-switcher > a { display: grid; min-width: 2.25rem; min-height: 1.9rem; padding: 0 .48rem; place-items: center; border-radius: .45rem; color: #73757a; font-size: .72rem; font-weight: 700; letter-spacing: .06em; line-height: 1; text-decoration: none; transition: color .15s, background .15s, box-shadow .15s; }
+.site-header .language-switcher > a:hover { color: var(--ink); }
+.site-header .language-switcher > a[aria-current="page"] { color: var(--ink); background: var(--white); box-shadow: 0 1px 3px rgba(17,18,20,.12); }
+.site-header .language-switcher > a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 
 .legal-main { width: min(100%, 72rem); margin: 0 auto; padding: 0 2rem 4rem; }
 .legal-tools { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin: 2rem 0 1.25rem; }
@@ -112,8 +115,7 @@ button { font: inherit; }
   .wordmark-label { padding-left: .65rem; font-size: .58rem; }
   /* Back-to-app plus the legal tabs already provide the useful phone navigation. */
   .site-header nav > a { display: none; }
-  .language-switcher > span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-  .language-switcher select { max-width: 7.5rem; }
+  .site-header .language-switcher > a { min-width: 2.05rem; padding: 0 .38rem; }
   .legal-main { padding: 0 .5rem 2rem; }
   .legal-tools { align-items: flex-start; flex-direction: column; gap: .8rem; margin: 1.25rem .75rem 1rem; }
   .legal-shell { border-radius: 1.15rem; }

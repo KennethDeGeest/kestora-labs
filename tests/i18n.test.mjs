@@ -7,6 +7,7 @@ import { escapeHtml, localeRoute, outputPath, pageEnabledForLocale, validateAppP
 import { locales, pages } from '../i18n/config.mjs';
 import { loadContent } from '../scripts/i18n-shared.mjs';
 import { localizeLegalPages } from '../scripts/legal-localization.mjs';
+import { renderLanguageSwitcher } from '../i18n/templates/language-switcher.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -34,6 +35,16 @@ test('locale paths are deterministic', () => {
   assert.equal(outputPath('en', '/'), 'index.html');
   assert.equal(outputPath('nl', '/'), 'nl/index.html');
   assert.equal(outputPath('en', '/fovri/'), 'fovri/index.html');
+});
+
+test('language switcher uses compact accessible links', async () => {
+  const content = await loadContent(root);
+  const page = pages.find(candidate => candidate.id === 'site.home');
+  const html = renderLanguageSwitcher({ locale: 'nl', page, contentByLocale: content, label: 'Taal' });
+  assert.match(html, /role="group" aria-label="Taal"/);
+  assert.match(html, /href="\/"[^>]*>EN<\/a>/);
+  assert.match(html, /href="\/nl\/"[^>]*aria-current="page"[^>]*>NL<\/a>/);
+  assert.doesNotMatch(html, /<select/);
 });
 
 test('core pages are shared while SEO inventories are locale-specific', () => {

@@ -40,7 +40,7 @@ export function renderStructuredDocument({ locale, page, content, common, conten
   let body = content.body.map(node => renderNode(node, locale)).join('');
   if (page.scope === 'core' && common) {
     const languageSwitcher = renderLanguageSwitcher({ locale, page, contentByLocale, label: common.ui.language });
-    if (languageSwitcher) body = body.replace('</nav></header>', `${languageSwitcher}</nav></header>`);
+    if (languageSwitcher) body = body.replace(/<\/nav>\s*<\/header>/, `${languageSwitcher}</nav></header>`);
   }
   return `<!doctype html>
 <html lang="${e(locale)}">

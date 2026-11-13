@@ -7,7 +7,7 @@ import { outputPath, pageEnabledForLocale } from '../i18n/lib/core.mjs';
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 function withoutLanguageSwitcher(html) {
-  return html.replace(/<label\s+class="language-switcher"[\s\S]*?<\/label>/gi, '');
+  return html.replace(/<(?:label|span)\s+class="language-switcher"[\s\S]*?<\/(?:label|span)>/gi, '');
 }
 
 function decode(value) {
