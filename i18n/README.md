@@ -55,7 +55,7 @@ Every registered page has a `scope`:
 - `core` pages belong to every enabled language. This includes app landing pages, guide overview pages, privacy pages, terms pages and support pages.
 - `seo` pages list their supported locales explicitly. English guides and calculators are currently English-only. A Dutch SEO page will be registered for `nl` only after Dutch keyword research determines its subject, native-language URL and content.
 
-The Dutch locale is registered at `/nl/` but remains disabled until all mandatory Dutch core content has been translated, reviewed and verified. Its homepage, shared interface, app landing pages, empty guide hubs, all eight support pages, all eight app privacy policies, the website privacy page, BulkBro health disclaimer and six app terms pages are drafted. Only the BulkBro and Bump Echo terms are still pending. Enabling Dutch therefore cannot accidentally publish an incomplete site or English SEO articles beneath Dutch URLs.
+The Dutch locale is registered at `/nl/` but remains disabled until all mandatory Dutch core content has been translated, reviewed and verified. Its homepage, shared interface, app landing pages, empty guide hubs and all 26 legal pages are drafted. The remaining step before activation is a final content and responsive-layout review. Enabling Dutch therefore cannot accidentally publish an incomplete site or English SEO articles beneath Dutch URLs.
 
 ## Migration order
 

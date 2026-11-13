@@ -11,11 +11,10 @@ Completed draft content:
 - privacy pages for all eight apps
 - website privacy page
 - BulkBro health disclaimer
-- terms pages for Calmber, Fovri, MigraLoom, Oqvi, TipHaven and WalkBop
+- terms pages for all eight apps
 
 Required before activation:
 
 - final language-selector review at phone and desktop widths
-- terms pages for BulkBro and Bump Echo
 
 English guides and calculators are not copied here. Dutch SEO pages will be added individually after Dutch keyword research and will use native Dutch titles, slugs and content.
