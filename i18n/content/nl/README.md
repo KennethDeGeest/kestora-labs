@@ -8,7 +8,7 @@ Completed draft content:
 - all app landing pages
 - all guide overview pages, initially with empty Dutch SEO inventories
 - all eight app support pages
-- privacy pages for Calmber, Fovri, MigraLoom and Oqvi
+- privacy pages for Bump Echo, Calmber, Fovri, MigraLoom, Oqvi and WalkBop
 
 Required before activation:
 

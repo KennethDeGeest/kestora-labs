@@ -42,9 +42,9 @@ test('completed Dutch legal-page batches preserve the protected English structur
   const source = JSON.parse(await readFile(resolve(root, 'i18n/content/en/legal-pages.json'), 'utf8'));
   const overlay = JSON.parse(await readFile(resolve(root, 'i18n/content/nl/legal-translations.json'), 'utf8'));
   const localized = localizeLegalPages(source, overlay, 'nl');
-  assert.equal(Object.keys(localized.pages).length, 12);
+  assert.equal(Object.keys(localized.pages).length, 14);
   assert.equal(Object.keys(localized.pages).filter(id => id.endsWith('.support')).length, 8);
-  assert.equal(Object.keys(localized.pages).filter(id => id.endsWith('.privacy')).length, 4);
+  assert.equal(Object.keys(localized.pages).filter(id => id.endsWith('.privacy')).length, 6);
   validateLegalPages(localized, 'nl.legalPagesDraft');
 });
 
