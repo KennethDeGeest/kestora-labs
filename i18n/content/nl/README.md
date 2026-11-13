@@ -1,6 +1,6 @@
 # Dutch locale draft
 
-Dutch will use the `/nl/` URL prefix. This locale intentionally remains disabled until its complete core content is ready.
+Dutch uses the `/nl/` URL prefix and is enabled after completing the core-content and responsive-layout review.
 
 Completed draft content:
 
@@ -13,8 +13,6 @@ Completed draft content:
 - BulkBro health disclaimer
 - terms pages for all eight apps
 
-Required before activation:
-
-- final language-selector review at phone and desktop widths
+Post-launch content plan:
 
 English guides and calculators are not copied here. Dutch SEO pages will be added individually after Dutch keyword research and will use native Dutch titles, slugs and content.

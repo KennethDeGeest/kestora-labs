@@ -8,7 +8,7 @@ export const site = {
 // explicitly enabled after its complete content set passes validation.
 export const locales = {
   en: { label: 'English', htmlLang: 'en', prefix: '', enabled: true },
-  nl: { label: 'Nederlands', htmlLang: 'nl', prefix: '/nl', enabled: false }
+  nl: { label: 'Nederlands', htmlLang: 'nl', prefix: '/nl', enabled: true }
 };
 
 const appPage = ({ slug, appStore, icon, screenshots, guides = true }) => ({

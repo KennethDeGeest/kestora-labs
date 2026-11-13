@@ -34,7 +34,9 @@ for (const [locale, localeContent] of Object.entries(contentByLocale)) {
         .map(([, article]) => article.card)
         .concat(content.extraCards)
         .sort((left, right) => left.order - right.order);
-      html = renderGuideOverview({ locale, page, content, guideUi: localeContent.guideOverviews.ui, common: localeContent.common, cards, contentByLocale });
+      const editorialPage = pages.find(candidate => candidate.route === page.routes.editorial);
+      const editorialAvailable = editorialPage ? pageEnabledForLocale(editorialPage, locale) : false;
+      html = renderGuideOverview({ locale, page, content, guideUi: localeContent.guideOverviews.ui, common: localeContent.common, cards, editorialAvailable, contentByLocale });
     } else if (page.type === 'guide-article') {
       const content = localeContent.guideArticles.pages[page.id];
       const appId = `${page.id.split('.')[0]}.guides`;

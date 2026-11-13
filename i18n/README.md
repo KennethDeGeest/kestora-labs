@@ -1,6 +1,6 @@
 # Kestora Labs localization pipeline
 
-This directory is the guarded source for future translations. It does **not** publish localized pages or replace the current English HTML.
+This directory is the guarded source for the English and Dutch site. Normal builds remain preview-only; publication requires the explicit promotion command.
 
 ## Safety model
 
@@ -11,8 +11,8 @@ This directory is the guarded source for future translations. It does **not** pu
 - Every enabled locale must contain every registered page and field.
 - Core pages are mandatory in every enabled locale; SEO pages declare exactly which locales they belong to.
 - Canonical URLs and `hreflang` links are generated, never translated manually.
-- Output always goes to `.i18n-preview/`, which is ignored by Git.
-- The live sitemap is unchanged until a locale is complete and deliberately promoted.
+- Verification output goes to `.i18n-preview/`, which is ignored by Git.
+- `npm run i18n:promote` is the only command that copies verified output into the live site and updates localized sitemap entries.
 
 ## Commands
 
@@ -22,6 +22,7 @@ npm run i18n:check
 npm test
 npm run i18n:build
 npm run i18n:parity
+npm run i18n:promote
 ```
 
 `npm run i18n:verify` runs the complete sequence. Parity verification compares visible text, CSS classes, links and image sources between each migrated English page and its generated equivalent.
@@ -55,7 +56,7 @@ Every registered page has a `scope`:
 - `core` pages belong to every enabled language. This includes app landing pages, guide overview pages, privacy pages, terms pages and support pages.
 - `seo` pages list their supported locales explicitly. English guides and calculators are currently English-only. A Dutch SEO page will be registered for `nl` only after Dutch keyword research determines its subject, native-language URL and content.
 
-The Dutch locale is registered at `/nl/` but remains disabled until all mandatory Dutch core content has been translated, reviewed and verified. Its homepage, shared interface, app landing pages, empty guide hubs and all 26 legal pages are drafted. The remaining step before activation is a final content and responsive-layout review. Enabling Dutch therefore cannot accidentally publish an incomplete site or English SEO articles beneath Dutch URLs.
+The Dutch locale is enabled at `/nl/`. Its homepage, shared interface, app landing pages, empty guide hubs and all 26 legal pages are published. Dutch guide articles and calculators remain intentionally absent until Dutch keyword research defines their topics, slugs and content; empty guide hubs are marked `noindex` and are excluded from the sitemap.
 
 ## Migration order
 

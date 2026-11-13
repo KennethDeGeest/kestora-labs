@@ -1,10 +1,14 @@
-import { readFile } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { pages, site } from '../i18n/config.mjs';
-import { outputPath } from '../i18n/lib/core.mjs';
+import { locales, pages, site } from '../i18n/config.mjs';
+import { outputPath, pageEnabledForLocale } from '../i18n/lib/core.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
+
+function withoutLanguageSwitcher(html) {
+  return html.replace(/<label\s+class="language-switcher"[\s\S]*?<\/label>/gi, '');
+}
 
 function decode(value) {
   return value
@@ -71,12 +75,14 @@ function runtimeFacts(html, base) {
 for (const page of pages) {
   const source = await readFile(join(root, page.source), 'utf8');
   const generated = await readFile(join(root, site.previewDirectory, outputPath('en', page.route)), 'utf8');
+  const comparableSource = withoutLanguageSwitcher(source);
+  const comparableGenerated = withoutLanguageSwitcher(generated);
   const base = `${site.origin}${page.route}`;
   const checks = {
-    visibleText: [bodyText(source), bodyText(generated)],
-    classes: [classSet(source), classSet(generated)],
-    links: [urls(source, 'href', base).filter(url => !url.includes('/site.css')), urls(generated, 'href', base).filter(url => !url.includes('/site.css'))],
-    images: [urls(source, 'src', base), urls(generated, 'src', base)],
+    visibleText: [bodyText(comparableSource), bodyText(comparableGenerated)],
+    classes: [classSet(comparableSource), classSet(comparableGenerated)],
+    links: [urls(comparableSource, 'href', base).filter(url => !url.includes('/site.css')), urls(comparableGenerated, 'href', base).filter(url => !url.includes('/site.css'))],
+    images: [urls(comparableSource, 'src', base), urls(comparableGenerated, 'src', base)],
     seo: [seoFacts(source), seoFacts(generated)]
   };
   if (['interactive-tool', 'legal-page'].includes(page.type)) checks.runtime = [runtimeFacts(source, base), runtimeFacts(generated, base)];
@@ -90,3 +96,22 @@ for (const page of pages) {
 }
 
 if (!process.exitCode) console.log(`Parity verified for ${pages.length} migrated English page(s).`);
+
+for (const [locale, config] of Object.entries(locales)) {
+  if (!config.enabled || locale === site.sourceLocale) continue;
+  for (const page of pages.filter(candidate => pageEnabledForLocale(candidate, locale))) {
+    const relative = outputPath(locale, page.route);
+    const html = await readFile(join(root, site.previewDirectory, relative), 'utf8');
+    for (const match of html.matchAll(/href="(\/[^"]+)"/g)) {
+      const pathname = match[1].split(/[?#]/)[0];
+      if (/\.[a-z]+$/i.test(pathname)) continue;
+      const target = join(root, site.previewDirectory, pathname, 'index.html');
+      try {
+        await access(target);
+      } catch {
+        console.error(`Broken localized link for ${page.id} (${locale}): ${match[1]}`);
+        process.exitCode = 1;
+      }
+    }
+  }
+}

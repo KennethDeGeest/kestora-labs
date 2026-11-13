@@ -4,7 +4,7 @@ import { renderLanguageSwitcher } from './language-switcher.mjs';
 const e = escapeHtml;
 const favicon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23111111'/%3E%3Cpath d='M18 14v36h8V36l12 14h10L32 31l15-17H37L26 28V14z' fill='white'/%3E%3C/svg%3E";
 
-export function renderGuideOverview({ locale, page, content, guideUi, common, cards, contentByLocale }) {
+export function renderGuideOverview({ locale, page, content, guideUi, common, cards, editorialAvailable, contentByLocale }) {
   const languageSwitcher = renderLanguageSwitcher({ locale, page, contentByLocale, label: common.ui.language });
   const cardMarkup = cards.length
     ? `<div class="guide-grid">${cards.map(card => `<a class="guide-card" href="${e(card.href)}"><h2>${e(card.title)}</h2><p>${e(card.description)}</p><span>${e(guideUi.readGuide)}</span></a>`).join('')}</div>`
@@ -12,7 +12,7 @@ export function renderGuideOverview({ locale, page, content, guideUi, common, ca
   const guideCount = cards.length === 0
     ? guideUi.newGuides
     : `${cards.length} ${cards.length === 1 ? guideUi.guideAvailable : guideUi.guidesAvailable}`;
-  const editorial = page.routes.editorial
+  const editorial = editorialAvailable
     ? `<a href="${e(localeRoute(locale, page.routes.editorial))}">${e(guideUi.editorialPolicy)}</a>`
     : '';
 

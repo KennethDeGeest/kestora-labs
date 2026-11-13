@@ -59,6 +59,8 @@ a { color: inherit; }
   .wordmark-label { padding-left: .65rem; font-size: .58rem; }
   /* The overview already has one explicit back-to-app link. */
   .site-header nav > a { display: none; }
+  .language-switcher > span { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  .language-switcher select { max-width: 7.5rem; }
   .guides-main { padding: 0 .5rem 2rem; }
   .guides-back { margin: 1.25rem .75rem 1rem; }
   .guides-shell { border-radius: 1.15rem; }
