@@ -37,13 +37,14 @@ test('locale paths are deterministic', () => {
   assert.equal(outputPath('en', '/fovri/'), 'fovri/index.html');
 });
 
-test('language switcher uses compact accessible links', async () => {
+test('language switcher uses a scalable accessible menu', async () => {
   const content = await loadContent(root);
   const page = pages.find(candidate => candidate.id === 'site.home');
   const html = renderLanguageSwitcher({ locale: 'nl', page, contentByLocale: content, label: 'Taal' });
-  assert.match(html, /role="group" aria-label="Taal"/);
-  assert.match(html, /href="\/"[^>]*>EN<\/a>/);
-  assert.match(html, /href="\/nl\/"[^>]*aria-current="page"[^>]*>NL<\/a>/);
+  assert.match(html, /<details class="language-switcher">/);
+  assert.match(html, /<summary aria-label="Taal">/);
+  assert.match(html, /href="\/"[^>]*>[^<]*<span class="language-option-name">English<\/span>/);
+  assert.match(html, /href="\/nl\/"[^>]*aria-current="page"[^>]*>[^<]*<span class="language-option-name">Nederlands<\/span>/);
   assert.doesNotMatch(html, /<select/);
 });
 
