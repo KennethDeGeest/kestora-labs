@@ -8,12 +8,12 @@ Completed draft content:
 - all app landing pages
 - all guide overview pages, initially with empty Dutch SEO inventories
 - all eight app support pages
-- privacy pages for Bump Echo, Calmber, Fovri, MigraLoom, Oqvi, TipHaven and WalkBop
+- privacy pages for all eight apps
 
 Required before activation:
 
 - final language-selector review at phone and desktop widths
-- the BulkBro privacy page and website privacy page
+- the website privacy page
 - all app terms pages
 - the BulkBro health disclaimer
 
