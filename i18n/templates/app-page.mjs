@@ -22,7 +22,7 @@ export function renderAppPage({ locale, page, content, common, contentByLocale }
   <link rel="canonical" href="${e(absoluteUrl(locale, page.route))}">
   ${hreflangLinks(page.id, contentByLocale)}
   <title>${e(content.meta.title)}</title>
-  <link rel="stylesheet" href="/site.css?v=20261111-simple-pages">
+  <link rel="stylesheet" href="/site.css?v=20261113-language-menu">
 </head>
 <body class="app-page-body">
   <header class="site-header">

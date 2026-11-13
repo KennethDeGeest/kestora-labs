@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const apps = ['walkbop', 'fovri', 'bulkbro', 'tiphaven', 'oqvi', 'migraloom', 'bumpecho', 'calmber'];
 const legalPages = ['privacy.html', 'terms.html', 'support.html'];
+const styleVersion = '20261113-language-menu';
 const forbiddenTemplateFiles = [
   'legal-template.css',
   'legal-template.js',
@@ -23,7 +24,7 @@ const requireText = (relative, html, value) => {
 for (const app of apps) {
   const relative = `${app}/index.html`;
   const html = read(relative);
-  requireText(relative, html, '/site.css?v=20261111-simple-pages');
+  requireText(relative, html, `/site.css?v=${styleVersion}`);
   requireText(relative, html, 'class="app-page-body"');
   requireText(relative, html, 'class="app-page-shell"');
   requireText(relative, html, 'class="app-showcase"');
@@ -37,7 +38,7 @@ for (const app of apps) {
   for (const page of legalPages) {
     const legalRelative = `${app}/${page}`;
     const legal = read(legalRelative);
-    requireText(legalRelative, legal, '/legal-page.css?v=20261111-1');
+    requireText(legalRelative, legal, `/legal-page.css?v=${styleVersion}`);
     requireText(legalRelative, legal, 'class="legal-main"');
     requireText(legalRelative, legal, 'class="legal-tools"');
     requireText(legalRelative, legal, 'class="legal-shell"');
@@ -46,7 +47,7 @@ for (const app of apps) {
 }
 
 const bulkHealth = read('bulkbro/health.html');
-requireText('bulkbro/health.html', bulkHealth, '/legal-page.css?v=20261111-1');
+requireText('bulkbro/health.html', bulkHealth, `/legal-page.css?v=${styleVersion}`);
 requireText('bulkbro/health.html', bulkHealth, 'class="legal-shell"');
 
 for (const relative of forbiddenTemplateFiles) {

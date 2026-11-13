@@ -27,7 +27,7 @@ export function renderGuideOverview({ locale, page, content, guideUi, common, ca
   ${hreflangLinks(page.id, contentByLocale)}
   <link rel="icon" type="image/svg+xml" href="${favicon}">
   <title>${e(content.name)} Guides — ${e(common.brand.studio)}</title>
-  <link rel="stylesheet" href="/guides-page.css?v=20261111-2">
+  <link rel="stylesheet" href="/guides-page.css?v=20261113-language-menu">
 </head>
 <body>
   <a class="skip-link" href="#guides">${e(guideUi.skipToGuides)}</a>
