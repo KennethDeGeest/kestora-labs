@@ -9,6 +9,7 @@ export async function loadContent(root) {
     if (!config.enabled) continue;
     const directory = join(root, 'i18n', 'content', locale);
     contentByLocale[locale] = {
+      home: JSON.parse(await readFile(join(directory, 'home.json'), 'utf8')),
       common: JSON.parse(await readFile(join(directory, 'common.json'), 'utf8')),
       pages: JSON.parse(await readFile(join(directory, 'pages.json'), 'utf8')),
       guideOverviews: JSON.parse(await readFile(join(directory, 'guide-overviews.json'), 'utf8')),

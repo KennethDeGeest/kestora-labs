@@ -7,7 +7,9 @@
     "guideAvailable": "guide available",
     "newGuides": "New guides will appear here",
     "editorialPolicy": "Editorial policy",
-    "websitePrivacy": "Website privacy"
+    "websitePrivacy": "Website privacy",
+    "backTo": "Back to",
+    "guides": "guides"
   },
   "pages": {
     "walkbop.guides": {"name":"WalkBop","intro":"Practical ideas for walking more, staying motivated and making step challenges fun with friends.","emptyTitle":"Guides are coming soon.","emptyBody":"We are preparing practical WalkBop guides. The overview is ready now, so new articles can be added without changing the app page again.","extraCards":[]},

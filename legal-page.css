@@ -43,6 +43,8 @@ button { font: inherit; }
 .site-header a:hover,
 .legal-site-footer a:hover,
 .legal-site-footer button:hover { color: var(--ink); }
+.language-switcher { display: inline-flex; align-items: center; gap: .45rem; color: #66686d; font-size: .78rem; }
+.language-switcher select { min-height: 2.25rem; padding: 0 1.8rem 0 .65rem; border: 1px solid #d9dade; border-radius: .55rem; color: var(--ink); background: var(--white); font: inherit; font-size: .85rem; }
 
 .legal-main { width: min(100%, 72rem); margin: 0 auto; padding: 0 2rem 4rem; }
 .legal-tools { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin: 2rem 0 1.25rem; }
@@ -109,7 +111,7 @@ button { font: inherit; }
   .wordmark-name { font-size: .82rem; }
   .wordmark-label { padding-left: .65rem; font-size: .58rem; }
   /* Back-to-app plus the legal tabs already provide the useful phone navigation. */
-  .site-header nav { display: none; }
+  .site-header nav > a { display: none; }
   .legal-main { padding: 0 .5rem 2rem; }
   .legal-tools { align-items: flex-start; flex-direction: column; gap: .8rem; margin: 1.25rem .75rem 1rem; }
   .legal-shell { border-radius: 1.15rem; }

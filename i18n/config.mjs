@@ -81,10 +81,12 @@ const interactiveTool = ({ id, route, source }) => ({
 
 const legalPage = ({ id, route, source }) => ({ id, type: 'legal-page', scope: 'core', route, source, routes: {} });
 const legalApps = ['bulkbro', 'bumpecho', 'calmber', 'fovri', 'migraloom', 'oqvi', 'tiphaven', 'walkbop'];
+const homePage = { id: 'site.home', type: 'home-page', scope: 'core', route: '/', source: 'index.html', routes: {} };
 
 // App pages are fully registered. Generated output remains preview-only until
 // every other page type has been migrated and explicitly promoted.
 export const pages = [
+  homePage,
   appPage({ slug: 'calmber', appStore: 'https://apps.apple.com/app/id6833412600', icon: '/assets/calmber.png', guides: false, screenshots: [
     '/assets/screens/calmber-home.png',
     '/assets/screens/calmber-plan.png',

@@ -36,6 +36,8 @@ a { color: inherit; }
 .site-header nav a, .site-header nav button, footer nav a { text-decoration: none; color: #505257; font-size: .98rem; }
 .site-header nav button { padding: 0; border: 0; background: transparent; }
 .site-header nav a:hover, .site-header nav button:hover, footer nav a:hover { color: var(--ink); }
+.language-switcher { display: inline-flex; align-items: center; gap: .45rem; color: #66686d; font-size: .78rem; }
+.language-switcher select { min-height: 2.25rem; padding: 0 1.8rem 0 .65rem; border: 1px solid #d9dade; border-radius: .55rem; color: var(--ink); background: var(--white); font: inherit; font-size: .85rem; }
 
 .apps-stage {
   min-height: 27rem;
@@ -204,7 +206,7 @@ footer p { margin: 0; }
 .app-page-bottom-cta p { margin: 0; color: var(--muted); }
 @media (max-width: 700px) {
   /* Dedicated app pages already provide a clear back link below the header. */
-  .app-page-body .site-header nav { display: none; }
+  .app-page-body .site-header nav > a { display: none; }
   .app-page-main { padding: 0 .5rem 2rem; }
   .app-page-back { margin-left: .75rem; }
   .app-page-shell { border-radius: 1.15rem; }

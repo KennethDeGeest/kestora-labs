@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { locales, pages, site } from '../i18n/config.mjs';
 import { outputPath, pageEnabledForLocale } from '../i18n/lib/core.mjs';
 import { renderAppPage } from '../i18n/templates/app-page.mjs';
+import { renderHomePage } from '../i18n/templates/home-page.mjs';
 import { renderGuideOverview } from '../i18n/templates/guide-overview.mjs';
 import { renderGuideArticle } from '../i18n/templates/guide-article.mjs';
 import { renderInteractiveTool } from '../i18n/templates/interactive-tool.mjs';
@@ -21,7 +22,9 @@ for (const [locale, localeContent] of Object.entries(contentByLocale)) {
     const destination = join(outputRoot, outputPath(locale, page.route));
     await mkdir(dirname(destination), { recursive: true });
     let html;
-    if (page.type === 'app-page') {
+    if (page.type === 'home-page') {
+      html = renderHomePage({ locale, page, content: localeContent.home, common: localeContent.common, contentByLocale });
+    } else if (page.type === 'app-page') {
       html = renderAppPage({ locale, page, content: localeContent.pages[page.id], common: localeContent.common, contentByLocale });
     } else if (page.type === 'guide-overview') {
       const content = localeContent.guideOverviews.pages[page.id];
@@ -40,7 +43,7 @@ for (const [locale, localeContent] of Object.entries(contentByLocale)) {
     } else if (page.type === 'interactive-tool') {
       html = renderInteractiveTool({ locale, page, content: localeContent.tools.pages[page.id], contentByLocale });
     } else {
-      html = renderLegalPage({ locale, page, content: localeContent.legalPages.pages[page.id], contentByLocale });
+      html = renderLegalPage({ locale, page, content: localeContent.legalPages.pages[page.id], common: localeContent.common, contentByLocale });
     }
     await writeFile(destination, html, 'utf8');
   }

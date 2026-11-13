@@ -55,7 +55,7 @@ Every registered page has a `scope`:
 - `core` pages belong to every enabled language. This includes app landing pages, guide overview pages, privacy pages, terms pages and support pages.
 - `seo` pages list their supported locales explicitly. English guides and calculators are currently English-only. A Dutch SEO page will be registered for `nl` only after Dutch keyword research determines its subject, native-language URL and content.
 
-The Dutch locale is registered at `/nl/` but remains disabled until all mandatory Dutch core content has been translated, reviewed and verified. Enabling Dutch therefore cannot accidentally publish English SEO articles beneath Dutch URLs.
+The Dutch locale is registered at `/nl/` but remains disabled until all mandatory Dutch core content has been translated, reviewed and verified. Its homepage, shared interface, app landing pages and empty guide hubs are drafted. Legal and support content is still pending. Enabling Dutch therefore cannot accidentally publish an incomplete site or English SEO articles beneath Dutch URLs.
 
 ## Migration order
 

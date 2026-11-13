@@ -1,0 +1,234 @@
+{
+  "calmber.app": {
+    "meta": {
+      "title": "Calmber — Kestora Labs",
+      "description": "Een rustige stoppen-met-roken-app met een persoonlijk afbouwplan, registratie van sigaretten, hulp bij trek en een longmaatje dat samen met jou herstelt."
+    },
+    "hero": {
+      "name": "Calmber",
+      "subtitle": "Stop met roken, één rustige dag tegelijk",
+      "description": "Een persoonlijk afbouwplan, eerlijke registratie van sigaretten en rustige hulp bij trek—met een expressief longmaatje dat geleidelijk samen met jou herstelt.",
+      "iconAlt": "App-icoon van Calmber"
+    },
+    "screenshots": [
+      {"alt": "Startscherm van Calmber met het longmaatje en het dagplan"},
+      {"alt": "Het geleidelijke Calmber-plan naar nul sigaretten"},
+      {"alt": "Voortgang en geldbesparing in Calmber"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Vooruitgang zonder perfectie.",
+      "body": "Stoppen verloopt zelden in een perfect rechte lijn. Calmber maakt er een geleidelijke en begrijpelijke reis van, waarbij een moeilijk moment nooit al het eerdere werk ongedaan maakt."
+    },
+    "features": [
+      {"title": "Maak een plan dat bij je leven past", "body": "Kies een tempo en routine en volg dagelijkse limieten richting je stopdag."},
+      {"title": "Registreer eerlijk en leer", "body": "Noteer sigaretten, corrigeer eerdere dagen en begrijp timing, kosten en patronen zonder oordeel."},
+      {"title": "Krijg steun wanneer de trek opkomt", "body": "Pauzeer, adem, stel uit of doorsta de drang met een longmaatje dat op je reageert en samen met jou herstelt."}
+    ],
+    "cta": {"title": "Neem de volgende ademteug.", "body": "Maak kennis met het longmaatje dat aan jouw kant staat."},
+    "footer": {"note": "Gedragsmatige ondersteuning—geen medisch advies, diagnose of behandeling. Je gedetailleerde stopdagboek blijft lokaal in de app op je iPhone.", "copyright": "Kestora Labs"}
+  },
+  "walkbop.app": {
+    "meta": {
+      "title": "WalkBop — Kestora Labs",
+      "description": "Verander je dagelijkse wandelingen in een wekelijkse race met vrienden, speelse rivaliteit, verrassingsvoorwerpen en een racer die op elke wending reageert."
+    },
+    "hero": {
+      "name": "WalkBop",
+      "subtitle": "Wekelijkse stappenraces met vrienden",
+      "description": "Verander je dagelijkse wandelingen in een wekelijkse race met vrienden, speelse rivaliteit, verrassingsvoorwerpen en een racer die op elke wending reageert.",
+      "iconAlt": "App-icoon van WalkBop"
+    },
+    "screenshots": [
+      {"alt": "Wekelijkse WalkBop-race waarin de speler tussen vrienden loopt"},
+      {"alt": "Voorraad in WalkBop met verrassingskisten, aanvallen en schilden"},
+      {"alt": "Personagemaker van WalkBop met aanpassingsmogelijkheden"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Maak gewone stappen het najagen waard.",
+      "body": "Stappendoelen zijn gemakkelijk te negeren wanneer je ze alleen probeert te halen. WalkBop verandert de wandelingen die je al maakt in een gedeelde wekelijkse wedstrijd waarin elk gat, elke inhaalactie en comeback je een reden geeft om opnieuw te bewegen."
+    },
+    "features": [
+      {"title": "Race met echte stappen", "body": "Koppel Apple Gezondheid en verander je wekelijkse stappentotaal in een live score, positie en afstand tot je vrienden."},
+      {"title": "Beïnvloed de race met voorwerpen", "body": "Verdien verrassingskisten door te wandelen en gebruik speelse voorwerpen om op het juiste moment aan te vallen, te verdedigen of te versnellen."},
+      {"title": "Begin elke week een nieuwe rivaliteit", "body": "Nodig vrienden uit, volg de race, zie je racer reageren en start een nieuw verhaal wanneer de volgende wekelijkse race begint."}
+    ],
+    "cta": {"title": "Probeer WalkBop zelf.", "body": "Bekijk de app in de App Store."},
+    "footer": {"note": "Toegang tot Apple Gezondheid is optioneel, maar nodig om echte wandelstappen in een live race te gebruiken. WalkBop deelt wekelijkse racetotalen met deelnemende vrienden, geen afzonderlijke gezondheidsgegevens.", "copyright": "Kestora Labs"}
+  },
+  "bulkbro.app": {
+    "meta": {
+      "title": "Bulk Tracker: Gain Weight Plan — Kestora Labs",
+      "description": "Een onderbouwde calorie- en gewichtcoach die hardgainers helpt giswerk te vervangen door een plan dat zich aan echte voortgang aanpast."
+    },
+    "hero": {
+      "name": "Bulk Tracker: Gain Weight Plan",
+      "subtitle": "Adaptieve calorie- en macrodoelen",
+      "description": "Een onderbouwde calorie- en gewichtcoach die hardgainers helpt giswerk te vervangen door een plan dat zich aan echte voortgang aanpast.",
+      "iconAlt": "App-icoon van Bulk Tracker: Gain Weight Plan"
+    },
+    "screenshots": [
+      {"alt": "Dagelijks calorieplan in Bulk Tracker"},
+      {"alt": "Scherm om maaltijden te registreren in Bulk Tracker"},
+      {"alt": "Voortgang en gewichtstrend in Bulk Tracker"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Een bulkplan dat van je resultaten leert.",
+      "body": "Meer eten is eenvoudig advies, maar weten of het genoeg is, is moeilijker. Bulk Tracker koppelt maaltijdregistratie, wegingen en voltooide weken om uit te leggen wat er gebeurt en het volgende doel gericht aan te passen."
+    },
+    "features": [
+      {"title": "Registreer zonder gedoe", "body": "Leg maaltijden snel vast met bewerkbare schattingen en houd de uiteindelijke cijfers zelf onder controle."},
+      {"title": "Pas aan op basis van volledige weken", "body": "Vergelijk de bevestigde inname met de gewichtsverandering en het gewenste tempo voordat een calorieaanpassing wordt voorgesteld."},
+      {"title": "Begrijp de aanbeveling", "body": "Bekijk waarom een doel veranderde—of gelijk bleef—zodat het plan begrijpelijk blijft."}
+    ],
+    "cta": {"title": "Probeer BulkBro zelf.", "body": "Bekijk de app in de App Store."},
+    "footer": {"note": "Ontwikkeld voor doelgericht aankomen. Bulk Tracker is geen medisch advies en vervangt geen professionele zorg.", "copyright": "Kestora Labs"}
+  },
+  "tiphaven.app": {
+    "meta": {
+      "title": "Server Tip Tracker: TipHaven — Kestora Labs",
+      "description": "Een privéregistratie voor diensten die fooien, loon, uren en afgedragen fooien omzet in een duidelijk beeld van wat je tijd waard is."
+    },
+    "hero": {
+      "name": "Server Tip Tracker: TipHaven",
+      "subtitle": "Inkomstenlogboek voor horeca en bediening",
+      "description": "Een privéregistratie voor diensten die fooien, loon, uren en afgedragen fooien omzet in een duidelijk beeld van wat je tijd waard is.",
+      "iconAlt": "App-icoon van Server Tip Tracker: TipHaven"
+    },
+    "screenshots": [
+      {"alt": "Vandaag-scherm van TipHaven met fooien, uurinkomsten en gewerkte uren"},
+      {"alt": "Invoer van een dienst in TipHaven"},
+      {"alt": "Inkomsteninzichten in TipHaven"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Weet welke diensten echt lonen.",
+      "body": "Horecamedewerkers herinneren zich vaak het contante geld in hun zak, maar niet de volledige waarde van een dienst. TipHaven brengt elk onderdeel van de werkdag samen, zodat inkomsten, patronen en voortgang gemakkelijk te begrijpen zijn."
+    },
+    "features": [
+      {"title": "Leg de volledige dienst vast", "body": "Registreer uren, loon, contante en kaartfooien, omzet en afgedragen fooien in één snelle invoer."},
+      {"title": "Bekijk de echte uurwaarde", "body": "Bereken automatisch de totale inkomsten en het effectieve uurloon voor verschillende diensten, functies en werkplekken."},
+      {"title": "Ontdek bruikbare patronen", "body": "Bekijk trends en vergelijkingen zonder van je persoonlijke werkgegevens een openbaar profiel te maken."}
+    ],
+    "cta": {"title": "Probeer TipHaven zelf.", "body": "Bekijk de app in de App Store."},
+    "footer": {"note": "Geen account nodig. Gegevens over diensten en inkomsten blijven op de iPhone van de gebruiker.", "copyright": "Kestora Labs"}
+  },
+  "migraloom.app": {
+    "meta": {
+      "title": "Headache Tracker: MigraLoom — Kestora Labs",
+      "description": "Een rustig en privé migrainedagboek om aanvallen vast te leggen, geregistreerde patronen te begrijpen en gesprekken met zorgverleners beter voor te bereiden."
+    },
+    "hero": {
+      "name": "Headache Tracker: MigraLoom",
+      "subtitle": "Migrainedagboek en symptoomlogboek",
+      "description": "Een rustig en privé migrainedagboek om aanvallen vast te leggen, geregistreerde patronen te begrijpen en gesprekken met zorgverleners beter voor te bereiden.",
+      "iconAlt": "App-icoon van Headache Tracker: MigraLoom"
+    },
+    "screenshots": [
+      {"alt": "Logboekscherm van MigraLoom met voorbeeldgegevens"},
+      {"alt": "Patronenscherm van MigraLoom met voorbeeldgegevens"},
+      {"alt": "Rapportscherm van MigraLoom met voorbeeldgegevens"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Onthoud minder. Neem een duidelijker overzicht mee.",
+      "body": "Op migrainedagen is het moeilijk om uitgebreide notities te maken en belangrijke context wordt later gemakkelijk vergeten. MigraLoom maakt de eerste invoer snel, laat gebruikers later details toevoegen en zet de registratie om in iets bruikbaars."
+    },
+    "features": [
+      {"title": "Registreer snel een aanval", "body": "Begin met tijdstip en intensiteit en voeg symptomen, pijnlocatie, medicatie en notities toe wanneer dat haalbaar voelt."},
+      {"title": "Bekijk alleen geregistreerde patronen", "body": "Vat frequentie, duur, intensiteit en terugkerende omstandigheden samen zonder vermoedens als medische conclusies te presenteren."},
+      {"title": "Bereid afspraken voor", "body": "Maak een gestructureerde samenvatting voor je afspraak en exporteer alleen een pdf wanneer de gebruiker die wil delen."}
+    ],
+    "cta": {"title": "Probeer MigraLoom zelf.", "body": "Bekijk de app in de App Store."},
+    "footer": {"note": "Geen account nodig. De eerste vijf aanvallen zijn gratis; met één betaling kun je onbeperkt verder registreren. Dagboekgegevens worden op je iPhone bewaard en kunnen in Apple-apparaatback-ups staan. Optionele diagnostische gegevens zijn standaard uitgeschakeld. Schermafbeeldingen gebruiken voorbeeldgegevens.", "copyright": "Kestora Labs"}
+  },
+  "bumpecho.app": {
+    "meta": {
+      "title": "Baby Heartbeat - Bump Echo — Kestora Labs",
+      "description": "Een privé-Soundbook om tijdens de zwangerschap boodschappen, liedjes, stemmen en stille momenten vast te leggen."
+    },
+    "hero": {
+      "name": "Baby Heartbeat - Bump Echo",
+      "subtitle": "Geluidsrecorder voor je zwangerschap",
+      "description": "Een privé-Soundbook om tijdens de zwangerschap boodschappen, liedjes, stemmen en stille momenten vast te leggen.",
+      "iconAlt": "App-icoon van Baby Heartbeat - Bump Echo"
+    },
+    "screenshots": [
+      {"alt": "Startscherm van het familie-Soundbook in Bump Echo"},
+      {"alt": "Verzameling met audioherinneringen in Bump Echo"},
+      {"alt": "Familie- en privacyinstellingen in Bump Echo"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Bewaar de geluiden van deze periode.",
+      "body": "Een zwangerschap zit vol kleine momenten die foto's niet kunnen vasthouden. Bump Echo geeft aanstaande gezinnen een rustige plek om stemmen en geluiden op te nemen, het verhaal erachter toe te voegen en de herinneringen later opnieuw te beluisteren."
+    },
+    "features": [
+      {"title": "Leg een betekenisvol moment vast", "body": "Neem met de microfoon van de iPhone een boodschap, liedje, stem van een dierbare of alledaags geluid op."},
+      {"title": "Bouw een privé-Soundbook", "body": "Voeg titels en notities toe, markeer bijzondere opnamen als favoriet, doorzoek de verzameling en beluister herinneringen opnieuw."},
+      {"title": "Deel alleen wanneer jij dat wilt", "body": "Opnamen blijven op het apparaat, tenzij de gebruiker er bewust één exporteert via het iOS-deelmenu."}
+    ],
+    "cta": {"title": "Probeer Bump Echo zelf.", "body": "Bekijk de app in de App Store."},
+    "footer": {"note": "Een audioherinnering—geen recorder van de foetale hartslag of medische monitor. Opnamen en persoonlijke notities blijven op de iPhone van de gebruiker.", "copyright": "Kestora Labs"}
+  },
+  "oqvi.app": {
+    "meta": {
+      "title": "AI Plant Identifier: Oqvi — Kestora Labs",
+      "description": "Herken bomen, planten, bladeren, bloemen, schors en hout aan de hand van een foto, stel vervolgvragen en bouw een privékaart van je vondsten."
+    },
+    "hero": {
+      "name": "AI Plant Identifier: Oqvi",
+      "subtitle": "Herken bomen, bladeren, hout en bloemen",
+      "description": "Herken bomen, planten, bladeren, bloemen, schors en hout aan de hand van een foto, stel vervolgvragen en bouw een privékaart van je vondsten.",
+      "iconAlt": "App-icoon van AI Plant Identifier: Oqvi"
+    },
+    "screenshots": [
+      {"alt": "Startscherm van AI Plant Identifier met een gevulde verzameling en privékaart"},
+      {"alt": "Privékaart met 257 gegroepeerde markeringen in 14 landen"},
+      {"alt": "Gedetailleerde vondst van een grove den met herkenningsdetails en extra foto-opties"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Verander een toevallige vondst in iets dat je kent.",
+      "body": "Een nieuwsgierig moment buiten hoeft niet bij een naam te eindigen. Elke foto wordt een bruikbare vondst met herkenningskenmerken, vervolgvragen, persoonlijke notities en een plaats in je privéveldverzameling."
+    },
+    "features": [
+      {"title": "Herken meer dan alleen bladeren", "body": "Gebruik foto's van volledige bomen, bladeren, bloemen, schors, nerven of gezaagd hout en voeg detailbeelden toe om de vondst te verbeteren."},
+      {"title": "Blijf ontdekken met AI", "body": "Stel vanuit elk resultaat vragen en bewaar nuttige antwoorden samen met de soort, herkenningsdetails en het bronmateriaal."},
+      {"title": "Bouw een privéveldarchief", "body": "Zoek en filter opgeslagen vondsten, markeer favorieten, voeg notities toe en bekijk honderden privémarkeringen op een gegroepeerde kaart."}
+    ],
+    "cta": {"title": "Probeer Oqvi zelf.", "body": "Bekijk de app in de App Store."},
+    "footer": {"note": "AI-ondersteunde identificaties zijn suggesties, geen professioneel veiligheidsadvies. Verzamelingen, notities en exacte locaties blijven op de iPhone van de gebruiker.", "copyright": "Kestora Labs"}
+  },
+  "fovri.app": {
+    "meta": {
+      "title": "Recipe Keeper & Planner: Fovri — Kestora Labs",
+      "description": "Verander receptlinks en kookvideo's in een persoonlijk kookboek en plan daarna wat je wilt koken en kopen."
+    },
+    "hero": {
+      "name": "Recipe Keeper & Planner: Fovri",
+      "subtitle": "Importeer recepten en bouw je kookboek",
+      "description": "Verander receptlinks en kookvideo's in een persoonlijk kookboek en plan daarna wat je wilt koken en kopen.",
+      "iconAlt": "App-icoon van Recipe Keeper & Planner: Fovri"
+    },
+    "screenshots": [
+      {"alt": "Scherm 'Binnenkort koken' in Fovri met een voorbeeldmaaltijd"},
+      {"alt": "Een bewerkbaar voorbeeldrecept in Fovri"},
+      {"alt": "Boodschappenlijst in Fovri met voorbeeldingrediënten"}
+    ],
+    "summary": {
+      "label": "Het idee",
+      "title": "Van opgeslagen inspiratie naar je volgende lekkere maaltijd.",
+      "body": "Een recept moet gemakkelijk terug te vinden zijn wanneer je wilt koken. Fovri brengt gedeelde links, bewerkbare recepten, maaltijdplannen en boodschappen samen op één rustige plek."
+    },
+    "features": [
+      {"title": "Breng recepten naar je kookboek", "body": "Deel een receptlink met Fovri of plak hem in de app. Controleer en bewerk ingrediënten en stappen; optionele AI-hulp kan ontbrekende gegevens aanvullen of een duidelijk gemarkeerd voorstel uit een video maken."},
+      {"title": "Plan maaltijden en boodschappen", "body": "Kies wat je binnenkort wilt koken en voeg de ingrediënten toe aan een boodschappenlijst die je tijdens het winkelen kunt afvinken."},
+      {"title": "Kook in je eigen tempo", "body": "Pas porties aan, volg de stappen en gebruik kookwekkers terwijl de oorspronkelijke bron binnen handbereik blijft."}
+    ],
+    "cta": {"title": "Probeer Fovri zelf.", "body": "Bekijk de app in de App Store."},
+    "footer": {"note": "Beschikbaar in de App Store. Vijf geslaagde receptimports zijn gratis; Fovri Pro biedt maand- en jaarabonnementen voor verdere imports. Opgeslagen recepten blijven zonder abonnement beschikbaar. Schermafbeeldingen tonen voorbeeldinhoud.", "copyright": "Kestora Labs"}
+  }
+}

@@ -1,8 +1,10 @@
 import { absoluteUrl, escapeHtml, hreflangLinks, localeRoute } from '../lib/core.mjs';
+import { renderLanguageSwitcher } from './language-switcher.mjs';
 
 const e = escapeHtml;
 
 export function renderAppPage({ locale, page, content, common, contentByLocale }) {
+  const languageSwitcher = renderLanguageSwitcher({ locale, page, contentByLocale, label: common.ui.language });
   const screenshots = content.screenshots.map((item, index) =>
     `<figure class="screenshot-card"><img src="${e(page.assets.screenshots[index])}" alt="${e(item.alt)}" loading="lazy"></figure>`
   ).join('\n            ');
@@ -27,7 +29,7 @@ export function renderAppPage({ locale, page, content, common, contentByLocale }
     <a class="wordmark" href="${e(localeRoute(locale, '/'))}" aria-label="${e(common.brand.homeLabel)}">
       <span class="wordmark-name">${e(common.brand.studio)}</span><span class="wordmark-label">${e(common.brand.label)}</span>
     </a>
-    <nav aria-label="${e(common.ui.mainNavigation)}"><a href="${e(localeRoute(locale, '/'))}">${e(common.ui.allApps)}</a></nav>
+    <nav aria-label="${e(common.ui.mainNavigation)}"><a href="${e(localeRoute(locale, '/'))}">${e(common.ui.allApps)}</a>${languageSwitcher}</nav>
   </header>
   <main class="app-page-main">
     <a class="app-page-back" href="${e(localeRoute(locale, '/'))}">← ${e(common.ui.allApps)}</a>

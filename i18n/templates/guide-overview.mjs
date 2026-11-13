@@ -1,9 +1,11 @@
 import { absoluteUrl, escapeHtml, hreflangLinks, localeRoute } from '../lib/core.mjs';
+import { renderLanguageSwitcher } from './language-switcher.mjs';
 
 const e = escapeHtml;
 const favicon = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23111111'/%3E%3Cpath d='M18 14v36h8V36l12 14h10L32 31l15-17H37L26 28V14z' fill='white'/%3E%3C/svg%3E";
 
 export function renderGuideOverview({ locale, page, content, guideUi, common, cards, contentByLocale }) {
+  const languageSwitcher = renderLanguageSwitcher({ locale, page, contentByLocale, label: common.ui.language });
   const cardMarkup = cards.length
     ? `<div class="guide-grid">${cards.map(card => `<a class="guide-card" href="${e(card.href)}"><h2>${e(card.title)}</h2><p>${e(card.description)}</p><span>${e(guideUi.readGuide)}</span></a>`).join('')}</div>`
     : `<section class="guide-empty"><h2>${e(content.emptyTitle)}</h2><p>${e(content.emptyBody)}</p></section>`;
@@ -31,12 +33,12 @@ export function renderGuideOverview({ locale, page, content, guideUi, common, ca
   <a class="skip-link" href="#guides">${e(guideUi.skipToGuides)}</a>
   <header class="site-header">
     <a class="wordmark" href="${e(localeRoute(locale, '/'))}" aria-label="${e(common.brand.homeLabel)}"><span class="wordmark-name">${e(common.brand.studio)}</span><span class="wordmark-label">${e(common.brand.label)}</span></a>
-    <nav aria-label="${e(common.ui.mainNavigation)}"><a href="${e(localeRoute(locale, '/'))}">${e(common.ui.allApps)}</a></nav>
+    <nav aria-label="${e(common.ui.mainNavigation)}"><a href="${e(localeRoute(locale, '/'))}">${e(common.ui.allApps)}</a>${languageSwitcher}</nav>
   </header>
   <main class="guides-main" id="guides">
-    <a class="guides-back" href="${e(localeRoute(locale, page.routes.app))}">← Back to ${e(content.name)}</a>
+    <a class="guides-back" href="${e(localeRoute(locale, page.routes.app))}">← ${e(guideUi.backTo)} ${e(content.name)}</a>
     <article class="guides-shell">
-      <header class="guides-hero"><p class="guides-kicker">${e(content.name)} guides</p><h1>${e(guideUi.heroTitle)}</h1><p class="guides-intro">${e(content.intro)}</p></header>
+      <header class="guides-hero"><p class="guides-kicker">${e(content.name)} ${e(guideUi.guides)}</p><h1>${e(guideUi.heroTitle)}</h1><p class="guides-intro">${e(content.intro)}</p></header>
       ${cardMarkup}
       <div class="guides-meta"><p>${e(guideCount)}</p>${editorial}</div>
     </article>

@@ -1,4 +1,5 @@
 import { absoluteUrl, escapeHtml, hreflangLinks, localeRoute } from '../lib/core.mjs';
+import { renderLanguageSwitcher } from './language-switcher.mjs';
 
 const e = escapeHtml;
 const voidTags = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'source', 'track', 'wbr']);
@@ -28,7 +29,7 @@ function renderAttrs(attrs) {
   return Object.entries(attrs).map(([name, value]) => ` ${name}="${e(value)}"`).join('');
 }
 
-export function renderStructuredDocument({ locale, page, content, contentByLocale }) {
+export function renderStructuredDocument({ locale, page, content, common, contentByLocale }) {
   const canonical = absoluteUrl(locale, page.route);
   const metaTags = content.meta.tags.map(tag => `<meta${renderAttrs(tag)}>`).join('\n  ');
   const icons = content.meta.icons.map(icon => `<link${renderAttrs(icon)}>`).join('\n  ');
@@ -36,6 +37,11 @@ export function renderStructuredDocument({ locale, page, content, contentByLocal
   const scripts = content.externalScripts.map(src => `<script src="${e(src)}" defer></script>`).join('\n  ');
   const jsonLd = content.meta.jsonLd.map(item => `<script type="application/ld+json">${JSON.stringify(localizeStructuredData(item, locale)).replaceAll('<', '\\u003c')}</script>`).join('\n  ');
   const inline = content.inlineScripts.map(script => `<script>${script}</script>`).join('\n  ');
+  let body = content.body.map(node => renderNode(node, locale)).join('');
+  if (page.scope === 'core' && common) {
+    const languageSwitcher = renderLanguageSwitcher({ locale, page, contentByLocale, label: common.ui.language });
+    if (languageSwitcher) body = body.replace('</nav></header>', `${languageSwitcher}</nav></header>`);
+  }
   return `<!doctype html>
 <html lang="${e(locale)}">
 <head>
@@ -50,7 +56,7 @@ export function renderStructuredDocument({ locale, page, content, contentByLocal
   ${scripts}
   ${jsonLd}
 </head>
-<body>${content.body.map(node => renderNode(node, locale)).join('')}${inline}</body>
+<body>${body}${inline}</body>
 </html>`;
 }
 

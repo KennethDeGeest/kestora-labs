@@ -1,0 +1,37 @@
+{
+  "meta": {"title":"Kestora Labs — Independent iPhone Apps","description":"Independent iPhone apps by Kestora Labs."},
+  "ui": {
+    "skipToApps":"Skip to apps",
+    "appsTitle":"Independent iPhone apps",
+    "stageHint":"Tap an app to learn more",
+    "contact":"Contact",
+    "eyebrow":"Independent software",
+    "headline":"Small apps. Carefully made.",
+    "intro":"Questions, support, or just want to say hello?",
+    "getInTouch":"Get in touch",
+    "closeContact":"Close contact options",
+    "dialogKicker":"Get in touch",
+    "dialogTitle":"How can I help?",
+    "dialogIntro":"Choose the type of message you would like to send.",
+    "appSupport":"App support",
+    "appSupportDescription":"Get help with one of the apps",
+    "generalEnquiry":"General enquiry",
+    "generalEnquiryDescription":"Questions, introductions, or working together",
+    "back":"Back",
+    "supportTitle":"Which app do you need help with?",
+    "supportIntro":"Select an app and I’ll prepare the support email.",
+    "appLabel":"App",
+    "chooseApp":"Choose an app",
+    "continueEmail":"Continue to email"
+  },
+  "appLabels": {
+    "walkbop":"Learn about WalkBop",
+    "fovri":"Learn about Fovri",
+    "bulkbro":"Learn about BulkBro",
+    "tiphaven":"Learn about TipHaven",
+    "oqvi":"Learn about Oqvi",
+    "migraloom":"Learn about MigraLoom",
+    "bumpecho":"Learn about Bump Echo",
+    "calmber":"Learn about Calmber"
+  }
+}

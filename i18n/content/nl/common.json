@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "studio": "Kestora Labs",
+    "label": "Onafhankelijke apps",
+    "homeLabel": "Startpagina van het Kestora Labs-appportfolio"
+  },
+  "ui": {
+    "allApps": "Alle apps",
+    "viewAppStore": "Bekijk in de App Store",
+    "browseGuides": "Bekijk gidsen",
+    "whatItDoes": "Wat de app doet",
+    "screenshots": "Schermafbeeldingen van de app",
+    "mainNavigation": "Hoofdnavigatie",
+    "appInformation": "App-informatie",
+    "footerNavigation": "Voettekstnavigatie",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "support": "Ondersteuning",
+    "language": "Taal"
+  }
+}

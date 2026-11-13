@@ -12,17 +12,20 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 test('registry and enabled locale content validate', async () => {
   const content = await loadContent(root);
   assert.deepEqual(Object.keys(content), ['en']);
+  assert.equal(content.en.home.meta.title, 'Kestora Labs — Independent iPhone Apps');
   assert.equal(Object.keys(content.en.pages).length, 8);
   assert.equal(Object.keys(content.en.guideOverviews.pages).length, 7);
   assert.equal(Object.keys(content.en.guideArticles.pages).length, 55);
   assert.equal(Object.keys(content.en.tools.pages).length, 5);
   assert.equal(Object.keys(content.en.legalPages.pages).length, 26);
-  assert.equal(pages.length, 101);
+  assert.equal(pages.length, 102);
 });
 
 test('locale paths are deterministic', () => {
   assert.equal(localeRoute('en', '/fovri/'), '/fovri/');
   assert.equal(localeRoute('nl', '/fovri/'), '/nl/fovri/');
+  assert.equal(outputPath('en', '/'), 'index.html');
+  assert.equal(outputPath('nl', '/'), 'nl/index.html');
   assert.equal(outputPath('en', '/fovri/'), 'fovri/index.html');
 });
 
@@ -52,7 +55,7 @@ test('an enabled locale cannot ship with missing content', async () => {
   const content = await loadContent(root);
   locales.test = { label: 'Test', htmlLang: 'test', prefix: '/test', enabled: true };
   try {
-    assert.throws(() => validateRegistry(content), /Missing test (common )?content/);
+    assert.throws(() => validateRegistry(content), /Missing test (home|common)? ?content/);
   } finally {
     delete locales.test;
   }

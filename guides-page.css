@@ -25,6 +25,8 @@ a { color: inherit; }
 .guides-footer a { color: #55575c; font-size: .9rem; text-decoration: none; }
 .site-header a:hover,
 .guides-footer a:hover { color: var(--ink); }
+.language-switcher { display: inline-flex; align-items: center; gap: .45rem; color: #66686d; font-size: .78rem; }
+.language-switcher select { min-height: 2.25rem; padding: 0 1.8rem 0 .65rem; border: 1px solid #d9dade; border-radius: .55rem; color: var(--ink); background: var(--white); font: inherit; font-size: .85rem; }
 
 .guides-main { width: min(100%, 72rem); margin: 0 auto; padding: 0 2rem 4rem; }
 .guides-back { display: inline-flex; margin: 2rem 0 1.25rem; color: var(--muted); font-size: .9rem; text-decoration: none; }
@@ -56,7 +58,7 @@ a { color: inherit; }
   .wordmark-name { font-size: .82rem; }
   .wordmark-label { padding-left: .65rem; font-size: .58rem; }
   /* The overview already has one explicit back-to-app link. */
-  .site-header nav { display: none; }
+  .site-header nav > a { display: none; }
   .guides-main { padding: 0 .5rem 2rem; }
   .guides-back { margin: 1.25rem .75rem 1rem; }
   .guides-shell { border-radius: 1.15rem; }

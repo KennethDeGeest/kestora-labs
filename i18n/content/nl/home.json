@@ -1,0 +1,37 @@
+{
+  "meta": {"title":"Kestora Labs — Onafhankelijke iPhone-apps","description":"Onafhankelijke iPhone-apps van Kestora Labs."},
+  "ui": {
+    "skipToApps":"Ga naar de apps",
+    "appsTitle":"Onafhankelijke iPhone-apps",
+    "stageHint":"Tik op een app voor meer informatie",
+    "contact":"Contact",
+    "eyebrow":"Onafhankelijke software",
+    "headline":"Kleine apps. Met zorg gemaakt.",
+    "intro":"Een vraag, ondersteuning nodig of gewoon even hallo zeggen?",
+    "getInTouch":"Neem contact op",
+    "closeContact":"Contactopties sluiten",
+    "dialogKicker":"Neem contact op",
+    "dialogTitle":"Waarmee kan ik helpen?",
+    "dialogIntro":"Kies welk soort bericht je wilt sturen.",
+    "appSupport":"Ondersteuning voor een app",
+    "appSupportDescription":"Krijg hulp met een van de apps",
+    "generalEnquiry":"Algemene vraag",
+    "generalEnquiryDescription":"Vragen, kennismaken of samenwerken",
+    "back":"Terug",
+    "supportTitle":"Met welke app heb je hulp nodig?",
+    "supportIntro":"Selecteer een app, dan maak ik de ondersteuningsmail voor je klaar.",
+    "appLabel":"App",
+    "chooseApp":"Kies een app",
+    "continueEmail":"Ga verder naar e-mail"
+  },
+  "appLabels": {
+    "walkbop":"Meer informatie over WalkBop",
+    "fovri":"Meer informatie over Fovri",
+    "bulkbro":"Meer informatie over BulkBro",
+    "tiphaven":"Meer informatie over TipHaven",
+    "oqvi":"Meer informatie over Oqvi",
+    "migraloom":"Meer informatie over MigraLoom",
+    "bumpecho":"Meer informatie over Bump Echo",
+    "calmber":"Meer informatie over Calmber"
+  }
+}

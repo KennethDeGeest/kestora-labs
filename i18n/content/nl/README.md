@@ -2,11 +2,15 @@
 
 Dutch will use the `/nl/` URL prefix. This locale intentionally remains disabled until its complete core content is ready.
 
-Required before activation:
+Completed draft content:
 
 - shared interface and navigation
 - all app landing pages
 - all guide overview pages, initially with empty Dutch SEO inventories
+
+Required before activation:
+
+- final language-selector review at phone and desktop widths
 - website and app privacy pages
 - app terms pages
 - app support pages

@@ -5,6 +5,18 @@ export function pageEnabledForLocale(page, locale) {
   return page.scope === 'core' || page.locales?.includes(locale) === true;
 }
 
+export function pageHasContent(page, locale, contentByLocale) {
+  const content = contentByLocale[locale];
+  if (!content || !pageEnabledForLocale(page, locale)) return false;
+  if (page.type === 'home-page') return Boolean(content.home);
+  if (page.type === 'app-page') return Boolean(content.pages?.[page.id]);
+  if (page.type === 'guide-overview') return Boolean(content.guideOverviews?.pages?.[page.id]);
+  if (page.type === 'guide-article') return Boolean(content.guideArticles?.pages?.[page.id]);
+  if (page.type === 'interactive-tool') return Boolean(content.tools?.pages?.[page.id]);
+  if (page.type === 'legal-page') return Boolean(content.legalPages?.pages?.[page.id]);
+  return false;
+}
+
 export const escapeHtml = value => String(value)
   .replaceAll('&', '&amp;')
   .replaceAll('<', '&lt;')
@@ -29,6 +41,7 @@ export function absoluteUrl(locale, route) {
 
 export function outputPath(locale, route) {
   const localized = localeRoute(locale, route).replace(/^\//, '');
+  if (!localized) return 'index.html';
   return localized.endsWith('/') ? `${localized}index.html` : localized;
 }
 
@@ -36,13 +49,7 @@ export function hreflangLinks(pageId, contentByLocale) {
   const page = pages.find(item => item.id === pageId);
   invariant(page, `Unknown page: ${pageId}`);
   const available = Object.keys(contentByLocale)
-    .filter(locale => locales[locale]?.enabled && pageEnabledForLocale(page, locale) && (
-      contentByLocale[locale]?.pages?.[pageId] ||
-      contentByLocale[locale]?.guideOverviews?.pages?.[pageId] ||
-      contentByLocale[locale]?.guideArticles?.pages?.[pageId] ||
-      contentByLocale[locale]?.tools?.pages?.[pageId] ||
-      contentByLocale[locale]?.legalPages?.pages?.[pageId]
-    ))
+    .filter(locale => locales[locale]?.enabled && pageHasContent(page, locale, contentByLocale))
     .sort();
   const links = available.map(locale =>
     `<link rel="alternate" hreflang="${escapeHtml(locales[locale].htmlLang)}" href="${escapeHtml(absoluteUrl(locale, page.route))}">`
@@ -77,7 +84,17 @@ function validateKeys(object, expected, path) {
 export function validateCommon(content, path) {
   validateKeys(content, ['brand', 'ui'], path);
   validateKeys(content.brand, ['studio', 'label', 'homeLabel'], `${path}.brand`);
-  validateKeys(content.ui, ['allApps', 'viewAppStore', 'browseGuides', 'whatItDoes', 'screenshots', 'mainNavigation', 'appInformation', 'footerNavigation', 'privacy', 'terms', 'support'], `${path}.ui`);
+  validateKeys(content.ui, ['allApps', 'viewAppStore', 'browseGuides', 'whatItDoes', 'screenshots', 'mainNavigation', 'appInformation', 'footerNavigation', 'privacy', 'terms', 'support', 'language'], `${path}.ui`);
+  for (const [section, object] of Object.entries(content)) {
+    for (const [key, value] of Object.entries(object)) validatePlainText(value, `${path}.${section}.${key}`);
+  }
+}
+
+export function validateHome(content, path) {
+  validateKeys(content, ['meta', 'ui', 'appLabels'], path);
+  validateKeys(content.meta, ['title', 'description'], `${path}.meta`);
+  validateKeys(content.ui, ['skipToApps', 'appsTitle', 'stageHint', 'contact', 'eyebrow', 'headline', 'intro', 'getInTouch', 'closeContact', 'dialogKicker', 'dialogTitle', 'dialogIntro', 'appSupport', 'appSupportDescription', 'generalEnquiry', 'generalEnquiryDescription', 'back', 'supportTitle', 'supportIntro', 'appLabel', 'chooseApp', 'continueEmail'], `${path}.ui`);
+  validateKeys(content.appLabels, ['walkbop', 'fovri', 'bulkbro', 'tiphaven', 'oqvi', 'migraloom', 'bumpecho', 'calmber'], `${path}.appLabels`);
   for (const [section, object] of Object.entries(content)) {
     for (const [key, value] of Object.entries(object)) validatePlainText(value, `${path}.${section}.${key}`);
   }
@@ -114,7 +131,7 @@ export function validateAppPage(content, path) {
 
 export function validateGuideOverviews(content, path) {
   validateKeys(content, ['ui', 'pages'], path);
-  validateKeys(content.ui, ['skipToGuides', 'heroTitle', 'readGuide', 'guidesAvailable', 'guideAvailable', 'newGuides', 'editorialPolicy', 'websitePrivacy'], `${path}.ui`);
+  validateKeys(content.ui, ['skipToGuides', 'heroTitle', 'readGuide', 'guidesAvailable', 'guideAvailable', 'newGuides', 'editorialPolicy', 'websitePrivacy', 'backTo', 'guides'], `${path}.ui`);
   for (const [key, value] of Object.entries(content.ui)) validatePlainText(value, `${path}.ui.${key}`);
   for (const [pageId, page] of Object.entries(content.pages)) {
     validateKeys(page, ['name', 'intro', 'emptyTitle', 'emptyBody', 'extraCards'], `${path}.pages.${pageId}`);
@@ -267,6 +284,8 @@ export function validateRegistry(contentByLocale) {
   const pageIds = new Set();
   const routes = new Set();
   for (const locale of enabled) {
+    invariant(contentByLocale[locale]?.home, `Missing ${locale} home content`);
+    validateHome(contentByLocale[locale].home, `${locale}.home`);
     invariant(contentByLocale[locale]?.common, `Missing ${locale} common content`);
     validateCommon(contentByLocale[locale].common, `${locale}.common`);
     invariant(contentByLocale[locale]?.guideOverviews, `Missing ${locale} guide overview content`);
@@ -290,8 +309,13 @@ export function validateRegistry(contentByLocale) {
     } else {
       invariant(page.locales === undefined, `${page.id}.locales is only valid for SEO pages`);
     }
-    invariant(['app-page', 'guide-overview', 'guide-article', 'interactive-tool', 'legal-page'].includes(page.type), `Unsupported page type: ${page.type}`);
-    if (page.type === 'app-page') {
+    invariant(['home-page', 'app-page', 'guide-overview', 'guide-article', 'interactive-tool', 'legal-page'].includes(page.type), `Unsupported page type: ${page.type}`);
+    if (page.type === 'home-page') {
+      for (const locale of enabled) {
+        if (!pageEnabledForLocale(page, locale)) continue;
+        invariant(contentByLocale[locale]?.home, `Missing ${locale} home content for ${page.id}`);
+      }
+    } else if (page.type === 'app-page') {
       validateUrl(page.appStore, `${page.id}.appStore`);
       validateUrl(page.assets.icon, `${page.id}.assets.icon`, { internal: true });
       invariant(page.assets.screenshots.length === 3, `${page.id}.assets.screenshots must contain exactly 3 items`);

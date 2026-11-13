@@ -1,0 +1,65 @@
+{
+  "ui": {
+    "skipToGuides": "Ga naar de gidsen",
+    "heroTitle": "Leer in je eigen tempo.",
+    "readGuide": "Lees de gids →",
+    "guidesAvailable": "gidsen beschikbaar",
+    "guideAvailable": "gids beschikbaar",
+    "newGuides": "Nieuwe gidsen verschijnen hier",
+    "editorialPolicy": "Redactioneel beleid",
+    "websitePrivacy": "Privacy van de website",
+    "backTo": "Terug naar",
+    "guides": "gidsen"
+  },
+  "pages": {
+    "walkbop.guides": {
+      "name": "WalkBop",
+      "intro": "Praktische ideeën om meer te wandelen, gemotiveerd te blijven en samen met vrienden plezier te maken van stappenuitdagingen.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    },
+    "fovri.guides": {
+      "name": "Fovri",
+      "intro": "Praktische gidsen over recepten bewaren, een persoonlijk kookboek opbouwen, maaltijden plannen en gemakkelijker koken.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    },
+    "bulkbro.guides": {
+      "name": "BulkBro",
+      "intro": "Duidelijke gidsen over gezond aankomen, calorieën bijhouden, maaltijden plannen en je voortgang begrijpen.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    },
+    "tiphaven.guides": {
+      "name": "TipHaven",
+      "intro": "Gidsen en hulpmiddelen om fooien bij te houden, inkomsten te begrijpen en je nettoloon te plannen.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    },
+    "oqvi.guides": {
+      "name": "Oqvi",
+      "intro": "Praktische veldgidsen om planten, bloemen, bomen, schors en hout met betere foto's en aanwijzingen te herkennen.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    },
+    "migraloom.guides": {
+      "name": "MigraLoom",
+      "intro": "Eenvoudige gidsen en sjablonen om een bruikbaar hoofdpijn- of migrainedagboek bij te houden zonder dat het een last wordt.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    },
+    "bumpecho.guides": {
+      "name": "Bump Echo",
+      "intro": "Warme ideeën om herinneringen aan je zwangerschap vast te leggen, een dagboek bij te houden en boodschappen voor je toekomstige baby te maken.",
+      "emptyTitle": "Nederlandse gidsen komen binnenkort.",
+      "emptyBody": "We onderzoeken eerst welke onderwerpen en zoekvragen voor Nederlandstalige gebruikers echt relevant zijn.",
+      "extraCards": []
+    }
+  }
+}
