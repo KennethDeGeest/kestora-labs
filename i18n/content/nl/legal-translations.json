@@ -60,7 +60,9 @@
   "pages": {
     "bulkbro.legal.support": {
       "title": "Ondersteuning en gegevens verwijderen — BulkBro",
-      "preserve": ["BulkBro → Settings → Delete data"],
+      "preserve": [
+        "BulkBro → Settings → Delete data"
+      ],
       "strings": {
         "Get help with BulkBro, send feedback, or learn how to delete your app data.": "Krijg hulp met BulkBro, stuur feedback of lees hoe je je appgegevens verwijdert.",
         "How can we help?": "Waarmee kunnen we helpen?",
@@ -161,7 +163,8 @@
         "Use the app’s export controls to keep an independent copy. Delete local journal removes app-managed local records and recovery/export copies, but cannot remove backups or copies shared elsewhere. We cannot remotely retrieve a journal from your phone.": "Gebruik de exportfuncties van de app om een afzonderlijke kopie te bewaren. 'Verwijder lokaal dagboek' verwijdert lokale registraties en herstel- of exportkopieën die door de app worden beheerd, maar niet back-ups of kopieën die elders zijn gedeeld. We kunnen een dagboek niet op afstand van je telefoon ophalen.",
         "Medical questions": "Medische vragen",
         "MigraLoom support cannot provide medical advice or emergency assistance. Contact a qualified health professional for care. Contact local emergency services in an emergency.": "De ondersteuning van MigraLoom kan geen medisch advies of noodhulp bieden. Neem voor zorg contact op met een gekwalificeerde zorgverlener. Neem in een noodgeval contact op met de plaatselijke hulpdiensten.",
-        "Kenneth Marcel S De Geest, a self-employed developer (autónomo) based in Spain ·": "Kenneth Marcel S De Geest, een zelfstandige ontwikkelaar (autónomo) gevestigd in Spanje ·"
+        "Kenneth Marcel S De Geest, a self-employed developer (autónomo) based in Spain ·": "Kenneth Marcel S De Geest, een zelfstandige ontwikkelaar (autónomo) gevestigd in Spanje ·",
+        "Use Restore purchases on the paywall with the Apple Account used for the monthly subscription or lifetime purchase. Manage or cancel monthly renewal in Apple subscription settings; deleting the app does not cancel it. Apple handles billing and": "Gebruik Herstel aankopen op het betaalscherm met het Apple-account dat je voor het maandabonnement of de levenslange aankoop gebruikte. Beheer of beëindig maandelijkse verlenging in de abonnementsinstellingen van Apple; de app verwijderen beëindigt het abonnement niet. Apple verwerkt facturering en"
       }
     },
     "oqvi.legal.support": {
@@ -184,7 +187,9 @@
     },
     "tiphaven.legal.support": {
       "title": "TipHaven-ondersteuning — hulp met aankopen, back-ups en de app",
-      "preserve": ["Restore Purchase"],
+      "preserve": [
+        "Restore Purchase"
+      ],
       "strings": {
         "Contact TipHaven support and get help with purchase restoration, exports, backups and app behavior.": "Neem contact op met TipHaven-ondersteuning voor hulp met het herstellen van aankopen, exports, back-ups en het gebruik van de app.",
         "TipHaven support": "TipHaven-ondersteuning",
@@ -212,7 +217,11 @@
     },
     "walkbop.legal.support": {
       "title": "Hulp en ondersteuning — WalkBop",
-      "preserve": ["You → Race alerts", "iPhone Settings → Notifications → WalkBop", "You → Data & privacy → Delete WalkBop account"],
+      "preserve": [
+        "You → Race alerts",
+        "iPhone Settings → Notifications → WalkBop",
+        "You → Data & privacy → Delete WalkBop account"
+      ],
       "strings": {
         "Help with WalkBop steps, weekly races, invitations, items, alerts and account deletion.": "Hulp met WalkBop-stappen, wekelijkse races, uitnodigingen, voorwerpen, meldingen en het verwijderen van je account.",
         "Help & support": "Hulp en ondersteuning",
@@ -309,12 +318,35 @@
         "Journal information remains on your device until you delete it or remove the app. Device backups and exported files must be managed separately. Providers retain limited purchase and diagnostic information under their own retention rules and legal obligations.": "Dagboekgegevens blijven op je apparaat totdat je ze verwijdert of de app verwijdert. Apparaatback-ups en geëxporteerde bestanden moeten afzonderlijk worden beheerd. Aanbieders bewaren beperkte aankoop- en diagnostische gegevens volgens hun eigen bewaartermijnen en wettelijke verplichtingen.",
         "You can keep diagnostics disabled, edit or delete journal entries, remove the app and control exports. Depending on where you live, you may also request access, correction, deletion, restriction or objection for personal information under the developer’s control. Contact the email above.": "Je kunt diagnostiek uitgeschakeld houden, dagboekregistraties bewerken of verwijderen, de app verwijderen en exports beheren. Afhankelijk van waar je woont, kun je ook verzoeken om inzage, correctie, verwijdering of beperking van persoonsgegevens die onder beheer van de ontwikkelaar staan, of bezwaar maken tegen de verwerking ervan. Neem contact op via het bovenstaande e-mailadres.",
         "Health notice, security and changes": "Gezondheidswaarschuwing, beveiliging en wijzigingen",
-        "MigraLoom is a personal journal, not a medical device, diagnosis or substitute for professional care. Reasonable safeguards are used, but no system can guarantee absolute security. This policy may be updated when features, providers or legal requirements change.": "MigraLoom is een persoonlijk dagboek, geen medisch hulpmiddel, diagnose of vervanging voor professionele zorg. Er worden redelijke beveiligingsmaatregelen gebruikt, maar geen enkel systeem kan absolute veiligheid garanderen. Dit beleid kan worden bijgewerkt wanneer functies, aanbieders of wettelijke vereisten veranderen."
+        "MigraLoom is a personal journal, not a medical device, diagnosis or substitute for professional care. Reasonable safeguards are used, but no system can guarantee absolute security. This policy may be updated when features, providers or legal requirements change.": "MigraLoom is een persoonlijk dagboek, geen medisch hulpmiddel, diagnose of vervanging voor professionele zorg. Er worden redelijke beveiligingsmaatregelen gebruikt, maar geen enkel systeem kan absolute veiligheid garanderen. Dit beleid kan worden bijgewerkt wanneer functies, aanbieders of wettelijke vereisten veranderen.",
+        "Who is responsible": "Wie verantwoordelijk is",
+        "MigraLoom is provided by Kenneth Marcel S De Geest, a self-employed developer based in Spain. For privacy questions or rights requests, email degeestkenneth@gmail.com. This policy describes MigraLoom 1.2 and later; earlier versions may have different purchase screens.": "MigraLoom wordt aangeboden door Kenneth Marcel S De Geest, zelfstandig ontwikkelaar in Spanje. Mail voor privacyvragen of verzoeken over je rechten naar degeestkenneth@gmail.com. Dit beleid beschrijft MigraLoom 1.2 en later; eerdere versies kunnen andere aankoopschermen hebben.",
+        "Your journal and backups": "Je dagboek en reservekopieën",
+        "No MigraLoom account is required. Episodes, symptoms, medicines and doses, notes, daily check-ins, profile answers, treatment changes, appointment questions and unfinished drafts are stored on your iPhone. MigraLoom does not operate cloud journal sync. Journal contents are not sent to Firebase or RevenueCat. The journal uses iOS file protection and may be included in Apple device backups according to your settings. Apple controls its backup service and retention.": "Je hebt geen MigraLoom-account nodig. Aanvallen, symptomen, medicijnen en doseringen, notities, dagelijkse check-ins, profielantwoorden, behandelwijzigingen, afspraakvragen en onafgemaakte concepten worden op je iPhone bewaard. MigraLoom biedt geen synchronisatie van je dagboek via de cloud. De inhoud wordt niet naar Firebase of RevenueCat gestuurd. Het dagboek gebruikt iOS-bestandsbeveiliging en kan volgens je instellingen in Apple-reservekopieën worden opgenomen. Apple beheert die dienst en bewaartermijnen.",
+        "Purchases, paywalls and RevenueCat": "Aankopen, betaalschermen en RevenueCat",
+        "Paid access is required after onboarding: an active monthly subscription or a valid lifetime purchase. Existing valid entitlements remain recognized. Apple processes payments; we do not receive payment-card details. RevenueCat supplies the paywall and verifies, synchronizes and restores purchase access. It may process an app-user identifier, product and transaction identifiers, receipts, purchase history, entitlement and renewal status, app/device information, connection information and country inferred from IP, and paywall impressions and purchase interactions. These purchase services operate separately from optional Firebase diagnostics. Journal contents are not included.": "Na de introductie is betaalde toegang vereist: een actief maandabonnement of een geldige levenslange aankoop. Bestaande geldige toegangsrechten blijven erkend. Apple verwerkt betalingen; wij ontvangen geen betaalkaartgegevens. RevenueCat levert het betaalscherm en controleert, synchroniseert en herstelt aankooprechten. Het kan een app-gebruikerscode, product- en transactiecodes, aankoopbewijzen, aankoopgeschiedenis, toegangs- en verlengingsstatus, app- en apparaatgegevens, verbindingsgegevens en een uit het IP-adres afgeleid land, en weergaven van en interacties met het betaalscherm verwerken. Deze aankoopdiensten staan los van optionele Firebase-diagnostiek. De inhoud van je dagboek wordt niet meegestuurd.",
+        "Optional Firebase diagnostics": "Optionele Firebase-diagnostiek",
+        "Share optional product diagnostics is off by default and is not required to buy or use paid features. Change it in Privacy & data on the paywall or Settings → Privacy in the app. With consent, Google Firebase Analytics receives limited product events: paywall/sample views, plan loading, the first saved record, Patterns opens, purchase and restore outcomes, and optional fixed-choice feedback after abandoning a purchase. No free-text feedback or journal details are attached. The sample onboarding interaction is illustrative and does not save an episode.": "Optionele productdiagnostiek delen staat standaard uit en is niet vereist om te kopen of betaalde functies te gebruiken. Je wijzigt dit via Privacy en gegevens op het betaalscherm of Instellingen → Privacy in de app. Met toestemming ontvangt Google Firebase Analytics beperkte productgebeurtenissen: weergaven van betaal- en voorbeeldschermen, geladen abonnementen, het eerste opgeslagen record, geopende patronen, aankoop- en herstelresultaten en optionele feedback met vaste antwoordkeuzes na het afbreken van een aankoop. Vrije tekst en dagboekinhoud worden niet meegestuurd. De interactie tijdens de introductie is een voorbeeld en slaat geen aanval op.",
+        "Firebase may also receive automatic app/session and App Store transaction signals, product and price/currency information, an installation or app-instance identifier, app/device and operating-system details, timestamps and technical crash traces through Crashlytics. Automatic screen-view reporting is disabled. Event timing and app use can still reveal use of a migraine app. We do not request precise location for diagnostics or attach symptoms, medication names or free-form health notes to events.": "Firebase kan ook automatische app-, sessie- en App Store-transactiegegevens ontvangen, waaronder product-, prijs- en valutagegevens, een installatie- of app-instantiecode, app-, apparaat- en besturingssysteemgegevens, tijdstippen en technische crashgegevens via Crashlytics. Automatische registratie van schermweergaven is uitgeschakeld. Tijdstippen en appgebruik kunnen wel laten zien dat je een migraine-app gebruikt. Voor diagnostiek vragen we geen precieze locatie op en voegen we geen symptomen, medicijnnamen of vrije gezondheidsnotities aan gebeurtenissen toe.",
+        "While diagnostics are enabled, the Firebase app-instance identifier is shared with RevenueCat to associate diagnostics with purchase activity. Turning diagnostics off stops future Analytics collection and Crashlytics uploads and marks that identifier for removal from RevenueCat attributes. It does not recall information already received. Crash reports retained on the phone while collection is off may be sent if you enable diagnostics later.": "Wanneer diagnostiek aanstaat, wordt de Firebase-app-instantiecode met RevenueCat gedeeld om diagnostiek aan aankoopactiviteit te koppelen. Uitschakelen stopt toekomstige Analytics-verzameling en Crashlytics-uploads en markeert de code voor verwijdering uit RevenueCat-kenmerken. Reeds ontvangen informatie wordt daarmee niet teruggehaald. Crashrapporten die op je telefoon zijn bewaard terwijl verzameling uitstaat, kunnen alsnog worden verzonden als je diagnostiek later inschakelt.",
+        "Exports, deletion and access": "Exporteren, verwijderen en toegang",
+        "You choose where to share visit-summary PDFs or complete-journal JSON exports; these may contain sensitive health information and unfinished drafts. Copies and Apple backups must be managed at their destination. Delete local journal in Settings removes local journal and app-managed recovery/export/report copies. Deleting the app removes app-container data, not copies already shared or Apple backups. We cannot remotely read or recover your local journal. Subscription expiry, refund or revocation may block journal features without deleting records. Export records you need while you have access; contact support for access or data-request difficulties. Deleting records or the app does not cancel an Apple subscription.": "Je kiest zelf waar je afspraakoverzichten als PDF of volledige dagboeken als JSON deelt; deze kunnen gevoelige gezondheidsinformatie en onafgemaakte concepten bevatten. Kopieën en Apple-reservekopieën beheer je op hun bestemming. Lokaal dagboek verwijderen in Instellingen verwijdert het lokale dagboek en door de app beheerde herstel-, export- en rapportbestanden. De app verwijderen wist appgegevens, niet eerder gedeelde kopieën of Apple-reservekopieën. Wij kunnen je lokale dagboek niet op afstand lezen of herstellen. Na afloop, terugbetaling of intrekking kunnen dagboekfuncties worden geblokkeerd zonder dat records worden gewist. Exporteer benodigde records terwijl je toegang hebt; neem bij toegangsproblemen of gegevensverzoeken contact op met ondersteuning. Gegevens of de app verwijderen beëindigt geen Apple-abonnement.",
+        "Purposes, legal bases and retention": "Doeleinden, rechtsgronden en bewaartermijnen",
+        "Optional diagnostics rely on consent to understand product use and troubleshoot faults. Purchase processing supports the agreement to provide, verify and restore paid access. Necessary security and service-reliability processing and support may rely on legitimate interests; legally required records are kept to meet legal obligations. We do not sell journal data or use it for advertising. Local records remain until you delete them. Diagnostic data follows the configured Firebase product retention and deletion processes. Purchase records may be retained to restore entitlements, resolve disputes and meet legal obligations. Support correspondence is kept as needed for the request and applicable obligations. Contact us about provider-held data we control and any required retention.": "Optionele diagnostiek berust op toestemming om productgebruik te begrijpen en fouten te onderzoeken. Aankoopverwerking ondersteunt de overeenkomst om betaalde toegang te leveren, te controleren en te herstellen. Noodzakelijke verwerking voor beveiliging, betrouwbaarheid en ondersteuning kan op gerechtvaardigde belangen berusten; wettelijk verplichte gegevens bewaren we om aan wettelijke verplichtingen te voldoen. We verkopen geen dagboekgegevens en gebruiken ze niet voor reclame. Lokale records blijven staan tot je ze verwijdert. Voor diagnostische gegevens gelden de ingestelde Firebase-bewaartermijnen en verwijderprocessen. Aankoopgegevens kunnen bewaard blijven voor herstel van rechten, geschillen en wettelijke verplichtingen. Ondersteuningsberichten bewaren we zolang nodig voor het verzoek en toepasselijke verplichtingen. Neem contact op over gegevens bij dienstverleners die onder onze verantwoordelijkheid vallen en verplichte bewaring.",
+        "Providers and international processing": "Dienstverleners en internationale verwerking",
+        "Providers include Apple for App Store purchases and device backups, RevenueCat for paywalls and purchase access, Google Firebase for optional diagnostics, Gmail for support and GitHub Pages for this website. They may process data outside Spain and the EEA under applicable transfer safeguards, including adequacy decisions or standard contractual clauses where required. Website analytics consent is separate from the app’s diagnostics choice; see Website privacy below. Provider information is available at firebase.google.com/support/privacy, revenuecat.com/privacy and apple.com/legal/privacy. Contact us for information about relevant safeguards.": "Dienstverleners zijn onder meer Apple voor App Store-aankopen en apparaatreservekopieën, RevenueCat voor betaalschermen en aankooprechten, Google Firebase voor optionele diagnostiek, Gmail voor ondersteuning en GitHub Pages voor deze website. Zij kunnen gegevens buiten Spanje en de EER verwerken met toepasselijke doorgiftewaarborgen, zoals adequaatheidsbesluiten of waar vereist standaardcontractbepalingen. Toestemming voor website-analytics staat los van de diagnostiekkeuze in de app; zie Websiteprivacy hieronder. Informatie over dienstverleners staat op firebase.google.com/support/privacy, revenuecat.com/privacy en apple.com/legal/privacy. Neem contact op voor informatie over relevante waarborgen.",
+        "Your rights and choices": "Je rechten en keuzes",
+        "Where applicable, you may request access, correction, deletion, portability, restriction, or object to processing based on legitimate interests. Withdraw diagnostics consent in the app without affecting your purchase or earlier lawful processing. Email degeestkenneth@gmail.com with only the information necessary to identify your request; do not send health records unnecessarily. We may request proportionate verification and normally respond within one month, explaining any lawful extension. You may complain to the Spanish Data Protection Agency (aepd.es) or your local supervisory authority. Local-only data is controlled through your device.": "Waar van toepassing kun je inzage, correctie, verwijdering, overdraagbaarheid of beperking vragen en bezwaar maken tegen verwerking op basis van gerechtvaardigde belangen. Je kunt diagnostiektoestemming in de app intrekken zonder gevolgen voor je aankoop of eerdere rechtmatige verwerking. Mail degeestkenneth@gmail.com met alleen de informatie die nodig is om je verzoek te herkennen; stuur niet onnodig gezondheidsgegevens mee. We kunnen om passende verificatie vragen en reageren normaal binnen één maand, met uitleg bij een wettelijk toegestane verlenging. Je kunt een klacht indienen bij de Spaanse privacytoezichthouder (aepd.es) of je lokale toezichthouder. Gegevens die uitsluitend lokaal staan, beheer je op je apparaat.",
+        "Children, health and policy changes": "Kinderen, gezondheid en beleidswijzigingen",
+        "MigraLoom is not directed to children under 13. Contact us if you believe a child supplied personal information. MigraLoom is a journal, not medical advice, diagnosis, treatment or an emergency service. We use reasonable safeguards but cannot guarantee absolute security. Policy changes appear here with an updated date; material changes and any new consent will be communicated where required.": "MigraLoom is niet gericht op kinderen jonger dan 13. Neem contact op als je denkt dat een kind persoonsgegevens heeft verstrekt. MigraLoom is een dagboek, geen medisch advies, diagnose, behandeling of nooddienst. We gebruiken redelijke beveiligingsmaatregelen, maar kunnen geen absolute veiligheid garanderen. Beleidswijzigingen verschijnen hier met een nieuwe datum; belangrijke wijzigingen en eventuele nieuwe toestemming worden waar vereist meegedeeld.",
+        "Updated 14 November 2026": "Bijgewerkt op 14 november 2026"
       }
     },
     "oqvi.legal.privacy": {
       "title": "Privacybeleid — Oqvi",
-      "preserve": ["Oqvi · private field collection"],
+      "preserve": [
+        "Oqvi · private field collection"
+      ],
       "strings": {
         "Privacy Policy for Oqvi, the private plant identification and field collection app.": "Privacybeleid voor Oqvi, de privé-app voor plantenherkenning en veldverzamelingen.",
         "How Oqvi handles photos used for identification, your private collection, purchases, diagnostics and support requests.": "Hoe Oqvi omgaat met foto's voor identificatie, je privéverzameling, aankopen, diagnostiek en ondersteuningsverzoeken.",
@@ -372,7 +404,14 @@
     },
     "calmber.legal.terms": {
       "title": "Gebruiksvoorwaarden — Calmber",
-      "preserve": ["Calmber", "Calmber Monthly", "Calmber Lifetime", "Apple", "RevenueCat", "Google Firebase"],
+      "preserve": [
+        "Calmber",
+        "Calmber Monthly",
+        "Calmber Lifetime",
+        "Apple",
+        "RevenueCat",
+        "Google Firebase"
+      ],
       "strings": {
         "Terms of Use for Calmber.": "Gebruiksvoorwaarden voor Calmber.",
         "These terms govern your use of the Calmber iPhone app.": "Deze voorwaarden zijn van toepassing op je gebruik van de Calmber-app voor iPhone.",
@@ -408,7 +447,11 @@
     },
     "fovri.legal.terms": {
       "title": "Gebruiksvoorwaarden — Fovri",
-      "preserve": ["Fovri", "Fovri Pro", "Apple"],
+      "preserve": [
+        "Fovri",
+        "Fovri Pro",
+        "Apple"
+      ],
       "strings": {
         "Terms of Use for Fovri, the personal recipe and meal-planning app.": "Gebruiksvoorwaarden voor Fovri, de persoonlijke app voor recepten en maaltijdplanning.",
         "The rules for using Fovri, recipe imports, optional AI assistance and Fovri Pro.": "De regels voor het gebruik van Fovri, het importeren van recepten, optionele AI-hulp en Fovri Pro.",
@@ -433,7 +476,12 @@
     },
     "tiphaven.legal.terms": {
       "title": "Gebruiksvoorwaarden — TipHaven",
-      "preserve": ["TipHaven", "Apple", "RevenueCat", "Firebase"],
+      "preserve": [
+        "TipHaven",
+        "Apple",
+        "RevenueCat",
+        "Firebase"
+      ],
       "strings": {
         "Terms for using the TipHaven iPhone app, its five free shift entries and lifetime unlock.": "Voorwaarden voor het gebruik van de TipHaven-app voor iPhone, de vijf gratis dienstregistraties en de levenslange ontgrendeling.",
         "Clear rules, plain language": "Duidelijke regels in begrijpelijke taal",
@@ -471,7 +519,11 @@
     },
     "walkbop.legal.terms": {
       "title": "Gebruiksvoorwaarden — WalkBop",
-      "preserve": ["WalkBop", "Apple", "You → Data & privacy → Delete WalkBop account"],
+      "preserve": [
+        "WalkBop",
+        "Apple",
+        "You → Data & privacy → Delete WalkBop account"
+      ],
       "strings": {
         "The basic rules for using WalkBop and taking part in friendly weekly walking races.": "De basisregels voor het gebruik van WalkBop en deelname aan vriendelijke wekelijkse wandelwedstrijden.",
         "Terms of use": "Gebruiksvoorwaarden",
@@ -505,7 +557,11 @@
     },
     "migraloom.legal.terms": {
       "title": "Gebruiksvoorwaarden — MigraLoom",
-      "preserve": ["Headache Tracker: MigraLoom", "MigraLoom", "Apple"],
+      "preserve": [
+        "Headache Tracker: MigraLoom",
+        "MigraLoom",
+        "Apple"
+      ],
       "strings": {
         "Terms of Use for Headache Tracker: MigraLoom and its one-time purchase.": "Gebruiksvoorwaarden voor Headache Tracker: MigraLoom en de eenmalige aankoop.",
         "Clear terms for a personal migraine journal and its one-time purchase.": "Duidelijke voorwaarden voor een persoonlijk migrainedagboek en de eenmalige aankoop.",
@@ -536,12 +592,28 @@
         "Governing law and updates": "Toepasselijk recht en updates",
         "These terms are governed by the laws of Spain without removing mandatory protections under the law of your country of residence. Disputes may be brought before a court with jurisdiction under applicable law. Revised terms will be posted here with an updated date; material changes will be notified where required.": "Op deze voorwaarden is Spaans recht van toepassing, zonder afbreuk te doen aan dwingende bescherming volgens het recht van je woonland. Geschillen kunnen worden voorgelegd aan een bevoegde rechter volgens de toepasselijke wetgeving. Herziene voorwaarden worden hier met een nieuwe datum gepubliceerd; belangrijke wijzigingen worden waar vereist gemeld.",
         "Contact": "Contact",
-        "Kenneth Marcel S De Geest, a self-employed developer (autónomo) based in Spain ·": "Kenneth Marcel S De Geest, een zelfstandige ontwikkelaar (autónomo) gevestigd in Spanje ·"
+        "Kenneth Marcel S De Geest, a self-employed developer (autónomo) based in Spain ·": "Kenneth Marcel S De Geest, een zelfstandige ontwikkelaar (autónomo) gevestigd in Spanje ·",
+        "Paid access, monthly and lifetime": "Betaalde toegang, maandelijks en levenslang",
+        "From version 1.2, paid access is required immediately after onboarding: an active monthly subscription or a valid lifetime entitlement. There is no general five-free-episode allowance in this version. Existing valid purchases are recognized. Any trial or introductory offer applies only if expressly displayed with its eligibility, duration and later price before confirmation. App Store prices and currencies vary by region; the localized price and Apple confirmation shown at purchase apply.": "Vanaf versie 1.2 is direct na de introductie betaalde toegang vereist: een actief maandabonnement of een geldig levenslang toegangsrecht. Deze versie biedt geen algemene mogelijkheid om vijf aanvallen gratis vast te leggen. Bestaande geldige aankopen blijven erkend. Een proefperiode of introductieaanbieding geldt alleen als de voorwaarden, duur en daaropvolgende prijs vóór bevestiging uitdrukkelijk worden getoond. App Store-prijzen en valuta verschillen per regio; de lokale prijs en Apple-bevestiging bij aankoop zijn van toepassing.",
+        "Monthly subscriptions renew automatically at the displayed applicable price unless cancelled in Apple subscription settings. Cancel at least 24 hours before renewal to avoid the next charge. Access normally remains until the end of the paid period. Deleting the app, deleting journal data or turning diagnostics off does not cancel a subscription. Manage or cancel at apps.apple.com/account/subscriptions.": "Maandabonnementen worden automatisch verlengd tegen de getoonde toepasselijke prijs, tenzij je ze opzegt in de abonnementsinstellingen van Apple. Zeg minimaal 24 uur vóór verlenging op om de volgende afschrijving te voorkomen. Je houdt normaal toegang tot het einde van de betaalde periode. De app of dagboekgegevens verwijderen of diagnostiek uitschakelen beëindigt geen abonnement. Beheer of zeg op via apps.apple.com/account/subscriptions.",
+        "Lifetime is a non-consumable, one-time app entitlement with no automatic renewal. Founder Offer labels identify the lifetime offer; they do not guarantee a future price or imply a recurring charge. Lifetime means the entitlement for this app, not perpetual service availability, support for every future device or every separate future product. Purchasing lifetime does not automatically cancel an existing Apple subscription; cancel it separately if no longer needed.": "Levenslang is een eenmalig, niet-verbruikbaar toegangsrecht voor de app zonder automatische verlenging. Het label Founder Offer duidt de levenslange aanbieding aan; het garandeert geen toekomstige prijs en houdt geen terugkerende afschrijving in. Levenslang verwijst naar het toegangsrecht voor deze app, niet naar eeuwige beschikbaarheid, ondersteuning voor elk toekomstig apparaat of elk afzonderlijk toekomstig product. Een levenslange aankoop beëindigt geen bestaand Apple-abonnement; zeg dat apart op als je het niet meer nodig hebt.",
+        "Restore purchases using the Apple Account used to buy. Expiry, refund or revocation can end paid access without deleting the local journal. Journal features, including history and export, may require active paid access; export records you need while you have access. Contact support about purchase or data-access difficulties. Earlier purchases and subscriptions retain their applicable Apple purchase terms and valid entitlements.": "Herstel aankopen met het Apple-account waarmee je hebt gekocht. Afloop, terugbetaling of intrekking kan betaalde toegang beëindigen zonder het lokale dagboek te wissen. Dagboekfuncties, waaronder geschiedenis en export, kunnen actieve betaalde toegang vereisen; exporteer benodigde records terwijl je toegang hebt. Neem bij aankoop- of gegevenstoegangsproblemen contact op met ondersteuning. Voor eerdere aankopen en abonnementen blijven de toepasselijke Apple-aankoopvoorwaarden en geldige toegangsrechten gelden.",
+        "Updated 14 November 2026": "Bijgewerkt op 14 november 2026",
+        "Clear terms for MigraLoom’s paid access, monthly subscription and lifetime purchase.": "Duidelijke voorwaarden voor betaalde toegang tot MigraLoom, het maandabonnement en de levenslange aankoop.",
+        "Terms of Use for MigraLoom paid access, monthly subscriptions and lifetime purchases.": "Gebruiksvoorwaarden voor betaalde toegang tot MigraLoom, maandabonnementen en levenslange aankopen."
       }
     },
     "oqvi.legal.terms": {
       "title": "Gebruiksvoorwaarden — Oqvi",
-      "preserve": ["Oqvi", "Apple", "Supabase", "Pl@ntNet", "OpenAI", "RevenueCat", "Google Firebase"],
+      "preserve": [
+        "Oqvi",
+        "Apple",
+        "Supabase",
+        "Pl@ntNet",
+        "OpenAI",
+        "RevenueCat",
+        "Google Firebase"
+      ],
       "strings": {
         "Terms of Use for the Oqvi plant identification and private field collection app.": "Gebruiksvoorwaarden voor Oqvi, de app voor plantenherkenning en een privéveldcollectie.",
         "Oqvi · identification with context": "Oqvi · herkenning met context",
@@ -592,7 +664,14 @@
     },
     "bulkbro.legal.terms": {
       "title": "Gebruiksvoorwaarden — BulkBro",
-      "preserve": ["BulkBro", "Bulk Tracker: Gain Weight Plan", "Apple", "Google/Firebase", "Meta", "OpenAI"],
+      "preserve": [
+        "BulkBro",
+        "Bulk Tracker: Gain Weight Plan",
+        "Apple",
+        "Google/Firebase",
+        "Meta",
+        "OpenAI"
+      ],
       "strings": {
         "Terms governing the use of BulkBro, including health guidance, AI estimates, subscriptions, and acceptable use.": "Voorwaarden voor het gebruik van BulkBro, waaronder gezondheidsrichtlijnen, AI-schattingen, abonnementen en toegestaan gebruik.",
         "Using the app": "De app gebruiken",
@@ -686,7 +765,16 @@
     },
     "bumpecho.legal.terms": {
       "title": "Gebruiksvoorwaarden — Bump Echo",
-      "preserve": ["Baby Heartbeat - Bump Echo", "Bump Echo", "Bump Echo Plus Monthly", "Bump Echo Plus Lifetime", "Apple", "RevenueCat", "Google Firebase", "Soundbook"],
+      "preserve": [
+        "Baby Heartbeat - Bump Echo",
+        "Bump Echo",
+        "Bump Echo Plus Monthly",
+        "Bump Echo Plus Lifetime",
+        "Apple",
+        "RevenueCat",
+        "Google Firebase",
+        "Soundbook"
+      ],
       "strings": {
         "Terms of Use for Bump Echo, the pregnancy audio keepsake app.": "Gebruiksvoorwaarden voor Bump Echo, de app voor audioherinneringen aan je zwangerschap.",
         "These terms govern your use of the Bump Echo iPhone app.": "Deze voorwaarden zijn van toepassing op je gebruik van de Bump Echo-app voor iPhone.",
@@ -732,7 +820,13 @@
     },
     "site.legal.privacy": {
       "title": "Privacybeleid van de website — Kestora Labs",
-      "preserve": ["kestoralabs.com", "Google Analytics 4", "GitHub Pages", "Google Ireland Limited", "Artikel 6(1)(a) AVG"],
+      "preserve": [
+        "kestoralabs.com",
+        "Google Analytics 4",
+        "GitHub Pages",
+        "Google Ireland Limited",
+        "Artikel 6(1)(a) AVG"
+      ],
       "strings": {
         "Privacy and analytics information for the Kestora Labs website.": "Informatie over privacy en analyses voor de website van Kestora Labs.",
         "Website information": "Website-informatie",
@@ -762,7 +856,9 @@
     },
     "bulkbro.legal.health": {
       "title": "Gezondheidsdisclaimer — BulkBro",
-      "preserve": ["Bulk Tracker: Gain Weight Plan"],
+      "preserve": [
+        "Bulk Tracker: Gain Weight Plan"
+      ],
       "strings": {
         "Important health and safety information for using BulkBro for intentional weight gain.": "Belangrijke informatie over gezondheid en veiligheid bij het gebruik van BulkBro voor bewuste gewichtstoename.",
         "Health & safety": "Gezondheid en veiligheid",
@@ -793,7 +889,21 @@
     },
     "bulkbro.legal.privacy": {
       "title": "Privacybeleid — BulkBro",
-      "preserve": ["Bulk Tracker: Gain Weight Plan", "Apple", "OpenAI", "Google Firebase", "Google Firebase Analytics", "Google Firebase Crashlytics", "Apple Ads", "Meta App Events", "Firebase Authentication", "App Check", "RevenueCat", "StoreKit", "IDFA"],
+      "preserve": [
+        "Bulk Tracker: Gain Weight Plan",
+        "Apple",
+        "OpenAI",
+        "Google Firebase",
+        "Google Firebase Analytics",
+        "Google Firebase Crashlytics",
+        "Apple Ads",
+        "Meta App Events",
+        "Firebase Authentication",
+        "App Check",
+        "RevenueCat",
+        "StoreKit",
+        "IDFA"
+      ],
       "strings": {
         "How BulkBro processes app data, meal descriptions, photos, subscriptions, analytics, and deletion requests.": "Hoe BulkBro appgegevens, maaltijdomschrijvingen, foto's, abonnementen, analyses en verwijderingsverzoeken verwerkt.",
         "Your data": "Jouw gegevens",
@@ -912,7 +1022,15 @@
     },
     "tiphaven.legal.privacy": {
       "title": "Privacybeleid — TipHaven",
-      "preserve": ["Apple", "RevenueCat", "Google Firebase", "Google Analytics", "GitHub Pages", "Agencia Española de Protección de Datos", "Kenneth Marcel S De Geest"],
+      "preserve": [
+        "Apple",
+        "RevenueCat",
+        "Google Firebase",
+        "Google Analytics",
+        "GitHub Pages",
+        "Agencia Española de Protección de Datos",
+        "Kenneth Marcel S De Geest"
+      ],
       "strings": {
         "How TipHaven handles shift records, purchases, analytics, exports, backups and support information.": "Hoe TipHaven omgaat met dienstgegevens, aankopen, analyses, exports, back-ups en ondersteuningsinformatie.",
         "Your earnings are your business": "Jouw inkomsten zijn jouw zaak",
@@ -966,7 +1084,13 @@
     },
     "walkbop.legal.privacy": {
       "title": "Privacybeleid — WalkBop",
-      "preserve": ["Google Firebase", "Apple", "GitHub Pages", "AEPD", "You → Data & privacy → Delete WalkBop account"],
+      "preserve": [
+        "Google Firebase",
+        "Apple",
+        "GitHub Pages",
+        "AEPD",
+        "You → Data & privacy → Delete WalkBop account"
+      ],
       "strings": {
         "How WalkBop handles account, walking, race, friend, item and notification information.": "Hoe WalkBop omgaat met account-, wandel-, race-, vrienden-, voorwerp- en meldingsgegevens.",
         "Privacy policy": "Privacybeleid",
