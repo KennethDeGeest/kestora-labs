@@ -56,6 +56,11 @@ test('core pages are shared while SEO inventories are locale-specific', () => {
   assert.equal(pageEnabledForLocale(englishGuide, 'nl'), false);
 });
 
+test('Calmber links to its live App Store listing', () => {
+  const calmber = pages.find(page => page.id === 'calmber.app');
+  assert.equal(calmber.appStore, 'https://apps.apple.com/app/cigarette-counter-calmber/id6833412600');
+});
+
 test('completed Dutch legal-page batches preserve the protected English structure', async () => {
   const source = JSON.parse(await readFile(resolve(root, 'i18n/content/en/legal-pages.json'), 'utf8'));
   const overlay = JSON.parse(await readFile(resolve(root, 'i18n/content/nl/legal-translations.json'), 'utf8'));
