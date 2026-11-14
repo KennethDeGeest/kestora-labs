@@ -9279,7 +9279,7 @@
                         "class": "legal-updated"
                       },
                       "children": [
-                        "Last updated 11 November 2026"
+                        "Updated 14 November 2026"
                       ]
                     },
                     "\n      "
@@ -9309,22 +9309,11 @@
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "MigraLoom is provided by Kenneth Marcel S De Geest, a self-employed developer based in Spain. For privacy questions or requests, email ",
-                            {
-                              "tag": "a",
-                              "attrs": {
-                                "href": "mailto:degeestkenneth@gmail.com?subject=MigraLoom%20Privacy"
-                              },
-                              "children": [
-                                "degeestkenneth@gmail.com"
-                              ]
-                            },
-                            "."
+                            "MigraLoom is provided by Kenneth Marcel S De Geest, a self-employed developer based in Spain. For privacy questions or rights requests, email degeestkenneth@gmail.com. This policy describes MigraLoom 1.2 and later; earlier versions may have different purchase screens."
                           ]
                         }
                       ]
                     },
-                    "\n",
                     {
                       "tag": "section",
                       "attrs": {
@@ -9335,19 +9324,18 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Your headache journal"
+                            "Your journal and backups"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "No personal account is required. Episodes, symptoms, triggers, medication notes and related journal information are stored on your iPhone. MigraLoom does not operate a cloud journal. Apple device backups may include app data according to your settings."
+                            "No MigraLoom account is required. Episodes, symptoms, medicines and doses, notes, daily check-ins, profile answers, treatment changes, appointment questions and unfinished drafts are stored on your iPhone. MigraLoom does not operate cloud journal sync. Journal contents are not sent to Firebase or RevenueCat. The journal uses iOS file protection and may be included in Apple device backups according to your settings. Apple controls its backup service and retention."
                           ]
                         }
                       ]
                     },
-                    "\n",
                     {
                       "tag": "section",
                       "attrs": {
@@ -9358,19 +9346,18 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Exports and sharing"
+                            "Purchases, paywalls and RevenueCat"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "You choose whether to create or share an export. Exported files can contain sensitive health information. Store and share them carefully. Copies already sent to another person or service are governed by that destination."
+                            "Paid access is required after onboarding: an active monthly subscription or a valid lifetime purchase. Existing valid entitlements remain recognized. Apple processes payments; we do not receive payment-card details. RevenueCat supplies the paywall and verifies, synchronizes and restores purchase access. It may process an app-user identifier, product and transaction identifiers, receipts, purchase history, entitlement and renewal status, app/device information, connection information and country inferred from IP, and paywall impressions and purchase interactions. These purchase services operate separately from optional Firebase diagnostics. Journal contents are not included."
                           ]
                         }
                       ]
                     },
-                    "\n",
                     {
                       "tag": "section",
                       "attrs": {
@@ -9381,19 +9368,32 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Purchases and optional diagnostics"
+                            "Optional Firebase diagnostics"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Apple processes App Store payments and purchase services help verify or restore access. If you enable optional diagnostics, limited app, device, performance and crash information may be processed to improve reliability. Journal entries, symptom notes and medication details are not intentionally included in diagnostics."
+                            "Share optional product diagnostics is off by default and is not required to buy or use paid features. Change it in Privacy & data on the paywall or Settings → Privacy in the app. With consent, Google Firebase Analytics receives limited product events: paywall/sample views, plan loading, the first saved record, Patterns opens, purchase and restore outcomes, and optional fixed-choice feedback after abandoning a purchase. No free-text feedback or journal details are attached. The sample onboarding interaction is illustrative and does not save an episode."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Firebase may also receive automatic app/session and App Store transaction signals, product and price/currency information, an installation or app-instance identifier, app/device and operating-system details, timestamps and technical crash traces through Crashlytics. Automatic screen-view reporting is disabled. Event timing and app use can still reveal use of a migraine app. We do not request precise location for diagnostics or attach symptoms, medication names or free-form health notes to events."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "While diagnostics are enabled, the Firebase app-instance identifier is shared with RevenueCat to associate diagnostics with purchase activity. Turning diagnostics off stops future Analytics collection and Crashlytics uploads and marks that identifier for removal from RevenueCat attributes. It does not recall information already received. Crash reports retained on the phone while collection is off may be sent if you enable diagnostics later."
                           ]
                         }
                       ]
                     },
-                    "\n",
                     {
                       "tag": "section",
                       "attrs": {
@@ -9404,19 +9404,18 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Retention and deletion"
+                            "Exports, deletion and access"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Journal information remains on your device until you delete it or remove the app. Device backups and exported files must be managed separately. Providers retain limited purchase and diagnostic information under their own retention rules and legal obligations."
+                            "You choose where to share visit-summary PDFs or complete-journal JSON exports; these may contain sensitive health information and unfinished drafts. Copies and Apple backups must be managed at their destination. Delete local journal in Settings removes local journal and app-managed recovery/export/report copies. Deleting the app removes app-container data, not copies already shared or Apple backups. We cannot remotely read or recover your local journal. Subscription expiry, refund or revocation may block journal features without deleting records. Export records you need while you have access; contact support for access or data-request difficulties. Deleting records or the app does not cancel an Apple subscription."
                           ]
                         }
                       ]
                     },
-                    "\n",
                     {
                       "tag": "section",
                       "attrs": {
@@ -9427,19 +9426,18 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Your choices and rights"
+                            "Purposes, legal bases and retention"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "You can keep diagnostics disabled, edit or delete journal entries, remove the app and control exports. Depending on where you live, you may also request access, correction, deletion, restriction or objection for personal information under the developer’s control. Contact the email above."
+                            "Optional diagnostics rely on consent to understand product use and troubleshoot faults. Purchase processing supports the agreement to provide, verify and restore paid access. Necessary security and service-reliability processing and support may rely on legitimate interests; legally required records are kept to meet legal obligations. We do not sell journal data or use it for advertising. Local records remain until you delete them. Diagnostic data follows the configured Firebase product retention and deletion processes. Purchase records may be retained to restore entitlements, resolve disputes and meet legal obligations. Support correspondence is kept as needed for the request and applicable obligations. Contact us about provider-held data we control and any required retention."
                           ]
                         }
                       ]
                     },
-                    "\n",
                     {
                       "tag": "section",
                       "attrs": {
@@ -9450,14 +9448,58 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Health notice, security and changes"
+                            "Providers and international processing"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "MigraLoom is a personal journal, not a medical device, diagnosis or substitute for professional care. Reasonable safeguards are used, but no system can guarantee absolute security. This policy may be updated when features, providers or legal requirements change."
+                            "Providers include Apple for App Store purchases and device backups, RevenueCat for paywalls and purchase access, Google Firebase for optional diagnostics, Gmail for support and GitHub Pages for this website. They may process data outside Spain and the EEA under applicable transfer safeguards, including adequacy decisions or standard contractual clauses where required. Website analytics consent is separate from the app’s diagnostics choice; see Website privacy below. Provider information is available at firebase.google.com/support/privacy, revenuecat.com/privacy and apple.com/legal/privacy. Contact us for information about relevant safeguards."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "section",
+                      "attrs": {
+                        "class": "legal-section"
+                      },
+                      "children": [
+                        {
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            "Your rights and choices"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Where applicable, you may request access, correction, deletion, portability, restriction, or object to processing based on legitimate interests. Withdraw diagnostics consent in the app without affecting your purchase or earlier lawful processing. Email degeestkenneth@gmail.com with only the information necessary to identify your request; do not send health records unnecessarily. We may request proportionate verification and normally respond within one month, explaining any lawful extension. You may complain to the Spanish Data Protection Agency (aepd.es) or your local supervisory authority. Local-only data is controlled through your device."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "section",
+                      "attrs": {
+                        "class": "legal-section"
+                      },
+                      "children": [
+                        {
+                          "tag": "h2",
+                          "attrs": {},
+                          "children": [
+                            "Children, health and policy changes"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "MigraLoom is not directed to children under 13. Contact us if you believe a child supplied personal information. MigraLoom is a journal, not medical advice, diagnosis, treatment or an emergency service. We use reasonable safeguards but cannot guarantee absolute security. Policy changes appear here with an updated date; material changes and any new consent will be communicated where required."
                           ]
                         }
                       ]
@@ -9653,7 +9695,7 @@
         "tags": [
           {
             "name": "description",
-            "content": "Terms of Use for Headache Tracker: MigraLoom and its one-time purchase."
+            "content": "Terms of Use for MigraLoom paid access, monthly subscriptions and lifetime purchases."
           },
           {
             "name": "robots",
@@ -9853,7 +9895,7 @@
                         "class": "legal-intro"
                       },
                       "children": [
-                        "Clear terms for a personal migraine journal and its one-time purchase."
+                        "Clear terms for MigraLoom’s paid access, monthly subscription and lifetime purchase."
                       ]
                     },
                     "\n        ",
@@ -9863,7 +9905,7 @@
                         "class": "legal-updated"
                       },
                       "children": [
-                        "Updated 5 November 2026"
+                        "Updated 14 November 2026"
                       ]
                     },
                     "\n      "
@@ -9942,28 +9984,35 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Free use and the one-time purchase"
+                            "Paid access, monthly and lifetime"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "The current app lets you save the first five episodes before requiring a one-time App Store purchase to keep adding episodes. Saved history, Patterns, Reports and basic export remain accessible whether or not you buy. The purchase is not an auto-renewing subscription. Its localized price is shown in the app and Apple’s purchase confirmation before you pay."
+                            "From version 1.2, paid access is required immediately after onboarding: an active monthly subscription or a valid lifetime entitlement. There is no general five-free-episode allowance in this version. Existing valid purchases are recognized. Any trial or introductory offer applies only if expressly displayed with its eligibility, duration and later price before confirmation. App Store prices and currencies vary by region; the localized price and Apple confirmation shown at purchase apply."
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "The non-consumable unlock can be restored using Restore purchases with the same Apple Account. A refund or revocation can remove paid access without deleting your saved journal. Future price changes do not create a recurring charge for existing purchasers. A lifetime unlock refers to the purchased app entitlement; it is not a promise of perpetual service availability, support for every future device, or every possible future separate product."
+                            "Monthly subscriptions renew automatically at the displayed applicable price unless cancelled in Apple subscription settings. Cancel at least 24 hours before renewal to avoid the next charge. Access normally remains until the end of the paid period. Deleting the app, deleting journal data or turning diagnostics off does not cancel a subscription. Manage or cancel at apps.apple.com/account/subscriptions."
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "If you already hold an earlier subscription, its Apple purchase terms continue to apply. Manage or cancel it in your Apple Account subscriptions; deleting the app does not cancel it. The current one-time offer does not automatically cancel an earlier subscription."
+                            "Lifetime is a non-consumable, one-time app entitlement with no automatic renewal. Founder Offer labels identify the lifetime offer; they do not guarantee a future price or imply a recurring charge. Lifetime means the entitlement for this app, not perpetual service availability, support for every future device or every separate future product. Purchasing lifetime does not automatically cancel an existing Apple subscription; cancel it separately if no longer needed."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Restore purchases using the Apple Account used to buy. Expiry, refund or revocation can end paid access without deleting the local journal. Journal features, including history and export, may require active paid access; export records you need while you have access. Contact support about purchase or data-access difficulties. Earlier purchases and subscriptions retain their applicable Apple purchase terms and valid entitlements."
                           ]
                         }
                       ]
@@ -10662,7 +10711,7 @@
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Use Restore purchases in MigraLoom with the Apple Account used to buy the unlock. Apple handles billing and ",
+                            "Use Restore purchases on the paywall with the Apple Account used for the monthly subscription or lifetime purchase. Manage or cancel monthly renewal in Apple subscription settings; deleting the app does not cancel it. Apple handles billing and ",
                             {
                               "tag": "a",
                               "attrs": {
