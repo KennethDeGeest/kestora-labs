@@ -320,6 +320,11 @@ export function validateRegistry(contentByLocale) {
       validateUrl(page.assets.icon, `${page.id}.assets.icon`, { internal: true });
       invariant(page.assets.screenshots.length === 3, `${page.id}.assets.screenshots must contain exactly 3 items`);
       page.assets.screenshots.forEach((url, index) => validateUrl(url, `${page.id}.assets.screenshots[${index}]`, { internal: true }));
+      for (const [locale, screenshots] of Object.entries(page.assets.screenshotsByLocale ?? {})) {
+        invariant(locales[locale], `${page.id}.assets.screenshotsByLocale contains unknown locale: ${locale}`);
+        invariant(screenshots.length === 3, `${page.id}.assets.screenshotsByLocale.${locale} must contain exactly 3 items`);
+        screenshots.forEach((url, index) => validateUrl(url, `${page.id}.assets.screenshotsByLocale.${locale}[${index}]`, { internal: true }));
+      }
       for (const locale of enabled) {
         if (!pageEnabledForLocale(page, locale)) continue;
         invariant(contentByLocale[locale]?.pages?.[page.id], `Missing ${locale} content for ${page.id}`);

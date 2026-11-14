@@ -5,8 +5,9 @@ const e = escapeHtml;
 
 export function renderAppPage({ locale, page, content, common, contentByLocale }) {
   const languageSwitcher = renderLanguageSwitcher({ locale, page, contentByLocale, label: common.ui.language });
+  const screenshotAssets = page.assets.screenshotsByLocale?.[locale] ?? page.assets.screenshots;
   const screenshots = content.screenshots.map((item, index) =>
-    `<figure class="screenshot-card"><img src="${e(page.assets.screenshots[index])}" alt="${e(item.alt)}" loading="lazy"></figure>`
+    `<figure class="screenshot-card"><img src="${e(screenshotAssets[index])}" alt="${e(item.alt)}" loading="lazy"></figure>`
   ).join('\n            ');
   const features = content.features.map(item =>
     `<li><strong>${e(item.title)}</strong><span>${e(item.body)}</span></li>`

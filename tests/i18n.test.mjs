@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { escapeHtml, localeRoute, outputPath, pageEnabledForLocale, validateAppPage, validateLegalPages, validateRegistry } from '../i18n/lib/core.mjs';
@@ -59,6 +59,16 @@ test('core pages are shared while SEO inventories are locale-specific', () => {
 test('Calmber links to its live App Store listing', () => {
   const calmber = pages.find(page => page.id === 'calmber.app');
   assert.equal(calmber.appStore, 'https://apps.apple.com/app/cigarette-counter-calmber/id6833412600');
+});
+
+test('Dutch app pages use complete localized screenshot sets', async () => {
+  const appPages = pages.filter(page => page.type === 'app-page');
+  for (const page of appPages) {
+    const screenshots = page.assets.screenshotsByLocale.nl;
+    assert.equal(screenshots.length, 3, `${page.id} needs three Dutch screenshots`);
+    for (const source of screenshots) await access(resolve(root, source.replace(/^\//, '')));
+    assert.ok(screenshots.every(source => source.startsWith('/assets/screens/nl/')));
+  }
 });
 
 test('completed Dutch legal-page batches preserve the protected English structure', async () => {

@@ -8,8 +8,17 @@ export const site = {
 // explicitly enabled after its complete content set passes validation.
 export const locales = {
   en: { label: 'English', htmlLang: 'en', prefix: '', enabled: true },
-  nl: { label: 'Nederlands', htmlLang: 'nl', prefix: '/nl', enabled: true }
+  nl: { label: 'Nederlands', htmlLang: 'nl', prefix: '/nl', enabled: true, screenshotDirectory: '/assets/screens/nl' }
 };
+
+const localizedScreenshotSets = (slug, screenshots) => Object.fromEntries(
+  Object.entries(locales)
+    .filter(([, config]) => config.screenshotDirectory)
+    .map(([locale, config]) => [locale, screenshots.map(source => {
+      const filename = source.split('?')[0].split('/').at(-1);
+      return `${config.screenshotDirectory}/${slug}/${filename}`;
+    })])
+);
 
 const appPage = ({ slug, appStore, icon, screenshots, guides = true }) => ({
     id: `${slug}.app`,
@@ -24,7 +33,7 @@ const appPage = ({ slug, appStore, icon, screenshots, guides = true }) => ({
       terms: `/${slug}/terms.html`,
       support: `/${slug}/support.html`
     },
-    assets: { icon, screenshots }
+    assets: { icon, screenshots, screenshotsByLocale: localizedScreenshotSets(slug, screenshots) }
 });
 
 const guideOverview = ({ slug, articleSource = 'guides', include, skip, editorial = false }) => ({
