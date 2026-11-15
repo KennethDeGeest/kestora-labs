@@ -71,6 +71,24 @@ test('Dutch app pages use complete localized screenshot sets', async () => {
   }
 });
 
+test('search identity uses the current Kestora K mark', async () => {
+  const [home, dutchHome, favicon, manifest] = await Promise.all([
+    readFile(resolve(root, 'index.html'), 'utf8'),
+    readFile(resolve(root, 'nl/index.html'), 'utf8'),
+    readFile(resolve(root, 'favicon.svg'), 'utf8'),
+    readFile(resolve(root, 'site.webmanifest'), 'utf8')
+  ]);
+  assert.match(home, /rel="icon" type="image\/svg\+xml" href="\/favicon\.svg"/);
+  assert.match(dutchHome, /rel="icon" type="image\/svg\+xml" href="\/favicon\.svg"/);
+  assert.match(favicon, /<path d="M18 14v36h8V36l12 14h10L32 31l15-17H37L26 28V14z"/);
+  assert.equal(JSON.parse(manifest).icons[0].src, '/favicon.svg');
+});
+
+test('sitemap excludes retired French and Spanish sections', async () => {
+  const sitemap = await readFile(resolve(root, 'sitemap.xml'), 'utf8');
+  assert.doesNotMatch(sitemap, /kestoralabs\.com\/(?:es|fr)\//);
+});
+
 test('completed Dutch legal-page batches preserve the protected English structure', async () => {
   const source = JSON.parse(await readFile(resolve(root, 'i18n/content/en/legal-pages.json'), 'utf8'));
   const overlay = JSON.parse(await readFile(resolve(root, 'i18n/content/nl/legal-translations.json'), 'utf8'));

@@ -28,7 +28,15 @@ export function renderHomePage({ locale, page, content, common, contentByLocale 
   <meta name="theme-color" content="#fafafa">
   <meta name="legal-template-version" content="20261111-5">
   <title>${e(content.meta.title)}</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23111111'/%3E%3Cpath d='M18 14v36h8V36l12 14h10L32 31l15-17H37L26 28V14z' fill='white'/%3E%3C/svg%3E">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Kestora Labs',
+    url: 'https://kestoralabs.com/',
+    logo: 'https://kestoralabs.com/favicon.svg'
+  }).replaceAll('<', '\\u003c')}</script>
   <link rel="stylesheet" href="/site.css?v=20261113-language-menu">
 </head>
 <body>

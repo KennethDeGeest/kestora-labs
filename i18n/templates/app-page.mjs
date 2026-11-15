@@ -23,6 +23,7 @@ export function renderAppPage({ locale, page, content, common, contentByLocale }
   <link rel="canonical" href="${e(absoluteUrl(locale, page.route))}">
   ${hreflangLinks(page.id, contentByLocale)}
   <title>${e(content.meta.title)}</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="stylesheet" href="/site.css?v=20261113-language-menu">
 </head>
 <body class="app-page-body">

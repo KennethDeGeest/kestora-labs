@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="title">
-  <title id="title">Kestora Labs portal mark</title>
-  <rect width="160" height="160" rx="42" fill="#121724"/>
-  <path d="M35 69V45c0-5.5 4.5-10 10-10h24" fill="none" stroke="#F4F3EF" stroke-width="14" stroke-linecap="round"/>
-  <path d="M91 35h24c5.5 0 10 4.5 10 10v24" fill="none" stroke="#7692EE" stroke-width="14" stroke-linecap="round"/>
-  <path d="M125 91v24c0 5.5-4.5 10-10 10H91" fill="none" stroke="#F4F3EF" stroke-width="14" stroke-linecap="round"/>
-  <path d="M69 125H45c-5.5 0-10-4.5-10-10V91" fill="none" stroke="#7692EE" stroke-width="14" stroke-linecap="round"/>
-</svg>
