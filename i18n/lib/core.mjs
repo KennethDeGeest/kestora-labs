@@ -147,8 +147,8 @@ export function validateGuideOverviews(content, path) {
   }
 }
 
-const articleTags = new Set(['a', 'aside', 'details', 'div', 'h1', 'h2', 'h3', 'header', 'img', 'li', 'ol', 'p', 'section', 'span', 'strong', 'summary', 'table', 'tbody', 'td', 'th', 'thead', 'time', 'tr', 'ul']);
-const articleAttrs = new Set(['alt', 'aria-label', 'aria-labelledby', 'class', 'datetime', 'height', 'href', 'id', 'open', 'rel', 'src', 'width']);
+const articleTags = new Set(['a', 'aside', 'details', 'div', 'figcaption', 'figure', 'h1', 'h2', 'h3', 'header', 'img', 'li', 'ol', 'p', 'section', 'span', 'strong', 'summary', 'table', 'tbody', 'td', 'th', 'thead', 'time', 'tr', 'ul']);
+const articleAttrs = new Set(['alt', 'aria-label', 'aria-labelledby', 'class', 'datetime', 'height', 'href', 'id', 'loading', 'open', 'rel', 'src', 'width']);
 
 function validateArticleNode(node, path) {
   if (typeof node === 'string') return;

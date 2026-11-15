@@ -12563,6 +12563,45 @@
                   ]
                 },
                 {
+                  "tag": "figure",
+                  "attrs": {
+                    "class": "article-visual"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/screens/calmber-insights.png",
+                        "width": "1206",
+                        "height": "2622",
+                        "loading": "lazy",
+                        "alt": "Calmber insights screen showing smoking progress and patterns"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "figcaption",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Move from individual logs to a wider pattern."
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Calmber's insights view brings timing, progress and money saved together so one cigarette does not become the only story you see."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "tag": "div",
                   "attrs": {
                     "class": "safety-note"
@@ -13464,6 +13503,45 @@
                   "attrs": {},
                   "children": [
                     "For a routine trigger, change the sequence or location. For an emotional trigger, plan a short alternative such as slow breathing, movement or contacting someone supportive. For social triggers, tell people what support you need. Withdrawal may require evidence-based treatment rather than willpower alone."
+                  ]
+                },
+                {
+                  "tag": "figure",
+                  "attrs": {
+                    "class": "article-visual"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/screens/calmber-home.png",
+                        "width": "1206",
+                        "height": "2622",
+                        "loading": "lazy",
+                        "alt": "Calmber home screen with the lung buddy and today's smoking plan"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "figcaption",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Keep today's next step easy to find."
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "The Calmber home screen puts the current plan, quick logging and the lung buddy in one place for the moment when a familiar trigger appears."
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -33908,6 +33986,45 @@
                   ]
                 },
                 {
+                  "tag": "figure",
+                  "attrs": {
+                    "class": "article-visual"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/screens/walkbop-race.png",
+                        "width": "414",
+                        "height": "900",
+                        "loading": "lazy",
+                        "alt": "WalkBop weekly race screen showing friends and their step totals"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "figcaption",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "See the people immediately around you."
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "The race view focuses on position, nearby friends and the gap between them, making the next walk feel connected to a shared chase."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
                   "tag": "p",
                   "attrs": {},
                   "children": [
@@ -34537,6 +34654,45 @@
                   "attrs": {},
                   "children": [
                     "The middle of a challenge is where attention can disappear. Show changes that matter: who moved up, which gap narrowed and whether someone returned to the race. In WalkBop, walking also earns mystery crates, and items can create playful changes in the race. The steps remain real; the game gives people more moments to care about them."
+                  ]
+                },
+                {
+                  "tag": "figure",
+                  "attrs": {
+                    "class": "article-visual"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/screens/walkbop-items.png",
+                        "width": "414",
+                        "height": "900",
+                        "loading": "lazy",
+                        "alt": "WalkBop item inventory with mystery crates, boosts, attacks and shields"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "figcaption",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Walking creates more than one reason to check in."
+                          ]
+                        },
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Mystery crates unlock playful items that can boost, defend or shake up the race while the underlying score still comes from real steps."
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
