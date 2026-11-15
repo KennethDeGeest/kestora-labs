@@ -12178,6 +12178,1564 @@
         "order": 9
       }
     },
+    "calmber.guide.cigarette-tracker-app": {
+      "meta": {
+        "title": "Cigarette Tracker App: What Is Worth Tracking? | Calmber",
+        "description": "Learn what a cigarette tracker app should record, how to spot useful patterns, and how to track smoking without turning one difficult day into failure.",
+        "robots": "index,follow,max-image-preview:large",
+        "themeColor": "#f6f2ed",
+        "appleItunesApp": "app-id=6833412600, affiliate-data=pt=128911414&ct=calmber_cigarette_tracker_banner",
+        "ogType": "article",
+        "ogTitle": "Cigarette Tracker App: What Is Worth Tracking?",
+        "ogDescription": "Track enough context to notice patterns, not just a total that judges the day.",
+        "ogImage": "https://kestoralabs.com/assets/screens/calmber-insights.png",
+        "twitterCard": "summary_large_image",
+        "icon": "/assets/calmber.png",
+        "jsonLd": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Cigarette Tracker App: What Is Worth Tracking?",
+            "description": "A practical guide to choosing and using a cigarette tracker without treating one difficult day as failure.",
+            "datePublished": "2026-11-15",
+            "dateModified": "2026-11-15",
+            "mainEntityOfPage": "https://kestoralabs.com/calmber/guides/cigarette-tracker-app/",
+            "image": "https://kestoralabs.com/assets/screens/calmber-insights.png",
+            "inLanguage": "en",
+            "author": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://kestoralabs.com/assets/calmber.png"
+              }
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Calmber",
+                "item": "https://kestoralabs.com/calmber/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/calmber/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Cigarette Tracker App",
+                "item": "https://kestoralabs.com/calmber/guides/cigarette-tracker-app/"
+              }
+            ]
+          }
+        ]
+      },
+      "article": [
+        "\n      ",
+        {
+          "tag": "header",
+          "attrs": {
+            "class": "article-hero"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-kicker"
+                  },
+                  "children": [
+                    "Smoking patterns · Practical guide"
+                  ]
+                },
+                {
+                  "tag": "h1",
+                  "attrs": {},
+                  "children": [
+                    "Cigarette tracker app: what is worth tracking?"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-lead"
+                  },
+                  "children": [
+                    "A useful cigarette tracker records more than a daily total. It should help you notice when smoking happens, what tends to come before it, and whether your plan is becoming easier to follow over time—without treating a slip as proof that the whole effort failed."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-byline"
+                  },
+                  "children": [
+                    "Published by Kestora Labs, the maker of Calmber · Updated ",
+                    {
+                      "tag": "time",
+                      "attrs": {
+                        "datetime": "2026-11-15"
+                      },
+                      "children": [
+                        "November 15, 2026"
+                      ]
+                    },
+                    " · 5 min read"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "aside",
+              "attrs": {
+                "class": "article-summary",
+                "aria-label": "Quick answer"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Quick answer"
+                  ]
+                },
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "What should a cigarette tracker app record?"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Start with time and daily count. Add a short note only when context matters: the situation, feeling or craving around the cigarette. Review patterns by week, not as a verdict on each individual day."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "\n      ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-layout"
+          },
+          "children": [
+            {
+              "tag": "details",
+              "attrs": {
+                "class": "article-toc",
+                "open": null
+              },
+              "children": [
+                {
+                  "tag": "summary",
+                  "attrs": {},
+                  "children": [
+                    "On this page"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#purpose"
+                      },
+                      "children": [
+                        "Purpose"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#minimum"
+                      },
+                      "children": [
+                        "What to track"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#patterns"
+                      },
+                      "children": [
+                        "Useful patterns"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#features"
+                      },
+                      "children": [
+                        "Choosing an app"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#support"
+                      },
+                      "children": [
+                        "Getting support"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#sources"
+                      },
+                      "children": [
+                        "Sources"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "article-content"
+              },
+              "children": [
+                "\n        ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "purpose"
+                  },
+                  "children": [
+                    "Track to understand, not to grade yourself"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A number becomes useful when it gives you something to act on. A daily cigarette count can show direction, but it cannot explain why one day was harder than another. Time and context can reveal repeated routines: the first coffee, a drive, a work break or a stressful conversation."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Smokefree.gov recommends learning when, where and with whom you tend to smoke because recognizing those patterns can help you prepare for triggers. A tracker can make that observation easier, but it is not a diagnosis or a replacement for professional cessation support."
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "minimum"
+                  },
+                  "children": [
+                    "Begin with the smallest useful record"
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Time:"
+                          ]
+                        },
+                        " when the cigarette happened."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Daily total:"
+                          ]
+                        },
+                        " a simple count you can compare across days."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Context when useful:"
+                          ]
+                        },
+                        " coffee, driving, a break, alcohol, stress or social company."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Craving or feeling:"
+                          ]
+                        },
+                        " a short label rather than a long journal entry."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Corrections:"
+                          ]
+                        },
+                        " the ability to fix a missed or incorrect log later."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Do not collect detail merely because the app allows it. If recording every field becomes tiring, keep the count and time first. Consistency is more useful than an elaborate log you abandon."
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "patterns"
+                  },
+                  "children": [
+                    "Review patterns over a week"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Look for clusters rather than isolated events. Are most cigarettes concentrated in the morning? Does the interval between them become shorter after work? Are weekends different? Pattern, emotional, social and withdrawal triggers need different responses, so the context matters more than simply labeling a day as good or bad."
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "safety-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Important:"
+                          ]
+                        },
+                        " nicotine dependence and withdrawal are health matters. Counseling and approved cessation medications can help. Talk with a healthcare professional or an established quit service about an approach that fits your health and circumstances."
+                      ]
+                    }
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "features"
+                  },
+                  "children": [
+                    "What to look for in a cigarette tracker app"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "capability-grid"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "capability-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Useful"
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Fast logging in the moment"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Editable history"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Daily and weekly patterns"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "A plan that can recover after a difficult day"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Clear privacy information"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "capability-card cannot"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Be cautious"
+                          ]
+                        },
+                        {
+                          "tag": "ul",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Shame-based streaks"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Health promises without sources"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Rigid plans that cannot reflect real life"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Unclear data sharing"
+                              ]
+                            },
+                            {
+                              "tag": "li",
+                              "attrs": {},
+                              "children": [
+                                "Claims that an app replaces treatment"
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "support"
+                  },
+                  "children": [
+                    "Use the record to plan the next moment"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The best outcome of tracking is a practical next step. If coffee is a repeated trigger, change that routine. If a cigarette reliably follows stress, prepare a short alternative before the situation arrives. Read ",
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/calmber/guides/how-to-identify-smoking-triggers/"
+                      },
+                      "children": [
+                        "how to identify smoking triggers"
+                      ]
+                    },
+                    " for a simple observation exercise."
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "sources"
+                  },
+                  "children": [
+                    "Sources"
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {
+                    "class": "source-list"
+                  },
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://smokefree.gov/build-your-quit-plan"
+                          },
+                          "children": [
+                            "Smokefree.gov: Build a plan to quit smoking or vaping."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://www.cdc.gov/tobacco/about/how-to-quit.html"
+                          },
+                          "children": [
+                            "CDC: How to quit smoking."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://smokefree.gov/challenges-when-quitting/cravings-triggers/know-your-triggers"
+                          },
+                          "children": [
+                            "Smokefree.gov: Know your smoking triggers."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "review-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Reviewed against public guidance from the CDC and Smokefree.gov on November 15, 2026. Calmber offers behavioral tracking and general support, not medical advice, diagnosis or treatment."
+                      ]
+                    }
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "app-callout",
+                    "aria-labelledby": "app-callout-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/calmber.png",
+                        "width": "320",
+                        "height": "320",
+                        "alt": "Calmber app icon"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "p",
+                          "attrs": {
+                            "class": "article-kicker"
+                          },
+                          "children": [
+                            "Calm support for a real process"
+                          ]
+                        },
+                        {
+                          "tag": "h2",
+                          "attrs": {
+                            "id": "app-callout-title"
+                          },
+                          "children": [
+                            "See the plan and the pattern together."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Calmber combines quick cigarette logging, an adjustable taper plan, craving support and progress insights on your iPhone."
+                          ]
+                        },
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "button",
+                            "href": "https://apps.apple.com/app/apple-store/id6833412600?pt=128911414&mt=8&ct=calmber_cigarette_tracker_inline"
+                          },
+                          "children": [
+                            "View Calmber on the App Store ↗"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n        ",
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Continue reading"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "related-grid"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/calmber/guides/how-to-identify-smoking-triggers/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Related guide"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "How to identify your smoking triggers"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/calmber/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "About the app"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "See how Calmber supports a gradual plan"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      "
+              ]
+            }
+          ]
+        },
+        "\n      ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-note"
+          },
+          "children": [
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Calmber provides general behavioral support for adults who want to reduce or quit smoking. It does not provide medical advice, diagnosis, treatment or emergency support."
+              ]
+            }
+          ]
+        },
+        "\n    "
+      ],
+      "card": {
+        "title": "Cigarette Tracker App: What Is Worth Tracking?",
+        "description": "Choose a cigarette counter that helps you notice timing, routines and progress without turning every difficult day into a failure.",
+        "href": "cigarette-tracker-app/",
+        "order": 0
+      }
+    },
+    "calmber.guide.how-to-identify-smoking-triggers": {
+      "meta": {
+        "title": "How to Identify Your Smoking Triggers | Calmber",
+        "description": "Identify smoking triggers by observing the situation, feeling and routine around each urge, then prepare one practical response for repeated patterns.",
+        "robots": "index,follow,max-image-preview:large",
+        "themeColor": "#f6f2ed",
+        "appleItunesApp": "app-id=6833412600, affiliate-data=pt=128911414&ct=calmber_smoking_triggers_banner",
+        "ogType": "article",
+        "ogTitle": "How to Identify Your Smoking Triggers",
+        "ogDescription": "Observe the moment before the cigarette, group repeated situations, and prepare one realistic response.",
+        "ogImage": "https://kestoralabs.com/assets/screens/calmber-home.png",
+        "twitterCard": "summary_large_image",
+        "icon": "/assets/calmber.png",
+        "jsonLd": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How to Identify Your Smoking Triggers",
+            "description": "A practical observation method for identifying repeated smoking triggers and preparing responses.",
+            "datePublished": "2026-11-15",
+            "dateModified": "2026-11-15",
+            "mainEntityOfPage": "https://kestoralabs.com/calmber/guides/how-to-identify-smoking-triggers/",
+            "image": "https://kestoralabs.com/assets/screens/calmber-home.png",
+            "inLanguage": "en",
+            "author": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://kestoralabs.com/assets/calmber.png"
+              }
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Calmber",
+                "item": "https://kestoralabs.com/calmber/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/calmber/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "How to Identify Smoking Triggers",
+                "item": "https://kestoralabs.com/calmber/guides/how-to-identify-smoking-triggers/"
+              }
+            ]
+          }
+        ]
+      },
+      "article": [
+        "\n    ",
+        {
+          "tag": "header",
+          "attrs": {
+            "class": "article-hero"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-kicker"
+                  },
+                  "children": [
+                    "Cravings and routines · Practical guide"
+                  ]
+                },
+                {
+                  "tag": "h1",
+                  "attrs": {},
+                  "children": [
+                    "How to identify your smoking triggers"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-lead"
+                  },
+                  "children": [
+                    "A smoking trigger is a situation, feeling or physical cue that brings on an urge to smoke. You can identify yours by recording what happened immediately before the urge, then reviewing repeated moments instead of trying to explain every cigarette separately."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-byline"
+                  },
+                  "children": [
+                    "Published by Kestora Labs, the maker of Calmber · Updated ",
+                    {
+                      "tag": "time",
+                      "attrs": {
+                        "datetime": "2026-11-15"
+                      },
+                      "children": [
+                        "November 15, 2026"
+                      ]
+                    },
+                    " · 5 min read"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "aside",
+              "attrs": {
+                "class": "article-summary",
+                "aria-label": "Quick answer"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Quick answer"
+                  ]
+                },
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "How do you find a smoking trigger?"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "For several days, note the time, place, activity, people and feeling around an urge or cigarette. Group repeated moments into routine, emotional, social or withdrawal triggers, then prepare one response for the most frequent pattern."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "\n    ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-layout"
+          },
+          "children": [
+            {
+              "tag": "details",
+              "attrs": {
+                "class": "article-toc",
+                "open": null
+              },
+              "children": [
+                {
+                  "tag": "summary",
+                  "attrs": {},
+                  "children": [
+                    "On this page"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#types"
+                      },
+                      "children": [
+                        "Four trigger types"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#observe"
+                      },
+                      "children": [
+                        "Observe"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#review"
+                      },
+                      "children": [
+                        "Review"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#respond"
+                      },
+                      "children": [
+                        "Prepare"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#help"
+                      },
+                      "children": [
+                        "When to get help"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#sources"
+                      },
+                      "children": [
+                        "Sources"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "article-content"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "types"
+                  },
+                  "children": [
+                    "Start with four useful categories"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Smokefree.gov groups common triggers into pattern, emotional, social and withdrawal triggers. The labels are useful because the same response will not fit all four."
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Pattern triggers:"
+                          ]
+                        },
+                        " coffee, driving, meals, breaks or phone calls."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Emotional triggers:"
+                          ]
+                        },
+                        " stress, boredom, loneliness, frustration or celebration."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Social triggers:"
+                          ]
+                        },
+                        " being around people who smoke or attending an event associated with smoking."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Withdrawal triggers:"
+                          ]
+                        },
+                        " cravings and discomfort as the body adjusts to less nicotine."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "observe"
+                  },
+                  "children": [
+                    "Capture the moment before the cigarette"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Ask five short questions: What time was it? Where were you? What were you doing? Who was there? What were you feeling? A one-word answer is enough. The goal is not to write a diary; it is to make an automatic routine visible."
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "prompt-grid"
+                  },
+                  "children": [
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "prompt-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Situation"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "After lunch, in the car, outside work, with a drink."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "prompt-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Feeling"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Restless, stressed, bored, social, tired."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "prompt-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Urge"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Notice whether it arrived suddenly or built gradually."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {
+                        "class": "prompt-card"
+                      },
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Response"
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Record what you tried and whether it helped for that moment."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "review"
+                  },
+                  "children": [
+                    "Look for repetition, not perfection"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "After several days, circle the situations that appear more than once. A morning cigarette after coffee is a different pattern from an evening cigarette during stress. Choose the most frequent or most predictable trigger first. Changing one repeated routine is more manageable than trying to redesign the entire day."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A ",
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/calmber/guides/cigarette-tracker-app/"
+                      },
+                      "children": [
+                        "cigarette tracker app"
+                      ]
+                    },
+                    " can make timing and weekly patterns easier to review, but paper notes work too. The useful part is the honest observation."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "respond"
+                  },
+                  "children": [
+                    "Prepare one response before the trigger arrives"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "For a routine trigger, change the sequence or location. For an emotional trigger, plan a short alternative such as slow breathing, movement or contacting someone supportive. For social triggers, tell people what support you need. Withdrawal may require evidence-based treatment rather than willpower alone."
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "safety-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Do not manage withdrawal in isolation if you need help."
+                          ]
+                        },
+                        " The CDC advises that counseling and cessation medications can help with cravings and withdrawal. A healthcare professional or quitline can help you choose an appropriate option."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "help"
+                  },
+                  "children": [
+                    "Know when an app is not enough"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "An app can support awareness, planning and progress tracking. It cannot evaluate medication safety, diagnose symptoms or provide emergency care. Seek professional support if withdrawal feels unmanageable, if your mood becomes concerning, or if you want help choosing cessation medication."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "sources"
+                  },
+                  "children": [
+                    "Sources"
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {
+                    "class": "source-list"
+                  },
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://smokefree.gov/challenges-when-quitting/cravings-triggers/know-your-triggers"
+                          },
+                          "children": [
+                            "Smokefree.gov: Know your smoking triggers."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://smokefree.gov/build-your-quit-plan"
+                          },
+                          "children": [
+                            "Smokefree.gov: Build your quit plan."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://www.cdc.gov/tobacco/about/how-to-quit.html"
+                          },
+                          "children": [
+                            "CDC: How to quit smoking."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "review-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Reviewed against public guidance from the CDC and Smokefree.gov on November 15, 2026. This guide is educational and does not replace individualized medical advice."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "app-callout",
+                    "aria-labelledby": "app-callout-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/calmber.png",
+                        "width": "320",
+                        "height": "320",
+                        "alt": "Calmber app icon"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "p",
+                          "attrs": {
+                            "class": "article-kicker"
+                          },
+                          "children": [
+                            "Notice the pattern without judgment"
+                          ]
+                        },
+                        {
+                          "tag": "h2",
+                          "attrs": {
+                            "id": "app-callout-title"
+                          },
+                          "children": [
+                            "Keep the next step visible."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "Calmber brings cigarette logs, timing patterns, an adjustable plan and in-the-moment craving support into one private iPhone companion."
+                          ]
+                        },
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "button",
+                            "href": "https://apps.apple.com/app/apple-store/id6833412600?pt=128911414&mt=8&ct=calmber_smoking_triggers_inline"
+                          },
+                          "children": [
+                            "View Calmber on the App Store ↗"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Continue reading"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "related-grid"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/calmber/guides/cigarette-tracker-app/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Related guide"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "What is worth tracking in a cigarette tracker app?"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/calmber/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "About the app"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Explore Calmber"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n    "
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-note"
+          },
+          "children": [
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "Calmber provides general behavioral support for adults who want to reduce or quit smoking. It does not provide medical advice, diagnosis, treatment or emergency support."
+              ]
+            }
+          ]
+        },
+        "\n  "
+      ],
+      "card": {
+        "title": "How to Identify Your Smoking Triggers",
+        "description": "Use a simple observation routine to recognize pattern, emotional, social and withdrawal triggers before planning what to do next.",
+        "href": "how-to-identify-smoking-triggers/",
+        "order": 1
+      }
+    },
     "fovri.guide.best-recipe-app": {
       "meta": {
         "title": "Best Recipe App for iPhone: How to Choose in 2026 | Fovri",
@@ -31966,6 +33524,1291 @@
         "description": "Learn which wood surfaces and anatomical clues matter for photo identification, and why grain and color alone cannot confirm a species.",
         "href": "wood-species-identifier/",
         "order": 9
+      }
+    },
+    "walkbop.guide.step-challenge-with-friends": {
+      "meta": {
+        "title": "How to Start a Step Challenge With Friends | WalkBop",
+        "description": "Start a step challenge with friends using clear rules, fair tracking, a seven-day race and playful motivation that keeps different walkers involved.",
+        "robots": "index,follow,max-image-preview:large",
+        "themeColor": "#ff5746",
+        "appleItunesApp": "app-id=6828370811, affiliate-data=pt=128911414&ct=walkbop_step_challenge_banner",
+        "ogType": "article",
+        "ogTitle": "How to Start a Step Challenge With Friends",
+        "ogDescription": "A simple format for turning everyday steps into a fair and lively group challenge.",
+        "ogImage": "https://kestoralabs.com/assets/screens/walkbop-race.png",
+        "twitterCard": "summary_large_image",
+        "icon": "/assets/walkbop.png",
+        "jsonLd": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How to Start a Step Challenge With Friends",
+            "description": "A practical setup for a fair and motivating step challenge with friends.",
+            "datePublished": "2026-11-15",
+            "dateModified": "2026-11-15",
+            "mainEntityOfPage": "https://kestoralabs.com/walkbop/guides/step-challenge-with-friends/",
+            "image": "https://kestoralabs.com/assets/screens/walkbop-race.png",
+            "inLanguage": "en",
+            "author": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://kestoralabs.com/assets/walkbop.png"
+              }
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "WalkBop",
+                "item": "https://kestoralabs.com/walkbop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/walkbop/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Step Challenge With Friends",
+                "item": "https://kestoralabs.com/walkbop/guides/step-challenge-with-friends/"
+              }
+            ]
+          }
+        ]
+      },
+      "article": [
+        "\n    ",
+        {
+          "tag": "header",
+          "attrs": {
+            "class": "article-hero"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-kicker"
+                  },
+                  "children": [
+                    "Friends and movement · Practical guide"
+                  ]
+                },
+                {
+                  "tag": "h1",
+                  "attrs": {},
+                  "children": [
+                    "How to start a step challenge with friends"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-lead"
+                  },
+                  "children": [
+                    "Pick one start time, one finish time and one trusted source of step data. Keep the first challenge short, make the standings easy to understand, and give everyone a reason to rejoin even when the early leader pulls ahead."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-byline"
+                  },
+                  "children": [
+                    "Published by Kestora Labs, the maker of WalkBop · Updated ",
+                    {
+                      "tag": "time",
+                      "attrs": {
+                        "datetime": "2026-11-15"
+                      },
+                      "children": [
+                        "November 15, 2026"
+                      ]
+                    },
+                    " · 5 min read"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "aside",
+              "attrs": {
+                "class": "article-summary",
+                "aria-label": "Quick answer"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Quick answer"
+                  ]
+                },
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "What is the easiest step challenge with friends?"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Run a seven-day race based on each person’s total steps. Agree on the data source and start time before the race, invite a small group, and reset the standings after a week so everyone gets another chance."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "\n    ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-layout"
+          },
+          "children": [
+            {
+              "tag": "details",
+              "attrs": {
+                "class": "article-toc",
+                "open": null
+              },
+              "children": [
+                {
+                  "tag": "summary",
+                  "attrs": {},
+                  "children": [
+                    "On this page"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#format"
+                      },
+                      "children": [
+                        "Choose a format"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#rules"
+                      },
+                      "children": [
+                        "Set the rules"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#fairness"
+                      },
+                      "children": [
+                        "Keep it fair"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#motivation"
+                      },
+                      "children": [
+                        "Keep it lively"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#finish"
+                      },
+                      "children": [
+                        "Finish and reset"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#sources"
+                      },
+                      "children": [
+                        "Sources"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "article-content"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "format"
+                  },
+                  "children": [
+                    "Choose a format people can explain in one sentence"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The simplest challenge is total steps over a fixed period: whoever records the most steps by the finish wins. A seven-day race is long enough for weekdays and a weekend to matter, but short enough that a slow start does not become a month-long punishment."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "For groups with very different routines, consider teams, a collective target or a consistency challenge. Choose one scoring idea for each race. Multiple bonus systems quickly make standings harder to trust."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "rules"
+                  },
+                  "children": [
+                    "Agree on five rules before starting"
+                  ]
+                },
+                {
+                  "tag": "ol",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Exact start and finish time."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "The phone or wearable that supplies the step total."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "Whether manual step entries are allowed."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "How late syncing will be handled."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        "What the winner receives—even if it is only bragging rights."
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A shared app can remove spreadsheet work, but it cannot replace clear expectations. Keep the rules visible and avoid changing them after someone takes the lead."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "fairness"
+                  },
+                  "children": [
+                    "Let ordinary walking count"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A good step challenge rewards movement without requiring everyone to train like an athlete. Commuting, errands, dog walks and a short evening loop can all contribute. If the group includes people with different abilities or medical limitations, use teams or personal baselines instead of insisting on one absolute target."
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Step counts from different phones and wearables can vary. Use one agreed source per person and treat the challenge as friendly motivation, not a precise fitness test."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "motivation"
+                  },
+                  "children": [
+                    "Create more moments than the final result"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A leaderboard is most interesting when positions can change. Small updates—an overtake, a shrinking gap or a friend joining the chase—give the group reasons to check in. WalkBop adds mystery crates and playful items earned through walking, so a race can change without replacing the real step total at its center."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Keep messages encouraging. Celebrate a comeback or a new routine, not only the person with the highest total. Social support and walking groups are recognized ways to support physical activity in the U.S. Physical Activity Guidelines."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "finish"
+                  },
+                  "children": [
+                    "Close the race, then reset cleanly"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Announce the result at the agreed finish, acknowledge the group, and start fresh. A weekly reset prevents one early lead from becoming permanent. Read the ",
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/walkbop/guides/weekly-walking-challenge/"
+                      },
+                      "children": [
+                        "weekly walking challenge guide"
+                      ]
+                    },
+                    " for a reusable seven-day rhythm."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "sources"
+                  },
+                  "children": [
+                    "Sources"
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {
+                    "class": "source-list"
+                  },
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://odphp.health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"
+                          },
+                          "children": [
+                            "U.S. Department of Health and Human Services: Physical Activity Guidelines for Americans, 2nd edition."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://www.cdc.gov/physical-activity/php/about/index.html"
+                          },
+                          "children": [
+                            "CDC: About physical activity."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "review-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Activity needs differ. People with health concerns, pain, mobility limitations or recent changes in health should seek appropriate professional guidance before changing their activity."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "app-callout",
+                    "aria-labelledby": "app-callout-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/walkbop.png",
+                        "width": "320",
+                        "height": "320",
+                        "alt": "WalkBop app icon"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "p",
+                          "attrs": {
+                            "class": "article-kicker"
+                          },
+                          "children": [
+                            "A weekly race with personality"
+                          ]
+                        },
+                        {
+                          "tag": "h2",
+                          "attrs": {
+                            "id": "app-callout-title"
+                          },
+                          "children": [
+                            "Turn real steps into a shared story."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "WalkBop uses Apple Health step totals for weekly races with friends, live gaps, playful items and a fresh reset every week."
+                          ]
+                        },
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "button",
+                            "href": "https://apps.apple.com/app/apple-store/id6828370811?pt=128911414&mt=8&ct=walkbop_step_challenge_inline"
+                          },
+                          "children": [
+                            "View WalkBop on the App Store ↗"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Continue reading"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "related-grid"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/walkbop/guides/weekly-walking-challenge/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Related guide"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "How to make a weekly walking challenge work"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/walkbop/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "About the app"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Explore WalkBop"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n    "
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-note"
+          },
+          "children": [
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "WalkBop is a social walking game, not a medical or fitness-prescription service. Apple Health access is optional but required to use real step totals in a live race."
+              ]
+            }
+          ]
+        },
+        "\n  "
+      ],
+      "card": {
+        "title": "How to Start a Step Challenge With Friends",
+        "description": "Set up a friendly walking competition with clear timing, fair step data and enough playfulness to keep the group involved.",
+        "href": "step-challenge-with-friends/",
+        "order": 0
+      }
+    },
+    "walkbop.guide.weekly-walking-challenge": {
+      "meta": {
+        "title": "How to Make a Weekly Walking Challenge Work | WalkBop",
+        "description": "Build a weekly walking challenge with a clear seven-day rhythm, fair tracking, midweek momentum and a clean reset that keeps the next race inviting.",
+        "robots": "index,follow,max-image-preview:large",
+        "themeColor": "#ff5746",
+        "appleItunesApp": "app-id=6828370811, affiliate-data=pt=128911414&ct=walkbop_weekly_challenge_banner",
+        "ogType": "article",
+        "ogTitle": "How to Make a Weekly Walking Challenge Work",
+        "ogDescription": "A repeatable seven-day structure for a walking challenge people want to join again.",
+        "ogImage": "https://kestoralabs.com/assets/screens/walkbop-items.png",
+        "twitterCard": "summary_large_image",
+        "icon": "/assets/walkbop.png",
+        "jsonLd": [
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How to Make a Weekly Walking Challenge Work",
+            "description": "A repeatable seven-day structure for a fair, social walking challenge.",
+            "datePublished": "2026-11-15",
+            "dateModified": "2026-11-15",
+            "mainEntityOfPage": "https://kestoralabs.com/walkbop/guides/weekly-walking-challenge/",
+            "image": "https://kestoralabs.com/assets/screens/walkbop-items.png",
+            "inLanguage": "en",
+            "author": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Kestora Labs",
+              "url": "https://kestoralabs.com/",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://kestoralabs.com/assets/walkbop.png"
+              }
+            }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "WalkBop",
+                "item": "https://kestoralabs.com/walkbop/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/walkbop/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Weekly Walking Challenge",
+                "item": "https://kestoralabs.com/walkbop/guides/weekly-walking-challenge/"
+              }
+            ]
+          }
+        ]
+      },
+      "article": [
+        "\n    ",
+        {
+          "tag": "header",
+          "attrs": {
+            "class": "article-hero"
+          },
+          "children": [
+            {
+              "tag": "div",
+              "attrs": {},
+              "children": [
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-kicker"
+                  },
+                  "children": [
+                    "Seven days, one fresh race · Practical guide"
+                  ]
+                },
+                {
+                  "tag": "h1",
+                  "attrs": {},
+                  "children": [
+                    "How to make a weekly walking challenge work"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-lead"
+                  },
+                  "children": [
+                    "A weekly walking challenge works best when every day has a purpose: a simple start, visible midweek movement, a clear finish and a reset that makes the next race feel possible. The challenge should add energy to ordinary walking, not turn every day into a test."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {
+                    "class": "article-byline"
+                  },
+                  "children": [
+                    "Published by Kestora Labs, the maker of WalkBop · Updated ",
+                    {
+                      "tag": "time",
+                      "attrs": {
+                        "datetime": "2026-11-15"
+                      },
+                      "children": [
+                        "November 15, 2026"
+                      ]
+                    },
+                    " · 5 min read"
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "aside",
+              "attrs": {
+                "class": "article-summary",
+                "aria-label": "Quick answer"
+              },
+              "children": [
+                {
+                  "tag": "span",
+                  "attrs": {},
+                  "children": [
+                    "Quick answer"
+                  ]
+                },
+                {
+                  "tag": "strong",
+                  "attrs": {},
+                  "children": [
+                    "How long should a walking challenge last?"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Seven days is a practical repeatable format: it includes weekdays and a weekend, creates enough time for comebacks, and ends before a large early lead becomes discouraging. Reset the standings for the next week."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "\n    ",
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-layout"
+          },
+          "children": [
+            {
+              "tag": "details",
+              "attrs": {
+                "class": "article-toc",
+                "open": null
+              },
+              "children": [
+                {
+                  "tag": "summary",
+                  "attrs": {},
+                  "children": [
+                    "On this page"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#rhythm"
+                      },
+                      "children": [
+                        "The rhythm"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#start"
+                      },
+                      "children": [
+                        "Start"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#middle"
+                      },
+                      "children": [
+                        "Midweek"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#weekend"
+                      },
+                      "children": [
+                        "Weekend"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#reset"
+                      },
+                      "children": [
+                        "Reset"
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "#sources"
+                      },
+                      "children": [
+                        "Sources"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "tag": "div",
+              "attrs": {
+                "class": "article-content"
+              },
+              "children": [
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "rhythm"
+                  },
+                  "children": [
+                    "Give the week a recognizable rhythm"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "People are more likely to return when they understand what happens next. Use the same start and finish each week. Show current totals, positions and nearby gaps. Keep the scoring stable so walkers can make sense of the race without rereading rules."
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "paper-list"
+                  },
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Day 1:"
+                          ]
+                        },
+                        " everyone starts from zero."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Days 2–4:"
+                          ]
+                        },
+                        " the group can see gaps and changing positions."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Days 5–6:"
+                          ]
+                        },
+                        " the weekend creates room for longer walks and comebacks."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Day 7:"
+                          ]
+                        },
+                        " finish at the stated time, recognize the result, then reset."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "start"
+                  },
+                  "children": [
+                    "Start with access, not pressure"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Invite a group that actually knows one another and make joining simple. Explain what step source is used, when the race begins and what information other participants can see. Avoid setting a mandatory daily target unless everyone agrees it fits their circumstances."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "If you are setting up the group for the first time, use the companion guide on ",
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "href": "/walkbop/guides/step-challenge-with-friends/"
+                      },
+                      "children": [
+                        "starting a step challenge with friends"
+                      ]
+                    },
+                    "."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "middle"
+                  },
+                  "children": [
+                    "Make midweek movement visible"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "The middle of a challenge is where attention can disappear. Show changes that matter: who moved up, which gap narrowed and whether someone returned to the race. In WalkBop, walking also earns mystery crates, and items can create playful changes in the race. The steps remain real; the game gives people more moments to care about them."
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Do not use public embarrassment or punishment to manufacture engagement. Friendly competition works when participants feel safe rejoining after a quiet day."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "weekend"
+                  },
+                  "children": [
+                    "Leave room for different schedules"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "A weekly format includes both workdays and a weekend, which makes it more representative than a single-day sprint. Some people walk most during commutes; others have time on Saturday or Sunday. If schedules or abilities differ greatly, use teams, personal baselines or a shared group target."
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "section-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "Walking is generally accessible, but it is not identical for everyone. A social challenge should accommodate disability, pain, illness and medical guidance rather than treating one step total as a universal measure of effort."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "reset"
+                  },
+                  "children": [
+                    "Let the next week be genuinely new"
+                  ]
+                },
+                {
+                  "tag": "p",
+                  "attrs": {},
+                  "children": [
+                    "Close the race at the promised time. Celebrate the winner and any memorable comeback, then clear the standings. A reset protects the challenge from becoming a permanent hierarchy. Someone who joined late or had a difficult week should have a credible reason to return."
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {
+                    "id": "sources"
+                  },
+                  "children": [
+                    "Sources"
+                  ]
+                },
+                {
+                  "tag": "ul",
+                  "attrs": {
+                    "class": "source-list"
+                  },
+                  "children": [
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://odphp.health.gov/sites/default/files/2019-09/Physical_Activity_Guidelines_2nd_edition.pdf"
+                          },
+                          "children": [
+                            "U.S. Department of Health and Human Services: Physical Activity Guidelines for Americans, 2nd edition."
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "href": "https://www.cdc.gov/physical-activity/php/about/index.html"
+                          },
+                          "children": [
+                            "CDC: About physical activity."
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "review-note"
+                  },
+                  "children": [
+                    {
+                      "tag": "p",
+                      "attrs": {},
+                      "children": [
+                        "This guide describes challenge design, not an individualized exercise prescription. Choose activity that is appropriate for your circumstances and professional advice."
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "section",
+                  "attrs": {
+                    "class": "app-callout",
+                    "aria-labelledby": "app-callout-title"
+                  },
+                  "children": [
+                    {
+                      "tag": "img",
+                      "attrs": {
+                        "src": "/assets/walkbop.png",
+                        "width": "320",
+                        "height": "320",
+                        "alt": "WalkBop app icon"
+                      },
+                      "children": []
+                    },
+                    {
+                      "tag": "div",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "p",
+                          "attrs": {
+                            "class": "article-kicker"
+                          },
+                          "children": [
+                            "A fresh story every week"
+                          ]
+                        },
+                        {
+                          "tag": "h2",
+                          "attrs": {
+                            "id": "app-callout-title"
+                          },
+                          "children": [
+                            "Race, react and come back next Monday."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "WalkBop turns Apple Health steps into weekly races with friends, visible gaps, mystery crates, playful items and racers that react to every twist."
+                          ]
+                        },
+                        {
+                          "tag": "a",
+                          "attrs": {
+                            "class": "button",
+                            "href": "https://apps.apple.com/app/apple-store/id6828370811?pt=128911414&mt=8&ct=walkbop_weekly_challenge_inline"
+                          },
+                          "children": [
+                            "View WalkBop on the App Store ↗"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n      ",
+                {
+                  "tag": "h2",
+                  "attrs": {},
+                  "children": [
+                    "Continue reading"
+                  ]
+                },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "related-grid"
+                  },
+                  "children": [
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/walkbop/guides/step-challenge-with-friends/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "Related guide"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "How to start a step challenge with friends"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "tag": "a",
+                      "attrs": {
+                        "class": "related-card",
+                        "href": "/walkbop/"
+                      },
+                      "children": [
+                        {
+                          "tag": "span",
+                          "attrs": {},
+                          "children": [
+                            "About the app"
+                          ]
+                        },
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Explore WalkBop"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "\n    "
+              ]
+            }
+          ]
+        },
+        {
+          "tag": "div",
+          "attrs": {
+            "class": "article-note"
+          },
+          "children": [
+            {
+              "tag": "p",
+              "attrs": {},
+              "children": [
+                "WalkBop is a social walking game, not a medical or fitness-prescription service. Apple Health access is optional but required to use real step totals in a live race."
+              ]
+            }
+          ]
+        },
+        "\n  "
+      ],
+      "card": {
+        "title": "How to Make a Weekly Walking Challenge Work",
+        "description": "Use a seven-day rhythm, a clean reset and small social moments to make ordinary walking feel worth returning to.",
+        "href": "weekly-walking-challenge/",
+        "order": 1
       }
     },
     "tiphaven.guide.average-bartender-salary-with-tips": {

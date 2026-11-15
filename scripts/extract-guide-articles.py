@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import urljoin, urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
-GUIDE_APPS = ['bulkbro', 'bumpecho', 'fovri', 'migraloom', 'oqvi']
+GUIDE_APPS = ['bulkbro', 'bumpecho', 'calmber', 'fovri', 'migraloom', 'oqvi', 'walkbop']
 SKIP = {('bulkbro', 'how-fast-should-you-gain-weight')}
 TIPHAVEN_ARTICLES = [
     'average-bartender-salary-with-tips',
@@ -97,7 +97,7 @@ for app, file in files:
         'card': None
     }
 
-for app in ['bulkbro', 'bumpecho', 'fovri', 'migraloom', 'oqvi', 'tiphaven']:
+for app in ['bulkbro', 'bumpecho', 'calmber', 'fovri', 'migraloom', 'oqvi', 'tiphaven', 'walkbop']:
     overview = (ROOT / app / 'guides' / 'index.html').read_text()
     cards = re.findall(r'<a class="guide-card" href="([^"]+)"><h2>([\s\S]*?)</h2><p>([\s\S]*?)</p><span>[\s\S]*?</span></a>', overview)
     for order, (href, title, description) in enumerate(cards):

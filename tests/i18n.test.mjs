@@ -17,10 +17,10 @@ test('registry and enabled locale content validate', async () => {
   assert.equal(content.en.home.meta.title, 'Kestora Labs — Independent iPhone Apps');
   assert.equal(Object.keys(content.en.pages).length, 8);
   assert.equal(Object.keys(content.en.guideOverviews.pages).length, 8);
-  assert.equal(Object.keys(content.en.guideArticles.pages).length, 55);
+  assert.equal(Object.keys(content.en.guideArticles.pages).length, 59);
   assert.equal(Object.keys(content.en.tools.pages).length, 5);
   assert.equal(Object.keys(content.en.legalPages.pages).length, 26);
-  assert.equal(pages.length, 103);
+  assert.equal(pages.length, 107);
 });
 
 test('locale paths are deterministic', () => {
