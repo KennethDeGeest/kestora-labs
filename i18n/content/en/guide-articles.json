@@ -12188,7 +12188,7 @@
         "ogType": "article",
         "ogTitle": "Cigarette Tracker App: What Is Worth Tracking?",
         "ogDescription": "Track enough context to notice patterns, not just a total that judges the day.",
-        "ogImage": "https://kestoralabs.com/assets/screens/calmber-insights.png",
+        "ogImage": "https://kestoralabs.com/assets/social/calmber-cigarette-tracker.png",
         "twitterCard": "summary_large_image",
         "icon": "/assets/calmber.png",
         "jsonLd": [
@@ -12200,7 +12200,7 @@
             "datePublished": "2026-11-15",
             "dateModified": "2026-11-15",
             "mainEntityOfPage": "https://kestoralabs.com/calmber/guides/cigarette-tracker-app/",
-            "image": "https://kestoralabs.com/assets/screens/calmber-insights.png",
+            "image": "https://kestoralabs.com/assets/social/calmber-cigarette-tracker.png",
             "inLanguage": "en",
             "author": {
               "@type": "Organization",
@@ -13022,7 +13022,7 @@
         "ogType": "article",
         "ogTitle": "How to Identify Your Smoking Triggers",
         "ogDescription": "Observe the moment before the cigarette, group repeated situations, and prepare one realistic response.",
-        "ogImage": "https://kestoralabs.com/assets/screens/calmber-home.png",
+        "ogImage": "https://kestoralabs.com/assets/social/calmber-smoking-triggers.png",
         "twitterCard": "summary_large_image",
         "icon": "/assets/calmber.png",
         "jsonLd": [
@@ -13034,7 +13034,7 @@
             "datePublished": "2026-11-15",
             "dateModified": "2026-11-15",
             "mainEntityOfPage": "https://kestoralabs.com/calmber/guides/how-to-identify-smoking-triggers/",
-            "image": "https://kestoralabs.com/assets/screens/calmber-home.png",
+            "image": "https://kestoralabs.com/assets/social/calmber-smoking-triggers.png",
             "inLanguage": "en",
             "author": {
               "@type": "Organization",
@@ -13454,6 +13454,171 @@
                     }
                   ]
                 },
+                {
+                  "tag": "div",
+                  "attrs": {
+                    "class": "comparison-scroll",
+                    "aria-label": "Example smoking trigger log"
+                  },
+                  "children": [
+                    {
+                      "tag": "table",
+                      "attrs": {
+                        "class": "comparison"
+                      },
+                      "children": [
+                        {
+                          "tag": "thead",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "tr",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "th",
+                                  "attrs": {},
+                                  "children": [
+                                    "Time"
+                                  ]
+                                },
+                                {
+                                  "tag": "th",
+                                  "attrs": {},
+                                  "children": [
+                                    "Situation"
+                                  ]
+                                },
+                                {
+                                  "tag": "th",
+                                  "attrs": {},
+                                  "children": [
+                                    "Feeling"
+                                  ]
+                                },
+                                {
+                                  "tag": "th",
+                                  "attrs": {},
+                                  "children": [
+                                    "What I tried"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "tag": "tbody",
+                          "attrs": {},
+                          "children": [
+                            {
+                              "tag": "tr",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "08:10"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Coffee before work"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Automatic urge"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Changed rooms for five minutes"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "tr",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "13:20"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "After lunch"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Restless"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Short walk"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "tag": "tr",
+                              "attrs": {},
+                              "children": [
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "18:05"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Commute home"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Stressed"
+                                  ]
+                                },
+                                {
+                                  "tag": "td",
+                                  "attrs": {},
+                                  "children": [
+                                    "Slow breathing"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
                 "\n      ",
                 {
                   "tag": "h2",
@@ -13514,11 +13679,11 @@
                     {
                       "tag": "img",
                       "attrs": {
-                        "src": "/assets/screens/calmber-home.png",
+                        "src": "/assets/screens/calmber-craving-tools.png",
                         "width": "1206",
                         "height": "2622",
                         "loading": "lazy",
-                        "alt": "Calmber home screen with the lung buddy and today's smoking plan"
+                        "alt": "Calmber craving-support screen with breathing, delay and urge-surf tools"
                       },
                       "children": []
                     },
@@ -13530,14 +13695,14 @@
                           "tag": "strong",
                           "attrs": {},
                           "children": [
-                            "Keep today's next step easy to find."
+                            "Prepare a small response before the urge arrives."
                           ]
                         },
                         {
                           "tag": "span",
                           "attrs": {},
                           "children": [
-                            "The Calmber home screen puts the current plan, quick logging and the lung buddy in one place for the moment when a familiar trigger appears."
+                            "This is the real Calmber craving-support screen: Breathe, Delay gently and Urge surf offer short, clearly timed options for the moment when a trigger becomes an urge."
                           ]
                         }
                       ]
@@ -33614,7 +33779,7 @@
         "ogType": "article",
         "ogTitle": "How to Start a Step Challenge With Friends",
         "ogDescription": "A simple format for turning everyday steps into a fair and lively group challenge.",
-        "ogImage": "https://kestoralabs.com/assets/screens/walkbop-race.png",
+        "ogImage": "https://kestoralabs.com/assets/social/walkbop-step-challenge.png",
         "twitterCard": "summary_large_image",
         "icon": "/assets/walkbop.png",
         "jsonLd": [
@@ -33626,7 +33791,7 @@
             "datePublished": "2026-11-15",
             "dateModified": "2026-11-15",
             "mainEntityOfPage": "https://kestoralabs.com/walkbop/guides/step-challenge-with-friends/",
-            "image": "https://kestoralabs.com/assets/screens/walkbop-race.png",
+            "image": "https://kestoralabs.com/assets/social/walkbop-step-challenge.png",
             "inLanguage": "en",
             "author": {
               "@type": "Organization",
@@ -33890,7 +34055,9 @@
                 },
                 {
                   "tag": "ol",
-                  "attrs": {},
+                  "attrs": {
+                    "class": "rule-list"
+                  },
                   "children": [
                     {
                       "tag": "li",
@@ -34284,7 +34451,7 @@
         "ogType": "article",
         "ogTitle": "How to Make a Weekly Walking Challenge Work",
         "ogDescription": "A repeatable seven-day structure for a walking challenge people want to join again.",
-        "ogImage": "https://kestoralabs.com/assets/screens/walkbop-items.png",
+        "ogImage": "https://kestoralabs.com/assets/social/walkbop-weekly-challenge.png",
         "twitterCard": "summary_large_image",
         "icon": "/assets/walkbop.png",
         "jsonLd": [
@@ -34296,7 +34463,7 @@
             "datePublished": "2026-11-15",
             "dateModified": "2026-11-15",
             "mainEntityOfPage": "https://kestoralabs.com/walkbop/guides/weekly-walking-challenge/",
-            "image": "https://kestoralabs.com/assets/screens/walkbop-items.png",
+            "image": "https://kestoralabs.com/assets/social/walkbop-weekly-challenge.png",
             "inLanguage": "en",
             "author": {
               "@type": "Organization",
@@ -34542,9 +34709,9 @@
                   ]
                 },
                 {
-                  "tag": "div",
+                  "tag": "ol",
                   "attrs": {
-                    "class": "paper-list"
+                    "class": "week-plan"
                   },
                   "children": [
                     {
@@ -34555,10 +34722,10 @@
                           "tag": "strong",
                           "attrs": {},
                           "children": [
-                            "Day 1:"
+                            "Day 1"
                           ]
                         },
-                        " everyone starts from zero."
+                        "Start together from zero."
                       ]
                     },
                     {
@@ -34569,10 +34736,10 @@
                           "tag": "strong",
                           "attrs": {},
                           "children": [
-                            "Days 2–4:"
+                            "Day 2"
                           ]
                         },
-                        " the group can see gaps and changing positions."
+                        "Check that everyone is syncing."
                       ]
                     },
                     {
@@ -34583,10 +34750,10 @@
                           "tag": "strong",
                           "attrs": {},
                           "children": [
-                            "Days 5–6:"
+                            "Day 3"
                           ]
                         },
-                        " the weekend creates room for longer walks and comebacks."
+                        "Notice the nearest gap."
                       ]
                     },
                     {
@@ -34597,10 +34764,52 @@
                           "tag": "strong",
                           "attrs": {},
                           "children": [
-                            "Day 7:"
+                            "Day 4"
                           ]
                         },
-                        " finish at the stated time, recognize the result, then reset."
+                        "Share one encouraging update."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Day 5"
+                          ]
+                        },
+                        "Leave room for a comeback."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Day 6"
+                          ]
+                        },
+                        "Use the weekend naturally."
+                      ]
+                    },
+                    {
+                      "tag": "li",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "tag": "strong",
+                          "attrs": {},
+                          "children": [
+                            "Day 7"
+                          ]
+                        },
+                        "Finish, recognize and reset."
                       ]
                     }
                   ]
