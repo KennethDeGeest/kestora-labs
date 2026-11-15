@@ -2235,6 +2235,36 @@
                 "url": "https://kestoralabs.com/assets/bulkbro.png"
               }
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "BulkBro",
+                "item": "https://kestoralabs.com/bulkbro/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/bulkbro/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "How BulkBro Guides Are Researched",
+                "item": "https://kestoralabs.com/bulkbro/guides/editorial-policy/"
+              }
+            ]
           }
         ]
       },
@@ -14016,6 +14046,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Best Recipe App for iPhone: How to Choose in 2026",
+                "item": "https://kestoralabs.com/fovri/guides/best-recipe-app/"
+              }
+            ]
           }
         ]
       },
@@ -14627,6 +14687,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Best Recipe Keeper App for iPhone (2026)",
+                "item": "https://kestoralabs.com/fovri/guides/best-recipe-keeper-app/"
+              }
+            ]
           }
         ]
       },
@@ -15092,6 +15182,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Best Recipe Organizer App for iPhone (2026)",
+                "item": "https://kestoralabs.com/fovri/guides/best-recipe-organizer-app/"
+              }
+            ]
           }
         ]
       },
@@ -15697,6 +15817,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Cookbook App for iPhone: Organize, Plan and Cook",
+                "item": "https://kestoralabs.com/fovri/guides/cookbook-app/"
+              }
+            ]
           }
         ]
       },
@@ -16162,6 +16312,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "How to Build a Digital Recipe Book That Lasts",
+                "item": "https://kestoralabs.com/fovri/guides/digital-recipe-book/"
+              }
+            ]
           }
         ]
       },
@@ -16641,6 +16821,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Meal Planning App With Grocery List for iPhone",
+                "item": "https://kestoralabs.com/fovri/guides/meal-planning-app-with-grocery-list/"
+              }
+            ]
           }
         ]
       },
@@ -17106,6 +17316,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Recipe App for iPhone: The Features That Matter",
+                "item": "https://kestoralabs.com/fovri/guides/recipe-app-for-iphone/"
+              }
+            ]
           }
         ]
       },
@@ -17578,6 +17818,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Recipe Manager App for iPhone: A Practical Guide",
+                "item": "https://kestoralabs.com/fovri/guides/recipe-manager-app/"
+              }
+            ]
           }
         ]
       },
@@ -18153,6 +18423,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "How to Save Recipes From Instagram on iPhone",
+                "item": "https://kestoralabs.com/fovri/guides/save-recipes-from-instagram/"
+              }
+            ]
           }
         ]
       },
@@ -18618,6 +18918,36 @@
               "applicationCategory": "FoodApplication",
               "operatingSystem": "iOS"
             }
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Kestora Labs",
+                "item": "https://kestoralabs.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fovri",
+                "item": "https://kestoralabs.com/fovri/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Guides",
+                "item": "https://kestoralabs.com/fovri/guides/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "How to Save Recipes From TikTok on iPhone",
+                "item": "https://kestoralabs.com/fovri/guides/save-recipes-from-tiktok/"
+              }
+            ]
           }
         ]
       },
@@ -19823,7 +20153,7 @@
                         {
                           "tag": "a",
                           "attrs": {
-                            "href": "https://apps.apple.com/app/id6811065580",
+                            "href": "https://apps.apple.com/app/id6811065580?pt=128911414&mt=8&ct=migraloom_migraloom_guides_best_migraine_tracker_apps_cta_1",
                             "rel": "noopener"
                           },
                           "children": [

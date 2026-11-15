@@ -15,6 +15,17 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const outputRoot = join(root, site.previewDirectory);
 const contentByLocale = await loadContent(root);
 
+function withTracking(html) {
+  let output = html;
+  if (!output.includes('/analytics-consent.css')) {
+    output = output.replace('</head>', '  <link rel="stylesheet" href="/analytics-consent.css?v=20261115">\n</head>');
+  }
+  if (!output.includes('/analytics.js')) {
+    output = output.replace('</body>', '  <script src="/analytics.js?v=20261115" defer></script>\n</body>');
+  }
+  return output;
+}
+
 await rm(outputRoot, { recursive: true, force: true });
 for (const [locale, localeContent] of Object.entries(contentByLocale)) {
   for (const page of pages) {
@@ -47,7 +58,7 @@ for (const [locale, localeContent] of Object.entries(contentByLocale)) {
     } else {
       html = renderLegalPage({ locale, page, content: localeContent.legalPages.pages[page.id], common: localeContent.common, contentByLocale });
     }
-    await writeFile(destination, html, 'utf8');
+    await writeFile(destination, withTracking(html), 'utf8');
   }
 }
 

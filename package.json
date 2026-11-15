@@ -9,6 +9,7 @@
     "i18n:parity": "node scripts/i18n-parity.mjs",
     "i18n:promote": "node scripts/i18n-promote.mjs",
     "i18n:verify": "npm run i18n:inventory && npm run i18n:check && npm test && npm run i18n:build && npm run i18n:parity",
+    "audit:guides": "node scripts/audit-guide-tracking.mjs",
     "test": "node --test tests/i18n.test.mjs"
   }
 }

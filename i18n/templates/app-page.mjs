@@ -3,7 +3,15 @@ import { renderLanguageSwitcher } from './language-switcher.mjs';
 
 const e = escapeHtml;
 
+function campaignUrl(base, app, placement) {
+  const separator = base.includes('?') ? '&' : '?';
+  return `${base}${separator}pt=128911414&mt=8&ct=${app}_${app}_cta_${placement}`;
+}
+
 export function renderAppPage({ locale, page, content, common, contentByLocale }) {
+  const app = page.id.split('.')[0];
+  const heroAppStore = campaignUrl(page.appStore, app, 1);
+  const bottomAppStore = campaignUrl(page.appStore, app, 2);
   const languageSwitcher = renderLanguageSwitcher({ locale, page, contentByLocale, label: common.ui.language });
   const screenshotAssets = page.assets.screenshotsByLocale?.[locale] ?? page.assets.screenshots;
   const screenshots = content.screenshots.map((item, index) =>
@@ -41,7 +49,7 @@ export function renderAppPage({ locale, page, content, common, contentByLocale }
         <div class="app-case-copy">
           <div class="app-case-heading"><h1>${e(content.hero.name)}</h1><p class="dialog-subtitle">${e(content.hero.subtitle)}</p></div>
           <p class="dialog-description">${e(content.hero.description)}</p>
-          <div class="app-page-actions"><a class="button dark" href="${e(page.appStore)}">${e(common.ui.viewAppStore)} <span aria-hidden="true">↗</span></a>${page.routes.guides ? `<a class="button" href="${e(localeRoute(locale, page.routes.guides))}">${e(common.ui.browseGuides)} <span aria-hidden="true">→</span></a>` : ''}</div>
+          <div class="app-page-actions"><a class="button dark" href="${e(heroAppStore)}">${e(common.ui.viewAppStore)} <span aria-hidden="true">↗</span></a>${page.routes.guides ? `<a class="button" href="${e(localeRoute(locale, page.routes.guides))}">${e(common.ui.browseGuides)} <span aria-hidden="true">→</span></a>` : ''}</div>
         </div>
       </header>
       <section class="app-showcase" aria-label="${e(common.ui.screenshots)}"><div class="screenshot-track">
@@ -51,7 +59,7 @@ export function renderAppPage({ locale, page, content, common, contentByLocale }
         <div class="app-case-summary"><p class="section-label">${e(content.summary.label)}</p><h2>${e(content.summary.title)}</h2><p>${e(content.summary.body)}</p></div>
         <div class="app-case-features"><p class="section-label">${e(common.ui.whatItDoes)}</p><ul>${features}</ul></div>
       </section>
-      <section class="app-page-bottom-cta"><div><h2>${e(content.cta.title)}</h2><p>${e(content.cta.body)}</p></div><a class="button dark" href="${e(page.appStore)}">${e(common.ui.viewAppStore)} <span aria-hidden="true">↗</span></a></section>
+      <section class="app-page-bottom-cta"><div><h2>${e(content.cta.title)}</h2><p>${e(content.cta.body)}</p></div><a class="button dark" href="${e(bottomAppStore)}">${e(common.ui.viewAppStore)} <span aria-hidden="true">↗</span></a></section>
       <div class="app-case-footer"><p>${e(content.footer.note)}</p><nav class="dialog-legal" aria-label="${e(common.ui.appInformation)}"><a href="${e(localeRoute(locale, page.routes.privacy))}">${e(common.ui.privacy)}</a><a href="${e(localeRoute(locale, page.routes.terms))}">${e(common.ui.terms)}</a><a href="${e(localeRoute(locale, page.routes.support))}">${e(common.ui.support)}</a></nav></div>
     </article>
   </main>
