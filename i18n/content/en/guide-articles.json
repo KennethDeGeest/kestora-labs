@@ -17247,14 +17247,14 @@
     },
     "migraloom.guide.best-migraine-tracker-apps": {
       "meta": {
-        "title": "Best Migraine Tracker Apps — Our No-Subscription Pick | MigraLoom",
-        "description": "Compare five migraine tracker apps for iPhone and see which logging, privacy, reporting and payment model fits your routine.",
+        "title": "Best Migraine Tracker Apps — Privacy, Reports & Pricing | MigraLoom",
+        "description": "Compare five migraine tracker apps for iPhone by logging, privacy, reporting and payment model, including MigraLoom’s monthly and lifetime access options.",
         "robots": "index,follow,max-image-preview:large",
         "themeColor": "#fafafa",
         "appleItunesApp": "app-id=6811065580, affiliate-data=pt=128911414&ct=migraloom_best_migraine_tracker_apps",
         "ogType": "article",
-        "ogTitle": "Best Migraine Tracker Apps — Our No-Subscription Pick",
-        "ogDescription": "Compare five migraine tracker apps for iPhone and see which logging, privacy, reporting and payment model fits your routine.",
+        "ogTitle": "Best Migraine Tracker Apps — Privacy, Reports & Pricing",
+        "ogDescription": "Compare five migraine tracker apps for iPhone by logging, privacy, reporting and payment model, including MigraLoom’s monthly and lifetime access options.",
         "ogImage": "https://kestoralabs.com/assets/guides/migraloom-best-migraine-tracker-apps.png",
         "twitterCard": "summary_large_image",
         "icon": "/assets/migraloom.png",
@@ -17262,11 +17262,11 @@
           {
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Best Migraine Tracker Apps — Our No-Subscription Pick",
-            "description": "Compare five migraine tracker apps for iPhone and see which logging, privacy, reporting and payment model fits your routine.",
+            "headline": "Best Migraine Tracker Apps — Privacy, Reports & Pricing",
+            "description": "Compare five migraine tracker apps for iPhone by logging, privacy, reporting and payment model, including MigraLoom’s monthly and lifetime access options.",
             "image": "https://kestoralabs.com/assets/guides/migraloom-best-migraine-tracker-apps.png",
             "datePublished": "2026-11-05",
-            "dateModified": "2026-11-11",
+            "dateModified": "2026-11-15",
             "author": {
               "@type": "Organization",
               "name": "Kestora Labs"
@@ -17321,7 +17321,7 @@
               {
                 "@type": "ListItem",
                 "position": 4,
-                "name": "Best Migraine Tracker Apps — Our No-Subscription Pick",
+                "name": "Best Migraine Tracker Apps — Privacy, Reports & Pricing",
                 "item": "https://kestoralabs.com/migraloom/guides/best-migraine-tracker-apps/"
               }
             ]
@@ -17711,7 +17711,7 @@
                                   "tag": "td",
                                   "attrs": {},
                                   "children": [
-                                    "Five episodes free; one-time unlock"
+                                    "Paid after onboarding; monthly or one-time lifetime access"
                                   ]
                                 }
                               ]
@@ -18181,22 +18181,22 @@
         "\n    "
       ],
       "card": {
-        "title": "Best Migraine Tracker Apps — Our No-Subscription Pick",
-        "description": "Compare five migraine tracker apps for iPhone. See why MigraLoom is our pick for private migraine tracking with a one-time unlock instead of a subscription.",
+        "title": "Best Migraine Tracker Apps — Privacy, Reports & Pricing",
+        "description": "Compare five migraine tracker apps for iPhone, including MigraLoom’s private on-device journal with monthly or one-time lifetime access after onboarding.",
         "href": "best-migraine-tracker-apps/",
         "order": 0
       }
     },
     "migraloom.guide.free-migraine-tracking-app": {
       "meta": {
-        "title": "Free Migraine Tracking Apps — What “Free” Really Means | MigraLoom",
-        "description": "Compare common free migraine tracker models, including limits, trials, subscriptions, exports and privacy questions to check first.",
+        "title": "Free Migraine Tracking Apps — Limits, Privacy & Paid Access | MigraLoom",
+        "description": "Compare migraine tracker access models, limits, subscriptions, exports and privacy, and learn how MigraLoom’s paid access works after onboarding.",
         "robots": "index,follow,max-image-preview:large",
         "themeColor": "#fafafa",
         "appleItunesApp": "app-id=6811065580, affiliate-data=pt=128911414&ct=migraloom_free_migraine_tracking_app",
         "ogType": "article",
-        "ogTitle": "Free Migraine Tracking Apps — What “Free” Really Means",
-        "ogDescription": "Compare common free migraine tracker models, including limits, trials, subscriptions, exports and privacy questions to check first.",
+        "ogTitle": "Free Migraine Tracking Apps — Limits, Privacy & Paid Access",
+        "ogDescription": "Compare migraine tracker access models, limits, subscriptions, exports and privacy, and learn how MigraLoom’s paid access works after onboarding.",
         "ogImage": "https://kestoralabs.com/assets/guides/migraloom-free-migraine-tracking-app.png",
         "twitterCard": "summary_large_image",
         "icon": "/assets/migraloom.png",
@@ -18204,11 +18204,11 @@
           {
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "Free Migraine Tracking Apps — What “Free” Really Means",
-            "description": "Compare common free migraine tracker models, including limits, trials, subscriptions, exports and privacy questions to check first.",
+            "headline": "Free Migraine Tracking Apps — Limits, Privacy & Paid Access",
+            "description": "Compare migraine tracker access models, limits, subscriptions, exports and privacy, and learn how MigraLoom’s paid access works after onboarding.",
             "image": "https://kestoralabs.com/assets/guides/migraloom-free-migraine-tracking-app.png",
             "datePublished": "2026-11-05",
-            "dateModified": "2026-11-11",
+            "dateModified": "2026-11-15",
             "author": {
               "@type": "Organization",
               "name": "Kestora Labs"
@@ -18257,7 +18257,7 @@
               {
                 "@type": "ListItem",
                 "position": 4,
-                "name": "Free Migraine Tracking Apps — What “Free” Really Means",
+                "name": "Free Migraine Tracking Apps — Limits, Privacy & Paid Access",
                 "item": "https://kestoralabs.com/migraloom/guides/free-migraine-tracking-app/"
               }
             ]
@@ -18585,14 +18585,14 @@
                     "id": "migraloom"
                   },
                   "children": [
-                    "How MigraLoom’s free allowance works"
+                    "How MigraLoom’s paid access works"
                   ]
                 },
                 {
                   "tag": "p",
                   "attrs": {},
                   "children": [
-                    "MigraLoom lets you complete five episodes before continued logging requires a one-time unlock. Existing entries remain part of your local history. There is no required account or recurring subscription."
+                    "MigraLoom requires paid access after onboarding. Choose monthly access or a one-time lifetime purchase. No account is required, and your journal stays stored on your iPhone."
                   ]
                 },
                 {
@@ -18758,8 +18758,8 @@
         "\n    "
       ],
       "card": {
-        "title": "Free Migraine Tracking Apps — What “Free” Really Means",
-        "description": "Compare common free migraine tracker models, including limits, trials, subscriptions, exports and privacy questions to check before building a long history.",
+        "title": "Free Migraine Tracking Apps — Limits, Privacy & Paid Access",
+        "description": "Compare migraine tracker access models, limits, subscriptions, exports and privacy, including MigraLoom’s paid access after onboarding.",
         "href": "free-migraine-tracking-app/",
         "order": 1
       }
