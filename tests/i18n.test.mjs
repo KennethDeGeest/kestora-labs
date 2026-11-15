@@ -75,13 +75,13 @@ test('search identity uses the current Kestora K mark', async () => {
   const [home, dutchHome, favicon, manifest] = await Promise.all([
     readFile(resolve(root, 'index.html'), 'utf8'),
     readFile(resolve(root, 'nl/index.html'), 'utf8'),
-    readFile(resolve(root, 'favicon.svg'), 'utf8'),
+    readFile(resolve(root, 'favicon.png')),
     readFile(resolve(root, 'site.webmanifest'), 'utf8')
   ]);
-  assert.match(home, /rel="icon" type="image\/svg\+xml" href="\/favicon\.svg"/);
-  assert.match(dutchHome, /rel="icon" type="image\/svg\+xml" href="\/favicon\.svg"/);
-  assert.match(favicon, /<path d="M18 14v36h8V36l12 14h10L32 31l15-17H37L26 28V14z"/);
-  assert.equal(JSON.parse(manifest).icons[0].src, '/favicon.svg');
+  assert.match(home, /rel="icon" type="image\/png" href="\/favicon\.png"/);
+  assert.match(dutchHome, /rel="icon" type="image\/png" href="\/favicon\.png"/);
+  assert.deepEqual([...favicon.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
+  assert.equal(JSON.parse(manifest).icons[0].src, '/favicon.png');
 });
 
 test('sitemap excludes retired French and Spanish sections', async () => {

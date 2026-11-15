@@ -28,14 +28,14 @@ export function renderHomePage({ locale, page, content, common, contentByLocale 
   <meta name="theme-color" content="#fafafa">
   <meta name="legal-template-version" content="20261111-5">
   <title>${e(content.meta.title)}</title>
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="manifest" href="/site.webmanifest">
   <script type="application/ld+json">${JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Kestora Labs',
     url: 'https://kestoralabs.com/',
-    logo: 'https://kestoralabs.com/favicon.svg'
+    logo: 'https://kestoralabs.com/favicon.png'
   }).replaceAll('<', '\\u003c')}</script>
   <link rel="stylesheet" href="/site.css?v=20261113-language-menu">
 </head>
