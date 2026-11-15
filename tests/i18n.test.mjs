@@ -13,19 +13,13 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 
 test('registry and enabled locale content validate', async () => {
   const content = await loadContent(root);
-  assert.deepEqual(Object.keys(content), ['en', 'nl']);
+  assert.deepEqual(Object.keys(content), ['en']);
   assert.equal(content.en.home.meta.title, 'Kestora Labs — Independent iPhone Apps');
   assert.equal(Object.keys(content.en.pages).length, 8);
   assert.equal(Object.keys(content.en.guideOverviews.pages).length, 8);
   assert.equal(Object.keys(content.en.guideArticles.pages).length, 55);
   assert.equal(Object.keys(content.en.tools.pages).length, 5);
   assert.equal(Object.keys(content.en.legalPages.pages).length, 26);
-  assert.equal(content.nl.home.meta.title, 'Kestora Labs — Onafhankelijke iPhone-apps');
-  assert.equal(Object.keys(content.nl.pages).length, 8);
-  assert.equal(Object.keys(content.nl.guideOverviews.pages).length, 8);
-  assert.equal(Object.keys(content.nl.guideArticles.pages).length, 0);
-  assert.equal(Object.keys(content.nl.tools.pages).length, 0);
-  assert.equal(Object.keys(content.nl.legalPages.pages).length, 26);
   assert.equal(pages.length, 103);
 });
 
@@ -37,15 +31,11 @@ test('locale paths are deterministic', () => {
   assert.equal(outputPath('en', '/fovri/'), 'fovri/index.html');
 });
 
-test('language switcher uses a scalable accessible menu', async () => {
+test('language switcher stays hidden when only one locale is enabled', async () => {
   const content = await loadContent(root);
   const page = pages.find(candidate => candidate.id === 'site.home');
-  const html = renderLanguageSwitcher({ locale: 'nl', page, contentByLocale: content, label: 'Taal' });
-  assert.match(html, /<details class="language-switcher">/);
-  assert.match(html, /<summary aria-label="Taal">/);
-  assert.match(html, /href="\/"[^>]*>[^<]*<span class="language-option-name">English<\/span>/);
-  assert.match(html, /href="\/nl\/"[^>]*aria-current="page"[^>]*>[^<]*<span class="language-option-name">Nederlands<\/span>/);
-  assert.doesNotMatch(html, /<select/);
+  const html = renderLanguageSwitcher({ locale: 'en', page, contentByLocale: content, label: 'Language' });
+  assert.equal(html, '');
 });
 
 test('core pages are shared while SEO inventories are locale-specific', () => {
@@ -72,21 +62,19 @@ test('Dutch app pages use complete localized screenshot sets', async () => {
 });
 
 test('search identity uses the current Kestora K mark', async () => {
-  const [home, dutchHome, favicon, manifest] = await Promise.all([
+  const [home, favicon, manifest] = await Promise.all([
     readFile(resolve(root, 'index.html'), 'utf8'),
-    readFile(resolve(root, 'nl/index.html'), 'utf8'),
     readFile(resolve(root, 'favicon.png')),
     readFile(resolve(root, 'site.webmanifest'), 'utf8')
   ]);
   assert.match(home, /rel="icon" type="image\/png" href="\/favicon\.png"/);
-  assert.match(dutchHome, /rel="icon" type="image\/png" href="\/favicon\.png"/);
   assert.deepEqual([...favicon.subarray(0, 8)], [137, 80, 78, 71, 13, 10, 26, 10]);
   assert.equal(JSON.parse(manifest).icons[0].src, '/favicon.png');
 });
 
-test('sitemap excludes retired French and Spanish sections', async () => {
+test('sitemap excludes all retired localized sections', async () => {
   const sitemap = await readFile(resolve(root, 'sitemap.xml'), 'utf8');
-  assert.doesNotMatch(sitemap, /kestoralabs\.com\/(?:es|fr)\//);
+  assert.doesNotMatch(sitemap, /kestoralabs\.com\/(?:es|fr|nl)\//);
 });
 
 test('completed Dutch legal-page batches preserve the protected English structure', async () => {

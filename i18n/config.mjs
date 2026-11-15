@@ -8,7 +8,7 @@ export const site = {
 // explicitly enabled after its complete content set passes validation.
 export const locales = {
   en: { label: 'English', htmlLang: 'en', prefix: '', enabled: true },
-  nl: { label: 'Nederlands', htmlLang: 'nl', prefix: '/nl', enabled: true, screenshotDirectory: '/assets/screens/nl' }
+  nl: { label: 'Nederlands', htmlLang: 'nl', prefix: '/nl', enabled: false, screenshotDirectory: '/assets/screens/nl' }
 };
 
 const localizedScreenshotSets = (slug, screenshots) => Object.fromEntries(
