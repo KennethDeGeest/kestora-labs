@@ -23,10 +23,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -1399,7 +1401,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -1426,10 +1429,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -2607,7 +2612,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -2634,10 +2640,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -3196,7 +3204,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -3223,10 +3232,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -3931,7 +3942,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -3958,10 +3970,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -4712,7 +4726,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -4739,10 +4754,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -5348,7 +5365,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -5374,10 +5392,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent=new Date().getFullYear()"
@@ -6004,7 +6024,9 @@
               ]
             }
           ]
-        }
+        },
+        "  ",
+        "\n"
       ]
     },
     "calmber.legal.terms": {
@@ -6029,10 +6051,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent=new Date().getFullYear()"
@@ -6672,7 +6696,9 @@
               ]
             }
           ]
-        }
+        },
+        "  ",
+        "\n"
       ]
     },
     "calmber.legal.support": {
@@ -6697,10 +6723,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent=new Date().getFullYear()"
@@ -7242,7 +7270,9 @@
               ]
             }
           ]
-        }
+        },
+        "  ",
+        "\n"
       ]
     },
     "fovri.legal.privacy": {
@@ -7268,10 +7298,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -7461,7 +7493,7 @@
                         "class": "legal-updated"
                       },
                       "children": [
-                        "Last updated 11 November 2026"
+                        "Last updated 16 November 2026"
                       ]
                     },
                     "\n      "
@@ -7577,14 +7609,21 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Purchases and subscriptions"
+                            "Purchases and access"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Apple processes App Store payments. RevenueCat helps Fovri display offers, confirm subscription access and restore purchases. These services may process purchase, product, entitlement, app and device information. Fovri does not receive your full payment-card details."
+                            "Apple processes App Store payments. RevenueCat helps Fovri display monthly and lifetime offers, confirm Fovri Pro access and restore purchases. These services may process purchase, product, entitlement, app and device information. Fovri does not receive your full payment-card details."
+                          ]
+                        },
+                        {
+                          "tag": "p",
+                          "attrs": {},
+                          "children": [
+                            "If you dismiss Apple’s purchase confirmation without completing a purchase, Fovri may ask why you decided not to continue. Responding is optional. The selected reason may be recorded as an analytics event to improve the offer; it is not added to your cookbook and does not include recipe content."
                           ]
                         }
                       ]
@@ -7892,7 +7931,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -7919,10 +7959,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -8112,7 +8154,7 @@
                         "class": "legal-updated"
                       },
                       "children": [
-                        "Last updated 11 November 2026"
+                        "Last updated 16 November 2026"
                       ]
                     },
                     "\n      "
@@ -8168,21 +8210,21 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Subscriptions and access"
+                            "Purchases and access"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Fovri Pro is offered through auto-renewing monthly and yearly subscriptions at the price shown before purchase. Any trial or introductory offer is shown in Apple’s confirmation sheet and is subject to Apple’s eligibility rules. Subscriptions renew unless cancelled through your Apple Account before the current period ends. Deleting Fovri does not cancel a subscription."
+                            "Fovri requires Fovri Pro after onboarding. The current offer includes a one-time lifetime purchase and an auto-renewing monthly subscription at the prices shown before purchase. Lifetime access is not a subscription. The monthly subscription renews unless cancelled through your Apple Account before the current billing period ends. Deleting Fovri does not cancel a subscription."
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Restore Purchases can restore eligible access bought with the same Apple Account. Apple handles billing and refund requests. Mandatory consumer rights continue to apply."
+                            "Restore Purchases can restore eligible access bought with the same Apple Account. A valid legacy yearly subscription may continue to be recognised until it expires or is revoked, but it is not part of the current offer. Buying lifetime access does not automatically cancel an existing subscription. Apple handles billing and refund requests. Mandatory consumer rights continue to apply."
                           ]
                         }
                       ]
@@ -8487,7 +8529,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -8514,10 +8557,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -8707,7 +8752,7 @@
                         "class": "legal-updated"
                       },
                       "children": [
-                        "Updated 4 November 2026"
+                        "Updated 16 November 2026"
                       ]
                     },
                     "\n      "
@@ -8770,21 +8815,21 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Subscriptions, trial and purchase restoration"
+                            "Monthly, lifetime and purchase restoration"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Fovri requires an active Fovri Pro subscription after onboarding. The monthly plan is billed immediately. Eligible new subscribers can receive a 14-day free trial on the yearly plan only; Apple determines eligibility and shows the applicable terms before confirmation. Unless cancelled before the trial ends, the yearly subscription renews at the displayed yearly price."
+                            "Fovri requires Fovri Pro after onboarding. Choose the one-time lifetime purchase or the auto-renewing monthly subscription at the prices Apple shows before purchase. Lifetime access does not renew. The monthly subscription renews until you cancel it in your Apple Account settings."
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Open Settings → Fovri Pro → View subscription plans. Choose Restore purchases using the Apple Account that bought your subscription. Manage or cancel subscriptions in your Apple Account settings. Cancelling or deleting the app does not remove the local cookbook, and deleting the app does not cancel billing. Apple handles ",
+                            "Open Settings → Fovri Pro → View plans. Choose Restore purchases using the Apple Account that bought Fovri Pro. Buying lifetime access does not automatically cancel an existing subscription. Cancelling or deleting the app does not remove the local cookbook, and deleting the app does not cancel billing. Apple handles ",
                             {
                               "tag": "a",
                               "attrs": {
@@ -9059,7 +9104,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -9086,10 +9132,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -9685,7 +9733,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n  \n",
+        "  ",
         "\n"
       ]
     },
@@ -9712,10 +9761,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -10412,7 +10463,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n  \n",
+        "  ",
         "\n"
       ]
     },
@@ -10439,10 +10491,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -10985,7 +11039,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n  \n",
+        "  ",
         "\n"
       ]
     },
@@ -11012,10 +11067,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -11569,7 +11626,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -11596,10 +11654,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -12415,7 +12475,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -12442,10 +12503,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -12966,7 +13029,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -12993,10 +13057,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -13805,7 +13871,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -13832,10 +13899,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -14513,7 +14582,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -14540,10 +14610,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -15121,7 +15193,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -15148,10 +15221,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -16060,7 +16135,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -16087,10 +16163,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -16740,7 +16818,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -16767,10 +16846,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -17397,7 +17478,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -17424,10 +17506,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -18041,7 +18125,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     },
@@ -18068,10 +18153,12 @@
         "jsonLd": []
       },
       "stylesheets": [
-        "/legal-page.css?v=20261113-language-menu"
+        "/legal-page.css?v=20261113-language-menu",
+        "/analytics-consent.css?v=20261115"
       ],
       "externalScripts": [
-        "/site.js?v=20261111-contact"
+        "/site.js?v=20261111-contact",
+        "/analytics.js?v=20261115"
       ],
       "inlineScripts": [
         "document.querySelector('#year').textContent = new Date().getFullYear();"
@@ -18643,7 +18730,8 @@
             "\n  "
           ]
         },
-        "\n  ",
+        "\n\n",
+        "  ",
         "\n"
       ]
     }
