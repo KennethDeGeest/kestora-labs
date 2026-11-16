@@ -48,6 +48,20 @@ function urls(html, attribute, base) {
     .sort();
 }
 
+function imageUrls(html, base) {
+  const body = html.match(/<body\b[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? html;
+  return [...body.matchAll(/<img\s+[^>]*src="([^"]+)"[^>]*>/gi)]
+    .map(match => match[1])
+    .filter(value => !value.startsWith('data:'))
+    .map(value => {
+      const url = new URL(value, base);
+      url.search = '';
+      url.hash = '';
+      return url.href;
+    })
+    .sort();
+}
+
 function seoFacts(html) {
   const title = decode(html.match(/<title>([\s\S]*?)<\/title>/i)?.[1]?.trim() ?? '');
   const meta = [...html.matchAll(/<meta\s+([^>]+)>/gi)].map(match => {
@@ -82,7 +96,7 @@ for (const page of pages) {
     visibleText: [bodyText(comparableSource), bodyText(comparableGenerated)],
     classes: [classSet(comparableSource), classSet(comparableGenerated)],
     links: [urls(comparableSource, 'href', base).filter(url => !url.includes('/site.css')), urls(comparableGenerated, 'href', base).filter(url => !url.includes('/site.css'))],
-    images: [urls(comparableSource, 'src', base), urls(comparableGenerated, 'src', base)],
+    images: [imageUrls(comparableSource, base), imageUrls(comparableGenerated, base)],
     seo: [seoFacts(source), seoFacts(generated)]
   };
   if (['interactive-tool', 'legal-page'].includes(page.type)) checks.runtime = [runtimeFacts(source, base), runtimeFacts(generated, base)];
