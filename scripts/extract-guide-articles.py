@@ -14,7 +14,8 @@ TIPHAVEN_ARTICLES = [
     'how-much-do-servers-make-in-tips',
     'server-tip-out-percentage',
     'server-tips-and-taxes',
-    'splitting-tips-by-hours-worked'
+    'splitting-tips-by-hours-worked',
+    'tip-pooling-vs-tip-sharing'
 ]
 
 class ArticleParser(HTMLParser):
