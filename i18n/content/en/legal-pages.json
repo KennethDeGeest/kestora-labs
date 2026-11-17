@@ -11849,7 +11849,7 @@
                         "class": "legal-updated"
                       },
                       "children": [
-                        "Updated 5 November 2026"
+                        "Updated 17 November 2026"
                       ]
                     },
                     "\n      "
@@ -11995,21 +11995,21 @@
                           "tag": "h2",
                           "attrs": {},
                           "children": [
-                            "Free experience and subscriptions"
+                            "Free experience and membership options"
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Oqvi allows one completed identification without a subscription. You can keep viewing that discovery and ask follow-up questions about it, subject to reasonable service limits. Any further identification request—including a new scan after replacing or adding photos to the first discovery—requires an active subscription. Deleting or reinstalling the app does not reset the free allowance."
+                            "Oqvi allows one completed identification without a purchase. You can keep viewing that discovery and ask follow-up questions about it, subject to reasonable service limits. Any further identification request—including a new scan after replacing or adding photos to the first discovery—requires an active monthly membership or a valid lifetime purchase. Deleting or reinstalling the app does not reset the free allowance."
                           ]
                         },
                         {
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Oqvi offers weekly and yearly auto-renewable subscriptions and does not currently include a free subscription trial. The exact billing period and localized price appear before you buy in Oqvi and on Apple’s purchase confirmation sheet."
+                            "Oqvi offers an auto-renewing monthly subscription and a separate one-time lifetime purchase. No free trial is included. The localized prices appear before you buy in Oqvi and on Apple’s purchase confirmation sheet."
                           ]
                         },
                         {
@@ -12027,7 +12027,7 @@
                               "tag": "li",
                               "attrs": {},
                               "children": [
-                                "A subscription renews automatically unless cancelled at least 24 hours before the end of the current billing period."
+                                "The monthly subscription renews automatically unless cancelled at least 24 hours before the end of the current billing period."
                               ]
                             },
                             {
@@ -12041,21 +12041,21 @@
                               "tag": "li",
                               "attrs": {},
                               "children": [
-                                "You can manage or cancel through your Apple Account subscription settings. Deleting the app does not cancel a subscription."
+                                "The lifetime purchase does not renew or expire. Buying lifetime access does not automatically cancel an existing monthly subscription."
                               ]
                             },
                             {
                               "tag": "li",
                               "attrs": {},
                               "children": [
-                                "Use Restore Purchases in Oqvi to restore an eligible active subscription."
+                                "You can manage or cancel Monthly through your Apple Account subscription settings. Deleting the app does not cancel it."
                               ]
                             },
                             {
                               "tag": "li",
                               "attrs": {},
                               "children": [
-                                "Billing, cancellations and refunds are handled by Apple under applicable App Store rules and consumer law."
+                                "Use Restore Purchases in Oqvi to restore eligible monthly or lifetime access. Billing, cancellations and refunds are handled by Apple under applicable App Store rules and consumer law."
                               ]
                             }
                           ]
@@ -12787,7 +12787,7 @@
                           "tag": "p",
                           "attrs": {},
                           "children": [
-                            "Use Restore Purchases if an active subscription is not recognized. Apple handles payment, cancellation and refund decisions. You can manage a subscription in your Apple Account subscription settings."
+                            "Use Restore Purchases if monthly or lifetime access is not recognized. Apple handles payment, subscription cancellation and refund decisions. Manage or cancel Monthly in your Apple Account subscription settings; Lifetime does not renew."
                           ]
                         }
                       ]
